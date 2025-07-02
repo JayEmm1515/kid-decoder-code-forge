@@ -61,6 +61,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				aquarius: {
+					teal: 'hsl(var(--aquarius-teal))',
+					blue: 'hsl(var(--aquarius-blue))',
+					indigo: 'hsl(var(--aquarius-indigo))',
+					purple: 'hsl(var(--aquarius-purple))',
+					rose: 'hsl(var(--aquarius-rose))',
+					amber: 'hsl(var(--aquarius-amber))'
 				}
 			},
 			borderRadius: {
