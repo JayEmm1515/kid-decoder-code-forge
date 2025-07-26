@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -26,9 +27,11 @@ const Index = () => {
             Understand challenging behaviors, discover evidence-based strategies, and build stronger connections with your child through research-backed insights.
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg" className="bg-aquarius-teal hover:bg-aquarius-blue">
-              Get Started
-            </Button>
+            <Link to="/emotional-toolbox">
+              <Button size="lg" className="bg-aquarius-teal hover:bg-aquarius-blue">
+                Try Emotional Toolbox
+              </Button>
+            </Link>
             <Button size="lg" variant="outline">
               Learn More
             </Button>
