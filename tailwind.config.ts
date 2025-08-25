@@ -62,13 +62,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				aquarius: {
-					teal: 'hsl(var(--aquarius-teal))',
-					blue: 'hsl(var(--aquarius-blue))',
-					indigo: 'hsl(var(--aquarius-indigo))',
-					purple: 'hsl(var(--aquarius-purple))',
-					rose: 'hsl(var(--aquarius-rose))',
-					amber: 'hsl(var(--aquarius-amber))'
+				ecosystem: {
+					navy: 'hsl(var(--ecosystem-navy))',
+					teal: 'hsl(var(--ecosystem-teal))',
+					coral: 'hsl(var(--ecosystem-coral))',
+					aqua: 'hsl(var(--ecosystem-aqua))',
+					purple: 'hsl(var(--ecosystem-purple))',
+					sage: 'hsl(var(--ecosystem-sage))'
 				}
 			},
 			borderRadius: {
@@ -96,7 +96,22 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'organic-morph': 'organic-morph 8s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'gradient-organic': 'var(--gradient-organic)',
+				'gradient-coral': 'var(--gradient-coral)',
+				'gradient-depth': 'var(--gradient-depth)',
+				'texture-organic': 'var(--texture-organic)',
+				'texture-depth': 'var(--texture-depth)'
+			},
+			boxShadow: {
+				'floating': 'var(--shadow-floating)',
+				'deep': 'var(--shadow-deep)',
+				'organic': 'var(--shadow-organic)',
+				'glow': 'var(--shadow-glow)'
 			}
 		}
 	},

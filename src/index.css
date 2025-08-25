@@ -37,13 +37,33 @@ All colors MUST be HSL.
     --input: 214.3 31.8% 91.4%;
     --ring: 179 76% 32%;
 
-    /* Custom aquarius colors */
-    --aquarius-teal: 179 76% 32%;
-    --aquarius-blue: 214 76% 36%;
-    --aquarius-indigo: 264 58% 18%;
-    --aquarius-purple: 316 89% 23%;
-    --aquarius-rose: 316 76% 42%;
-    --aquarius-amber: 32 70% 54%;
+    /* Nature-inspired 3D ecosystem colors */
+    --ecosystem-navy: 220 40% 15%;
+    --ecosystem-teal: 174 72% 56%;
+    --ecosystem-coral: 16 84% 65%;
+    --ecosystem-aqua: 188 78% 70%;
+    --ecosystem-purple: 280 65% 68%;
+    --ecosystem-sage: 120 25% 75%;
+    
+    /* 3D layered gradients */
+    --gradient-organic: linear-gradient(135deg, hsl(var(--ecosystem-teal)) 0%, hsl(var(--ecosystem-aqua)) 50%, hsl(var(--ecosystem-purple)) 100%);
+    --gradient-coral: linear-gradient(135deg, hsl(var(--ecosystem-coral)) 0%, hsl(var(--ecosystem-purple)) 100%);
+    --gradient-depth: linear-gradient(180deg, hsl(var(--ecosystem-navy)) 0%, hsl(220 50% 25%) 100%);
+    
+    /* 3D shadows and lighting */
+    --shadow-floating: 0 8px 32px -8px hsl(var(--ecosystem-navy) / 0.3), 0 0 0 1px hsl(var(--ecosystem-teal) / 0.1);
+    --shadow-deep: 0 20px 40px -12px hsl(var(--ecosystem-navy) / 0.4), 0 8px 16px -8px hsl(var(--ecosystem-purple) / 0.3);
+    --shadow-organic: 0 4px 20px hsl(var(--ecosystem-coral) / 0.4), 0 1px 4px hsl(var(--ecosystem-navy) / 0.2);
+    --shadow-glow: 0 0 20px hsl(var(--ecosystem-teal) / 0.5), 0 0 40px hsl(var(--ecosystem-aqua) / 0.3);
+    
+    /* Textures and patterns */
+    --texture-organic: radial-gradient(circle at 25% 25%, hsl(var(--ecosystem-teal) / 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(var(--ecosystem-coral) / 0.1) 0%, transparent 50%);
+    --texture-depth: conic-gradient(from 45deg at 50% 50%, hsl(var(--ecosystem-navy) / 0.05) 0deg, transparent 90deg, hsl(var(--ecosystem-purple) / 0.05) 180deg, transparent 270deg);
+    
+    /* Layered transforms */
+    --transform-float: perspective(1000px) rotateX(2deg) translateZ(10px);
+    --transform-grow: perspective(1000px) rotateX(-1deg) scale(1.02) translateZ(20px);
+    --transform-organic: perspective(1000px) rotateY(1deg) rotateX(1deg) translateZ(5px);
 
     --radius: 0.5rem;
 
@@ -65,41 +85,38 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 264 58% 8%;
+    --background: var(--ecosystem-navy);
     --foreground: 210 40% 98%;
-
-    --card: 264 58% 12%;
+    --card: hsl(var(--ecosystem-navy)) / 0.8;
     --card-foreground: 210 40% 98%;
-
-    --popover: 264 58% 12%;
+    --popover: var(--ecosystem-navy);
     --popover-foreground: 210 40% 98%;
-
-    --primary: 179 76% 42%;
-    --primary-foreground: 264 58% 8%;
-
-    --secondary: 214 76% 46%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 264 30% 20%;
+    --primary: var(--ecosystem-teal);
+    --primary-foreground: var(--ecosystem-navy);
+    --secondary: var(--ecosystem-purple);
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 30% 25%;
     --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 316 76% 52%;
-    --accent-foreground: 0 0% 100%;
-
+    --accent: var(--ecosystem-coral);
+    --accent-foreground: var(--ecosystem-navy);
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 264 30% 20%;
-    --input: 264 30% 20%;
-    --ring: 179 76% 42%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: hsl(var(--ecosystem-teal)) / 0.2;
+    --input: 220 30% 25%;
+    --ring: var(--ecosystem-aqua);
+    --chart-1: var(--ecosystem-teal);
+    --chart-2: var(--ecosystem-coral);
+    --chart-3: var(--ecosystem-aqua);
+    --chart-4: var(--ecosystem-purple);
+    --chart-5: var(--ecosystem-sage);
+    --sidebar-background: var(--ecosystem-navy);
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: var(--ecosystem-teal);
+    --sidebar-primary-foreground: var(--ecosystem-navy);
+    --sidebar-accent: var(--ecosystem-coral);
+    --sidebar-accent-foreground: var(--ecosystem-navy);
+    --sidebar-border: hsl(var(--ecosystem-teal)) / 0.2;
+    --sidebar-ring: var(--ecosystem-aqua);
   }
 }
 
@@ -109,6 +126,123 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    background: var(--gradient-depth);
+    color: hsl(var(--foreground));
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* 3D Ecosystem Component Styles */
+  .ecosystem-card {
+    background: var(--texture-organic), hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 24px;
+    box-shadow: var(--shadow-floating);
+    transform: var(--transform-organic);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ecosystem-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient-organic);
+    opacity: 0.5;
+  }
+
+  .ecosystem-card:hover {
+    transform: var(--transform-grow);
+    box-shadow: var(--shadow-deep);
+  }
+
+  .ecosystem-button {
+    background: var(--gradient-organic);
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--shadow-organic);
+    transform: var(--transform-float);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ecosystem-button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: var(--gradient-coral);
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .ecosystem-button:hover {
+    transform: var(--transform-grow);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .ecosystem-button:hover::before {
+    opacity: 1;
+  }
+
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+    transform-origin: center center;
+  }
+
+  @keyframes float {
+    0%, 100% { 
+      transform: translateY(0px) rotate(0deg); 
+    }
+    33% { 
+      transform: translateY(-10px) rotate(1deg); 
+    }
+    66% { 
+      transform: translateY(-5px) rotate(-1deg); 
+    }
+  }
+
+  .organic-shape {
+    position: absolute;
+    border-radius: 50% 40% 60% 30%;
+    background: var(--gradient-organic);
+    opacity: 0.1;
+    animation: organic-morph 8s ease-in-out infinite;
+  }
+
+  @keyframes organic-morph {
+    0%, 100% { 
+      border-radius: 50% 40% 60% 30%;
+      transform: rotate(0deg) scale(1);
+    }
+    25% { 
+      border-radius: 40% 60% 30% 50%;
+      transform: rotate(90deg) scale(1.1);
+    }
+    50% { 
+      border-radius: 60% 30% 50% 40%;
+      transform: rotate(180deg) scale(0.9);
+    }
+    75% { 
+      border-radius: 30% 50% 40% 60%;
+      transform: rotate(270deg) scale(1.05);
+    }
+  }
+
+  .gradient-text {
+    background: var(--gradient-organic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
