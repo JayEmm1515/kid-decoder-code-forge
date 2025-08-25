@@ -1,165 +1,126 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { LayeredCard, LayeredCardHeader, LayeredCardTitle, LayeredCardActions } from "@/components/ui/layered-card";
+import { FloatingBlobs } from "@/components/ui/floating-blobs";
 import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Organic Background Shapes */}
-      <div className="organic-shape w-96 h-96 top-10 -right-20 floating-element"></div>
-      <div className="organic-shape w-64 h-64 bottom-20 -left-10 floating-element" style={{ animationDelay: '2s' }}></div>
-      <div className="organic-shape w-80 h-80 top-1/2 left-1/3 floating-element" style={{ animationDelay: '4s' }}></div>
+    <div className="kd-app">
+      <div className="kd-bg"></div>
+      <FloatingBlobs />
       
-      {/* Header */}
-      <header className="relative z-10 border-b border-ecosystem-teal/20 bg-background/60 backdrop-blur-xl">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold gradient-text floating-element">
-              🌿 The Kid Decoder
-            </h1>
-            <Button className="ecosystem-button text-ecosystem-navy font-semibold px-6 py-2">
-              Sign In
-            </Button>
-          </div>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <section className="relative z-10 container mx-auto px-4 py-20">
-        <div className="text-center max-w-5xl mx-auto">
-          <div className="floating-element mb-8">
-            <h2 className="text-6xl font-bold mb-6 gradient-text leading-tight">
-              Decode Your Child's Behavior with Confidence
-            </h2>
-            <div className="w-24 h-1 bg-gradient-organic mx-auto mb-8 rounded-full"></div>
-          </div>
-          <p className="text-xl text-foreground/80 mb-12 leading-relaxed max-w-3xl mx-auto">
-            Understand challenging behaviors, discover evidence-based strategies, and build stronger connections with your child through research-backed insights.
-          </p>
-          <div className="flex gap-6 justify-center flex-wrap">
+      <div className="kd-stack">
+        {/* Hero Section */}
+        <LayeredCard depth={3} className="text-center">
+          <LayeredCardHeader>
+            <div className="w-full">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 gradient-text">
+                🧰 Emotional Wellness Toolkit
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+                Discover tools to understand and nurture emotional intelligence in yourself and your children
+              </p>
+            </div>
+          </LayeredCardHeader>
+          
+          <LayeredCardActions className="justify-center">
             <Link to="/emotional-toolbox">
-              <Button size="lg" className="ecosystem-button text-ecosystem-navy font-semibold px-8 py-4 text-lg">
-                🧰 Try Emotional Toolbox
-              </Button>
+              <button className="kd-btn kd-btn--primary text-lg px-8 py-4">
+                Try Emotional Toolbox
+              </button>
             </Link>
-            <Button size="lg" className="ecosystem-card border-ecosystem-teal/30 text-ecosystem-teal hover:text-ecosystem-navy px-8 py-4 text-lg bg-transparent">
-              🌱 Learn More
-            </Button>
+            <button className="kd-btn text-lg px-8 py-4">
+              Learn More
+            </button>
+          </LayeredCardActions>
+        </LayeredCard>
+
+        {/* Feature Overview */}
+        <LayeredCard depth={2} size="small">
+          <LayeredCardHeader>
+            <LayeredCardTitle size="h3">🌟 Key Features</LayeredCardTitle>
+            <div className="flex gap-2">
+              <button className="kd-pill">Interactive</button>
+              <button className="kd-pill kd-pill--alt">Research-Based</button>
+            </div>
+          </LayeredCardHeader>
+          
+          {/* Feature chart visualization */}
+          <div className="flex items-end gap-4 h-40 mb-6">
+            <div 
+              className="w-12 bg-gradient-organic rounded-t-3xl rounded-b-2xl shadow-glow transform translate-z-6"
+              style={{ height: '60%', boxShadow: '0 12px 22px hsl(var(--ecosystem-teal) / 0.35), inset 0 1px 0 rgba(255,255,255,0.8)' }}
+            ></div>
+            <div 
+              className="w-12 rounded-t-3xl rounded-b-2xl transform translate-z-6"
+              style={{ 
+                height: '80%', 
+                background: 'linear-gradient(180deg, hsl(var(--ecosystem-purple)), hsl(var(--ecosystem-coral)))',
+                boxShadow: '0 12px 22px hsl(var(--ecosystem-purple) / 0.35), inset 0 1px 0 rgba(255,255,255,0.85)' 
+              }}
+            ></div>
+            <div 
+              className="w-12 bg-gradient-organic rounded-t-3xl rounded-b-2xl shadow-glow transform translate-z-6"
+              style={{ height: '45%', boxShadow: '0 12px 22px hsl(var(--ecosystem-teal) / 0.35), inset 0 1px 0 rgba(255,255,255,0.8)' }}
+            ></div>
+            <div 
+              className="w-12 rounded-t-3xl rounded-b-2xl transform translate-z-6"
+              style={{ 
+                height: '70%', 
+                background: 'linear-gradient(180deg, hsl(var(--ecosystem-aqua)), hsl(var(--ecosystem-sage)))',
+                boxShadow: '0 12px 22px hsl(var(--ecosystem-aqua) / 0.35), inset 0 1px 0 rgba(255,255,255,0.85)' 
+              }}
+            ></div>
+            <div 
+              className="w-12 bg-gradient-organic rounded-t-3xl rounded-b-2xl shadow-glow transform translate-z-6"
+              style={{ height: '90%', boxShadow: '0 12px 22px hsl(var(--ecosystem-teal) / 0.35), inset 0 1px 0 rgba(255,255,255,0.8)' }}
+            ></div>
           </div>
-        </div>
-      </section>
+          
+          <LayeredCardActions>
+            <button className="kd-btn">View Analytics</button>
+            <button className="kd-btn kd-btn--primary">Get Started</button>
+          </LayeredCardActions>
+        </LayeredCard>
 
-      {/* Feature Cards */}
-      <section className="relative z-10 container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold gradient-text mb-4">🌊 Explore Our Living Ecosystem</h3>
-          <p className="text-lg text-foreground/70">Discover tools that grow with your family's journey</p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card className="ecosystem-card group floating-element">
-            <CardHeader className="pb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-coral mb-4 flex items-center justify-center text-2xl">
-                🧩
-              </div>
-              <CardTitle className="text-ecosystem-teal text-xl font-bold">Behavior Decoder</CardTitle>
-              <CardDescription className="text-foreground/70">
-                Understand what your child's challenging behaviors really mean
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-foreground/60 leading-relaxed">
-                Get insights into the underlying needs and emotions behind difficult behaviors with research-backed explanations.
-              </p>
-            </CardContent>
-          </Card>
+        {/* Quick Actions */}
+        <LayeredCard depth={1} size="small">
+          <LayeredCardHeader>
+            <LayeredCardTitle size="h3">✨ Quick Actions</LayeredCardTitle>
+          </LayeredCardHeader>
+          
+          <ul className="list-none p-0 m-0 grid gap-3 mb-6">
+            <li className="flex items-center">
+              <span 
+                className="inline-block w-3 h-3 rounded-full mr-3 shadow-organic"
+                style={{ background: 'hsl(var(--ecosystem-teal))' }}
+              ></span>
+              Emotional Safety Assessment
+            </li>
+            <li className="flex items-center">
+              <span 
+                className="inline-block w-3 h-3 rounded-full mr-3 shadow-organic"
+                style={{ background: 'hsl(var(--ecosystem-purple))' }}
+              ></span>
+              Family Wellness Tools
+            </li>
+            <li className="flex items-center">
+              <span 
+                className="inline-block w-3 h-3 rounded-full mr-3 shadow-organic"
+                style={{ background: 'hsl(var(--ecosystem-coral))' }}
+              ></span>
+              Growth Tracking
+            </li>
+          </ul>
+          
+          <LayeredCardActions layout="grid">
+            <button className="kd-chip">Start Journey</button>
+            <button className="kd-chip">Learn More</button>
+            <button className="kd-chip">Share</button>
+          </LayeredCardActions>
+        </LayeredCard>
+      </div>
 
-          <Card className="ecosystem-card group floating-element" style={{ animationDelay: '0.5s' }}>
-            <CardHeader className="pb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-organic mb-4 flex items-center justify-center text-2xl">
-                🔗
-              </div>
-              <CardTitle className="text-ecosystem-aqua text-xl font-bold">Chain Analysis</CardTitle>
-              <CardDescription className="text-foreground/70">
-                Identify triggers and patterns to prevent challenging moments
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-foreground/60 leading-relaxed">
-                Track and analyze behavioral patterns to better predict and manage triggering situations.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="ecosystem-card group floating-element" style={{ animationDelay: '1s' }}>
-            <CardHeader className="pb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-coral mb-4 flex items-center justify-center text-2xl">
-                🤖
-              </div>
-              <CardTitle className="text-ecosystem-purple text-xl font-bold">AI Parenting Coach</CardTitle>
-              <CardDescription className="text-foreground/70">
-                Get personalized advice based on your specific situation
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-foreground/60 leading-relaxed">
-                Chat with our AI coach for real-time support and evidence-based parenting strategies.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="ecosystem-card group floating-element" style={{ animationDelay: '1.5s' }}>
-            <CardHeader className="pb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-organic mb-4 flex items-center justify-center text-2xl">
-                📊
-              </div>
-              <CardTitle className="text-ecosystem-coral text-xl font-bold">Mood & Behavior Logs</CardTitle>
-              <CardDescription className="text-foreground/70">
-                Track your child's emotional patterns over time
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-foreground/60 leading-relaxed">
-                Keep detailed logs to identify trends and measure progress in your child's development.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="ecosystem-card group floating-element" style={{ animationDelay: '2s' }}>
-            <CardHeader className="pb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-coral mb-4 flex items-center justify-center text-2xl">
-                🌱
-              </div>
-              <CardTitle className="text-ecosystem-sage text-xl font-bold">Age-Based Guidance</CardTitle>
-              <CardDescription className="text-foreground/70">
-                Strategies tailored to your child's developmental stage
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-foreground/60 leading-relaxed">
-                Access content organized by developmental milestones from infancy through adolescence.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="ecosystem-card group floating-element" style={{ animationDelay: '2.5s' }}>
-            <CardHeader className="pb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-organic mb-4 flex items-center justify-center text-2xl">
-                🔬
-              </div>
-              <CardTitle className="text-ecosystem-teal text-xl font-bold">Evidence-Based Strategies</CardTitle>
-              <CardDescription className="text-foreground/70">
-                Solutions rooted in child development research
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-foreground/60 leading-relaxed">
-                Practical approaches based on attachment theory, neurodevelopment, and proven methodologies.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
     </div>
   );
 };

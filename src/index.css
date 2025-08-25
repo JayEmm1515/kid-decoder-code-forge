@@ -132,7 +132,89 @@ All colors MUST be HSL.
     overflow-x: hidden;
   }
 
-  /* 3D Ecosystem Component Styles */
+  /* 3D Paper-Cut UI System */
+  .kd-app {
+    position: relative;
+    min-height: 100vh;
+    padding: 6rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial;
+  }
+
+  .kd-bg::before,
+  .kd-bg::after {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    background: radial-gradient(600px 300px at 20% 30%, hsl(var(--ecosystem-teal) / 0.15), transparent 60%),
+                radial-gradient(500px 400px at 80% 10%, hsl(var(--ecosystem-purple) / 0.18), transparent 60%),
+                radial-gradient(400px 500px at 60% 90%, hsl(var(--ecosystem-coral) / 0.12), transparent 70%);
+    filter: blur(20px);
+  }
+
+  .kd-stack {
+    position: relative;
+    width: min(1050px, 92vw);
+    perspective: 1600px;
+  }
+
+  .kd-card {
+    position: relative;
+    border-radius: 28px;
+    padding: 24px;
+    margin: 28px 0;
+    background: linear-gradient(180deg, hsl(var(--card)), hsl(var(--muted)));
+    box-shadow: 0 30px 60px hsl(var(--ecosystem-navy) / 0.35),
+                inset 0 1px 0 hsl(var(--foreground) / 0.1);
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .kd-depth-3 {
+    transform: rotateX(8deg) rotateY(-12deg) translateZ(60px);
+  }
+
+  .kd-depth-2 {
+    transform: rotateX(6deg) rotateY(-10deg) translateZ(30px);
+  }
+
+  .kd-depth-1 {
+    transform: rotateX(4deg) rotateY(-8deg) translateZ(8px);
+  }
+
+  .kd-card::before,
+  .kd-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    pointer-events: none;
+  }
+
+  .kd-card::before {
+    box-shadow: 0 10px 0 -4px hsl(var(--card)),
+                0 18px 22px hsl(var(--ecosystem-navy) / 0.25);
+    transform: translateZ(-2px);
+  }
+
+  .kd-card::after {
+    background: linear-gradient(145deg, 
+                               hsl(var(--ecosystem-aqua) / 0.35), 
+                               hsl(var(--ecosystem-purple) / 0.25), 
+                               hsl(var(--ecosystem-coral) / 0.25));
+    mix-blend-mode: overlay;
+    opacity: 0.35;
+  }
+
+  .kd-card:hover {
+    transform: rotateX(6deg) rotateY(-10deg) translateZ(80px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Legacy ecosystem cards for backwards compatibility */
   .ecosystem-card {
     background: var(--texture-organic), hsl(var(--card));
     border: 1px solid hsl(var(--border));
@@ -161,6 +243,72 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-deep);
   }
 
+  /* 3D UI Components */
+  .kd-pill {
+    border: 0;
+    padding: 10px 14px;
+    border-radius: 20px;
+    background: hsl(var(--card));
+    box-shadow: 0 6px 18px hsl(var(--ecosystem-navy) / 0.18),
+                inset 0 1px 0 hsl(var(--foreground) / 0.1);
+    color: hsl(var(--foreground));
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .kd-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-floating);
+  }
+
+  .kd-pill--alt {
+    background: linear-gradient(180deg, hsl(var(--card)), hsl(var(--muted)));
+    color: hsl(var(--primary));
+  }
+
+  .kd-btn {
+    border: 0;
+    padding: 10px 14px;
+    border-radius: 14px;
+    background: hsl(var(--card));
+    cursor: pointer;
+    box-shadow: 0 10px 18px hsl(var(--ecosystem-navy) / 0.18),
+                inset 0 1px 0 hsl(var(--foreground) / 0.1);
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .kd-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-floating);
+  }
+
+  .kd-btn--primary {
+    background: var(--gradient-organic);
+    color: hsl(var(--primary-foreground));
+    text-shadow: 0 1px 0 hsl(var(--ecosystem-navy) / 0.15);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .kd-chip {
+    border: 0;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: hsl(var(--card));
+    cursor: pointer;
+    box-shadow: 0 6px 14px hsl(var(--ecosystem-navy) / 0.15),
+                inset 0 1px 0 hsl(var(--foreground) / 0.1);
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .kd-chip:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-floating);
+  }
+
+  /* Legacy ecosystem buttons */
   .ecosystem-button {
     background: var(--gradient-organic);
     border: none;
