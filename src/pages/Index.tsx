@@ -14,22 +14,22 @@ const Index = () => {
         <LayeredCard depth={3} className="text-center">
           <LayeredCardHeader>
             <div className="w-full">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 gradient-text">
+              <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-teal-200 bg-clip-text text-transparent">
                 🧰 Emotional Wellness Toolkit
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              <p className="text-base md:text-lg text-white/70 max-w-2xl mx-auto mb-8 leading-relaxed">
                 Discover tools to understand and nurture emotional intelligence in yourself and your children
               </p>
             </div>
           </LayeredCardHeader>
           
-          <LayeredCardActions className="justify-center">
+          <LayeredCardActions className="justify-center gap-4">
             <Link to="/emotional-toolbox">
-              <button className="kd-btn kd-btn--primary text-lg px-8 py-4">
+              <button className="kd-btn kd-btn--primary text-base px-8 py-4">
                 Try Emotional Toolbox
               </button>
             </Link>
-            <button className="kd-btn text-lg px-8 py-4">
+            <button className="kd-btn text-base px-8 py-4">
               Learn More
             </button>
           </LayeredCardActions>
@@ -38,42 +38,54 @@ const Index = () => {
         {/* Feature Overview */}
         <LayeredCard depth={2} size="small">
           <LayeredCardHeader>
-            <LayeredCardTitle size="h3">🌟 Key Features</LayeredCardTitle>
+            <LayeredCardTitle size="h3" className="text-white/90">🌟 Key Features</LayeredCardTitle>
             <div className="flex gap-2">
               <button className="kd-pill">Interactive</button>
               <button className="kd-pill kd-pill--alt">Research-Based</button>
             </div>
           </LayeredCardHeader>
           
-          {/* Feature chart visualization */}
-          <div className="flex items-end gap-4 h-40 mb-6">
+          {/* Enhanced glass chart visualization */}
+          <div className="flex items-end gap-3 h-32 mb-6 p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
             <div 
-              className="w-12 bg-gradient-organic rounded-t-3xl rounded-b-2xl shadow-glow transform translate-z-6"
-              style={{ height: '60%', boxShadow: '0 12px 22px hsl(var(--ecosystem-teal) / 0.35), inset 0 1px 0 rgba(255,255,255,0.8)' }}
+              className="w-8 rounded-t-2xl rounded-b-xl backdrop-blur-sm border border-white/20"
+              style={{ 
+                height: '60%', 
+                background: 'linear-gradient(180deg, hsl(var(--ecosystem-teal) / 0.6), hsl(var(--ecosystem-teal) / 0.8))',
+                boxShadow: 'var(--shadow-glow-teal), inset 0 1px 0 rgba(255,255,255,0.3)'
+              }}
             ></div>
             <div 
-              className="w-12 rounded-t-3xl rounded-b-2xl transform translate-z-6"
+              className="w-8 rounded-t-2xl rounded-b-xl backdrop-blur-sm border border-white/20"
               style={{ 
                 height: '80%', 
-                background: 'linear-gradient(180deg, hsl(var(--ecosystem-purple)), hsl(var(--ecosystem-coral)))',
-                boxShadow: '0 12px 22px hsl(var(--ecosystem-purple) / 0.35), inset 0 1px 0 rgba(255,255,255,0.85)' 
+                background: 'linear-gradient(180deg, hsl(var(--ecosystem-purple) / 0.6), hsl(var(--ecosystem-coral) / 0.8))',
+                boxShadow: 'var(--shadow-glow-purple), inset 0 1px 0 rgba(255,255,255,0.3)'
               }}
             ></div>
             <div 
-              className="w-12 bg-gradient-organic rounded-t-3xl rounded-b-2xl shadow-glow transform translate-z-6"
-              style={{ height: '45%', boxShadow: '0 12px 22px hsl(var(--ecosystem-teal) / 0.35), inset 0 1px 0 rgba(255,255,255,0.8)' }}
+              className="w-8 rounded-t-2xl rounded-b-xl backdrop-blur-sm border border-white/20"
+              style={{ 
+                height: '45%', 
+                background: 'linear-gradient(180deg, hsl(var(--ecosystem-aqua) / 0.6), hsl(var(--ecosystem-teal) / 0.8))',
+                boxShadow: 'var(--shadow-glow-teal), inset 0 1px 0 rgba(255,255,255,0.3)'
+              }}
             ></div>
             <div 
-              className="w-12 rounded-t-3xl rounded-b-2xl transform translate-z-6"
+              className="w-8 rounded-t-2xl rounded-b-xl backdrop-blur-sm border border-white/20"
               style={{ 
                 height: '70%', 
-                background: 'linear-gradient(180deg, hsl(var(--ecosystem-aqua)), hsl(var(--ecosystem-sage)))',
-                boxShadow: '0 12px 22px hsl(var(--ecosystem-aqua) / 0.35), inset 0 1px 0 rgba(255,255,255,0.85)' 
+                background: 'linear-gradient(180deg, hsl(var(--ecosystem-aqua) / 0.6), hsl(var(--ecosystem-sage) / 0.8))',
+                boxShadow: 'var(--shadow-glow-teal), inset 0 1px 0 rgba(255,255,255,0.3)'
               }}
             ></div>
             <div 
-              className="w-12 bg-gradient-organic rounded-t-3xl rounded-b-2xl shadow-glow transform translate-z-6"
-              style={{ height: '90%', boxShadow: '0 12px 22px hsl(var(--ecosystem-teal) / 0.35), inset 0 1px 0 rgba(255,255,255,0.8)' }}
+              className="w-8 rounded-t-2xl rounded-b-xl backdrop-blur-sm border border-white/20"
+              style={{ 
+                height: '90%', 
+                background: 'linear-gradient(180deg, hsl(var(--ecosystem-teal) / 0.6), hsl(var(--ecosystem-purple) / 0.8))',
+                boxShadow: 'var(--shadow-glow-purple), inset 0 1px 0 rgba(255,255,255,0.3)'
+              }}
             ></div>
           </div>
           
@@ -86,30 +98,39 @@ const Index = () => {
         {/* Quick Actions */}
         <LayeredCard depth={1} size="small">
           <LayeredCardHeader>
-            <LayeredCardTitle size="h3">✨ Quick Actions</LayeredCardTitle>
+            <LayeredCardTitle size="h3" className="text-white/90">✨ Quick Actions</LayeredCardTitle>
           </LayeredCardHeader>
           
-          <ul className="list-none p-0 m-0 grid gap-3 mb-6">
-            <li className="flex items-center">
+          <ul className="list-none p-0 m-0 grid gap-4 mb-6">
+            <li className="flex items-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
               <span 
-                className="inline-block w-3 h-3 rounded-full mr-3 shadow-organic"
-                style={{ background: 'hsl(var(--ecosystem-teal))' }}
+                className="inline-block w-4 h-4 rounded-full mr-4 backdrop-blur-sm border border-white/20"
+                style={{ 
+                  background: 'linear-gradient(45deg, hsl(var(--ecosystem-teal)), hsl(var(--ecosystem-aqua)))',
+                  boxShadow: 'var(--shadow-glow-teal)'
+                }}
               ></span>
-              Emotional Safety Assessment
+              <span className="text-white/80 text-sm">Emotional Safety Assessment</span>
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
               <span 
-                className="inline-block w-3 h-3 rounded-full mr-3 shadow-organic"
-                style={{ background: 'hsl(var(--ecosystem-purple))' }}
+                className="inline-block w-4 h-4 rounded-full mr-4 backdrop-blur-sm border border-white/20"
+                style={{ 
+                  background: 'linear-gradient(45deg, hsl(var(--ecosystem-purple)), hsl(var(--ecosystem-coral)))',
+                  boxShadow: 'var(--shadow-glow-purple)'
+                }}
               ></span>
-              Family Wellness Tools
+              <span className="text-white/80 text-sm">Family Wellness Tools</span>
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
               <span 
-                className="inline-block w-3 h-3 rounded-full mr-3 shadow-organic"
-                style={{ background: 'hsl(var(--ecosystem-coral))' }}
+                className="inline-block w-4 h-4 rounded-full mr-4 backdrop-blur-sm border border-white/20"
+                style={{ 
+                  background: 'linear-gradient(45deg, hsl(var(--ecosystem-coral)), hsl(var(--ecosystem-sunset)))',
+                  boxShadow: 'var(--shadow-glow-coral)'
+                }}
               ></span>
-              Growth Tracking
+              <span className="text-white/80 text-sm">Growth Tracking</span>
             </li>
           </ul>
           

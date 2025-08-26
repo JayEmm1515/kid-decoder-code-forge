@@ -7,54 +7,62 @@ All colors MUST be HSL.
 */
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+/* Glassmorphism Design System - Nature-Inspired 3D UI */
+:root {
+  /* Base colors (HSL format) */
+  --background: 245 25% 8%;
+  --foreground: 220 15% 95%;
+  --card: 0 0% 100% / 0.08;
+  --card-foreground: 220 15% 95%;
+  --popover: 0 0% 100% / 0.95;
+  --popover-foreground: 222.2 84% 4.9%;
+  
+  --primary: 254 70% 70%;
+  --primary-foreground: 210 40% 98%;
+  
+  --secondary: 174 70% 50%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  
+  --muted: 210 40% 96% / 0.1;
+  --muted-foreground: 215.4 16.3% 70%;
+  
+  --accent: 12 85% 68%;
+  --accent-foreground: 222.2 84% 4.9%;
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --border: 0 0% 100% / 0.12;
+  --input: 0 0% 100% / 0.08;
+  --ring: 254 70% 70%;
+  
+  --radius: 1.5rem;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+  /* Enhanced ecosystem color palette */
+  --ecosystem-navy: 245 45% 12%;
+  --ecosystem-teal: 174 70% 55%;
+  --ecosystem-purple: 254 70% 70%;
+  --ecosystem-coral: 12 85% 68%;
+  --ecosystem-aqua: 185 85% 78%;
+  --ecosystem-sage: 140 25% 60%;
+  --ecosystem-sunset: 25 95% 70%;
+  --ecosystem-lavender: 270 60% 80%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    /* Aquarius theme colors */
-    --primary: 179 76% 32%; /* teal #158F88 */
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 214 76% 36%; /* blue #094183 */
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 316 76% 42%; /* rose #C6298C */
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 179 76% 32%;
-
-    /* Nature-inspired 3D ecosystem colors */
-    --ecosystem-navy: 220 40% 15%;
-    --ecosystem-teal: 174 72% 56%;
-    --ecosystem-coral: 16 84% 65%;
-    --ecosystem-aqua: 188 78% 70%;
-    --ecosystem-purple: 280 65% 68%;
-    --ecosystem-sage: 120 25% 75%;
-    
-    /* 3D layered gradients */
-    --gradient-organic: linear-gradient(135deg, hsl(var(--ecosystem-teal)) 0%, hsl(var(--ecosystem-aqua)) 50%, hsl(var(--ecosystem-purple)) 100%);
-    --gradient-coral: linear-gradient(135deg, hsl(var(--ecosystem-coral)) 0%, hsl(var(--ecosystem-purple)) 100%);
-    --gradient-depth: linear-gradient(180deg, hsl(var(--ecosystem-navy)) 0%, hsl(220 50% 25%) 100%);
-    
-    /* 3D shadows and lighting */
-    --shadow-floating: 0 8px 32px -8px hsl(var(--ecosystem-navy) / 0.3), 0 0 0 1px hsl(var(--ecosystem-teal) / 0.1);
-    --shadow-deep: 0 20px 40px -12px hsl(var(--ecosystem-navy) / 0.4), 0 8px 16px -8px hsl(var(--ecosystem-purple) / 0.3);
-    --shadow-organic: 0 4px 20px hsl(var(--ecosystem-coral) / 0.4), 0 1px 4px hsl(var(--ecosystem-navy) / 0.2);
-    --shadow-glow: 0 0 20px hsl(var(--ecosystem-teal) / 0.5), 0 0 40px hsl(var(--ecosystem-aqua) / 0.3);
+  /* Glass gradients with transparency */
+  --gradient-glass-primary: linear-gradient(135deg, hsl(var(--ecosystem-purple) / 0.2), hsl(var(--ecosystem-coral) / 0.15));
+  --gradient-glass-secondary: linear-gradient(135deg, hsl(var(--ecosystem-teal) / 0.2), hsl(var(--ecosystem-aqua) / 0.15));
+  --gradient-glass-accent: linear-gradient(135deg, hsl(var(--ecosystem-sunset) / 0.2), hsl(var(--ecosystem-lavender) / 0.15));
+  --gradient-organic: linear-gradient(135deg, hsl(var(--ecosystem-teal)), hsl(var(--ecosystem-aqua)));
+  --gradient-sunset: linear-gradient(135deg, hsl(var(--ecosystem-coral)), hsl(var(--ecosystem-purple)));
+  --gradient-depth: linear-gradient(180deg, hsl(var(--ecosystem-purple)), hsl(254 70% 60%));
+  
+  /* Enhanced glass shadows */
+  --shadow-glass-sm: 0 4px 16px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-glass-md: 0 8px 32px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-glass-lg: 0 16px 64px rgba(0, 0, 0, 0.15), 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-glow-purple: 0 8px 32px hsl(var(--ecosystem-purple) / 0.3);
+  --shadow-glow-teal: 0 8px 32px hsl(var(--ecosystem-teal) / 0.3);
+  --shadow-glow-coral: 0 8px 32px hsl(var(--ecosystem-coral) / 0.3);
     
     /* Textures and patterns */
     --texture-organic: radial-gradient(circle at 25% 25%, hsl(var(--ecosystem-teal) / 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(var(--ecosystem-coral) / 0.1) 0%, transparent 50%);
@@ -126,92 +134,127 @@ All colors MUST be HSL.
   }
 
   body {
-    background: var(--gradient-depth);
+    background: 
+      radial-gradient(circle at 25% 25%, hsl(var(--ecosystem-purple) / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--ecosystem-coral) / 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 50% 100%, hsl(var(--ecosystem-teal) / 0.1) 0%, transparent 60%),
+      linear-gradient(135deg, hsl(245 50% 8%) 0%, hsl(245 35% 4%) 50%, hsl(245 25% 2%) 100%);
     color: hsl(var(--foreground));
     min-height: 100vh;
     overflow-x: hidden;
   }
 
-  /* 3D Paper-Cut UI System */
+  /* Glassmorphism 3D System */
   .kd-app {
     position: relative;
     min-height: 100vh;
-    padding: 6rem 1.25rem;
+    padding: 2rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
   .kd-bg::before,
   .kd-bg::after {
     content: "";
     position: absolute;
-    inset: -20%;
-    background: radial-gradient(600px 300px at 20% 30%, hsl(var(--ecosystem-teal) / 0.15), transparent 60%),
-                radial-gradient(500px 400px at 80% 10%, hsl(var(--ecosystem-purple) / 0.18), transparent 60%),
-                radial-gradient(400px 500px at 60% 90%, hsl(var(--ecosystem-coral) / 0.12), transparent 70%);
-    filter: blur(20px);
+    inset: -30%;
+    background: 
+      radial-gradient(800px 400px at 20% 30%, hsl(var(--ecosystem-teal) / 0.08), transparent 70%),
+      radial-gradient(600px 600px at 80% 10%, hsl(var(--ecosystem-purple) / 0.12), transparent 70%),
+      radial-gradient(500px 700px at 60% 90%, hsl(var(--ecosystem-coral) / 0.06), transparent 80%),
+      radial-gradient(400px 300px at 40% 50%, hsl(var(--ecosystem-aqua) / 0.05), transparent 70%);
+    filter: blur(60px);
+    animation: ambient-flow 20s ease-in-out infinite;
+  }
+
+  @keyframes ambient-flow {
+    0%, 100% { transform: translateX(0) translateY(0) scale(1); }
+    25% { transform: translateX(-5px) translateY(-10px) scale(1.02); }
+    50% { transform: translateX(10px) translateY(5px) scale(0.98); }
+    75% { transform: translateX(-8px) translateY(8px) scale(1.01); }
   }
 
   .kd-stack {
     position: relative;
-    width: min(1050px, 92vw);
-    perspective: 1600px;
+    width: min(420px, 90vw);
+    perspective: 2000px;
+    padding: 1rem 0;
   }
 
   .kd-card {
     position: relative;
-    border-radius: 28px;
-    padding: 24px;
-    margin: 28px 0;
-    background: linear-gradient(180deg, hsl(var(--card)), hsl(var(--muted)));
-    box-shadow: 0 30px 60px hsl(var(--ecosystem-navy) / 0.35),
-                inset 0 1px 0 hsl(var(--foreground) / 0.1);
+    border-radius: 32px;
+    padding: 28px;
+    margin: 20px 0;
+    background: linear-gradient(145deg, 
+      hsl(0 0% 100% / 0.12) 0%, 
+      hsl(0 0% 100% / 0.06) 50%,
+      hsl(0 0% 100% / 0.08) 100%);
+    border: 1px solid hsl(0 0% 100% / 0.18);
+    box-shadow: var(--shadow-glass-lg);
     transform-style: preserve-3d;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(24px) saturate(1.2);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
   }
 
+  .kd-card:hover {
+    background: linear-gradient(145deg, 
+      hsl(0 0% 100% / 0.15) 0%, 
+      hsl(0 0% 100% / 0.08) 50%,
+      hsl(0 0% 100% / 0.12) 100%);
+    border-color: hsl(0 0% 100% / 0.25);
+    box-shadow: var(--shadow-glass-lg), var(--shadow-glow-purple);
+  }
+
+  /* Glassmorphism depth layers with subtle 3D */
   .kd-depth-3 {
-    transform: rotateX(8deg) rotateY(-12deg) translateZ(60px);
+    transform: translateY(-8px) rotateX(2deg) scale(1.02);
+    background: var(--gradient-glass-primary);
+    border-color: hsl(var(--ecosystem-purple) / 0.3);
   }
 
   .kd-depth-2 {
-    transform: rotateX(6deg) rotateY(-10deg) translateZ(30px);
+    transform: translateY(-4px) rotateX(1deg) scale(1.01);
+    background: var(--gradient-glass-secondary);
+    border-color: hsl(var(--ecosystem-teal) / 0.3);
   }
 
   .kd-depth-1 {
-    transform: rotateX(4deg) rotateY(-8deg) translateZ(8px);
+    transform: translateY(-2px) rotateX(0.5deg);
+    background: var(--gradient-glass-accent);
+    border-color: hsl(var(--ecosystem-coral) / 0.3);
   }
 
-  .kd-card::before,
+  /* Advanced glass effects */
+  .kd-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 32px;
+    background: linear-gradient(145deg, 
+      hsl(0 0% 100% / 0.1) 0%, 
+      transparent 50%,
+      hsl(0 0% 0% / 0.02) 100%);
+    pointer-events: none;
+  }
+
   .kd-card::after {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 28px;
-    pointer-events: none;
-  }
-
-  .kd-card::before {
-    box-shadow: 0 10px 0 -4px hsl(var(--card)),
-                0 18px 22px hsl(var(--ecosystem-navy) / 0.25);
-    transform: translateZ(-2px);
-  }
-
-  .kd-card::after {
-    background: linear-gradient(145deg, 
-                               hsl(var(--ecosystem-aqua) / 0.35), 
-                               hsl(var(--ecosystem-purple) / 0.25), 
-                               hsl(var(--ecosystem-coral) / 0.25));
+    border-radius: 32px;
+    background: linear-gradient(225deg, 
+      hsl(var(--ecosystem-purple) / 0.08) 0%,
+      transparent 30%,
+      hsl(var(--ecosystem-teal) / 0.06) 70%,
+      hsl(var(--ecosystem-coral) / 0.04) 100%);
     mix-blend-mode: overlay;
-    opacity: 0.35;
-  }
-
-  .kd-card:hover {
-    transform: rotateX(6deg) rotateY(-10deg) translateZ(80px);
-    box-shadow: var(--shadow-glow);
+    opacity: 0.6;
+    pointer-events: none;
   }
 
   /* Legacy ecosystem cards for backwards compatibility */
@@ -243,69 +286,107 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-deep);
   }
 
-  /* 3D UI Components */
-  .kd-pill {
-    border: 0;
-    padding: 10px 14px;
-    border-radius: 20px;
-    background: hsl(var(--card));
-    box-shadow: 0 6px 18px hsl(var(--ecosystem-navy) / 0.18),
-                inset 0 1px 0 hsl(var(--foreground) / 0.1);
-    color: hsl(var(--foreground));
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .kd-pill:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-floating);
-  }
-
-  .kd-pill--alt {
-    background: linear-gradient(180deg, hsl(var(--card)), hsl(var(--muted)));
-    color: hsl(var(--primary));
-  }
-
+  /* Glassmorphism buttons and UI elements */
   .kd-btn {
     border: 0;
-    padding: 10px 14px;
-    border-radius: 14px;
-    background: hsl(var(--card));
-    cursor: pointer;
-    box-shadow: 0 10px 18px hsl(var(--ecosystem-navy) / 0.18),
-                inset 0 1px 0 hsl(var(--foreground) / 0.1);
+    padding: 14px 24px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, 
+      hsl(0 0% 100% / 0.15) 0%, 
+      hsl(0 0% 100% / 0.08) 100%);
+    border: 1px solid hsl(0 0% 100% / 0.2);
+    box-shadow: var(--shadow-glass-sm);
     font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color: hsl(var(--foreground));
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
   }
 
   .kd-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-floating);
+    transform: translateY(-2px) scale(1.02);
+    background: linear-gradient(145deg, 
+      hsl(0 0% 100% / 0.2) 0%, 
+      hsl(0 0% 100% / 0.12) 100%);
+    border-color: hsl(0 0% 100% / 0.3);
+    box-shadow: var(--shadow-glass-md), var(--shadow-glow-teal);
   }
 
   .kd-btn--primary {
-    background: var(--gradient-organic);
-    color: hsl(var(--primary-foreground));
-    text-shadow: 0 1px 0 hsl(var(--ecosystem-navy) / 0.15);
-    box-shadow: var(--shadow-glow);
+    background: linear-gradient(145deg, 
+      hsl(var(--ecosystem-purple) / 0.8) 0%, 
+      hsl(var(--ecosystem-purple) / 0.6) 100%);
+    border-color: hsl(var(--ecosystem-purple) / 0.4);
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-glow-purple);
+  }
+
+  .kd-btn--primary:hover {
+    background: linear-gradient(145deg, 
+      hsl(var(--ecosystem-purple) / 0.9) 0%, 
+      hsl(var(--ecosystem-purple) / 0.7) 100%);
+    box-shadow: var(--shadow-glow-purple), var(--shadow-glass-md);
+  }
+
+  /* Glass pills and chips */
+  .kd-pill {
+    border: 0;
+    padding: 10px 18px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, 
+      hsl(0 0% 100% / 0.12) 0%, 
+      hsl(0 0% 100% / 0.06) 100%);
+    border: 1px solid hsl(0 0% 100% / 0.15);
+    box-shadow: var(--shadow-glass-sm);
+    color: hsl(var(--foreground));
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+  }
+
+  .kd-pill:hover {
+    background: linear-gradient(145deg, 
+      hsl(0 0% 100% / 0.18) 0%, 
+      hsl(0 0% 100% / 0.1) 100%);
+    transform: translateY(-1px);
+  }
+
+  .kd-pill--alt {
+    background: linear-gradient(145deg, 
+      hsl(var(--ecosystem-purple) / 0.15) 0%, 
+      hsl(var(--ecosystem-purple) / 0.08) 100%);
+    border-color: hsl(var(--ecosystem-purple) / 0.25);
+    color: hsl(var(--ecosystem-purple));
   }
 
   .kd-chip {
     border: 0;
-    padding: 10px 12px;
-    border-radius: 12px;
-    background: hsl(var(--card));
-    cursor: pointer;
-    box-shadow: 0 6px 14px hsl(var(--ecosystem-navy) / 0.15),
-                inset 0 1px 0 hsl(var(--foreground) / 0.1);
+    padding: 12px 18px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, 
+      hsl(0 0% 100% / 0.1) 0%, 
+      hsl(0 0% 100% / 0.05) 100%);
+    border: 1px solid hsl(0 0% 100% / 0.12);
+    box-shadow: var(--shadow-glass-sm);
     font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: hsl(var(--foreground));
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
   }
 
   .kd-chip:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-floating);
+    background: linear-gradient(145deg, 
+      hsl(0 0% 100% / 0.15) 0%, 
+      hsl(0 0% 100% / 0.08) 100%);
+    transform: translateY(-1px) scale(1.02);
   }
 
   /* Legacy ecosystem buttons */
