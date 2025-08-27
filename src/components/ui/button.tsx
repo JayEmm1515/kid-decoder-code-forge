@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-gradient-to-br from-background to-background/90 text-foreground shadow-[var(--neuro-shadow-sm)] border border-white/10 hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
+        default: "bg-card text-foreground shadow-[var(--neuro-shadow-sm)] border border-border hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
         destructive:
-          "bg-gradient-to-br from-destructive to-destructive/90 text-destructive-foreground shadow-[var(--neuro-shadow-sm)] border border-red-500/20 hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
+          "bg-destructive text-destructive-foreground shadow-[var(--neuro-shadow-sm)] border border-destructive/20 hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
         outline:
-          "bg-gradient-to-br from-background to-background/80 text-foreground border border-border shadow-[var(--neuro-shadow-sm)] hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
+          "bg-card text-foreground border border-border shadow-[var(--neuro-shadow-sm)] hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
         secondary:
-          "bg-gradient-to-br from-secondary to-secondary/90 text-secondary-foreground shadow-[var(--neuro-shadow-sm)] border border-secondary/20 hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
-        ghost: "bg-transparent text-foreground hover:bg-gradient-to-br hover:from-accent hover:to-accent/80 hover:text-accent-foreground hover:shadow-[var(--neuro-shadow-sm)] active:shadow-[var(--neuro-shadow-inset)]",
+          "bg-secondary text-secondary-foreground shadow-[var(--neuro-shadow-sm)] border border-secondary/20 hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
+        ghost: "bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground hover:shadow-[var(--neuro-shadow-sm)] active:shadow-[var(--neuro-shadow-inset)]",
         link: "text-primary underline-offset-4 hover:underline bg-transparent shadow-none",
-        primary: "bg-gradient-to-br from-primary to-primary/90 text-primary-foreground shadow-[var(--neuro-shadow-sm)] border border-primary/20 hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
+        primary: "bg-primary text-primary-foreground shadow-[var(--neuro-shadow-sm)] border border-primary/20 hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
       },
       size: {
         default: "h-10 px-4 py-2",

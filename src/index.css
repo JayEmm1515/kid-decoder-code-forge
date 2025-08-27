@@ -7,131 +7,125 @@ All colors MUST be HSL.
 */
 
 @layer base {
-/* Glassmorphism Design System - Nature-Inspired 3D UI */
+/* Soft Neumorphic Design System - Inspired by Modern UI */
 :root {
-  /* Base colors (HSL format) */
-  --background: 245 25% 8%;
-  --foreground: 220 15% 95%;
-  --card: 0 0% 100% / 0.08;
-  --card-foreground: 220 15% 95%;
-  --popover: 0 0% 100% / 0.95;
-  --popover-foreground: 222.2 84% 4.9%;
+  /* Base colors (HSL format) - Soft pastels */
+  --background: 250 30% 92%;
+  --foreground: 230 15% 25%;
+  --card: 250 30% 92%;
+  --card-foreground: 230 15% 25%;
+  --popover: 250 30% 95%;
+  --popover-foreground: 230 15% 25%;
   
-  --primary: 254 70% 70%;
-  --primary-foreground: 210 40% 98%;
+  --primary: 240 60% 70%;
+  --primary-foreground: 0 0% 100%;
   
-  --secondary: 174 70% 50%;
-  --secondary-foreground: 222.2 84% 4.9%;
+  --secondary: 320 40% 80%;
+  --secondary-foreground: 230 15% 25%;
   
-  --muted: 210 40% 96% / 0.1;
-  --muted-foreground: 215.4 16.3% 70%;
+  --muted: 250 20% 85%;
+  --muted-foreground: 230 10% 45%;
   
-  --accent: 12 85% 68%;
-  --accent-foreground: 222.2 84% 4.9%;
+  --accent: 280 50% 75%;
+  --accent-foreground: 230 15% 25%;
   
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive: 0 70% 65%;
+  --destructive-foreground: 0 0% 100%;
   
-  --border: 0 0% 100% / 0.12;
-  --input: 0 0% 100% / 0.08;
-  --ring: 254 70% 70%;
+  --border: 250 20% 80%;
+  --input: 250 30% 90%;
+  --ring: 240 60% 70%;
   
   --radius: 1.5rem;
 
-  /* Enhanced ecosystem color palette */
-  --ecosystem-navy: 245 45% 12%;
-  --ecosystem-teal: 174 70% 55%;
-  --ecosystem-purple: 254 70% 70%;
-  --ecosystem-coral: 12 85% 68%;
-  --ecosystem-aqua: 185 85% 78%;
-  --ecosystem-sage: 140 25% 60%;
-  --ecosystem-sunset: 25 95% 70%;
-  --ecosystem-lavender: 270 60% 80%;
+  /* Soft pastel color palette */
+  --ecosystem-navy: 230 25% 20%;
+  --ecosystem-teal: 180 50% 70%;
+  --ecosystem-purple: 240 60% 70%;
+  --ecosystem-coral: 15 70% 75%;
+  --ecosystem-aqua: 185 60% 80%;
+  --ecosystem-sage: 140 30% 70%;
+  --ecosystem-sunset: 25 80% 75%;
+  --ecosystem-lavender: 270 40% 80%;
+  --ecosystem-rose: 320 40% 80%;
+  --ecosystem-peach: 30 60% 85%;
 
-  /* Glass gradients with transparency */
-  --gradient-glass-primary: linear-gradient(135deg, hsl(var(--ecosystem-purple) / 0.2), hsl(var(--ecosystem-coral) / 0.15));
-  --gradient-glass-secondary: linear-gradient(135deg, hsl(var(--ecosystem-teal) / 0.2), hsl(var(--ecosystem-aqua) / 0.15));
-  --gradient-glass-accent: linear-gradient(135deg, hsl(var(--ecosystem-sunset) / 0.2), hsl(var(--ecosystem-lavender) / 0.15));
-  --gradient-organic: linear-gradient(135deg, hsl(var(--ecosystem-teal)), hsl(var(--ecosystem-aqua)));
-  --gradient-sunset: linear-gradient(135deg, hsl(var(--ecosystem-coral)), hsl(var(--ecosystem-purple)));
-  --gradient-depth: linear-gradient(180deg, hsl(var(--ecosystem-purple)), hsl(254 70% 60%));
+  /* Soft gradient backgrounds */
+  --gradient-glass-primary: linear-gradient(135deg, hsl(240 60% 85% / 0.7), hsl(280 50% 85% / 0.5));
+  --gradient-glass-secondary: linear-gradient(135deg, hsl(180 50% 85% / 0.7), hsl(200 60% 85% / 0.5));
+  --gradient-glass-accent: linear-gradient(135deg, hsl(320 40% 85% / 0.7), hsl(280 50% 85% / 0.5));
+  --gradient-organic: linear-gradient(135deg, hsl(180 50% 70%), hsl(200 60% 75%));
+  --gradient-sunset: linear-gradient(135deg, hsl(15 70% 75%), hsl(25 80% 75%));
+  --gradient-depth: linear-gradient(180deg, hsl(240 60% 70%), hsl(260 50% 65%));
   
-  /* Enhanced glass shadows */
-  --shadow-glass-sm: 0 4px 16px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-glass-md: 0 8px 32px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08);
-  --shadow-glass-lg: 0 16px 64px rgba(0, 0, 0, 0.15), 0 8px 32px rgba(0, 0, 0, 0.1);
-  --shadow-glow-purple: 0 8px 32px hsl(var(--ecosystem-purple) / 0.3);
-  --shadow-glow-teal: 0 8px 32px hsl(var(--ecosystem-teal) / 0.3);
-  --shadow-glow-coral: 0 8px 32px hsl(var(--ecosystem-coral) / 0.3);
+  /* Main background gradient */
+  --gradient-main-bg: linear-gradient(135deg, 
+    hsl(250 40% 95%) 0%, 
+    hsl(270 35% 90%) 25%, 
+    hsl(280 30% 88%) 50%, 
+    hsl(320 25% 90%) 75%, 
+    hsl(340 30% 92%) 100%);
   
-  /* Neumorphic shadows */
-  --neuro-shadow-light: 12px 12px 24px hsl(var(--background) / 0.4), -12px -12px 24px hsl(var(--background) / 0.15);
-  --neuro-shadow-sm: 6px 6px 12px hsl(var(--background) / 0.3), -6px -6px 12px hsl(var(--background) / 0.12);
-  --neuro-shadow-inset: inset 8px 8px 16px hsl(var(--background) / 0.3), inset -8px -8px 16px hsl(var(--background) / 0.12);
-  --neuro-shadow-active: inset 12px 12px 24px hsl(var(--background) / 0.4), inset -12px -12px 24px hsl(var(--background) / 0.15);
+  /* Enhanced neumorphic shadows - much more pronounced */
+  --neuro-shadow-light: 20px 20px 40px hsl(250 30% 80%), -20px -20px 40px hsl(0 0% 100% / 0.8);
+  --neuro-shadow-sm: 8px 8px 16px hsl(250 30% 84%), -8px -8px 16px hsl(0 0% 100% / 0.7);
+  --neuro-shadow-inset: inset 12px 12px 24px hsl(250 30% 82%), inset -12px -12px 24px hsl(0 0% 100% / 0.6);
+  --neuro-shadow-active: inset 20px 20px 40px hsl(250 30% 80%), inset -20px -20px 40px hsl(0 0% 100% / 0.8);
+  --neuro-shadow-deep: 25px 25px 50px hsl(250 30% 75%), -25px -25px 50px hsl(0 0% 100% / 0.9);
     
-    /* Textures and patterns */
-    --texture-organic: radial-gradient(circle at 25% 25%, hsl(var(--ecosystem-teal) / 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, hsl(var(--ecosystem-coral) / 0.1) 0%, transparent 50%);
-    --texture-depth: conic-gradient(from 45deg at 50% 50%, hsl(var(--ecosystem-navy) / 0.05) 0deg, transparent 90deg, hsl(var(--ecosystem-purple) / 0.05) 180deg, transparent 270deg);
+  /* Soft textures and patterns */
+  --texture-organic: radial-gradient(circle at 25% 25%, hsl(180 50% 85% / 0.3) 0%, transparent 50%), 
+                     radial-gradient(circle at 75% 75%, hsl(280 50% 85% / 0.3) 0%, transparent 50%);
+  --texture-depth: conic-gradient(from 45deg at 50% 50%, hsl(250 30% 88% / 0.5) 0deg, transparent 90deg, 
+                   hsl(270 40% 88% / 0.5) 180deg, transparent 270deg);
     
-    /* Layered transforms */
-    --transform-float: perspective(1000px) rotateX(2deg) translateZ(10px);
-    --transform-grow: perspective(1000px) rotateX(-1deg) scale(1.02) translateZ(20px);
-    --transform-organic: perspective(1000px) rotateY(1deg) rotateX(1deg) translateZ(5px);
+  /* Layered transforms */
+  --transform-float: perspective(1000px) rotateX(1deg) translateZ(5px);
+  --transform-grow: perspective(1000px) rotateX(-0.5deg) scale(1.01) translateZ(10px);
+  --transform-organic: perspective(1000px) rotateY(0.5deg) rotateX(0.5deg) translateZ(3px);
 
-    --radius: 0.5rem;
+  --sidebar-background: 250 30% 95%;
+  --sidebar-foreground: 230 15% 25%;
+  --sidebar-primary: 240 60% 70%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 280 50% 75%;
+  --sidebar-accent-foreground: 230 15% 25%;
+  --sidebar-border: 250 20% 85%;
+  --sidebar-ring: 240 60% 70%;
+}
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: var(--ecosystem-navy);
-    --foreground: 210 40% 98%;
-    --card: hsl(var(--ecosystem-navy)) / 0.8;
-    --card-foreground: 210 40% 98%;
-    --popover: var(--ecosystem-navy);
-    --popover-foreground: 210 40% 98%;
-    --primary: var(--ecosystem-teal);
-    --primary-foreground: var(--ecosystem-navy);
-    --secondary: var(--ecosystem-purple);
-    --secondary-foreground: 210 40% 98%;
-    --muted: 220 30% 25%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: var(--ecosystem-coral);
-    --accent-foreground: var(--ecosystem-navy);
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: hsl(var(--ecosystem-teal)) / 0.2;
-    --input: 220 30% 25%;
-    --ring: var(--ecosystem-aqua);
-    --chart-1: var(--ecosystem-teal);
-    --chart-2: var(--ecosystem-coral);
-    --chart-3: var(--ecosystem-aqua);
-    --chart-4: var(--ecosystem-purple);
-    --chart-5: var(--ecosystem-sage);
-    --sidebar-background: var(--ecosystem-navy);
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: var(--ecosystem-teal);
-    --sidebar-primary-foreground: var(--ecosystem-navy);
-    --sidebar-accent: var(--ecosystem-coral);
-    --sidebar-accent-foreground: var(--ecosystem-navy);
-    --sidebar-border: hsl(var(--ecosystem-teal)) / 0.2;
-    --sidebar-ring: var(--ecosystem-aqua);
-  }
+.dark {
+  --background: 230 25% 8%;
+  --foreground: 250 15% 90%;
+  --card: 230 25% 10%;
+  --card-foreground: 250 15% 90%;
+  --popover: 230 25% 8%;
+  --popover-foreground: 250 15% 90%;
+  --primary: 240 60% 70%;
+  --primary-foreground: 230 25% 8%;
+  --secondary: 320 40% 60%;
+  --secondary-foreground: 250 15% 90%;
+  --muted: 230 20% 15%;
+  --muted-foreground: 250 10% 65%;
+  --accent: 280 50% 65%;
+  --accent-foreground: 250 15% 90%;
+  --destructive: 0 70% 65%;
+  --destructive-foreground: 250 15% 90%;
+  --border: 230 20% 20%;
+  --input: 230 25% 12%;
+  --ring: 240 60% 70%;
+  --neuro-shadow-light: 20px 20px 40px hsl(230 25% 5%), -20px -20px 40px hsl(230 25% 15%);
+  --neuro-shadow-sm: 8px 8px 16px hsl(230 25% 6%), -8px -8px 16px hsl(230 25% 12%);
+  --neuro-shadow-inset: inset 12px 12px 24px hsl(230 25% 5%), inset -12px -12px 24px hsl(230 25% 15%);
+  --neuro-shadow-active: inset 20px 20px 40px hsl(230 25% 3%), inset -20px -20px 40px hsl(230 25% 18%);
+  --neuro-shadow-deep: 25px 25px 50px hsl(230 25% 3%), -25px -25px 50px hsl(230 25% 20%);
+  --gradient-main-bg: linear-gradient(135deg, 
+    hsl(230 25% 8%) 0%, 
+    hsl(240 20% 10%) 25%, 
+    hsl(250 15% 8%) 50%, 
+    hsl(260 20% 10%) 75%, 
+    hsl(270 25% 12%) 100%);
+}
 }
 
 @layer base {
@@ -140,14 +134,26 @@ All colors MUST be HSL.
   }
 
   body {
-    background: 
-      radial-gradient(circle at 25% 25%, hsl(var(--ecosystem-purple) / 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsl(var(--ecosystem-coral) / 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 50% 100%, hsl(var(--ecosystem-teal) / 0.1) 0%, transparent 60%),
-      linear-gradient(135deg, hsl(245 50% 8%) 0%, hsl(245 35% 4%) 50%, hsl(245 25% 2%) 100%);
+    background: var(--gradient-main-bg);
     color: hsl(var(--foreground));
     min-height: 100vh;
     overflow-x: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 30%, hsl(240 60% 85% / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(280 50% 85% / 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(320 40% 85% / 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
   }
 
   /* Glassmorphism 3D System */
@@ -192,28 +198,20 @@ All colors MUST be HSL.
 
   .kd-card {
     position: relative;
-    border-radius: 32px;
-    padding: 28px;
-    margin: 20px 0;
-    background: linear-gradient(145deg, 
-      hsl(0 0% 100% / 0.12) 0%, 
-      hsl(0 0% 100% / 0.06) 50%,
-      hsl(0 0% 100% / 0.08) 100%);
-    border: 1px solid hsl(0 0% 100% / 0.18);
-    box-shadow: var(--shadow-glass-lg);
+    border-radius: 24px;
+    padding: 24px;
+    margin: 16px 0;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--neuro-shadow-sm);
     transform-style: preserve-3d;
-    backdrop-filter: blur(24px) saturate(1.2);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     overflow: hidden;
   }
 
   .kd-card:hover {
-    background: linear-gradient(145deg, 
-      hsl(0 0% 100% / 0.15) 0%, 
-      hsl(0 0% 100% / 0.08) 50%,
-      hsl(0 0% 100% / 0.12) 100%);
-    border-color: hsl(0 0% 100% / 0.25);
-    box-shadow: var(--shadow-glass-lg), var(--shadow-glow-purple);
+    transform: translateY(-2px);
+    box-shadow: var(--neuro-shadow-light);
   }
 
   /* Glassmorphism depth layers with subtle 3D */
