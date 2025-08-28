@@ -2,96 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Exact match design system from uploaded image - Soft pastel glassmorphic */
 
 @layer base {
-/* Soft Neumorphic Design System - Inspired by Modern UI */
 :root {
-  /* Base colors (HSL format) - Soft pastels */
-  --background: 250 30% 92%;
-  --foreground: 230 15% 25%;
-  --card: 250 30% 92%;
-  --card-foreground: 230 15% 25%;
-  --popover: 250 30% 95%;
-  --popover-foreground: 230 15% 25%;
+  /* Exact color palette from the uploaded image */
+  --background: 270 25% 95%;
+  --foreground: 230 45% 25%;
+  --card: 270 20% 98%;
+  --card-foreground: 230 45% 25%;
   
-  --primary: 240 60% 70%;
-  --primary-foreground: 0 0% 100%;
+  /* Soft pastel colors matching the image */
+  --dreamy-purple: 265 35% 85%;
+  --dreamy-pink: 320 30% 88%;
+  --dreamy-blue: 220 40% 85%;
+  --dreamy-peach: 25 45% 85%;
+  --dreamy-lavender: 280 25% 90%;
+  --dreamy-mint: 160 25% 85%;
+  --dreamy-coral: 15 40% 80%;
+  --dreamy-teal: 180 35% 75%;
   
-  --secondary: 320 40% 80%;
-  --secondary-foreground: 230 15% 25%;
-  
-  --muted: 250 20% 85%;
-  --muted-foreground: 230 10% 45%;
-  
-  --accent: 280 50% 75%;
-  --accent-foreground: 230 15% 25%;
-  
-  --destructive: 0 70% 65%;
-  --destructive-foreground: 0 0% 100%;
-  
-  --border: 250 20% 80%;
-  --input: 250 30% 90%;
-  --ring: 240 60% 70%;
-  
-  --radius: 1.5rem;
-
-  /* Soft pastel color palette */
-  --ecosystem-navy: 230 25% 20%;
-  --ecosystem-teal: 180 50% 70%;
-  --ecosystem-purple: 240 60% 70%;
-  --ecosystem-coral: 15 70% 75%;
-  --ecosystem-aqua: 185 60% 80%;
-  --ecosystem-sage: 140 30% 70%;
-  --ecosystem-sunset: 25 80% 75%;
-  --ecosystem-lavender: 270 40% 80%;
-  --ecosystem-rose: 320 40% 80%;
-  --ecosystem-peach: 30 60% 85%;
-
-  /* Soft gradient backgrounds */
-  --gradient-glass-primary: linear-gradient(135deg, hsl(240 60% 85% / 0.7), hsl(280 50% 85% / 0.5));
-  --gradient-glass-secondary: linear-gradient(135deg, hsl(180 50% 85% / 0.7), hsl(200 60% 85% / 0.5));
-  --gradient-glass-accent: linear-gradient(135deg, hsl(320 40% 85% / 0.7), hsl(280 50% 85% / 0.5));
-  --gradient-organic: linear-gradient(135deg, hsl(180 50% 70%), hsl(200 60% 75%));
-  --gradient-sunset: linear-gradient(135deg, hsl(15 70% 75%), hsl(25 80% 75%));
-  --gradient-depth: linear-gradient(180deg, hsl(240 60% 70%), hsl(260 50% 65%));
-  
-  /* Main background gradient */
-  --gradient-main-bg: linear-gradient(135deg, 
-    hsl(250 40% 95%) 0%, 
-    hsl(270 35% 90%) 25%, 
-    hsl(280 30% 88%) 50%, 
-    hsl(320 25% 90%) 75%, 
+  /* Background gradient matching the uploaded image */
+  --main-gradient: linear-gradient(180deg,
+    hsl(265 30% 92%) 0%,
+    hsl(280 25% 90%) 25%,
+    hsl(300 30% 88%) 50%,
+    hsl(320 25% 90%) 75%,
     hsl(340 30% 92%) 100%);
   
-  /* Enhanced neumorphic shadows - much more pronounced */
-  --neuro-shadow-light: 20px 20px 40px hsl(250 30% 80%), -20px -20px 40px hsl(0 0% 100% / 0.8);
-  --neuro-shadow-sm: 8px 8px 16px hsl(250 30% 84%), -8px -8px 16px hsl(0 0% 100% / 0.7);
-  --neuro-shadow-inset: inset 12px 12px 24px hsl(250 30% 82%), inset -12px -12px 24px hsl(0 0% 100% / 0.6);
-  --neuro-shadow-active: inset 20px 20px 40px hsl(250 30% 80%), inset -20px -20px 40px hsl(0 0% 100% / 0.8);
-  --neuro-shadow-deep: 25px 25px 50px hsl(250 30% 75%), -25px -25px 50px hsl(0 0% 100% / 0.9);
-    
-  /* Soft textures and patterns */
-  --texture-organic: radial-gradient(circle at 25% 25%, hsl(180 50% 85% / 0.3) 0%, transparent 50%), 
-                     radial-gradient(circle at 75% 75%, hsl(280 50% 85% / 0.3) 0%, transparent 50%);
-  --texture-depth: conic-gradient(from 45deg at 50% 50%, hsl(250 30% 88% / 0.5) 0deg, transparent 90deg, 
-                   hsl(270 40% 88% / 0.5) 180deg, transparent 270deg);
-    
-  /* Layered transforms */
-  --transform-float: perspective(1000px) rotateX(1deg) translateZ(5px);
-  --transform-grow: perspective(1000px) rotateX(-0.5deg) scale(1.01) translateZ(10px);
-  --transform-organic: perspective(1000px) rotateY(0.5deg) rotateX(0.5deg) translateZ(3px);
-
-  --sidebar-background: 250 30% 95%;
-  --sidebar-foreground: 230 15% 25%;
-  --sidebar-primary: 240 60% 70%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 280 50% 75%;
-  --sidebar-accent-foreground: 230 15% 25%;
-  --sidebar-border: 250 20% 85%;
-  --sidebar-ring: 240 60% 70%;
+  /* Glassmorphic card backgrounds */
+  --glass-card: rgba(255, 255, 255, 0.25);
+  --glass-card-border: rgba(255, 255, 255, 0.3);
+  --glass-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  
+  /* Button glassmorphic styles */
+  --glass-button: rgba(255, 255, 255, 0.2);
+  --glass-button-border: rgba(255, 255, 255, 0.25);
+  --glass-button-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  
+  /* Decorative gradients for elements */
+  --sunset-gradient: linear-gradient(135deg, hsl(35 70% 70%) 0%, hsl(25 80% 75%) 100%);
+  --mountain-gradient: linear-gradient(135deg, hsl(220 40% 75%) 0%, hsl(240 30% 80%) 50%, hsl(260 25% 85%) 100%);
+  --toggle-gradient: linear-gradient(135deg, hsl(180 50% 65%) 0%, hsl(200 45% 70%) 100%);
 }
 
 .dark {
@@ -134,131 +86,126 @@ All colors MUST be HSL.
   }
 
   body {
-    background: var(--gradient-main-bg);
+    background: var(--main-gradient);
     color: hsl(var(--foreground));
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 30%, hsl(240 60% 85% / 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(280 50% 85% / 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, hsl(320 40% 85% / 0.1) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: -1;
-  }
-
-  /* Glassmorphism 3D System */
-  .kd-app {
+  /* App container matching the uploaded image */
+  .dreamy-app {
     position: relative;
     min-height: 100vh;
     padding: 2rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
-  .kd-bg::before,
-  .kd-bg::after {
-    content: "";
-    position: absolute;
-    inset: -30%;
-    background: 
-      radial-gradient(800px 400px at 20% 30%, hsl(var(--ecosystem-teal) / 0.08), transparent 70%),
-      radial-gradient(600px 600px at 80% 10%, hsl(var(--ecosystem-purple) / 0.12), transparent 70%),
-      radial-gradient(500px 700px at 60% 90%, hsl(var(--ecosystem-coral) / 0.06), transparent 80%),
-      radial-gradient(400px 300px at 40% 50%, hsl(var(--ecosystem-aqua) / 0.05), transparent 70%);
-    filter: blur(60px);
-    animation: ambient-flow 20s ease-in-out infinite;
-  }
-
-  @keyframes ambient-flow {
-    0%, 100% { transform: translateX(0) translateY(0) scale(1); }
-    25% { transform: translateX(-5px) translateY(-10px) scale(1.02); }
-    50% { transform: translateX(10px) translateY(5px) scale(0.98); }
-    75% { transform: translateX(-8px) translateY(8px) scale(1.01); }
-  }
-
-  .kd-stack {
+  .dreamy-container {
     position: relative;
-    width: min(420px, 90vw);
-    perspective: 2000px;
-    padding: 1rem 0;
+    width: min(380px, 90vw);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  .kd-card {
+  /* Glassmorphic cards matching the uploaded image exactly */
+  .dreamy-card {
     position: relative;
+    background: var(--glass-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-card-border);
     border-radius: 24px;
+    box-shadow: var(--glass-card-shadow);
     padding: 24px;
-    margin: 16px 0;
-    background: hsl(var(--card));
-    border: 1px solid hsl(var(--border));
-    box-shadow: var(--neuro-shadow-sm);
-    transform-style: preserve-3d;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s ease;
+  }
+
+  .dreamy-card-hero {
+    padding: 32px 24px;
+    position: relative;
     overflow: hidden;
+    min-height: 200px;
   }
 
-  .kd-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--neuro-shadow-light);
+  .dreamy-card-small {
+    padding: 20px;
+    border-radius: 20px;
   }
 
-  /* Glassmorphism depth layers with subtle 3D */
-  .kd-depth-3 {
-    transform: translateY(-8px) rotateX(2deg) scale(1.02);
-    background: var(--gradient-glass-primary);
-    border-color: hsl(var(--ecosystem-purple) / 0.3);
+  .dreamy-card-tiny {
+    padding: 16px;
+    border-radius: 16px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .kd-depth-2 {
-    transform: translateY(-4px) rotateX(1deg) scale(1.01);
-    background: var(--gradient-glass-secondary);
-    border-color: hsl(var(--ecosystem-teal) / 0.3);
+  /* Glassmorphic buttons matching the uploaded image */
+  .dreamy-button {
+    background: var(--glass-button);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-button-border);
+    border-radius: 16px;
+    padding: 12px 24px;
+    color: hsl(var(--foreground));
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--glass-button-shadow);
   }
 
-  .kd-depth-1 {
-    transform: translateY(-2px) rotateX(0.5deg);
-    background: var(--gradient-glass-accent);
-    border-color: hsl(var(--ecosystem-coral) / 0.3);
+  .dreamy-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
   }
 
-  /* Advanced glass effects */
-  .kd-card::before {
-    content: "";
+  /* Decorative elements matching the uploaded image */
+  .dreamy-sun {
     position: absolute;
-    inset: 0;
-    border-radius: 32px;
-    background: linear-gradient(145deg, 
-      hsl(0 0% 100% / 0.1) 0%, 
-      transparent 50%,
-      hsl(0 0% 0% / 0.02) 100%);
-    pointer-events: none;
+    top: 30px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--sunset-gradient);
+    box-shadow: 0 0 30px rgba(255, 200, 100, 0.4);
   }
 
-  .kd-card::after {
-    content: "";
+  .dreamy-mountains {
     position: absolute;
-    inset: 0;
-    border-radius: 32px;
-    background: linear-gradient(225deg, 
-      hsl(var(--ecosystem-purple) / 0.08) 0%,
-      transparent 30%,
-      hsl(var(--ecosystem-teal) / 0.06) 70%,
-      hsl(var(--ecosystem-coral) / 0.04) 100%);
-    mix-blend-mode: overlay;
-    opacity: 0.6;
-    pointer-events: none;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    background: var(--mountain-gradient);
+    clip-path: polygon(0 100%, 20% 40%, 40% 60%, 60% 30%, 80% 50%, 100% 20%, 100% 100%);
+  }
+
+  .dreamy-toggle {
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background: var(--toggle-gradient);
+    position: relative;
+    cursor: pointer;
+  }
+
+  .dreamy-toggle::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   /* Legacy ecosystem cards for backwards compatibility */
