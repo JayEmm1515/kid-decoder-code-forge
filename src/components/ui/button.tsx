@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-card text-foreground shadow-[var(--neuro-shadow-sm)] border border-border hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
+        default: "bg-[var(--neuro-button)] text-[hsl(var(--foreground))] shadow-[var(--neuro-button-shadow)] border-none hover:bg-[var(--neuro-button-light)] hover:shadow-[15px_15px_30px_hsl(250_40%_75%),_-15px_-15px_30px_hsl(250_40%_97%)] active:shadow-[var(--neuro-button-pressed)]",
         destructive:
-          "bg-destructive text-destructive-foreground shadow-[var(--neuro-shadow-sm)] border border-destructive/20 hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
+          "bg-destructive text-destructive-foreground shadow-[var(--neuro-button-shadow)] border-none hover:shadow-[15px_15px_30px_hsl(0_70%_55%),_-15px_-15px_30px_hsl(0_70%_75%)] active:shadow-[var(--neuro-button-pressed)]",
         outline:
-          "bg-card text-foreground border border-border shadow-[var(--neuro-shadow-sm)] hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
+          "bg-[var(--neuro-button)] text-[hsl(var(--foreground))] border border-[hsl(var(--foreground))]/20 shadow-[var(--neuro-button-shadow)] hover:shadow-[15px_15px_30px_hsl(250_40%_75%),_-15px_-15px_30px_hsl(250_40%_97%)] active:shadow-[var(--neuro-button-pressed)]",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-[var(--neuro-shadow-sm)] border border-secondary/20 hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
-        ghost: "bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground hover:shadow-[var(--neuro-shadow-sm)] active:shadow-[var(--neuro-shadow-inset)]",
-        link: "text-primary underline-offset-4 hover:underline bg-transparent shadow-none",
-        primary: "bg-primary text-primary-foreground shadow-[var(--neuro-shadow-sm)] border border-primary/20 hover:shadow-[var(--neuro-shadow-light)] active:shadow-[var(--neuro-shadow-inset)]",
+          "bg-[hsl(var(--dreamy-purple))] text-white shadow-[12px_12px_24px_hsl(260_50%_60%),_-12px_-12px_24px_hsl(260_50%_80%)] border-none hover:shadow-[15px_15px_30px_hsl(260_50%_55%),_-15px_-15px_30px_hsl(260_50%_85%)] active:shadow-[inset_6px_6px_12px_hsl(260_50%_60%),_inset_-6px_-6px_12px_hsl(260_50%_75%)]",
+        ghost: "bg-transparent text-[hsl(var(--foreground))] hover:bg-[var(--neuro-button)] hover:text-[hsl(var(--foreground))] hover:shadow-[var(--neuro-button-shadow)] active:shadow-[var(--neuro-button-pressed)]",
+        link: "text-[hsl(var(--dreamy-purple))] underline-offset-4 hover:underline bg-transparent shadow-none",
+        primary: "bg-[hsl(var(--dreamy-teal))] text-white shadow-[12px_12px_24px_hsl(180_55%_50%),_-12px_-12px_24px_hsl(180_55%_80%)] border-none hover:shadow-[15px_15px_30px_hsl(180_55%_45%),_-15px_-15px_30px_hsl(180_55%_85%)] active:shadow-[inset_6px_6px_12px_hsl(180_55%_50%),_inset_-6px_-6px_12px_hsl(180_55%_75%)]",
       },
       size: {
         default: "h-10 px-4 py-2",

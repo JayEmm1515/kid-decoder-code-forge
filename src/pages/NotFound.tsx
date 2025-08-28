@@ -1,24 +1,33 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
+    <div className="dreamy-app">
+      <div className="dreamy-container">
+        <div className="dreamy-card dreamy-card-hero text-center">
+          <div className="dreamy-sun"></div>
+          <div className="dreamy-mountains"></div>
+          <h1 className="text-6xl font-bold text-[hsl(var(--foreground))] mb-4 relative z-10">404</h1>
+          <p className="text-xl text-[hsl(var(--foreground))] opacity-80 mb-6 relative z-10">Oops! Page not found</p>
+          <p className="text-sm text-[hsl(var(--foreground))] opacity-70 mb-8 relative z-10">
+            The page you're looking for doesn't exist
+          </p>
+          <Link to="/">
+            <button className="dreamy-button relative z-10">
+              Return to Home
+            </button>
+          </Link>
+        </div>
+        
+        <div className="dreamy-card text-center">
+          <div className="text-4xl mb-4">🏠</div>
+          <h2 className="text-lg font-bold text-[hsl(var(--foreground))] mb-2">
+            Lost your way?
+          </h2>
+          <p className="text-sm text-[hsl(var(--foreground))] opacity-70">
+            Let's get you back to your emotional wellness toolkit
+          </p>
+        </div>
       </div>
     </div>
   );

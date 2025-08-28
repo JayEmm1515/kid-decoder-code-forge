@@ -36,64 +36,58 @@ export default function EmotionalToolbox() {
   const allPlaced = insideToolbox.length + outsideToolbox.length === emotions.length;
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Organic Background Shapes */}
-      <div className="organic-shape w-80 h-80 top-10 -right-10 floating-element"></div>
-      <div className="organic-shape w-60 h-60 bottom-20 -left-10 floating-element" style={{ animationDelay: '3s' }}></div>
+    <div className="dreamy-container pt-24 pb-12">
       
-      <div className="relative z-10 p-6 max-w-5xl mx-auto">
+      <div className="relative z-10">
         {/* HEADER */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold gradient-text mb-4 floating-element">🧰 My Emotional Toolbox</h2>
-          <div className="w-20 h-1 bg-gradient-organic mx-auto mb-6 rounded-full"></div>
-          <p className="text-foreground/80 text-lg leading-relaxed max-w-3xl mx-auto">
+        <div className="dreamy-card dreamy-card-hero text-center mb-8">
+          <h2 className="text-3xl font-bold text-[hsl(var(--foreground))] mb-4">🧰 My Emotional Toolbox</h2>
+          <p className="text-[hsl(var(--foreground))] opacity-80 text-lg leading-relaxed">
             Drag each emotion into the toolbox if your caregiver helped you feel safe with it — 
             or outside the toolbox if it felt unsupported when you were growing up.
           </p>
         </div>
 
         {/* DRAGGABLE EMOTIONS */}
-        <div className="flex gap-4 flex-wrap justify-center mb-12">
+        <div className="flex gap-4 flex-wrap justify-center mb-8">
           {emotions.map((emotion, index) => (
             <div
               key={emotion.id}
               draggable
               onDragStart={() => setDragging(emotion)}
-              className="ecosystem-card cursor-grab active:cursor-grabbing p-6 select-none floating-element min-w-[140px] text-center"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="dreamy-card dreamy-card-small cursor-grab active:cursor-grabbing select-none min-w-[140px] text-center"
             >
               <div className="text-3xl mb-2">{emotion.icon}</div>
-              <div className="font-semibold text-foreground">{emotion.label}</div>
+              <div className="font-semibold text-[hsl(var(--foreground))]">{emotion.label}</div>
             </div>
           ))}
         </div>
 
         {/* DROP ZONES */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {/* Inside Toolbox */}
           <div
             onDragOver={(e) => e.preventDefault()}
             onDrop={() => handleDrop("inside", dragging)}
-            className="ecosystem-card min-h-[250px] p-8 border-2 border-dashed border-ecosystem-teal/50 bg-ecosystem-teal/5 hover:bg-ecosystem-teal/10 transition-all duration-300"
+            className="dreamy-card min-h-[250px] border-2 border-dashed border-[hsl(var(--dreamy-teal))]/50 bg-[hsl(var(--dreamy-teal))]/10 hover:bg-[hsl(var(--dreamy-teal))]/20 transition-all duration-300"
           >
-            <h3 className="text-2xl font-bold text-ecosystem-teal mb-6 flex items-center gap-3">
+            <h3 className="text-2xl font-bold text-[hsl(var(--dreamy-teal))] mb-6 flex items-center gap-3">
               <span className="text-3xl">🧰</span> Inside Toolbox
             </h3>
             {insideToolbox.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-4xl mb-4 opacity-50">🌱</div>
-                <p className="text-foreground/60">Drop emotions here to grow your toolkit</p>
+                <p className="text-[hsl(var(--foreground))] opacity-60">Drop emotions here to grow your toolkit</p>
               </div>
             )}
             <div className="flex flex-wrap gap-3">
               {insideToolbox.map((emotion, index) => (
                 <div
                   key={emotion.id}
-                  className="ecosystem-card p-4 bg-ecosystem-teal/20 border-ecosystem-teal/40 flex items-center gap-3 floating-element"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="dreamy-card dreamy-card-tiny bg-[hsl(var(--dreamy-teal))]/20"
                 >
                   <span className="text-xl">{emotion.icon}</span>
-                  <span className="font-medium text-ecosystem-teal">{emotion.label}</span>
+                  <span className="font-medium text-[hsl(var(--dreamy-teal))]">{emotion.label}</span>
                 </div>
               ))}
             </div>
@@ -103,26 +97,25 @@ export default function EmotionalToolbox() {
           <div
             onDragOver={(e) => e.preventDefault()}
             onDrop={() => handleDrop("outside", dragging)}
-            className="ecosystem-card min-h-[250px] p-8 border-2 border-dashed border-ecosystem-coral/50 bg-ecosystem-coral/5 hover:bg-ecosystem-coral/10 transition-all duration-300"
+            className="dreamy-card min-h-[250px] border-2 border-dashed border-[hsl(var(--dreamy-coral))]/50 bg-[hsl(var(--dreamy-coral))]/10 hover:bg-[hsl(var(--dreamy-coral))]/20 transition-all duration-300"
           >
-            <h3 className="text-2xl font-bold text-ecosystem-coral mb-6 flex items-center gap-3">
+            <h3 className="text-2xl font-bold text-[hsl(var(--dreamy-coral))] mb-6 flex items-center gap-3">
               <span className="text-3xl">🚪</span> Outside Toolbox
             </h3>
             {outsideToolbox.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-4xl mb-4 opacity-50">🍃</div>
-                <p className="text-foreground/60">Drop emotions that need nurturing</p>
+                <p className="text-[hsl(var(--foreground))] opacity-60">Drop emotions that need nurturing</p>
               </div>
             )}
             <div className="flex flex-wrap gap-3">
               {outsideToolbox.map((emotion, index) => (
                 <div
                   key={emotion.id}
-                  className="ecosystem-card p-4 bg-ecosystem-coral/20 border-ecosystem-coral/40 flex items-center gap-3 floating-element"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="dreamy-card dreamy-card-tiny bg-[hsl(var(--dreamy-coral))]/20"
                 >
                   <span className="text-xl">{emotion.icon}</span>
-                  <span className="font-medium text-ecosystem-coral">{emotion.label}</span>
+                  <span className="font-medium text-[hsl(var(--dreamy-coral))]">{emotion.label}</span>
                 </div>
               ))}
             </div>
@@ -131,27 +124,27 @@ export default function EmotionalToolbox() {
 
         {/* SUMMARY */}
         {allPlaced && (
-          <div className="mt-12 ecosystem-card p-8 bg-ecosystem-purple/10 border-ecosystem-purple/30 floating-element">
-            <h3 className="text-2xl font-bold text-ecosystem-purple mb-6 flex items-center gap-3">
+          <div className="mt-8 dreamy-card bg-[hsl(var(--dreamy-purple))]/10">
+            <h3 className="text-2xl font-bold text-[hsl(var(--dreamy-purple))] mb-6 flex items-center gap-3">
               <span className="text-3xl">✨</span> Reflection & Growth
             </h3>
-            <div className="space-y-6">
-              <div className="ecosystem-card p-6 bg-ecosystem-teal/10 border-ecosystem-teal/20">
-                <p className="text-ecosystem-teal text-lg">
+            <div className="space-y-4">
+              <div className="dreamy-card dreamy-card-small bg-[hsl(var(--dreamy-teal))]/10">
+                <p className="text-[hsl(var(--dreamy-teal))] text-lg">
                   <span className="font-bold text-xl">🌟 Your Emotional Strengths:</span><br />
                   <span className="font-medium text-lg">{insideToolbox.map((e) => e.label).join(", ")}</span>
                 </p>
               </div>
-              <div className="ecosystem-card p-6 bg-ecosystem-coral/10 border-ecosystem-coral/20">
-                <p className="text-ecosystem-coral text-lg">
+              <div className="dreamy-card dreamy-card-small bg-[hsl(var(--dreamy-coral))]/10">
+                <p className="text-[hsl(var(--dreamy-coral))] text-lg">
                   <span className="font-bold text-xl">🌱 Growth Opportunities:</span><br />
                   <span className="font-medium text-lg">{outsideToolbox.map((e) => e.label).join(", ")}</span>
                 </p>
               </div>
-              <div className="ecosystem-card p-6 bg-gradient-organic/10 border-ecosystem-aqua/20">
-                <p className="text-foreground leading-relaxed text-lg">
+              <div className="dreamy-card dreamy-card-small bg-[hsl(var(--dreamy-mint))]/10">
+                <p className="text-[hsl(var(--foreground))] leading-relaxed text-lg">
                   <span className="text-2xl mr-3">🌿</span>
-                  <strong className="text-ecosystem-aqua">Remember:</strong> Missing tools aren't failures — they're beautiful opportunities to grow your
+                  <strong className="text-[hsl(var(--dreamy-mint))]">Remember:</strong> Missing tools aren't failures — they're beautiful opportunities to grow your
                   emotional capacity and help your child feel safe with every feeling. You're creating the garden where emotions can bloom safely.
                 </p>
               </div>
