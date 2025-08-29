@@ -12,38 +12,38 @@
   --card: 250 35% 94%;
   --card-foreground: 240 30% 20%;
   
-  /* Vibrant pastel colors matching the image */
-  --dreamy-purple: 260 50% 70%;
-  --dreamy-pink: 320 55% 75%;
-  --dreamy-blue: 220 60% 75%;
-  --dreamy-peach: 25 65% 75%;
-  --dreamy-lavender: 280 45% 80%;
-  --dreamy-mint: 160 50% 75%;
-  --dreamy-coral: 15 60% 70%;
-  --dreamy-teal: 180 55% 65%;
+  /* More vibrant pastel colors matching the image */
+  --dreamy-purple: 260 70% 65%;
+  --dreamy-pink: 320 75% 70%;
+  --dreamy-blue: 220 80% 70%;
+  --dreamy-peach: 25 85% 70%;
+  --dreamy-lavender: 280 65% 75%;
+  --dreamy-mint: 160 70% 70%;
+  --dreamy-coral: 15 80% 65%;
+  --dreamy-teal: 180 75% 60%;
   
-  /* Vibrant background gradient matching the uploaded image */
+  /* More vibrant gradient matching the uploaded image */
   --main-gradient: linear-gradient(135deg,
-    hsl(260 50% 85%) 0%,
-    hsl(280 45% 82%) 20%,
-    hsl(300 50% 80%) 40%,
-    hsl(320 45% 82%) 60%,
-    hsl(340 50% 85%) 80%,
-    hsl(360 45% 87%) 100%);
+    hsl(260 70% 80%) 0%,
+    hsl(280 65% 78%) 20%,
+    hsl(300 70% 75%) 40%,
+    hsl(320 65% 78%) 60%,
+    hsl(340 70% 80%) 80%,
+    hsl(360 65% 82%) 100%);
   
   /* Deep neumorphic card backgrounds */
   --neuro-card: hsl(250 40% 90%);
   --neuro-card-light: hsl(250 40% 95%);
   --neuro-card-dark: hsl(250 40% 82%);
-  --neuro-shadow-deep: 20px 20px 40px hsl(250 40% 75%), -20px -20px 40px hsl(250 40% 98%);
-  --neuro-shadow-inset: inset 8px 8px 16px hsl(250 40% 82%), inset -8px -8px 16px hsl(250 40% 95%);
+  --neuro-shadow-deep: 25px 25px 50px hsl(250 40% 70%), -25px -25px 50px hsl(250 40% 98%);
+  --neuro-shadow-inset: inset 12px 12px 24px hsl(250 40% 78%), inset -12px -12px 24px hsl(250 40% 95%);
   
   /* Neumorphic button styles */
   --neuro-button: hsl(250 40% 88%);
   --neuro-button-light: hsl(250 40% 92%);
   --neuro-button-dark: hsl(250 40% 80%);
-  --neuro-button-shadow: 12px 12px 24px hsl(250 40% 78%), -12px -12px 24px hsl(250 40% 96%);
-  --neuro-button-pressed: inset 6px 6px 12px hsl(250 40% 82%), inset -6px -6px 12px hsl(250 40% 92%);
+  --neuro-button-shadow: 15px 15px 30px hsl(250 40% 75%), -15px -15px 30px hsl(250 40% 96%);
+  --neuro-button-pressed: inset 8px 8px 16px hsl(250 40% 80%), inset -8px -8px 16px hsl(250 40% 92%);
   
   /* Decorative gradients for elements */
   --sunset-gradient: linear-gradient(135deg, hsl(35 70% 70%) 0%, hsl(25 80% 75%) 100%);
@@ -129,8 +129,8 @@
   }
   
   .dreamy-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 25px 25px 50px hsl(250 40% 72%), -25px -25px 50px hsl(250 40% 98%);
+    transform: translateY(-3px);
+    box-shadow: 30px 30px 60px hsl(250 40% 68%), -30px -30px 60px hsl(250 40% 98%);
   }
 
   .dreamy-card-hero {
@@ -170,8 +170,8 @@
 
   .dreamy-button:hover {
     background: var(--neuro-button-light);
-    transform: translateY(-1px);
-    box-shadow: 15px 15px 30px hsl(250 40% 75%), -15px -15px 30px hsl(250 40% 97%);
+    transform: translateY(-2px);
+    box-shadow: 18px 18px 36px hsl(250 40% 72%), -18px -18px 36px hsl(250 40% 97%);
   }
   
   .dreamy-button:active {

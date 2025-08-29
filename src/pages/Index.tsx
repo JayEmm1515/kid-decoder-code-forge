@@ -24,12 +24,12 @@ const Index = () => {
         {/* Two button row - "Overview" and "Insights" equivalent */}
         <div className="flex gap-3">
           <Link to="/emotional-toolbox" className="flex-1">
-            <button className="dreamy-button w-full">
-              Try Toolbox
+            <button className="dreamy-button w-full flex items-center justify-center gap-2">
+              🧰 Try Toolbox
             </button>
           </Link>
-          <button className="dreamy-button flex-1">
-            Learn More
+          <button className="dreamy-button flex-1 flex items-center justify-center gap-2">
+            📚 Learn More
           </button>
         </div>
 
@@ -81,15 +81,19 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Bottom three icon cards */}
+        {/* Bottom three icon cards - Navigation to different sections */}
         <div className="flex gap-3">
-          <div className="dreamy-card dreamy-card-tiny flex-1">
-            <Home className="w-6 h-6 text-[hsl(var(--dreamy-blue))]" />
-          </div>
-          <div className="dreamy-card dreamy-card-tiny flex-1">
-            <Zap className="w-6 h-6 text-[hsl(var(--dreamy-coral))]" />
-          </div>
-          <div className="dreamy-card dreamy-card-tiny flex-1">
+          <Link to="/" className="flex-1">
+            <div className="dreamy-card dreamy-card-tiny cursor-pointer hover:transform hover:scale-105 transition-all">
+              <Home className="w-6 h-6 text-[hsl(var(--dreamy-blue))]" />
+            </div>
+          </Link>
+          <Link to="/emotional-toolbox" className="flex-1">
+            <div className="dreamy-card dreamy-card-tiny cursor-pointer hover:transform hover:scale-105 transition-all">
+              <Zap className="w-6 h-6 text-[hsl(var(--dreamy-coral))]" />
+            </div>
+          </Link>
+          <div className="dreamy-card dreamy-card-tiny cursor-pointer hover:transform hover:scale-105 transition-all">
             <User className="w-6 h-6 text-[hsl(var(--dreamy-purple))]" />
           </div>
         </div>
