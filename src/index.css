@@ -2,53 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Exact match design system from uploaded image - Soft pastel glassmorphic */
+/* THE KID DECODER – Global colour system */
 
 @layer base {
 :root {
-/* Vibrant color palette from the uploaded image */
-  --background: 250 40% 92%;
-  --foreground: 240 30% 20%;
-  --card: 250 35% 94%;
-  --card-foreground: 240 30% 20%;
+  /* KID DECODER color tokens */
+  --white: #FFFFFF;
+  --mint: #8EF4E9;
+  --lavender: #9C9AD4;
+  --soft-red: #FF6F6F;
+  --peach: #F4B97E;
+  --violet: #9861A7;
+  --ink: #0D1216;
+  --teal-grey: #618D93;
+  --beige: #CBB7A7;
+  --pink-ice: #FACDF7;
+  --plum: #844A83;
+  --pastel-y: #F7E287;
+  --deep-teal: #0A2D35;
+  --dusty-rose: #C287B2;
+  --rose: #C94F76;
+  --raspberry: #D66C85;
+  --mint-ice: #B4F4EE;
+
+  /* Base surfaces & text */
+  --background: var(--white);
+  --foreground: var(--ink);
+  --card: var(--white);
+  --card-foreground: var(--ink);
+  --muted: var(--teal-grey);
   
-  /* More vibrant pastel colors matching the image */
-  --dreamy-purple: 260 70% 65%;
-  --dreamy-pink: 320 75% 70%;
-  --dreamy-blue: 220 80% 70%;
-  --dreamy-peach: 25 85% 70%;
-  --dreamy-lavender: 280 65% 75%;
-  --dreamy-mint: 160 70% 70%;
-  --dreamy-coral: 15 80% 65%;
-  --dreamy-teal: 180 75% 60%;
+  /* Gradients */
+  --grad-aurora: linear-gradient(135deg, var(--mint) 0%, var(--lavender) 35%, var(--violet) 100%);
+  --grad-sunset: linear-gradient(135deg, var(--soft-red) 0%, var(--peach) 50%, var(--pastel-y) 100%);
+  --grad-therapy: linear-gradient(135deg, var(--pink-ice) 0%, var(--dusty-rose) 55%, var(--plum) 100%);
+  --grad-ocean: linear-gradient(135deg, var(--mint-ice) 0%, var(--mint) 40%, var(--deep-teal) 100%);
+  --grad-warmcool: linear-gradient(135deg, var(--rose) 0%, var(--raspberry) 45%, var(--lavender) 100%);
+  --grad-softbrand: linear-gradient(135deg, var(--beige) 0%, var(--peach) 50%, var(--mint-ice) 100%);
+  --grad-hero: linear-gradient(135deg, var(--mint) 0%, var(--peach) 40%, var(--violet) 80%, var(--deep-teal) 100%);
+  --grad-cta: radial-gradient(circle at 30% 20%, var(--soft-red), var(--rose) 45%, var(--plum) 100%);
   
-  /* More vibrant gradient matching the uploaded image */
-  --main-gradient: linear-gradient(135deg,
-    hsl(260 70% 80%) 0%,
-    hsl(280 65% 78%) 20%,
-    hsl(300 70% 75%) 40%,
-    hsl(320 65% 78%) 60%,
-    hsl(340 70% 80%) 80%,
-    hsl(360 65% 82%) 100%);
+  /* Main background gradient */
+  --main-gradient: var(--grad-hero);
   
-  /* Deep neumorphic card backgrounds */
-  --neuro-card: hsl(250 40% 90%);
-  --neuro-card-light: hsl(250 40% 95%);
-  --neuro-card-dark: hsl(250 40% 82%);
-  --neuro-shadow-deep: 25px 25px 50px hsl(250 40% 70%), -25px -25px 50px hsl(250 40% 98%);
-  --neuro-shadow-inset: inset 12px 12px 24px hsl(250 40% 78%), inset -12px -12px 24px hsl(250 40% 95%);
+  /* Neumorphic card backgrounds using white base */
+  --neuro-card: var(--white);
+  --neuro-card-light: #FAFAFA;
+  --neuro-card-dark: #F0F0F0;
+  --neuro-shadow-deep: 25px 25px 50px rgba(13, 18, 22, 0.15), -25px -25px 50px rgba(255, 255, 255, 0.9);
+  --neuro-shadow-inset: inset 12px 12px 24px rgba(13, 18, 22, 0.08), inset -12px -12px 24px rgba(255, 255, 255, 0.8);
   
   /* Neumorphic button styles */
-  --neuro-button: hsl(250 40% 88%);
-  --neuro-button-light: hsl(250 40% 92%);
-  --neuro-button-dark: hsl(250 40% 80%);
-  --neuro-button-shadow: 15px 15px 30px hsl(250 40% 75%), -15px -15px 30px hsl(250 40% 96%);
-  --neuro-button-pressed: inset 8px 8px 16px hsl(250 40% 80%), inset -8px -8px 16px hsl(250 40% 92%);
-  
-  /* Decorative gradients for elements */
-  --sunset-gradient: linear-gradient(135deg, hsl(35 70% 70%) 0%, hsl(25 80% 75%) 100%);
-  --mountain-gradient: linear-gradient(135deg, hsl(220 40% 75%) 0%, hsl(240 30% 80%) 50%, hsl(260 25% 85%) 100%);
-  --toggle-gradient: linear-gradient(135deg, hsl(180 50% 65%) 0%, hsl(200 45% 70%) 100%);
+  --neuro-button: var(--white);
+  --neuro-button-light: #FAFAFA;
+  --neuro-button-dark: #F0F0F0;
+  --neuro-button-shadow: 15px 15px 30px rgba(13, 18, 22, 0.12), -15px -15px 30px rgba(255, 255, 255, 0.8);
+  --neuro-button-pressed: inset 8px 8px 16px rgba(13, 18, 22, 0.1), inset -8px -8px 16px rgba(255, 255, 255, 0.9);
 }
 
 .dark {
@@ -92,7 +101,7 @@
 
   body {
     background: var(--main-gradient);
-    color: hsl(var(--foreground));
+    color: var(--ink);
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
