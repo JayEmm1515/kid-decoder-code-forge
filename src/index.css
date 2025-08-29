@@ -5,8 +5,8 @@
 /* THE KID DECODER – Global colour system */
 
 @layer base {
+/* ---------- 1) Tokens ---------- */
 :root {
-  /* KID DECODER color tokens */
   --white: #FFFFFF;
   --mint: #8EF4E9;
   --lavender: #9C9AD4;
@@ -26,13 +26,17 @@
   --mint-ice: #B4F4EE;
 
   /* Base surfaces & text */
+  --bg: var(--white);
+  --fg: var(--ink);
   --background: var(--white);
   --foreground: var(--ink);
   --card: var(--white);
   --card-foreground: var(--ink);
   --muted: var(--teal-grey);
-  
-  /* Gradients */
+}
+
+/* ---------- 2) Gradients (ready-to-use) ---------- */
+:root {
   --grad-aurora: linear-gradient(135deg, var(--mint) 0%, var(--lavender) 35%, var(--violet) 100%);
   --grad-sunset: linear-gradient(135deg, var(--soft-red) 0%, var(--peach) 50%, var(--pastel-y) 100%);
   --grad-therapy: linear-gradient(135deg, var(--pink-ice) 0%, var(--dusty-rose) 55%, var(--plum) 100%);
@@ -99,6 +103,12 @@
     @apply border-border;
   }
 
+  /* ---------- 3) App-wide application ---------- */
+  html, body {
+    background: var(--bg);
+    color: var(--fg);
+  }
+
   body {
     background: var(--main-gradient);
     color: var(--ink);
@@ -106,6 +116,85 @@
     overflow-x: hidden;
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  /* Page backgrounds */
+  .app-bg-aurora { background: var(--grad-aurora); }
+  .app-bg-sunset { background: var(--grad-sunset); }
+  .app-bg-therapy { background: var(--grad-therapy); }
+  .app-bg-ocean { background: var(--grad-ocean); }
+  .app-bg-hero { background: var(--grad-hero); }
+
+  /* Solid backgrounds */
+  .bg-white { background: var(--white); }
+  .bg-mint { background: var(--mint); }
+  .bg-lavender { background: var(--lavender); }
+  .bg-soft-red { background: var(--soft-red); }
+  .bg-peach { background: var(--peach); }
+  .bg-violet { background: var(--violet); }
+  .bg-ink { background: var(--ink); }
+  .bg-teal-grey { background: var(--teal-grey); }
+  .bg-beige { background: var(--beige); }
+  .bg-pink-ice { background: var(--pink-ice); }
+  .bg-plum { background: var(--plum); }
+  .bg-pastel-y { background: var(--pastel-y); }
+  .bg-deep-teal { background: var(--deep-teal); }
+  .bg-dusty-rose { background: var(--dusty-rose); }
+  .bg-rose { background: var(--rose); }
+  .bg-raspberry { background: var(--raspberry); }
+  .bg-mint-ice { background: var(--mint-ice); }
+
+  /* Text colours */
+  .text-ink { color: var(--ink); }
+  .text-muted { color: var(--muted); }
+  .text-violet { color: var(--violet); }
+  .text-rose { color: var(--rose); }
+
+  /* Cards / panels (works nicely with neumorphism if you add shadows) */
+  .card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 8px 8px 24px rgba(13,18,22,0.15), -8px -8px 24px rgba(255,255,255,0.8);
+  }
+
+  /* Buttons */
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 16px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--grad-cta);
+    box-shadow: 0 10px 24px rgba(13,18,22,0.25);
+    border: 0;
+    cursor: pointer;
+  }
+  .button.alt { background: var(--grad-ocean); }
+  .button.ghost {
+    background: transparent;
+    color: var(--deep-teal);
+    border: 2px solid var(--deep-teal);
+  }
+
+  /* Inputs */
+  .input {
+    background: var(--white);
+    color: var(--fg);
+    border-radius: 14px;
+    padding: 12px 14px;
+    border: 1px solid rgba(13,18,22,0.08);
+    box-shadow: inset 3px 3px 8px rgba(13,18,22,0.08), inset -3px -3px 8px rgba(255,255,255,0.8);
+  }
+
+  /* Utility gradient text (e.g., headings) */
+  .grad-text {
+    background: var(--grad-therapy);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   /* App container matching the uploaded image */
