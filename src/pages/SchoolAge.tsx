@@ -1,27 +1,37 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BookOpen, Brain, Users, Phone, AlertTriangle } from 'lucide-react';
+import { BookOpen, Brain, Users, Phone, AlertTriangle, Heart } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 export default function SchoolAgePage() {
   const strategies = [
     {
-      title: "Staying Connected: The Power of Attachment",
-      content: "As their world expands with school and friends, your role as their secure base is more important than ever. Gabor Maté notes that the primary attachment relationship is the buffer against the stresses of the outside world. Make time for one-on-one connection, even just 10-15 minutes a day, to listen without judgment. This keeps the lines of communication open for when the big problems arise.",
+      title: "Maintaining the Secure Base: Attachment in Middle Childhood",
+      content: "John Bowlby's attachment theory shows that school-age children still need you as their secure base, even as they venture into the wider world. Gabor Maté's research emphasizes that the primary attachment relationship buffers against peer pressure, academic stress, and social challenges. Your consistent availability matters more than being the 'fun' parent.",
+      details: "Create ritual connection time: 10-15 minutes daily of child-led conversation with no advice-giving. Ask open questions like 'What was the best part of your day?' This maintains the attachment relationship as their primary source of safety and belonging.",
       icon: Users,
       color: "text-pastel-y"
     },
     {
-      title: "The Wheel of Awareness: Teaching Self-Reflection",
-      content: "Dr. Dan Siegel's 'Wheel of Awareness' is a great concept for this age. You can guide them to notice what's happening in their body (sensations), their mind (thoughts), and their heart (feelings) without judgment. Asking 'What was that like for you?' instead of 'Why did you do that?' encourages them to look inwards, building the foundations of emotional intelligence.",
+      title: "Mindful Awareness: Dan Siegel's Integration Practices",
+      content: "Dan Siegel's 'Wheel of Awareness' teaches children to observe their inner world with curiosity rather than judgment. School-age children can begin to notice the difference between thoughts, feelings, and sensations, building the meta-cognitive skills essential for emotional regulation and academic success.",
+      details: "Practice together: 'Let's notice what's happening in your body... your thoughts... your feelings.' This builds the prefrontal cortex areas responsible for self-awareness, attention regulation, and emotional balance. Research shows these skills predict better outcomes than IQ alone.",
       icon: Brain,
       color: "text-mint"
     },
     {
-      title: "Problem-Solving, Not Punishing",
-      content: "When rules are broken, shift from punishment to collaborative problem-solving, a core tenet of 'No-Drama Discipline'. Say, 'The rule about screen time was broken. That's a problem. What are some ideas for how we can solve this and make sure it doesn't happen tomorrow?' This empowers them, respects their developing 'upstairs brain', and teaches critical life skills.",
+      title: "Collaborative Problem-Solving: Building Executive Function",
+      content: "Moving beyond reward and punishment to collaborative problem-solving honors their developing prefrontal cortex. Dan Siegel's 'No-Drama Discipline' approach asks: 'How can we solve this problem together?' This builds executive function skills while maintaining the relationship.",
+      details: "The process: Stay calm (your regulation helps theirs), acknowledge the problem without blame, brainstorm solutions together, agree on a plan, and follow up. This teaches responsibility, critical thinking, and collaborative skills they'll need for life.",
       icon: BookOpen,
       color: "text-violet"
+    },
+    {
+      title: "The Power of Reflection: Building Emotional Intelligence",
+      content: "School-age children can begin developing what Dan Siegel calls 'mindsight' - the ability to see the internal world of themselves and others. This is crucial for empathy, self-regulation, and social success. Teaching reflection builds these neural pathways.",
+      details: "Daily practice: 'What do you think your friend was feeling when that happened?' or 'How did you handle that frustrating moment?' This develops the capacity to mentalize - understanding that behavior is driven by internal states, not just external events.",
+      icon: Heart,
+      color: "text-rose"
     }
   ];
 
@@ -46,8 +56,13 @@ export default function SchoolAgePage() {
                     {strategy.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   <p className="text-white/90 leading-relaxed">{strategy.content}</p>
+                  {strategy.details && (
+                    <div className="p-4 bg-white/5 rounded-lg border border-white/10">
+                      <p className="text-white/80 text-sm leading-relaxed italic">{strategy.details}</p>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}

@@ -6,22 +6,32 @@ import Layout from '@/components/Layout';
 export default function EarlyYearsPage() {
   const strategies = [
     {
-      title: "Building a Secure Base: The Circle of Security",
-      content: "In the early years, your main job is to be a 'secure base' and a 'safe haven' for your child. Inspired by Attachment Theory and the Circle of Security model, this means being present for your child's explorations and welcoming them back for comfort and reassurance. When your bub looks to you for a reaction, they're checking in. A calm, loving response builds their sense of safety in the world.",
+      title: "Building a Secure Base: The Circle of Security Foundation",
+      content: "Based on Bowlby's attachment theory and refined by the Circle of Security program, your role is to be both a 'secure base' from which your child explores and a 'safe haven' they return to for comfort. When your baby reaches for you, makes eye contact, or shows distress, they're seeking connection. Research shows that consistent, warm responses during these moments build neural pathways for emotional regulation and trust that last a lifetime.",
+      details: "Key practices: Follow their lead in play, offer comfort without rushing to 'fix', validate their emotions even when you can't understand the cause. Mary Ainsworth's research revealed that securely attached children had caregivers who were consistently available and responsive.",
       icon: Shield,
-      color: 'text-teal-grey'
+      color: 'text-mint'
     },
     {
-      title: "Co-Regulation: Your Superpower",
-      content: "Infants can't manage their big feelings alone; they rely on you. This is called co-regulation. As Dr. Gabor Maté's work highlights, a parent's calm presence helps to soothe the child's nervous system. When you stay calm during their distress, you're not just stopping the crying; you are teaching their brain how to handle stress.",
+      title: "Co-Regulation: Teaching Through Your Nervous System", 
+      content: "Gabor Maté's extensive work shows that babies are born with an immature nervous system that relies entirely on their caregiver's regulation. Your calm breathing, soothing voice, and steady heartbeat literally teach their nervous system how to return to balance. This isn't about being perfect – it's about repair when things go wrong.",
+      details: "Practical approach: When baby is distressed, focus first on your own breathing. Speak slowly and softly. Hold them close so they feel your regulated state. Research by Stephen Porges shows this 'co-regulation' builds their future capacity for self-soothing.",
       icon: Heart,
       color: 'text-violet'
     },
     {
-      title: "Understanding 'Flipping Their Lid': Dan Siegel's Hand Model",
-      content: "Dr. Dan Siegel's 'hand model of the brain' is a brilliant way to understand tantrums. When your toddler is overwhelmed, their 'upstairs brain' (thinking part) disconnects from the 'downstairs brain' (feeling/survival part). They've 'flipped their lid'. In this state, they can't listen to reason. The first step is always connection and soothing to help them get their thinking brain back online.",
+      title: "The Developing Brain: Dan Siegel's Integration Model",
+      content: "Dan Siegel's research reveals that a baby's brain is building one million neural connections per second. The 'downstairs brain' (emotions, survival instincts) is fully online, while the 'upstairs brain' (logic, reasoning) won't be ready until age 25. Understanding this helps you respond with compassion rather than frustration when they can't be 'reasoned with'.",
+      details: "Your response matters: Connection before direction. When they're upset, comfort first (downstairs brain), then engage their curiosity (beginning upstairs brain development). This integration work you do now forms the foundation for their future emotional intelligence.",
       icon: Baby,
-      color: 'text-soft-red'
+      color: 'text-peach'
+    },
+    {
+      title: "Evolved Developmental Niche: Darcia Narvaez's Framework",
+      content: "Developmental psychologist Darcia Narvaez describes the 'evolved developmental niche' - the conditions babies evolved to expect for optimal brain development. This includes responsive caregiving, extensive physical affection, multiple caring adults, and rich sensory experiences in natural environments.",
+      details: "Modern application: Skin-to-skin contact, baby wearing, responsive feeding, limiting overstimulation. Research shows children who receive these evolved supports show better stress resilience, empathy development, and emotional regulation throughout life.",
+      icon: Heart,
+      color: 'text-rose'
     }
   ];
 
@@ -46,8 +56,13 @@ export default function EarlyYearsPage() {
                     {strategy.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   <p className="text-white/90 leading-relaxed">{strategy.content}</p>
+                  {strategy.details && (
+                    <div className="p-4 bg-white/5 rounded-lg border border-white/10">
+                      <p className="text-white/80 text-sm leading-relaxed italic">{strategy.details}</p>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}

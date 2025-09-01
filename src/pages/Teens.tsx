@@ -1,27 +1,37 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { GraduationCap, Anchor, Users, Phone, AlertTriangle } from 'lucide-react';
+import { GraduationCap, Anchor, Users, Phone, AlertTriangle, Heart } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 export default function TeensPage() {
   const strategies = [
     {
-      title: "Be the Anchor, Not the Storm: The Secure Base in Adolescence",
-      content: "Teens are pushing for independence, but they still desperately need a secure base to return to. Your role shifts from manager to consultant. Be their anchor in the stormy seas of adolescence. This means being a non-anxious presence they can count on, even when they mess up. Your unwavering connection is the most protective factor against risk-taking behaviours.",
+      title: "The Secure Base Paradox: Staying Connected While Letting Go",
+      content: "Attachment research shows that teens who feel most securely connected to parents are actually better able to individuate healthily. Your role shifts from manager to consultant - being their anchor while they navigate increasing independence. This isn't permissive parenting; it's being a non-anxious, consistent presence they can count on.",
+      details: "Circle of Security in adolescence: Be bigger, stronger, wiser, and kind. They need to know you can handle their emotions without becoming reactive. Your regulation during their dysregulation teaches them that intense feelings are manageable and temporary.",
       icon: Anchor,
       color: "text-rose"
     },
     {
-      title: "The 'Yes Brain': Fostering Resilience and Receptivity",
-      content: "From Drs. Siegel and Bryson's work on the 'Yes Brain', the goal is to keep your teen's brain in a receptive state of openness and curiosity, rather than a reactive 'No Brain' state of defence. This is achieved by valuing their perspective (even if you don't agree with it), showing empathy, and moving from 'You can't' to 'How can we...'.",
+      title: "Cultivating the 'Yes Brain': Receptivity Over Reactivity", 
+      content: "Dan Siegel and Tina Payne Bryson's 'Yes Brain' research shows that adolescents learn best when their brains are in a state of openness rather than defensiveness. This happens when they feel truly seen and heard, even when you disagree with their choices. Lead with curiosity before correction.",
+      details: "Practical approach: 'Help me understand your perspective' before sharing yours. Validate their emotions even when you can't support their actions. This keeps their prefrontal cortex online and available for learning, rather than triggering fight-or-flight responses.",
       icon: Users,
       color: "text-mint"
     },
     {
-      title: "Understanding the 'Remodelling' Brain",
-      content: "The teenage brain is undergoing a massive remodelling project. The emotional, reward-seeking parts are highly active, while the prefrontal cortex (responsible for judgment and impulse control) is still under construction. This explains why they are prone to risky behaviour and intense emotions. It's not defiance for defiance's sake; it's neuroscience. Understanding this helps you respond with more patience and less frustration.",
+      title: "The Adolescent Brain Revolution: Understanding Development",
+      content: "Neuroscientist David Yeager's research reveals that the teenage brain isn't broken - it's designed for exploration and sensation-seeking to prepare them for independence. The limbic system is highly active while the prefrontal cortex is still developing, explaining their intensity and impulsivity.",
+      details: "This knowledge changes everything: Their behavior isn't personal or purposefully difficult. Their brains are literally wired for risk-taking and emotional intensity. Understanding this helps you respond with patience rather than taking their behavior as a reflection of your parenting.",
       icon: GraduationCap,
       color: "text-violet"
+    },
+    {
+      title: "Collaborative Authority: Respecting Their Developing Autonomy",
+      content: "Research by Laurence Steinberg shows that teens need increasing autonomy with consistent support. This means involving them in family decisions, respecting their perspectives, while maintaining clear boundaries around safety and values. It's authoritative, not authoritarian or permissive.",
+      details: "Implementation: Include them in creating family rules, explain the 'why' behind boundaries, negotiate on non-safety issues, and follow through with agreed consequences. This builds their decision-making skills while maintaining the relationship.",
+      icon: Heart,
+      color: "text-peach"
     }
   ];
 
@@ -46,8 +56,13 @@ export default function TeensPage() {
                     {strategy.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   <p className="text-white/90 leading-relaxed">{strategy.content}</p>
+                  {strategy.details && (
+                    <div className="p-4 bg-white/5 rounded-lg border border-white/10">
+                      <p className="text-white/80 text-sm leading-relaxed italic">{strategy.details}</p>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
