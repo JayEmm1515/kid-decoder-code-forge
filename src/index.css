@@ -33,6 +33,21 @@
   --card: var(--white);
   --card-foreground: var(--ink);
   --muted: var(--teal-grey);
+  
+  /* Component color references */
+  --color-teal: 87 157 156;
+  --color-purple: 187 50 161; 
+  --color-gold: 249 193 94;
+  --color-coral-pink: 249 85 123;
+  --color-bright-teal: 142 244 233;
+  --color-magenta: 217 70 239;
+  
+  /* Dreamy app specific colors */
+  --dreamy-teal: 87 157 156;
+  --dreamy-coral: 249 85 123;
+  --dreamy-peach: 244 185 126;
+  --dreamy-purple: 152 154 212;
+  --dreamy-blue: 96 165 250;
 }
 
 /* ---------- 2) Gradients (ready-to-use) ---------- */
@@ -48,6 +63,29 @@
   
   /* Main background gradient */
   --main-gradient: var(--grad-hero);
+  
+  /* Missing gradients for dreamy components */
+  --sunset-gradient: linear-gradient(135deg, #FFA726 0%, #FF7043 100%);
+  --mountain-gradient: linear-gradient(135deg, #8E24AA 0%, #5E35B1 50%, #3F51B5 100%);
+  --toggle-gradient: linear-gradient(135deg, var(--teal-grey) 0%, var(--deep-teal) 100%);
+  --gradient-organic: var(--grad-therapy);
+  --gradient-coral: var(--grad-sunset);
+  
+  /* Missing shadow and transform variables */
+  --shadow-floating: 0 10px 40px rgba(13, 18, 22, 0.12), 0 0 20px rgba(255, 255, 255, 0.8);
+  --shadow-deep: 0 20px 60px rgba(13, 18, 22, 0.2), 0 0 40px rgba(255, 255, 255, 0.9);
+  --shadow-glass-sm: 0 4px 16px rgba(13, 18, 22, 0.1);
+  --shadow-glass-md: 0 8px 32px rgba(13, 18, 22, 0.15);
+  --shadow-organic: var(--neuro-shadow-deep);
+  --shadow-glow: 0 0 40px rgba(249, 85, 123, 0.3);
+  --shadow-glow-teal: 0 0 30px rgba(87, 157, 156, 0.2);
+  --shadow-glow-purple: 0 0 30px rgba(187, 50, 161, 0.3);
+  
+  --transform-organic: none;
+  --transform-grow: translateY(-5px) scale(1.02);
+  --transform-float: translateY(0px);
+  --texture-organic: none;
+  --ecosystem-purple: var(--color-purple);
   
   /* Neumorphic card backgrounds using white base */
   --neuro-card: var(--white);
