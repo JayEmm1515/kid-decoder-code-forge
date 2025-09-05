@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Heart, Sparkles, RotateCcw, CheckCircle2 } from "lucide-react";
+import { Heart, Sparkles, RotateCcw, CheckCircle2, Brain } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function EmotionalToolbox() {
   const EMOTIONS = [
@@ -199,15 +200,24 @@ export default function EmotionalToolbox() {
           </div>
         )}
 
-        {/* Reset Button */}
-        {(toolbox.length > 0 || workbench.length > 0) && (
-          <div className="text-center mt-8">
+        {/* Action Buttons */}
+        <div className="text-center mt-8 space-y-4">
+          {(toolbox.length > 0 || workbench.length > 0) && (
             <Button onClick={reset} variant="outline" className="gap-2 dreamy-button">
               <RotateCcw className="w-4 h-4" />
               Start Over
             </Button>
+          )}
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link to="/emotional-presence">
+              <Button className="gap-2 bg-gradient-to-r from-violet to-purple hover:from-violet/90 hover:to-purple/90 text-white">
+                <Brain className="w-4 h-4" />
+                Try Emotional Presence Exercise
+              </Button>
+            </Link>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

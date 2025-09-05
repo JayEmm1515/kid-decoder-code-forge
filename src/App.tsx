@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import EmotionalToolboxPage from "./pages/EmotionalToolbox";
+import EmotionalPresencePage from "./pages/EmotionalPresence";
 import NotFound from "./pages/NotFound";
 // Import all new pages
 import Children from "./pages/Children";
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/emotional-toolbox" element={<EmotionalToolboxPage />} />
+          <Route path="/emotional-presence" element={<EmotionalPresencePage />} />
           <Route path="/children" element={<Children />} />
           <Route path="/parenting-chat" element={<ParentingChat />} />
           <Route path="/tracking" element={<Tracking />} />
