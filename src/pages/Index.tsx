@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Home, User, Zap } from "lucide-react";
+import { Home, User, Zap, Users, BookOpen, ArrowRight } from "lucide-react";
 
 const Index = () => {
   return (
@@ -33,23 +33,23 @@ const Index = () => {
           </button>
         </div>
 
-        {/* Activity Card - "Today's Activity" equivalent */}
-        <div className="dreamy-card">
-          <h2 className="text-xl font-bold text-[hsl(var(--foreground))] mb-2">
-            🌟 Key Features
-          </h2>
-          <div className="text-3xl font-bold text-[hsl(var(--foreground))] opacity-90">
-            Interactive & Research-Based
+          <div className="text-center mt-4">
+            <h1 className="text-3xl font-bold text-foreground mb-2 flex items-center justify-center gap-3">
+              <Users className="w-8 h-8 text-primary" />
+              Understanding Your Child
+            </h1>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-6">
+              Evidence-based insights for understanding children's complex behaviour patterns 
+              and developmental needs at every stage
+            </p>
+            <Link to="/understanding-behaviour">
+              <Button size="lg" className="gap-2 mb-8">
+                <BookOpen className="w-5 h-5" />
+                Explore Behaviour Guides by Age
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
           </div>
-          <div className="flex gap-2 mt-4">
-            <span className="inline-block px-3 py-1 rounded-full bg-white/20 text-xs font-medium text-[hsl(var(--foreground))]">
-              Interactive
-            </span>
-            <span className="inline-block px-3 py-1 rounded-full bg-white/20 text-xs font-medium text-[hsl(var(--foreground))]">
-              Evidence-Based
-            </span>
-          </div>
-        </div>
 
         {/* Reminders Card equivalent */}
         <div className="dreamy-card">
@@ -93,9 +93,11 @@ const Index = () => {
               <Zap className="w-6 h-6 text-[hsl(var(--dreamy-coral))]" />
             </div>
           </Link>
-          <div className="dreamy-card dreamy-card-tiny cursor-pointer hover:transform hover:scale-105 transition-all">
-            <User className="w-6 h-6 text-[hsl(var(--dreamy-purple))]" />
-          </div>
+          <Link to="/children" className="flex-1">
+            <div className="dreamy-card dreamy-card-tiny cursor-pointer hover:transform hover:scale-105 transition-all">
+              <Users className="w-6 h-6 text-[hsl(var(--dreamy-purple))]" />
+            </div>
+          </Link>
         </div>
       </div>
     </div>

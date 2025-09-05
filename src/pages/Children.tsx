@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Plus, Users, Baby, Calendar, Edit, Trash2 } from "lucide-react";
+import { Plus, Users, Baby, Calendar, Edit, Trash2, BookOpen, ArrowRight } from "lucide-react";
 import { format, differenceInYears, differenceInMonths } from "date-fns";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 
 export default function ChildrenPage() {
@@ -89,21 +90,43 @@ export default function ChildrenPage() {
     setShowForm(false);
   };
 
+  const handleEdit = (child) => {
+    setEditingChild(child);
+    setFormData({
+      name: child.name,
+      birth_date: child.birth_date,
+      age_group: child.age_group,
+      notes: child.notes || ""
+    });
+    setShowForm(true);
+  };
+
+  const handleDelete = async (childId) => {
+    if (window.confirm('Are you sure you want to remove this child? This action cannot be undone.')) {
+      try {
+        await Child.delete(childId);
+        loadChildren();
+      } catch (error) {
+        console.error('Error deleting child:', error);
+      }
+    }
+  };
+
   return (
     <Layout>
       <div className="min-h-screen bg-white p-4 md:p-8">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <div>
-              <h1 className="text-3xl font-bold text-ink flex items-center gap-3">
-                <Users className="w-8 h-8 text-rose" />
-                My Children
+              <h1 className="text-3xl font-bold text-foreground flex items-center gap-3">
+                <Users className="w-8 h-8 text-primary" />
+                Understanding Your Child
               </h1>
-              <p className="text-muted mt-2">Manage your children's profiles and tracking</p>
+              <p className="text-muted-foreground mt-2">Manage your children's profiles and explore age-appropriate behaviour insights</p>
             </div>
             <Button
               onClick={() => setShowForm(!showForm)}
-              className="bg-gradient-to-r from-rose to-peach text-white hover:opacity-90"
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
             >
               <Plus className="w-5 h-5 mr-2" />
               Add Child
@@ -189,35 +212,66 @@ export default function ChildrenPage() {
                     <CardHeader className="pb-4">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 bg-gradient-to-r from-mint to-violet rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold text-lg">
+                          <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                            <span className="text-primary-foreground font-bold text-lg">
                               {child.name.charAt(0).toUpperCase()}
                             </span>
                           </div>
                           <div>
-                            <CardTitle className="text-lg text-ink">{child.name}</CardTitle>
-                            <p className="text-sm text-muted">{formatAge(child.birth_date)}</p>
+                            <CardTitle className="text-lg text-foreground">{child.name}</CardTitle>
+                            <p className="text-sm text-muted-foreground">{formatAge(child.birth_date)}</p>
                           </div>
+                        </div>
+                        <div className="flex gap-1">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => handleEdit(child)}
+                            className="text-muted-foreground hover:bg-muted hover:text-primary"
+                          >
+                            <Edit className="w-4 h-4" />
+                          </Button>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => handleDelete(child.id)}
+                            className="text-muted-foreground hover:bg-muted hover:text-destructive"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </Button>
                         </div>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4 text-slate-400" />
-                          <span className="text-sm text-muted">
-                            Born {format(new Date(child.birth_date), "MMM d, yyyy")}
-                          </span>
-                        </div>
-                        <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-100 text-teal-800 border border-teal-200">
-                          Age Group: {child.age_group} years
-                        </div>
-                        {child.notes && (
-                          <div className="mt-3 p-3 bg-slate-100 rounded-lg">
-                            <p className="text-sm text-ink">{child.notes}</p>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4 text-muted-foreground" />
+                            <span className="text-sm text-muted-foreground">
+                              Born {format(new Date(child.birth_date), "MMM d, yyyy")}
+                            </span>
                           </div>
-                        )}
-                      </div>
+                          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
+                            Age Group: {child.age_group} years
+                          </div>
+                          {child.notes && (
+                            <div className="mt-3 p-3 bg-muted rounded-lg">
+                              <p className="text-sm text-muted-foreground">{child.notes}</p>
+                            </div>
+                          )}
+                          
+                          <div className="pt-4 border-t">
+                            <Link to={`/understanding-behaviour?age=${child.age_group}`}>
+                              <Button 
+                                variant="outline" 
+                                className="w-full text-sm gap-2 hover:bg-primary hover:text-primary-foreground"
+                              >
+                                <BookOpen className="w-4 h-4" />
+                                Explore {child.age_group} Behaviour Guide
+                                <ArrowRight className="w-4 h-4 ml-auto" />
+                              </Button>
+                            </Link>
+                          </div>
+                        </div>
                     </CardContent>
                   </Card>
                 ))}
