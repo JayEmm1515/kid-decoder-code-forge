@@ -253,6 +253,981 @@ export class BehaviorGuide {
           "Extreme avoidance of school or social spaces",
           "Regression (e.g. toileting, speech) lasting weeks"
         ]
+      },
+      {
+        "behaviour": "Lying or fabrication",
+        "meanings": {
+          "0-2": [
+            "Lying or fabrication meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Lying or fabrication meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Lying or fabrication meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Lying or fabrication meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Lying or fabrication - example 1",
+          "Parent experience for Lying or fabrication - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Lying or fabrication at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Lying or fabrication at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Lying or fabrication at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Lying or fabrication at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Lying or fabrication - example 1",
+          "Red flag for Lying or fabrication - example 2"
+        ]
+      },
+      {
+        "behaviour": "Stealing or taking without permission",
+        "meanings": {
+          "0-2": [
+            "Stealing or taking without permission meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Stealing or taking without permission meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Stealing or taking without permission meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Stealing or taking without permission meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Stealing or taking without permission - example 1",
+          "Parent experience for Stealing or taking without permission - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Stealing or taking without permission at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Stealing or taking without permission at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Stealing or taking without permission at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Stealing or taking without permission at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Stealing or taking without permission - example 1",
+          "Red flag for Stealing or taking without permission - example 2"
+        ]
+      },
+      {
+        "behaviour": "Risk-taking or thrill-seeking",
+        "meanings": {
+          "0-2": [
+            "Risk-taking or thrill-seeking meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Risk-taking or thrill-seeking meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Risk-taking or thrill-seeking meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Risk-taking or thrill-seeking meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Risk-taking or thrill-seeking - example 1",
+          "Parent experience for Risk-taking or thrill-seeking - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Risk-taking or thrill-seeking at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Risk-taking or thrill-seeking at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Risk-taking or thrill-seeking at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Risk-taking or thrill-seeking at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Risk-taking or thrill-seeking - example 1",
+          "Red flag for Risk-taking or thrill-seeking - example 2"
+        ]
+      },
+      {
+        "behaviour": "Bedwetting or soiling",
+        "meanings": {
+          "0-2": [
+            "Bedwetting or soiling meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Bedwetting or soiling meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Bedwetting or soiling meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Bedwetting or soiling meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Bedwetting or soiling - example 1",
+          "Parent experience for Bedwetting or soiling - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Bedwetting or soiling at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Bedwetting or soiling at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Bedwetting or soiling at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Bedwetting or soiling at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Bedwetting or soiling - example 1",
+          "Red flag for Bedwetting or soiling - example 2"
+        ]
+      },
+      {
+        "behaviour": "Sleep disturbances",
+        "meanings": {
+          "0-2": [
+            "Sleep disturbances meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Sleep disturbances meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Sleep disturbances meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Sleep disturbances meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Sleep disturbances - example 1",
+          "Parent experience for Sleep disturbances - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Sleep disturbances at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Sleep disturbances at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Sleep disturbances at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Sleep disturbances at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Sleep disturbances - example 1",
+          "Red flag for Sleep disturbances - example 2"
+        ]
+      },
+      {
+        "behaviour": "Excessive screen use or fixation",
+        "meanings": {
+          "0-2": [
+            "Excessive screen use or fixation meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Excessive screen use or fixation meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Excessive screen use or fixation meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Excessive screen use or fixation meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Excessive screen use or fixation - example 1",
+          "Parent experience for Excessive screen use or fixation - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Excessive screen use or fixation at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Excessive screen use or fixation at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Excessive screen use or fixation at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Excessive screen use or fixation at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Excessive screen use or fixation - example 1",
+          "Red flag for Excessive screen use or fixation - example 2"
+        ]
+      },
+      {
+        "behaviour": "Selective mutism or refusal to speak",
+        "meanings": {
+          "0-2": [
+            "Selective mutism or refusal to speak meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Selective mutism or refusal to speak meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Selective mutism or refusal to speak meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Selective mutism or refusal to speak meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Selective mutism or refusal to speak - example 1",
+          "Parent experience for Selective mutism or refusal to speak - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Selective mutism or refusal to speak at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Selective mutism or refusal to speak at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Selective mutism or refusal to speak at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Selective mutism or refusal to speak at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Selective mutism or refusal to speak - example 1",
+          "Red flag for Selective mutism or refusal to speak - example 2"
+        ]
+      },
+      {
+        "behaviour": "Repetitive movements or self-stimulation",
+        "meanings": {
+          "0-2": [
+            "Repetitive movements or self-stimulation meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Repetitive movements or self-stimulation meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Repetitive movements or self-stimulation meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Repetitive movements or self-stimulation meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Repetitive movements or self-stimulation - example 1",
+          "Parent experience for Repetitive movements or self-stimulation - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Repetitive movements or self-stimulation at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Repetitive movements or self-stimulation at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Repetitive movements or self-stimulation at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Repetitive movements or self-stimulation at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Repetitive movements or self-stimulation - example 1",
+          "Red flag for Repetitive movements or self-stimulation - example 2"
+        ]
+      },
+      {
+        "behaviour": "Controlling or bossy behaviour",
+        "meanings": {
+          "0-2": [
+            "Controlling or bossy behaviour meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Controlling or bossy behaviour meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Controlling or bossy behaviour meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Controlling or bossy behaviour meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Controlling or bossy behaviour - example 1",
+          "Parent experience for Controlling or bossy behaviour - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Controlling or bossy behaviour at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Controlling or bossy behaviour at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Controlling or bossy behaviour at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Controlling or bossy behaviour at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Controlling or bossy behaviour - example 1",
+          "Red flag for Controlling or bossy behaviour - example 2"
+        ]
+      },
+      {
+        "behaviour": "Hyperactivity and impulsiveness",
+        "meanings": {
+          "0-2": [
+            "Hyperactivity and impulsiveness meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Hyperactivity and impulsiveness meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Hyperactivity and impulsiveness meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Hyperactivity and impulsiveness meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Hyperactivity and impulsiveness - example 1",
+          "Parent experience for Hyperactivity and impulsiveness - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Hyperactivity and impulsiveness at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Hyperactivity and impulsiveness at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Hyperactivity and impulsiveness at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Hyperactivity and impulsiveness at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Hyperactivity and impulsiveness - example 1",
+          "Red flag for Hyperactivity and impulsiveness - example 2"
+        ]
+      },
+      {
+        "behaviour": "Emotional shutdown or numbing",
+        "meanings": {
+          "0-2": [
+            "Emotional shutdown or numbing meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Emotional shutdown or numbing meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Emotional shutdown or numbing meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Emotional shutdown or numbing meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Emotional shutdown or numbing - example 1",
+          "Parent experience for Emotional shutdown or numbing - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Emotional shutdown or numbing at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Emotional shutdown or numbing at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Emotional shutdown or numbing at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Emotional shutdown or numbing at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Emotional shutdown or numbing - example 1",
+          "Red flag for Emotional shutdown or numbing - example 2"
+        ]
+      },
+      {
+        "behaviour": "People-pleasing or perfectionism",
+        "meanings": {
+          "0-2": [
+            "People-pleasing or perfectionism meaning for 0-2 years"
+          ],
+          "3-5": [
+            "People-pleasing or perfectionism meaning for 3-5 years"
+          ],
+          "6-12": [
+            "People-pleasing or perfectionism meaning for 6-12 years"
+          ],
+          "13-18": [
+            "People-pleasing or perfectionism meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for People-pleasing or perfectionism - example 1",
+          "Parent experience for People-pleasing or perfectionism - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for People-pleasing or perfectionism at 0-2"
+          ],
+          "3-5": [
+            "Strategy for People-pleasing or perfectionism at 3-5"
+          ],
+          "6-12": [
+            "Strategy for People-pleasing or perfectionism at 6-12"
+          ],
+          "13-18": [
+            "Strategy for People-pleasing or perfectionism at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for People-pleasing or perfectionism - example 1",
+          "Red flag for People-pleasing or perfectionism - example 2"
+        ]
+      },
+      {
+        "behaviour": "Regressing (baby talk, needing nappies, etc.)",
+        "meanings": {
+          "0-2": [
+            "Regressing (baby talk, needing nappies, etc.) meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Regressing (baby talk, needing nappies, etc.) meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Regressing (baby talk, needing nappies, etc.) meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Regressing (baby talk, needing nappies, etc.) meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Regressing (baby talk, needing nappies, etc.) - example 1",
+          "Parent experience for Regressing (baby talk, needing nappies, etc.) - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Regressing (baby talk, needing nappies, etc.) at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Regressing (baby talk, needing nappies, etc.) at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Regressing (baby talk, needing nappies, etc.) at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Regressing (baby talk, needing nappies, etc.) at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Regressing (baby talk, needing nappies, etc.) - example 1",
+          "Red flag for Regressing (baby talk, needing nappies, etc.) - example 2"
+        ]
+      },
+      {
+        "behaviour": "Excessive crying or sadness",
+        "meanings": {
+          "0-2": [
+            "Excessive crying or sadness meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Excessive crying or sadness meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Excessive crying or sadness meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Excessive crying or sadness meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Excessive crying or sadness - example 1",
+          "Parent experience for Excessive crying or sadness - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Excessive crying or sadness at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Excessive crying or sadness at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Excessive crying or sadness at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Excessive crying or sadness at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Excessive crying or sadness - example 1",
+          "Red flag for Excessive crying or sadness - example 2"
+        ]
+      },
+      {
+        "behaviour": "Bullying others or mean behaviour",
+        "meanings": {
+          "0-2": [
+            "Bullying others or mean behaviour meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Bullying others or mean behaviour meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Bullying others or mean behaviour meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Bullying others or mean behaviour meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Bullying others or mean behaviour - example 1",
+          "Parent experience for Bullying others or mean behaviour - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Bullying others or mean behaviour at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Bullying others or mean behaviour at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Bullying others or mean behaviour at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Bullying others or mean behaviour at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Bullying others or mean behaviour - example 1",
+          "Red flag for Bullying others or mean behaviour - example 2"
+        ]
+      },
+      {
+        "behaviour": "Fearfulness and phobias",
+        "meanings": {
+          "0-2": [
+            "Fearfulness and phobias meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Fearfulness and phobias meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Fearfulness and phobias meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Fearfulness and phobias meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Fearfulness and phobias - example 1",
+          "Parent experience for Fearfulness and phobias - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Fearfulness and phobias at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Fearfulness and phobias at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Fearfulness and phobias at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Fearfulness and phobias at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Fearfulness and phobias - example 1",
+          "Red flag for Fearfulness and phobias - example 2"
+        ]
+      },
+      {
+        "behaviour": "Avoidance of school or tasks",
+        "meanings": {
+          "0-2": [
+            "Avoidance of school or tasks meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Avoidance of school or tasks meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Avoidance of school or tasks meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Avoidance of school or tasks meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Avoidance of school or tasks - example 1",
+          "Parent experience for Avoidance of school or tasks - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Avoidance of school or tasks at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Avoidance of school or tasks at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Avoidance of school or tasks at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Avoidance of school or tasks at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Avoidance of school or tasks - example 1",
+          "Red flag for Avoidance of school or tasks - example 2"
+        ]
+      },
+      {
+        "behaviour": "Food refusal or bingeing",
+        "meanings": {
+          "0-2": [
+            "Food refusal or bingeing meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Food refusal or bingeing meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Food refusal or bingeing meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Food refusal or bingeing meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Food refusal or bingeing - example 1",
+          "Parent experience for Food refusal or bingeing - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Food refusal or bingeing at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Food refusal or bingeing at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Food refusal or bingeing at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Food refusal or bingeing at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Food refusal or bingeing - example 1",
+          "Red flag for Food refusal or bingeing - example 2"
+        ]
+      },
+      {
+        "behaviour": "Sensation seeking or self-harm",
+        "meanings": {
+          "0-2": [
+            "Sensation seeking or self-harm meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Sensation seeking or self-harm meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Sensation seeking or self-harm meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Sensation seeking or self-harm meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Sensation seeking or self-harm - example 1",
+          "Parent experience for Sensation seeking or self-harm - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Sensation seeking or self-harm at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Sensation seeking or self-harm at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Sensation seeking or self-harm at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Sensation seeking or self-harm at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Sensation seeking or self-harm - example 1",
+          "Red flag for Sensation seeking or self-harm - example 2"
+        ]
+      },
+      {
+        "behaviour": "Inappropriate sexualised behaviour",
+        "meanings": {
+          "0-2": [
+            "Inappropriate sexualised behaviour meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Inappropriate sexualised behaviour meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Inappropriate sexualised behaviour meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Inappropriate sexualised behaviour meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Inappropriate sexualised behaviour - example 1",
+          "Parent experience for Inappropriate sexualised behaviour - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Inappropriate sexualised behaviour at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Inappropriate sexualised behaviour at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Inappropriate sexualised behaviour at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Inappropriate sexualised behaviour at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Inappropriate sexualised behaviour - example 1",
+          "Red flag for Inappropriate sexualised behaviour - example 2"
+        ]
+      },
+      {
+        "behaviour": "Over-compliance or adultification",
+        "meanings": {
+          "0-2": [
+            "Over-compliance or adultification meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Over-compliance or adultification meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Over-compliance or adultification meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Over-compliance or adultification meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Over-compliance or adultification - example 1",
+          "Parent experience for Over-compliance or adultification - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Over-compliance or adultification at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Over-compliance or adultification at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Over-compliance or adultification at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Over-compliance or adultification at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Over-compliance or adultification - example 1",
+          "Red flag for Over-compliance or adultification - example 2"
+        ]
+      },
+      {
+        "behaviour": "Manipulation or triangulation",
+        "meanings": {
+          "0-2": [
+            "Manipulation or triangulation meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Manipulation or triangulation meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Manipulation or triangulation meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Manipulation or triangulation meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Manipulation or triangulation - example 1",
+          "Parent experience for Manipulation or triangulation - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Manipulation or triangulation at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Manipulation or triangulation at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Manipulation or triangulation at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Manipulation or triangulation at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Manipulation or triangulation - example 1",
+          "Red flag for Manipulation or triangulation - example 2"
+        ]
+      },
+      {
+        "behaviour": "Obsessive rituals or rigidity",
+        "meanings": {
+          "0-2": [
+            "Obsessive rituals or rigidity meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Obsessive rituals or rigidity meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Obsessive rituals or rigidity meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Obsessive rituals or rigidity meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Obsessive rituals or rigidity - example 1",
+          "Parent experience for Obsessive rituals or rigidity - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Obsessive rituals or rigidity at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Obsessive rituals or rigidity at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Obsessive rituals or rigidity at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Obsessive rituals or rigidity at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Obsessive rituals or rigidity - example 1",
+          "Red flag for Obsessive rituals or rigidity - example 2"
+        ]
+      },
+      {
+        "behaviour": "Frequent apologies or shame-based language",
+        "meanings": {
+          "0-2": [
+            "Frequent apologies or shame-based language meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Frequent apologies or shame-based language meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Frequent apologies or shame-based language meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Frequent apologies or shame-based language meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Frequent apologies or shame-based language - example 1",
+          "Parent experience for Frequent apologies or shame-based language - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Frequent apologies or shame-based language at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Frequent apologies or shame-based language at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Frequent apologies or shame-based language at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Frequent apologies or shame-based language at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Frequent apologies or shame-based language - example 1",
+          "Red flag for Frequent apologies or shame-based language - example 2"
+        ]
+      },
+      {
+        "behaviour": "Refusal to bathe or poor hygiene",
+        "meanings": {
+          "0-2": [
+            "Refusal to bathe or poor hygiene meaning for 0-2 years"
+          ],
+          "3-5": [
+            "Refusal to bathe or poor hygiene meaning for 3-5 years"
+          ],
+          "6-12": [
+            "Refusal to bathe or poor hygiene meaning for 6-12 years"
+          ],
+          "13-18": [
+            "Refusal to bathe or poor hygiene meaning for 13-18 years"
+          ]
+        },
+        "parent_experience": [
+          "Parent experience for Refusal to bathe or poor hygiene - example 1",
+          "Parent experience for Refusal to bathe or poor hygiene - example 2"
+        ],
+        "strategies": {
+          "0-2": [
+            "Strategy for Refusal to bathe or poor hygiene at 0-2"
+          ],
+          "3-5": [
+            "Strategy for Refusal to bathe or poor hygiene at 3-5"
+          ],
+          "6-12": [
+            "Strategy for Refusal to bathe or poor hygiene at 6-12"
+          ],
+          "13-18": [
+            "Strategy for Refusal to bathe or poor hygiene at 13-18"
+          ]
+        },
+        "red_flags": [
+          "Red flag for Refusal to bathe or poor hygiene - example 1",
+          "Red flag for Refusal to bathe or poor hygiene - example 2"
+        ]
       }
     ];
 
