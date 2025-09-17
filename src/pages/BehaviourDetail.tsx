@@ -3,7 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { BehaviorGuide } from '@/entities/BehaviorGuide';
 import { createPageUrl } from '@/utils';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowLeft, Lightbulb, UserCheck, Heart, AlertTriangle, Phone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, Lightbulb, UserCheck, Heart, AlertTriangle, Phone, MessageCircle } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 export default function BehaviourDetailPage() {
@@ -140,6 +141,27 @@ export default function BehaviourDetailPage() {
                 <Phone className="w-5 h-5"/>
                 For any immediate safety concerns, always call 000.
               </p>
+            </CardContent>
+          </Card>
+
+          {/* AI Chat Bot Link */}
+          <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20 mt-6">
+            <CardContent className="p-6 text-center">
+              <div className="flex flex-col items-center gap-4">
+                <MessageCircle className="w-12 h-12 text-primary" />
+                <div>
+                  <h3 className="text-lg font-semibold text-ink mb-2">Have Questions About Other Behaviors?</h3>
+                  <p className="text-muted mb-4">
+                    If you have questions about behaviors not covered in our guides, our AI parenting assistant is here to help with evidence-based guidance.
+                  </p>
+                </div>
+                <Button asChild className="bg-primary hover:bg-primary/90 text-white">
+                  <Link to={createPageUrl("ParentingChat")} className="flex items-center gap-2">
+                    <MessageCircle className="w-4 h-4" />
+                    Ask Our AI Assistant
+                  </Link>
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
