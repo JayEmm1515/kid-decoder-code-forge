@@ -1,180 +1,287 @@
 export class BehaviorGuide {
   static async list(orderBy?: string) {
-    // Comprehensive evidence-based behavior guides
-    return [
-      // 0-2 Age Group (Early Years)
+    const behaviorsData = [
       {
-        id: '1',
-        title: 'Separation Anxiety',
-        slug: 'separation-anxiety',
-        age_group: '0-2',
-        summary: 'Helping babies and toddlers feel secure during separations',
-        what_it_means: 'Separation anxiety shows that your child has formed a healthy attachment and understands you as their safe base. This developmental milestone typically emerges around 8-10 months as their brain develops awareness of object permanence.',
-        what_it_conveys: 'Your child is saying "I love you and need you" - this is actually a positive sign of healthy development. They\'re expressing their deep connection to you and their understanding that you exist even when not visible.',
-        parent_experience: 'You may feel guilty leaving them, worry about their distress, or question if you\'re doing the right thing. These feelings are completely normal and show your care for your child\'s wellbeing.',
-        practical_strategies: 'Create predictable goodbye rituals, practice short separations, leave a comfort object, stay calm during transitions, and trust that consistent warm partings build resilience over time.'
+        "behaviour": "Tantrums",
+        "meanings": {
+          "0-2": [
+            "Frustration from limited verbal expression",
+            "Overstimulation or unmet physical needs",
+            "Need for co-regulation and safety"
+          ],
+          "3-5": [
+            "Boundary testing and emotional learning",
+            "Lack of consistent routines or unmet needs",
+            "Difficulty transitioning between tasks"
+          ],
+          "6-12": [
+            "Emotional overwhelm related to social or academic stress",
+            "Seeking control in uncertain environments",
+            "Unexpressed anxiety or unmet expectations"
+          ],
+          "13-18": [
+            "Intensified emotional reactivity or identity assertion",
+            "Maladaptive coping with stress or shame",
+            "Unprocessed trauma or peer conflict"
+          ]
+        },
+        "parent_experience": [
+          "Feeling overwhelmed, unsure how to respond",
+          "Fear of being judged in public or by family",
+          "Frustration from repeated outbursts"
+        ],
+        "strategies": {
+          "0-2": [
+            "Use calm voice and stay close",
+            "Validate feelings with simple words",
+            "Redirect gently with touch or song"
+          ],
+          "3-5": [
+            "Name emotions and offer two choices",
+            "Hold limits with empathy",
+            "Use visual aids for transitions"
+          ],
+          "6-12": [
+            "Debrief after calm returns",
+            "Introduce self-regulation strategies",
+            "Help child name triggers"
+          ],
+          "13-18": [
+            "Keep tone neutral during escalation",
+            "Use collaborative problem solving later",
+            "Encourage journaling or creative outlets"
+          ]
+        },
+        "red_flags": [
+          "Tantrums lasting over 30 mins daily",
+          "Physical harm to self or others",
+          "Lack of response to comfort consistently"
+        ]
       },
       {
-        id: '2',
-        title: 'Sleep Resistance',
-        slug: 'sleep-resistance',
-        age_group: '0-2',
-        summary: 'Understanding and addressing bedtime battles in babies and toddlers',
-        what_it_means: 'Sleep resistance often reflects your child\'s nervous system struggling to shift from alert to calm states. Their developing brain is learning the complex skill of self-regulation.',
-        what_it_conveys: 'Your child may be communicating overwhelm, overtiredness, or a need for more connection and co-regulation before sleep.',
-        parent_experience: 'You might feel exhausted, frustrated, or worried about doing something wrong. Sleep challenges can trigger our own childhood experiences and fears about rest.',
-        practical_strategies: 'Establish consistent routines, watch for early sleep cues, create calm environments, offer your regulated presence, and remember that sleep skills develop gradually with patient repetition.'
+        "behaviour": "Withdrawing or isolating",
+        "meanings": {
+          "0-2": [
+            "Low energy due to tiredness or illness",
+            "Need to self-soothe in overstimulating environments"
+          ],
+          "3-5": [
+            "Seeking emotional safety through retreat",
+            "Feeling unseen or unimportant"
+          ],
+          "6-12": [
+            "Avoidance of peer rejection or bullying",
+            "Masking sadness or emotional distress"
+          ],
+          "13-18": [
+            "Withdrawing due to depression or social anxiety",
+            "Avoidance linked to fear of judgement or rejection"
+          ]
+        },
+        "parent_experience": [
+          "Worry about child's emotional wellbeing",
+          "Confusion about whether to intervene or give space",
+          "Loneliness due to child withdrawing"
+        ],
+        "strategies": {
+          "0-2": [
+            "Sit nearby in silence and wait for engagement",
+            "Use simple play or book sharing"
+          ],
+          "3-5": [
+            "Reflect feelings: 'You're needing some quiet.'",
+            "Draw them gently into shared activity"
+          ],
+          "6-12": [
+            "Open the door with: 'I've noticed you've been quiet lately.'",
+            "Offer connection through shared interests"
+          ],
+          "13-18": [
+            "Respect space but check in non-judgementally",
+            "Use low-pressure options like texting or walking side-by-side"
+          ]
+        },
+        "red_flags": [
+          "Refusal to engage with family or friends",
+          "Speech regression or extreme silence",
+          "Expression of sadness or hopelessness"
+        ]
       },
       {
-        id: '3',
-        title: 'Hitting and Aggression',
-        slug: 'hitting-aggression-toddler',
-        age_group: '0-2',
-        summary: 'Responding to physical expressions of big emotions in toddlers',
-        what_it_means: 'Hitting is your toddler\'s primitive way of expressing emotions they cannot yet verbalize. Their impulse control systems are still developing, making physical reactions their default response.',
-        what_it_conveys: 'Your child is likely feeling overwhelmed, frustrated, or seeking connection through the only means they currently understand.',
-        parent_experience: 'You may feel shocked, embarrassed, or worried about raising an aggressive child. These behaviors can trigger intense reactions in parents.',
-        practical_strategies: 'Stay calm, gently stop the hitting, offer alternative expressions, name their emotions, provide comfort after boundaries, and model gentle touch consistently.'
-      },
-
-      // 3-5 Age Group (Preschool)
-      {
-        id: '4',
-        title: 'Tantrums and Meltdowns',
-        slug: 'tantrums-meltdowns',
-        age_group: '3-5',
-        summary: 'Understanding and responding to emotional outbursts in preschoolers',
-        what_it_means: 'Tantrums occur when your child\'s emotional intensity exceeds their capacity to cope. Their developing prefrontal cortex cannot yet regulate the intense activation in their emotional brain centers.',
-        what_it_conveys: 'Your child is communicating that they need help regulating their emotions and may be feeling scared, frustrated, overwhelmed, or powerless.',
-        parent_experience: 'You might feel embarrassed, frustrated, helpless, or triggered by the intensity. Remember that your calm presence teaches emotional regulation more than any words.',
-        practical_strategies: 'Stay present and calm, validate their feelings, avoid reasoning during the storm, offer comfort when they\'re ready, and teach coping strategies during calm moments.'
-      },
-      {
-        id: '5',
-        title: 'Defiance and Power Struggles',
-        slug: 'defiance-power-struggles',
-        age_group: '3-5',
-        summary: 'Navigating the push for autonomy in preschoolers',
-        what_it_means: 'Defiance is your child\'s developmental drive for autonomy meeting their need for safety and connection. They\'re learning about personal power while still needing guidance.',
-        what_it_conveys: 'Your child is saying "I want to have some control" and "I\'m learning about my own will." This is healthy development, even when challenging.',
-        parent_experience: 'You may feel challenged, frustrated, or worry about losing authority. This phase can trigger our own childhood experiences with power and control.',
-        practical_strategies: 'Offer limited choices, pick your battles wisely, stay connected during conflicts, acknowledge their feelings, set clear boundaries with warmth, and celebrate cooperation.'
-      },
-      {
-        id: '6',
-        title: 'Fears and Phobias',
-        slug: 'fears-phobias',
-        age_group: '3-5',
-        summary: 'Supporting children through developmental fears',
-        what_it_means: 'Fears are normal as your child\'s imagination develops faster than their logical thinking. Their brain is designed to detect threats, sometimes creating fears of imaginary dangers.',
-        what_it_conveys: 'Your child is communicating a need for safety, comfort, and reassurance as they navigate an increasingly complex understanding of the world.',
-        parent_experience: 'You might feel the urge to dismiss fears as "silly" or become anxious yourself. Balancing validation with gentle reality-testing can feel challenging.',
-        practical_strategies: 'Validate their feelings, avoid dismissing fears, gradually expose them to safe versions, create comfort rituals, read books about fears, and model calm responses.'
-      },
-
-      // 6-12 Age Group (School Age)
-      {
-        id: '7',
-        title: 'School Refusal and Anxiety',
-        slug: 'school-refusal-anxiety',
-        age_group: '6-12',
-        summary: 'Understanding and addressing reluctance to attend school',
-        what_it_means: 'School refusal often reflects underlying anxiety, overwhelm, or unmet needs rather than simple avoidance. Your child\'s nervous system may be perceiving school as unsafe.',
-        what_it_conveys: 'Your child is communicating distress about some aspect of school - social, academic, sensory, or emotional - and needs support to feel safe.',
-        parent_experience: 'You may feel frustrated, worried about academics, or uncertain about how firm to be. The morning battles can be exhausting for the whole family.',
-        practical_strategies: 'Explore underlying causes, collaborate with teachers, create gradual re-entry plans, teach anxiety management skills, maintain connection, and seek professional support if needed.'
+        "behaviour": "Defiance and refusing instructions",
+        "meanings": {
+          "0-2": [
+            "Developmental drive toward independence",
+            "Misunderstanding of safety or instruction"
+          ],
+          "3-5": [
+            "Boundary testing and autonomy seeking",
+            "Emotional overload when feeling powerless"
+          ],
+          "6-12": [
+            "Challenging perceived unfairness or lack of control",
+            "Reacting to inconsistency or harsh discipline"
+          ],
+          "13-18": [
+            "Pushing against perceived control or injustice",
+            "Asserting independence and rejecting hierarchy"
+          ]
+        },
+        "parent_experience": [
+          "Feeling disrespected or powerless",
+          "Worry that discipline isn't working",
+          "Fear that the child will become uncontrollable"
+        ],
+        "strategies": {
+          "0-2": [
+            "Repeat simple instruction calmly",
+            "Model safe behaviour instead of punishing"
+          ],
+          "3-5": [
+            "Offer choices within limits",
+            "Use playful tone to increase cooperation"
+          ],
+          "6-12": [
+            "Discuss reasons behind rules collaboratively",
+            "Validate frustration but hold expectations"
+          ],
+          "13-18": [
+            "Negotiate shared expectations openly",
+            "Avoid punitive reactions—focus on mutual respect"
+          ]
+        },
+        "red_flags": [
+          "Destructive or dangerous defiance",
+          "Repeated defiance causing school or social issues",
+          "Child expresses hatred or self-harm during defiance"
+        ]
       },
       {
-        id: '8',
-        title: 'Sibling Rivalry and Fighting',
-        slug: 'sibling-rivalry-fighting',
-        age_group: '6-12',
-        summary: 'Managing conflicts and competition between siblings',
-        what_it_means: 'Sibling conflicts reflect children\'s fundamental need to secure their place in the family and ensure their survival needs are met. Competition for parental attention is developmentally normal.',
-        what_it_conveys: 'Your children are communicating their need for individual recognition, fairness, and assurance of their unique place in your heart.',
-        parent_experience: 'You might feel torn between children, exhausted by constant refereeing, or worried about long-term relationships between siblings.',
-        practical_strategies: 'Avoid comparisons, spend individual time with each child, teach conflict resolution skills, focus on underlying needs, stay out of minor disputes, and build family connection rituals.'
+        "behaviour": "Aggression (hitting, biting, throwing)",
+        "meanings": {
+          "0-2": [
+            "Exploratory behaviour with poor impulse control",
+            "Frustration, fatigue, or dysregulation"
+          ],
+          "3-5": [
+            "Immature social communication",
+            "Mimicking aggressive play or lack of emotional vocabulary"
+          ],
+          "6-12": [
+            "Inability to express anger safely",
+            "Reactivity to perceived threat or rejection"
+          ],
+          "13-18": [
+            "Intense emotional pain expressed physically",
+            "Poor impulse control or trauma reactivity"
+          ]
+        },
+        "parent_experience": [
+          "Fear of harm to others or child",
+          "Guilt for yelling or reacting strongly",
+          "Uncertainty about whether it's 'normal' behaviour"
+        ],
+        "strategies": {
+          "0-2": [
+            "Redirect with soft object or change of scene",
+            "Model gentle touch and calm tone"
+          ],
+          "3-5": [
+            "Label what's not okay and show what is",
+            "Use books or stories to teach alternatives"
+          ],
+          "6-12": [
+            "Teach emotional vocabulary and physical outlets",
+            "Create calm-down spaces at home or school"
+          ],
+          "13-18": [
+            "Help teen recognise escalation signals",
+            "Model anger management techniques yourself"
+          ]
+        },
+        "red_flags": [
+          "Frequent violence towards others or animals",
+          "Use of weapons or threats",
+          "Lack of remorse after aggression"
+        ]
       },
       {
-        id: '9',
-        title: 'Perfectionism and Performance Anxiety',
-        slug: 'perfectionism-performance-anxiety',
-        age_group: '6-12',
-        summary: 'Supporting children who struggle with high expectations',
-        what_it_means: 'Perfectionism often develops as a strategy to maintain connection and approval. Your child\'s developing sense of self becomes tied to achievement rather than inherent worth.',
-        what_it_conveys: 'Your child is communicating anxiety about acceptance and belonging, fearing that mistakes might threaten their relationships or safety.',
-        parent_experience: 'You may feel proud of their high standards while also worried about their stress levels. Balancing encouragement with pressure can feel tricky.',
-        practical_strategies: 'Model making mistakes gracefully, focus on effort over outcome, share your own struggles, create low-pressure activities, celebrate imperfection, and emphasize unconditional love.'
-      },
-      {
-        id: '10',
-        title: 'Lying and Dishonesty',
-        slug: 'lying-dishonesty',
-        age_group: '6-12',
-        summary: 'Understanding why children lie and how to respond',
-        what_it_means: 'Lying often reflects your child\'s attempt to avoid disappointing you, escape consequences, or protect something important to them. It\'s rarely about moral failing.',
-        what_it_conveys: 'Your child may be communicating fear of your reaction, a desire to please you, or anxiety about the consequences of truth.',
-        parent_experience: 'You might feel hurt, betrayed, or worried about their moral development. The discovery of lies can trigger feelings about trust and connection.',
-        practical_strategies: 'Create safe spaces for truth-telling, focus on problem-solving rather than punishment, model honesty about your own mistakes, and address underlying fears that drive dishonesty.'
-      },
-
-      // 13-18 Age Group (Teens)
-      {
-        id: '11',
-        title: 'Mood Swings and Emotional Intensity',
-        slug: 'mood-swings-emotional-intensity',
-        age_group: '13-18',
-        summary: 'Understanding teenage emotional volatility and brain development',
-        what_it_means: 'Mood swings reflect massive brain reconstruction during adolescence. The emotional centers develop faster than regulatory systems, creating temporary imbalance.',
-        what_it_conveys: 'Your teen is communicating the overwhelm of navigating intense emotions with developing coping skills while facing increased social and academic pressures.',
-        parent_experience: 'You may feel confused by the intensity, miss your "easier" child, or take their moods personally. The unpredictability can be emotionally exhausting.',
-        practical_strategies: 'Stay regulated yourself, avoid taking moods personally, offer presence without fixing, teach emotional vocabulary, maintain routines, and validate their experience.'
-      },
-      {
-        id: '12',
-        title: 'Risk-Taking and Poor Decisions',
-        slug: 'risk-taking-poor-decisions',
-        age_group: '13-18',
-        summary: 'Understanding adolescent decision-making and impulse control',
-        what_it_means: 'Risk-taking reflects normal adolescent brain development where reward systems are hyperactive while impulse control systems are still maturing.',
-        what_it_conveys: 'Your teen is communicating their developmental need for autonomy, peer acceptance, and novel experiences while their brain prioritizes immediate rewards.',
-        parent_experience: 'You may feel terrified, frustrated, or powerless watching them make choices you wouldn\'t make. The urge to control can be overwhelming.',
-        practical_strategies: 'Maintain connection over control, discuss consequences collaboratively, share your values without lecturing, create opportunities for appropriate risk-taking, and trust the relationship.'
-      },
-      {
-        id: '13',
-        title: 'Withdrawal and Communication Shutdown',
-        slug: 'withdrawal-communication-shutdown',
-        age_group: '13-18',
-        summary: 'Reconnecting when teenagers pull away emotionally',
-        what_it_means: 'Withdrawal is often your teen\'s attempt to individuate and develop their own identity while managing overwhelming emotions and social pressures.',
-        what_it_conveys: 'Your teen may be communicating a need for space to process their experiences while still needing your steady, available presence.',
-        parent_experience: 'You might feel rejected, worried, or desperate to reconnect. The silence can trigger fears about losing your relationship permanently.',
-        practical_strategies: 'Respect their need for space while staying available, find new ways to connect, focus on being interesting rather than interested, maintain family rituals, and trust the foundation you\'ve built.'
-      },
-      {
-        id: '14',
-        title: 'Academic Struggles and Motivation Issues',
-        slug: 'academic-struggles-motivation',
-        age_group: '13-18',
-        summary: 'Supporting teens through school challenges and loss of motivation',
-        what_it_means: 'Academic struggles often reflect overwhelm, misaligned learning styles, mental health challenges, or the adolescent brain\'s focus on social rather than academic priorities.',
-        what_it_conveys: 'Your teen may be communicating stress, perfectionism, learning differences, or competing priorities as their brain reorganizes around peer relationships.',
-        parent_experience: 'You might feel anxious about their future, frustrated by their apparent lack of care, or uncertain about how much to intervene.',
-        practical_strategies: 'Collaborate on solutions, address underlying stress, connect with teachers, explore learning supports, maintain perspective on long-term development, and separate their struggles from your worth as a parent.'
-      },
-      {
-        id: '15',
-        title: 'Peer Pressure and Social Drama',
-        slug: 'peer-pressure-social-drama',
-        age_group: '13-18',
-        summary: 'Helping teens navigate complex social relationships',
-        what_it_means: 'Social struggles reflect the adolescent brain\'s developmental priority on peer relationships and belonging, which temporarily override family connections and individual judgment.',
-        what_it_conveys: 'Your teen is communicating their intense need for social acceptance and their struggle to balance authenticity with belonging.',
-        parent_experience: 'You may feel helpless watching them get hurt, frustrated by their choices, or triggered by your own adolescent social memories.',
-        practical_strategies: 'Listen without immediately problem-solving, share your own social struggles, discuss values during calm moments, help them identify true friends, and trust their ability to learn from experience.'
+        "behaviour": "Clinginess or separation anxiety",
+        "meanings": {
+          "0-2": [
+            "Developmental anxiety related to object permanence",
+            "Need for secure base and safety"
+          ],
+          "3-5": [
+            "Fear of abandonment or change in routine",
+            "Uncertainty about transitions or new environments"
+          ],
+          "6-12": [
+            "Social separation fears or identity-related insecurity",
+            "Increased awareness of risk and consequence"
+          ],
+          "13-18": [
+            "Dependency rooted in low self-esteem or enmeshment",
+            "Avoidance of separation as protective mechanism"
+          ]
+        },
+        "parent_experience": [
+          "Distress seeing child cry or cling",
+          "Frustration from inability to leave or get things done",
+          "Worry about creating 'dependency'"
+        ],
+        "strategies": {
+          "0-2": [
+            "Offer transitional object (e.g. toy, cloth)",
+            "Use short goodbye rituals"
+          ],
+          "3-5": [
+            "Prepare child ahead of time for separations",
+            "Keep routines consistent and warm"
+          ],
+          "6-12": [
+            "Validate anxiety and explain reasons for separation",
+            "Encourage confidence-building tasks"
+          ],
+          "13-18": [
+            "Foster autonomy while offering safety net",
+            "Explore underlying emotional needs for closeness"
+          ]
+        },
+        "red_flags": [
+          "Inconsolable distress at every separation",
+          "Extreme avoidance of school or social spaces",
+          "Regression (e.g. toileting, speech) lasting weeks"
+        ]
       }
     ];
+
+    // Convert the new structure to match existing UI expectations
+    const guides = [];
+    behaviorsData.forEach((behavior, index) => {
+      // Create entries for each age group
+      const ageGroups = ['0-2', '3-5', '6-12', '13-18'];
+      ageGroups.forEach(ageGroup => {
+        if (behavior.meanings[ageGroup] && behavior.meanings[ageGroup].length > 0) {
+          guides.push({
+            id: `${index + 1}-${ageGroup}`,
+            title: behavior.behaviour,
+            slug: behavior.behaviour.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+            age_group: ageGroup,
+            summary: `Understanding ${behavior.behaviour.toLowerCase()} in ${ageGroup === '0-2' ? 'babies and toddlers' : ageGroup === '3-5' ? 'preschoolers' : ageGroup === '6-12' ? 'school-age children' : 'teenagers'}`,
+            what_it_means: behavior.meanings[ageGroup].join('. ') + '.',
+            what_it_conveys: behavior.meanings[ageGroup][0] || 'Your child is communicating an important need.',
+            parent_experience: behavior.parent_experience.join('. ') + '.',
+            practical_strategies: behavior.strategies[ageGroup].join('. ') + '.',
+            red_flags: behavior.red_flags,
+            age_specific_meanings: behavior.meanings[ageGroup],
+            age_specific_strategies: behavior.strategies[ageGroup]
+          });
+        }
+      });
+    });
+
+    return guides;
   }
 
   static async filter(criteria: any) {

@@ -79,7 +79,46 @@ export default function BehaviourDetailPage() {
                 </div>
               </div>
             ))}
+            
+            {/* Age-Specific Strategies */}
+            {guide.age_specific_strategies && (
+              <div>
+                <h2 className="flex items-center gap-3 text-2xl font-bold text-ink mb-4">
+                  <div style={{ backgroundColor: "var(--primary)" }} className="w-10 h-10 rounded-lg flex items-center justify-center">
+                     <Lightbulb className="w-6 h-6 text-white" />
+                  </div>
+                  Practical Strategies for {guide.age_group} Years
+                </h2>
+                <div className="grid gap-3">
+                  {guide.age_specific_strategies.map((strategy, index) => (
+                    <div key={index} className="p-4 bg-background/50 rounded-lg border-l-4 border-primary">
+                      <p className="text-ink leading-relaxed">{strategy}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
+
+          {/* When to Seek Help */}
+          <Card className="bg-pink-ice border-dusty-rose mb-6">
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold text-plum flex items-center gap-3">
+                <AlertTriangle className="w-6 h-6" />
+                Red Flags to Watch For
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3 text-plum">
+              <p>Consider seeking immediate professional help if you notice:</p>
+              {guide.red_flags && (
+                <ul className="list-disc list-inside space-y-2">
+                  {guide.red_flags.map((flag, index) => (
+                    <li key={index}>{flag}</li>
+                  ))}
+                </ul>
+              )}
+            </CardContent>
+          </Card>
 
           {/* When to Seek Help */}
           <Card className="bg-pink-ice border-dusty-rose">
