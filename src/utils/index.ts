@@ -13,6 +13,7 @@ export const createPageUrl = (pageName: string) => {
     'Preschool': '/preschool',
     'SchoolAge': '/school-age',
     'Teens': '/teens',
+    'BeingWithExercise': '/being-with-exercise',
   };
 
   return pageRoutes[pageName] || `/${pageName.toLowerCase()}`;
