@@ -39,8 +39,8 @@ const App = () => (
           <Route path="/tracking" element={<Tracking />} />
           <Route path="/chain-analysis" element={<ChainAnalysis />} />
           <Route path="/understanding-behaviour" element={<UnderstandingBehaviour />} />
-          <Route path="/behaviour-list" element={<BehaviourList />} />
-          <Route path="/behaviour-detail" element={<BehaviourDetail />} />
+          <Route path="/behaviourlist" element={<BehaviourList />} />
+          <Route path="/behaviourdetail" element={<BehaviourDetail />} />
           <Route path="/early-years" element={<EarlyYears />} />
           <Route path="/preschool" element={<Preschool />} />
           <Route path="/school-age" element={<SchoolAge />} />
