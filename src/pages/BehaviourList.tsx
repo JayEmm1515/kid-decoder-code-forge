@@ -72,7 +72,7 @@ export default function BehaviourListPage() {
       to={createPageUrl(`BehaviourDetail?id=${behavior.id}`)}
       className="block group"
     >
-      <Card className="h-full bg-white hover:shadow-lg transition-all duration-300 border border-slate-200 group-hover:border-violet/30">
+      <Card className="glass h-full hover:shadow-lg transition-all duration-300 group-hover:border-violet/30">
         <CardHeader>
           <CardTitle className="text-xl font-semibold text-ink group-hover:text-violet transition-colors">
             {behavior.title}
@@ -151,7 +151,7 @@ export default function BehaviourListPage() {
 
           {/* Results */}
           {filteredBehaviors.length === 0 ? (
-            <Card className="text-center py-12 bg-slate-50">
+            <Card className="glass text-center py-12">
               <CardContent className="space-y-4">
                 <BookOpen className="w-12 h-12 text-muted mx-auto" />
                 <div>
