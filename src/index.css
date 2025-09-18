@@ -560,4 +560,73 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* Kid Theme Wrapper Styles */
+  /* Force base colours inside our app, regardless of Lovable's defaults */
+  .kid-theme, .kid-theme * { 
+    color: var(--text); 
+  }
+  .kid-theme .muted, .kid-theme .subtle, .kid-theme .caption { 
+    color: var(--text-muted) !important; 
+  }
+
+  /* Page background (softer wash for readability on phones) */
+  .kid-theme.bg-orb,
+  .kid-theme .bg-orb {
+    background:
+      radial-gradient(800px 400px at 20% 10%, rgba(185,218,245,0.25) 0%, transparent 60%),
+      radial-gradient(700px 500px at 80% 30%, rgba(195,134,224,0.18) 0%, transparent 65%),
+      radial-gradient(600px 400px at 50% 90%, rgba(124,202,228,0.18) 0%, transparent 70%),
+      var(--surface) !important;
+  }
+
+  /* Glass panes – less milk, more contrast; stronger shadow */
+  .kid-theme .glass {
+    background: rgba(255,255,255,0.35) !important;
+    border: 1px solid rgba(255,255,255,0.30) !important;
+    backdrop-filter: blur(var(--glass-blur)); 
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: 18px !important;
+    box-shadow: 0 12px 30px rgba(92,141,207,0.22) !important;
+  }
+
+  /* Neumorphic tiles */
+  .kid-theme .neu {
+    background: var(--surface) !important;
+    border-radius: 18px !important;
+    box-shadow:
+      10px 10px 24px rgba(15,23,42,0.08),
+      -10px -10px 24px rgba(255,255,255,0.85) !important;
+  }
+
+  /* Pressed state */
+  .kid-theme .neu-pressed {
+    background: var(--surface) !important;
+    border-radius: 18px !important;
+    box-shadow:
+      inset 6px 6px 14px rgba(15,23,42,0.08),
+      inset -6px -6px 14px rgba(255,255,255,0.85) !important;
+  }
+
+  /* Primary action button – always visible */
+  .kid-theme .btn-primary,
+  .kid-theme .primary,
+  .kid-theme .cta {
+    background-image: var(--grad-teal-purple) !important;
+    color: #fff !important;
+    border: 0 !important;
+    box-shadow: 0 8px 20px rgba(92,141,207,0.25) !important;
+  }
+
+  /* Kill accidental white text on light backgrounds */
+  .kid-theme .text-white:not(.on-dark) { 
+    color: var(--text) !important; 
+  }
+
+  /* iOS readability tweaks */
+  @supports (-webkit-touch-callout: none) {
+    .kid-theme .glass { 
+      background: rgba(255,255,255,0.32) !important; 
+    }
+  }
 }
