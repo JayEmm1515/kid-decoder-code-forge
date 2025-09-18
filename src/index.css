@@ -5,101 +5,86 @@
 /* THE KID DECODER – Global colour system */
 
 @layer base {
-/* ---------- 1) Tokens ---------- */
-:root {
-  --white: #FFFFFF;
-  --mint: #8EF4E9;
-  --lavender: #9C9AD4;
-  --soft-red: #FF6F6F;
-  --peach: #F4B97E;
-  --violet: #9861A7;
-  --ink: #0D1216;
-  --teal-grey: #618D93;
-  --beige: #CBB7A7;
-  --pink-ice: #FACDF7;
-  --plum: #844A83;
-  --pastel-y: #F7E287;
-  --deep-teal: #0A2D35;
-  --dusty-rose: #C287B2;
-  --rose: #C94F76;
-  --raspberry: #D66C85;
-  --mint-ice: #B4F4EE;
+:root{
+  /* Colours sampled from your bottom image */
+  --color-snow:        #F8FBFC;
+  --color-sky-50:      #E4EDF8;
+  --color-sky-200:     #B9DAF5;
+  --color-teal-300:    #7BCAE4;
+  --color-ocean-500:   #5C8DCF;
+  --color-purple-400:  #C386E0;
+  --color-peach-gold:  #F3D2A3;
 
-  /* Base surfaces & text */
-  --bg: var(--white);
-  --fg: var(--ink);
-  --background: var(--white);
-  --foreground: var(--ink);
-  --card: var(--white);
-  --card-foreground: var(--ink);
-  --muted: var(--teal-grey);
-  
-  /* Component color references */
-  --color-teal: 87 157 156;
-  --color-purple: 187 50 161; 
-  --color-gold: 249 193 94;
-  --color-coral-pink: 249 85 123;
-  --color-bright-teal: 142 244 233;
-  --color-magenta: 217 70 239;
-  
-  /* Dreamy app specific colors */
-  --dreamy-teal: 87 157 156;
-  --dreamy-coral: 249 85 123;
-  --dreamy-peach: 244 185 126;
-  --dreamy-purple: 152 154 212;
-  --dreamy-blue: 96 165 250;
+  /* Roles */
+  --surface:           var(--color-snow);
+  --surface-muted:     var(--color-sky-50);
+  --primary:           var(--color-teal-300);
+  --primary-strong:    var(--color-ocean-500);
+  --accent:            var(--color-purple-400);
+  --warning:           var(--color-peach-gold);
+  --text:              #0F172A;
+  --text-muted:        #64748B;
+
+  /* Gradients (match the spheres) */
+  --grad-teal-purple:  linear-gradient(90deg,#7BCAE4 0%,#C386E0 100%);
+  --grad-sky-teal:     linear-gradient(90deg,#B9DAF5 0%,#7BCAE4 100%);
+
+  /* Rounding */
+  --radius-sm: 14px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+
+  /* Glassmorphism */
+  --glass-bg:     rgba(255,255,255,0.55);
+  --glass-brd:    rgba(255,255,255,0.45);
+  --glass-blur:   14px;
+  --glass-shadow: 0 10px 28px rgba(92,141,207,0.18);
+
+  /* Neumorphism / skeuo */
+  --neu-outer:  10px 10px 24px rgba(15,23,42,0.08),
+                -10px -10px 24px rgba(255,255,255,0.85);
+  --neu-pressed: inset 6px 6px 14px rgba(15,23,42,0.08),
+                 inset -6px -6px 14px rgba(255,255,255,0.85);
+
+  /* Legacy compatibility */
+  --background: var(--surface);
+  --foreground: var(--text);
+  --card: var(--surface);
+  --card-foreground: var(--text);
+  --muted: var(--text-muted);
 }
 
-/* ---------- 2) Gradients (ready-to-use) ---------- */
-:root {
-  --grad-aurora: linear-gradient(135deg, var(--mint) 0%, var(--lavender) 35%, var(--violet) 100%);
-  --grad-sunset: linear-gradient(135deg, var(--soft-red) 0%, var(--peach) 50%, var(--pastel-y) 100%);
-  --grad-therapy: linear-gradient(135deg, var(--pink-ice) 0%, var(--dusty-rose) 55%, var(--plum) 100%);
-  --grad-ocean: linear-gradient(135deg, var(--mint-ice) 0%, var(--mint) 40%, var(--deep-teal) 100%);
-  --grad-warmcool: linear-gradient(135deg, var(--rose) 0%, var(--raspberry) 45%, var(--lavender) 100%);
-  --grad-softbrand: linear-gradient(135deg, var(--beige) 0%, var(--peach) 50%, var(--mint-ice) 100%);
-  --grad-hero: linear-gradient(135deg, var(--mint) 0%, var(--peach) 40%, var(--violet) 80%, var(--deep-teal) 100%);
-  --grad-cta: radial-gradient(circle at 30% 20%, var(--soft-red), var(--rose) 45%, var(--plum) 100%);
-  
-  /* Main background gradient */
-  --main-gradient: var(--grad-hero);
-  
-  /* Missing gradients for dreamy components */
-  --sunset-gradient: linear-gradient(135deg, #FFA726 0%, #FF7043 100%);
-  --mountain-gradient: linear-gradient(135deg, #8E24AA 0%, #5E35B1 50%, #3F51B5 100%);
-  --toggle-gradient: linear-gradient(135deg, var(--teal-grey) 0%, var(--deep-teal) 100%);
-  --gradient-organic: var(--grad-therapy);
-  --gradient-coral: var(--grad-sunset);
-  
-  /* Missing shadow and transform variables */
-  --shadow-floating: 0 10px 40px rgba(13, 18, 22, 0.12), 0 0 20px rgba(255, 255, 255, 0.8);
-  --shadow-deep: 0 20px 60px rgba(13, 18, 22, 0.2), 0 0 40px rgba(255, 255, 255, 0.9);
-  --shadow-glass-sm: 0 4px 16px rgba(13, 18, 22, 0.1);
-  --shadow-glass-md: 0 8px 32px rgba(13, 18, 22, 0.15);
-  --shadow-organic: var(--neuro-shadow-deep);
-  --shadow-glow: 0 0 40px rgba(249, 85, 123, 0.3);
-  --shadow-glow-teal: 0 0 30px rgba(87, 157, 156, 0.2);
-  --shadow-glow-purple: 0 0 30px rgba(187, 50, 161, 0.3);
-  
-  --transform-organic: none;
-  --transform-grow: translateY(-5px) scale(1.02);
-  --transform-float: translateY(0px);
-  --texture-organic: none;
-  --ecosystem-purple: var(--color-purple);
-  
-  /* Neumorphic card backgrounds using white base */
-  --neuro-card: var(--white);
-  --neuro-card-light: #FAFAFA;
-  --neuro-card-dark: #F0F0F0;
-  --neuro-shadow-deep: 25px 25px 50px rgba(13, 18, 22, 0.15), -25px -25px 50px rgba(255, 255, 255, 0.9);
-  --neuro-shadow-inset: inset 12px 12px 24px rgba(13, 18, 22, 0.08), inset -12px -12px 24px rgba(255, 255, 255, 0.8);
-  
-  /* Neumorphic button styles */
-  --neuro-button: var(--white);
-  --neuro-button-light: #FAFAFA;
-  --neuro-button-dark: #F0F0F0;
-  --neuro-button-shadow: 15px 15px 30px rgba(13, 18, 22, 0.12), -15px -15px 30px rgba(255, 255, 255, 0.8);
-  --neuro-button-pressed: inset 8px 8px 16px rgba(13, 18, 22, 0.1), inset -8px -8px 16px rgba(255, 255, 255, 0.9);
+/* Floating glass pane */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-brd);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-radius: var(--radius-md);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Raised soft tile (neumorphic) */
+.neu {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--neu-outer);
+}
+
+/* Pressed/active skeuo */
+.neu-pressed {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--neu-pressed);
+}
+
+/* Page background like the image (soft coloured orbs) */
+.bg-orb {
+  background:
+    radial-gradient(800px 400px at 20% 10%, rgba(185,218,245,0.35) 0%, transparent 60%),
+    radial-gradient(700px 500px at 80% 30%, rgba(195,134,224,0.25) 0%, transparent 65%),
+    radial-gradient(600px 400px at 50% 90%, rgba(124,202,228,0.25) 0%, transparent 70%),
+    var(--surface);
 }
 
 .dark {
