@@ -28,16 +28,16 @@ export default function QuickActions() {
       color: "text-violet"
     },
     {
+      title: "Being With Exercise",
+      icon: Calendar,
+      url: createPageUrl("BeingWithExercise"),
+      color: "text-rose"
+    },
+    {
       title: "Ask AI",
       icon: MessageCircle,
       url: createPageUrl("ParentingChat"),
       color: "text-peach"
-    },
-    {
-      title: "View Insights",
-      icon: TrendingUp,
-      url: createPageUrl("Tracking"),
-      color: "text-rose"
     }
   ];
 
