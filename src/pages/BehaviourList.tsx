@@ -73,44 +73,19 @@ export default function BehaviourListPage() {
       className="block group"
     >
       <Card className="h-full bg-white hover:shadow-lg transition-all duration-300 border border-slate-200 group-hover:border-violet/30">
-        <CardHeader className="space-y-3">
-          <div className="flex items-start justify-between">
-            <Badge 
-              variant="outline" 
-              className={ageGroupColors[behavior.age_group]}
-            >
-              {ageGroupLabels[behavior.age_group]}
-            </Badge>
-            <Clock className="w-4 h-4 text-muted" />
-          </div>
+        <CardHeader>
           <CardTitle className="text-xl font-semibold text-ink group-hover:text-violet transition-colors">
             {behavior.title}
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="text-muted leading-relaxed">{behavior.summary}</p>
-          
-          <div className="space-y-3 pt-3 border-t border-slate-100">
-            <div className="space-y-2">
-              <h4 className="font-medium text-ink text-sm">What it means:</h4>
-              <p className="text-sm text-muted line-clamp-2">{behavior.what_it_means}</p>
-            </div>
-            
-            <div className="space-y-2">
-              <h4 className="font-medium text-ink text-sm">What they're communicating:</h4>
-              <p className="text-sm text-muted line-clamp-2">{behavior.what_it_conveys}</p>
-            </div>
-          </div>
-
-          <div className="pt-3 border-t border-slate-100">
-            <Button 
-              variant="ghost" 
-              size="sm" 
-              className="text-violet hover:text-violet hover:bg-violet/10 p-0 h-auto font-semibold"
-            >
-              Read full guide →
-            </Button>
-          </div>
+        <CardContent>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="text-violet hover:text-violet hover:bg-violet/10 p-0 h-auto font-semibold"
+          >
+            Read full guide →
+          </Button>
         </CardContent>
       </Card>
     </Link>
