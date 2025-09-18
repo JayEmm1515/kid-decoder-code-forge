@@ -82,7 +82,7 @@ export default function BehaviourListPage() {
           <Button 
             variant="ghost" 
             size="sm" 
-            className="text-violet hover:text-violet hover:bg-violet/10 p-0 h-auto font-semibold"
+            className="neu text-violet hover:text-violet p-0 h-auto font-semibold"
           >
             Read full guide →
           </Button>
@@ -167,7 +167,7 @@ export default function BehaviourListPage() {
                   <Button 
                     variant="outline" 
                     onClick={() => setSearchTerm('')}
-                    className="mt-4"
+                    className="neu mt-4"
                   >
                     Clear search
                   </Button>
