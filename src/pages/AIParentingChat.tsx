@@ -148,7 +148,7 @@ export default function AIParentingChatPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">General Advice</SelectItem>
-                  {children.map(child => (
+                  {children && children.length > 0 && children.map(child => (
                     <SelectItem key={child.id} value={child.id}>
                       {child.name} ({child.age_group})
                     </SelectItem>
