@@ -43,7 +43,7 @@ export default function UnderstandingBehaviourPage() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-white p-4 md:p-8">
+      <div className="min-h-screen bg-coral-bottom p-4 md:p-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block p-4 bg-purple-100 rounded-2xl mb-4">

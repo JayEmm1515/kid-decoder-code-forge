@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="dreamy-app">
+    <div className="bg-coral-bottom dreamy-app">
       <div className="dreamy-container">
         <div className="dreamy-card dreamy-card-hero text-center">
           <div className="dreamy-sun"></div>

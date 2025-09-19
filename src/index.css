@@ -570,14 +570,44 @@
     color: var(--text-muted) !important; 
   }
 
-  /* Page background (softer wash for readability on phones) */
-  .kid-theme.bg-orb,
-  .kid-theme .bg-orb {
+  /* New coral and teal colors */
+  --color-coral: #F97F84;
+  --color-teal: #6EDCD7;
+
+  /* Gradient background variations */
+  .kid-theme .bg-coral-teal {
+    background: linear-gradient(135deg, #F97F84 0%, #6EDCD7 100%) !important;
+  }
+
+  .kid-theme .bg-teal-coral {
+    background: linear-gradient(135deg, #6EDCD7 0%, #F97F84 100%) !important;
+  }
+
+  .kid-theme .bg-coral-corner {
     background:
-      radial-gradient(800px 400px at 20% 10%, rgba(185,218,245,0.25) 0%, transparent 60%),
-      radial-gradient(700px 500px at 80% 30%, rgba(195,134,224,0.18) 0%, transparent 65%),
-      radial-gradient(600px 400px at 50% 90%, rgba(124,202,228,0.18) 0%, transparent 70%),
-      var(--surface) !important;
+      radial-gradient(600px 400px at 15% 15%, rgba(249, 127, 132, 0.4) 0%, transparent 50%),
+      linear-gradient(135deg, #6EDCD7 0%, #6EDCD7 100%) !important;
+  }
+
+  .kid-theme .bg-teal-corner {
+    background:
+      radial-gradient(600px 400px at 85% 15%, rgba(110, 220, 215, 0.4) 0%, transparent 50%),
+      linear-gradient(135deg, #F97F84 0%, #F97F84 100%) !important;
+  }
+
+  .kid-theme .bg-coral-bottom {
+    background: linear-gradient(180deg, #6EDCD7 0%, #F97F84 100%) !important;
+  }
+
+  .kid-theme .bg-teal-bottom {
+    background: linear-gradient(180deg, #F97F84 0%, #6EDCD7 100%) !important;
+  }
+
+  .kid-theme .bg-soft-coral-teal {
+    background:
+      radial-gradient(800px 600px at 20% 20%, rgba(249, 127, 132, 0.2) 0%, transparent 60%),
+      radial-gradient(700px 500px at 80% 80%, rgba(110, 220, 215, 0.2) 0%, transparent 60%),
+      linear-gradient(135deg, rgba(249, 127, 132, 0.05) 0%, rgba(110, 220, 215, 0.05) 100%) !important;
   }
 
   /* Glass panes – less milk, more contrast; stronger shadow */

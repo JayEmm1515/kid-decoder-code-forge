@@ -94,7 +94,7 @@ export default function BehaviourListPage() {
   if (loading) {
     return (
       <Layout>
-        <div className="min-h-screen bg-orb p-4 md:p-8">
+        <div className="min-h-screen bg-coral-teal p-4 md:p-8">
           <div className="max-w-6xl mx-auto">
             <div className="animate-pulse space-y-8">
               <div className="h-8 bg-slate-200 rounded w-1/3"></div>
@@ -112,7 +112,7 @@ export default function BehaviourListPage() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-orb p-4 md:p-8">
+      <div className="min-h-screen bg-coral-teal p-4 md:p-8">
         <div className="max-w-6xl mx-auto space-y-8">
           
           {/* Header */}

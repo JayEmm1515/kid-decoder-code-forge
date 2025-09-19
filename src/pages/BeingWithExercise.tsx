@@ -340,7 +340,7 @@ export default function BeingWithExercisePage() {
 
   return (
     <Layout currentPageName="Being With Exercise">
-      <div className="min-h-screen bg-background p-4 md:p-8">
+      <div className="min-h-screen bg-coral-corner p-4 md:p-8">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
             <h1 className="text-4xl md:text-5xl font-extrabold text-ink tracking-tight mb-4">

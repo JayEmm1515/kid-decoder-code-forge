@@ -128,7 +128,7 @@ export default function AIParentingChatPage() {
 
   return (
     <Layout>
-      <div className="p-6 max-w-4xl mx-auto h-screen flex flex-col">
+      <div className="bg-soft-coral-teal p-6 max-w-4xl mx-auto h-screen flex flex-col">
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-foreground mb-2 flex items-center gap-3">
             <MessageCircle className="w-8 h-8 text-primary" />

@@ -33,7 +33,7 @@ export default function BehaviourDetailPage() {
   if (isLoading) {
     return (
       <Layout>
-        <div className="min-h-screen bg-white p-8 text-center text-ink">Loading guide...</div>
+        <div className="min-h-screen bg-teal-coral p-8 text-center text-ink">Loading guide...</div>
       </Layout>
     );
   }
@@ -41,7 +41,7 @@ export default function BehaviourDetailPage() {
   if (!guide) {
     return (
       <Layout>
-        <div className="min-h-screen bg-white p-8 text-center text-ink">Could not find the requested guide.</div>
+        <div className="min-h-screen bg-teal-coral p-8 text-center text-ink">Could not find the requested guide.</div>
       </Layout>
     );
   }
@@ -54,7 +54,7 @@ export default function BehaviourDetailPage() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-white p-4 md:p-8">
+      <div className="min-h-screen bg-teal-coral p-4 md:p-8">
         <div className="max-w-3xl mx-auto">
           <header className="mb-8">
             <Link to={createPageUrl(`BehaviourList?age_group=${guide.age_group}`)} className="inline-flex items-center gap-2 text-muted hover:text-ink mb-4 transition-colors font-medium">

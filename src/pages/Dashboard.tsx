@@ -47,7 +47,7 @@ export default function Dashboard() {
 
   return (
     <Layout currentPageName="Dashboard">
-      <div className="p-6 space-y-6 app-bg-hero min-h-screen">
+      <div className="bg-teal-bottom p-6 space-y-6 min-h-screen">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="mb-8">

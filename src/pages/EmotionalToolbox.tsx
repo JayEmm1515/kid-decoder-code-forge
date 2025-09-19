@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const EmotionalToolboxPage = () => {
   return (
-    <div className="dreamy-app">
+    <div className="bg-soft-coral-teal dreamy-app">
       {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-20 p-6">
         <div className="flex items-center justify-between">

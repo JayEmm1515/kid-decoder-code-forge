@@ -110,7 +110,7 @@ export default function ChainAnalysisDetailPage() {
 
   return (
     <Layout>
-      <div className="p-6 max-w-5xl mx-auto">
+      <div className="bg-teal-corner p-6 max-w-5xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-foreground mb-2 flex items-center gap-3">
             <Brain className="w-8 h-8 text-primary" />
