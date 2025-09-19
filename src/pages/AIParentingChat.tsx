@@ -27,7 +27,7 @@ const sampleResponses = {
 
 export default function AIParentingChatPage() {
   const [children, setChildren] = useState([]);
-  const [selectedChild, setSelectedChild] = useState("");
+  const [selectedChild, setSelectedChild] = useState("general");
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -147,7 +147,7 @@ export default function AIParentingChatPage() {
                   <SelectValue placeholder="Choose child" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">General Advice</SelectItem>
+                  <SelectItem value="general">General Advice</SelectItem>
                   {children && children.length > 0 && children.map(child => (
                     <SelectItem key={child.id} value={child.id}>
                       {child.name} ({child.age_group})
