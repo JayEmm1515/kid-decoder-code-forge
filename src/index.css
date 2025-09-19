@@ -562,6 +562,12 @@
   }
 
   /* Kid Theme Wrapper Styles */
+  /* New coral and teal colors */
+  :root {
+    --color-coral: #F97F84;
+    --color-teal: #6EDCD7;
+  }
+
   /* Force base colours inside our app, regardless of Lovable's defaults */
   .kid-theme, .kid-theme * { 
     color: var(--text); 
@@ -570,9 +576,6 @@
     color: var(--text-muted) !important; 
   }
 
-  /* New coral and teal colors */
-  --color-coral: #F97F84;
-  --color-teal: #6EDCD7;
 
   /* Gradient background variations */
   .kid-theme .bg-coral-teal {
