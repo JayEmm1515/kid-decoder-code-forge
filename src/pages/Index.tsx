@@ -5,7 +5,7 @@ import { Home, Heart, Zap, Users, BookOpen, ArrowRight, Activity, MessageCircle,
 
 const Index = () => {
   return (
-    <div className="kid-theme min-h-screen bg-coral-bottom p-4">
+    <div className="min-h-screen bg-coral-bottom p-4">
       <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-12 pt-8">
