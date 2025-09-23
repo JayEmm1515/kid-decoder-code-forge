@@ -32,6 +32,18 @@ const Index = () => {
 
         {/* Quick Actions Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <Link to="/being-with-exercise">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all cursor-pointer">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-rose-400/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-6 h-6 text-rose-400" />
+                </div>
+                <h3 className="text-white font-semibold text-lg mb-2">Being With Exercise</h3>
+                <p className="text-white/70 text-sm">Explore your emotional patterns and get personalized parenting guidance</p>
+              </CardContent>
+            </Card>
+          </Link>
+
           <Link to="/tracking">
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all cursor-pointer">
               <CardContent className="p-6 text-center">

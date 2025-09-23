@@ -44,6 +44,12 @@ const navigationItems = [
     color: "text-blue-400"
   },
   {
+    title: "Being With Exercise",
+    url: "/being-with-exercise",
+    icon: Heart,
+    color: "text-rose-400"
+  },
+  {
     title: "Track Behavior",
     url: createPageUrl("Tracking"),
     icon: Zap,
