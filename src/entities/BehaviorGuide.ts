@@ -525,11 +525,11 @@ export class BehaviorGuide {
         ]
       },
 
-      // 6-11 Years Behaviors
+      // 6-12 Years Behaviors
       {
         "behaviour": "Withdrawing or isolating",
-        "age_group": "6-11",
-        "slug": "withdrawing-isolating-6-11",
+        "age_group": "6-12",
+        "slug": "withdrawing-isolating-6-12",
         "summary": "Pulling away from family and social interactions",
         "meanings": [
           "Avoidance of peer rejection or bullying",
@@ -554,8 +554,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Defiance and refusing instructions",
-        "age_group": "6-11",
-        "slug": "defiance-refusing-instructions-6-11",
+        "age_group": "6-12",
+        "slug": "defiance-refusing-instructions-6-12",
         "summary": "Challenging authority and refusing to comply with rules",
         "meanings": [
           "Challenging perceived unfairness or lack of control",
@@ -580,8 +580,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Aggression (hitting, biting, throwing)",
-        "age_group": "6-11",
-        "slug": "aggression-6-11",
+        "age_group": "6-12",
+        "slug": "aggression-6-12",
         "summary": "Physical expressions of anger or frustration",
         "meanings": [
           "Inability to express anger safely",
@@ -606,8 +606,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Lying or fabrication",
-        "age_group": "6-11",
-        "slug": "lying-fabrication-6-11",
+        "age_group": "6-12",
+        "slug": "lying-fabrication-6-12",
         "summary": "Telling untruths to avoid consequences or gain attention",
         "meanings": [
           "Avoiding punishment or disappointment",
@@ -632,8 +632,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Stealing or taking without permission",
-        "age_group": "6-11",
-        "slug": "stealing-taking-without-permission-6-11",
+        "age_group": "6-12",
+        "slug": "stealing-taking-without-permission-6-12",
         "summary": "Taking items that belong to others",
         "meanings": [
           "Impulsive desire for items",
@@ -658,8 +658,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Bullying others or mean behaviour",
-        "age_group": "6-11",
-        "slug": "bullying-mean-behaviour-6-11",
+        "age_group": "6-12",
+        "slug": "bullying-mean-behaviour-6-12",
         "summary": "Deliberately hurting others physically or emotionally",
         "meanings": [
           "Feeling powerless in other areas of life",
@@ -684,8 +684,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "People-pleasing or perfectionism",
-        "age_group": "6-11",
-        "slug": "people-pleasing-perfectionism-6-11",
+        "age_group": "6-12",
+        "slug": "people-pleasing-perfectionism-6-12",
         "summary": "Excessive concern with meeting others' expectations",
         "meanings": [
           "Fear of disappointing others",
@@ -710,8 +710,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Avoidance of school or tasks",
-        "age_group": "6-11",
-        "slug": "avoidance-school-tasks-6-11",
+        "age_group": "6-12",
+        "slug": "avoidance-school-tasks-6-12",
         "summary": "Reluctance to attend school or complete required activities",
         "meanings": [
           "Academic struggles or learning difficulties",
@@ -736,8 +736,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Emotional shutdown or numbing",
-        "age_group": "6-11",
-        "slug": "emotional-shutdown-numbing-6-11",
+        "age_group": "6-12",
+        "slug": "emotional-shutdown-numbing-6-12",
         "summary": "Appearing emotionally disconnected or unresponsive",
         "meanings": [
           "Protective response to overwhelming emotions",
@@ -762,8 +762,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Food refusal or bingeing",
-        "age_group": "6-11",
-        "slug": "food-refusal-bingeing-6-11",
+        "age_group": "6-12",
+        "slug": "food-refusal-bingeing-6-12",
         "summary": "Extreme eating patterns of restriction or overeating",
         "meanings": [
           "Emotional regulation through food",
@@ -788,8 +788,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Bedwetting or soiling (persistent)",
-        "age_group": "6-11",
-        "slug": "bedwetting-soiling-persistent-6-11",
+        "age_group": "6-12",
+        "slug": "bedwetting-soiling-persistent-6-12",
         "summary": "Continued toileting accidents beyond typical developmental age",
         "meanings": [
           "Medical issues or developmental delays",
@@ -814,8 +814,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Obsessive rituals or rigidity",
-        "age_group": "6-11",
-        "slug": "obsessive-rituals-rigidity-6-11",
+        "age_group": "6-12",
+        "slug": "obsessive-rituals-rigidity-6-12",
         "summary": "Repetitive behaviours or extreme need for sameness",
         "meanings": [
           "Anxiety management through control",
@@ -840,8 +840,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Frequent apologies or shame-based language",
-        "age_group": "6-11",
-        "slug": "frequent-apologies-shame-language-6-11",
+        "age_group": "6-12",
+        "slug": "frequent-apologies-shame-language-6-12",
         "summary": "Excessive apologising and negative self-talk",
         "meanings": [
           "Low self-esteem or perfectionism",
@@ -866,8 +866,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Refusal to bathe or poor hygiene",
-        "age_group": "6-11",
-        "slug": "refusal-bathe-poor-hygiene-6-11",
+        "age_group": "6-12",
+        "slug": "refusal-bathe-poor-hygiene-6-12",
         "summary": "Resistance to personal care and cleanliness",
         "meanings": [
           "Sensory sensitivities or discomfort",
@@ -892,8 +892,8 @@ export class BehaviorGuide {
       },
       {
         "behaviour": "Excessive screen use or fixation",
-        "age_group": "6-11",
-        "slug": "excessive-screen-use-fixation-6-11",
+        "age_group": "6-12",
+        "slug": "excessive-screen-use-fixation-6-12",
         "summary": "Problematic relationship with digital devices and content",
         "meanings": [
           "Escape from difficult emotions or situations",

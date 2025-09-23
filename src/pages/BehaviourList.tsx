@@ -78,15 +78,6 @@ export default function BehaviourListPage() {
             {behavior.title}
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            className="neu text-violet hover:text-violet p-0 h-auto font-semibold"
-          >
-            Read full guide →
-          </Button>
-        </CardContent>
       </Card>
     </Link>
   );
