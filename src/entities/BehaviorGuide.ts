@@ -1238,10 +1238,11 @@ export class BehaviorGuide {
       const ageGroups = ['0-2', '3-5', '6-12', '13-18'];
       ageGroups.forEach(ageGroup => {
         if (behavior.meanings[ageGroup] && behavior.meanings[ageGroup].length > 0) {
+          const baseSlug = behavior.behaviour.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
           guides.push({
             id: `${index + 1}-${ageGroup}`,
             title: behavior.behaviour,
-            slug: behavior.behaviour.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+            slug: `${baseSlug}-${ageGroup}`,
             age_group: ageGroup,
             summary: `Understanding ${behavior.behaviour.toLowerCase()} in ${ageGroup === '0-2' ? 'babies and toddlers' : ageGroup === '3-5' ? 'preschoolers' : ageGroup === '6-12' ? 'school-age children' : 'teenagers'}`,
             what_it_means: behavior.meanings[ageGroup].join('. ') + '.',

@@ -69,7 +69,7 @@ export default function BehaviourListPage() {
 
   const BehaviorCard = ({ behavior }) => (
     <Link 
-      to={createPageUrl(`BehaviourDetail?id=${behavior.id}`)}
+      to={createPageUrl(`BehaviourDetail?slug=${behavior.slug}`)}
       className="block group"
     >
       <Card className="glass h-full hover:shadow-lg transition-all duration-300 group-hover:border-violet/30">
