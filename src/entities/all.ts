@@ -3,3 +3,4 @@ export { BehaviorEntry } from './BehaviorEntry';
 export { MoodEntry } from './MoodEntry';
 export { ChainAnalysis } from './ChainAnalysis';
 export { BehaviorGuide } from './BehaviorGuide';
+export { TriggerPattern } from './TriggerPattern';

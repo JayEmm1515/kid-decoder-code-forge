@@ -8,6 +8,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge";
 import Layout from "@/components/Layout";
 import { Child, ChainAnalysis } from "@/entities/all";
+import { TriggerPattern } from "@/entities/TriggerPattern";
+import TriggerPatterns from "@/components/TriggerPatterns";
 import { Brain, Plus, Link2, AlertTriangle, Target, Lightbulb, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -81,11 +83,17 @@ export default function ChainAnalysisDetailPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      // Save the chain analysis
       await ChainAnalysis.create(formData);
+      
+      // Extract and update trigger patterns
+      await TriggerPattern.updateTriggerFromAnalysis(formData);
+      
       toast({
         title: "Chain Analysis Saved",
-        description: "Your analysis has been saved successfully.",
+        description: "Your analysis has been saved and trigger patterns updated.",
       });
+      
       // Reset form
       setFormData({
         child_id: children[0]?.id || "",
@@ -373,6 +381,16 @@ export default function ChainAnalysisDetailPage() {
             Save Chain Analysis
           </Button>
         </form>
+
+        {/* Trigger Patterns Section */}
+        {formData.child_id && (
+          <div className="mt-8">
+            <TriggerPatterns 
+              childId={formData.child_id} 
+              childName={children.find(c => c.id === formData.child_id)?.name}
+            />
+          </div>
+        )}
 
         {/* Educational Note */}
         <Card className="mt-8 bg-blue-50 border-blue-200">
