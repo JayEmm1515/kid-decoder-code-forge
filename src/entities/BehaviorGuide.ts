@@ -1395,9 +1395,10 @@ export class BehaviorGuide {
       slug: behavior.slug,
       age_group: behavior.age_group,
       summary: behavior.summary,
-      meanings: behavior.meanings,
-      parent_experience: behavior.parent_experience,
-      strategies: behavior.strategies,
+      what_it_means: Array.isArray(behavior.meanings) ? behavior.meanings.join('. ') + '.' : behavior.meanings,
+      what_it_conveys: "Through this behavior, your child may be trying to communicate their need for understanding, safety, or support in managing overwhelming feelings or situations.",
+      parent_experience: Array.isArray(behavior.parent_experience) ? behavior.parent_experience.join('. ') + '.' : behavior.parent_experience,
+      age_specific_strategies: behavior.strategies,
       red_flags: behavior.red_flags
     }));
   }
