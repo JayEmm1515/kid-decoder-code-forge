@@ -812,9 +812,15 @@ export class BehaviorGuide {
           "Concern about child's authentic self-expression"
         ],
         "strategies": [
-          "Emphasise effort over outcomes",
-          "Model making mistakes and learning",
-          "Encourage child's own preferences and opinions"
+          "Understand as trauma response: Perfectionism often stems from early experiences of conditional love or criticism. The child's nervous system learned that being 'perfect' equals safety (Maté's trauma understanding).",
+          "Focus on internal validation: Help them develop intrinsic motivation by asking 'How did that feel to you?' rather than 'Great job!' Authentic self-esteem comes from within (Circle of Security principles).",
+          "Model mistake-making as learning: Share your own mistakes openly and how they led to growth. 'I used to think I had to be perfect too, and it made me really anxious.'",
+          "Separate worth from performance: Consistently communicate 'I love you no matter what you do or achieve.' This helps rewire their attachment security (Bowlby's secure base concept).",
+          "Address underlying anxiety: Perfectionism often masks deep fear. Validate: 'It sounds scary to think about making mistakes. Tell me more about that worry.'",
+          "Create 'good enough' experiences: Intentionally engage in activities where imperfection is okay - art, cooking, games. Show joy in the process rather than outcome.",
+          "Teach self-compassion practices: Help them develop the inner voice that says 'It's okay to make mistakes, that's how we learn' instead of harsh self-criticism (influenced by self-compassion research).",
+          "Support nervous system regulation: Perfectionism keeps children in chronic stress. Use breathing techniques, movement, and mindfulness to help them feel safe in their body.",
+          "Examine family and school pressures: Honestly assess whether environmental expectations are contributing to their perfectionism and advocate for more balanced approaches."
         ],
         "red_flags": [
           "Extreme distress over minor mistakes",
@@ -838,9 +844,15 @@ export class BehaviorGuide {
           "Stress about school relationships"
         ],
         "strategies": [
-          "Identify underlying causes of avoidance",
-          "Work with school to address concerns",
-          "Break tasks into manageable steps"
+          "Investigate through attachment lens: School avoidance often signals the child doesn't feel safe at school. Ask 'What makes school feel unsafe?' rather than 'Why won't you go?' (Circle of Security approach).",
+          "Address separation anxiety: Some school avoidance reflects attachment needs. Provide transitional objects, photos, or notes that maintain connection during separation.",
+          "Support nervous system regulation: Anxiety about school activates fight-or-flight responses. Teach breathing techniques and grounding exercises they can use at school.",
+          "Collaborate with school as partners: Work together to identify specific stressors - academic, social, or sensory. Schools often have resources parents don't know about.",
+          "Create graduated exposure plan: Start with very small steps like driving by school, visiting for 10 minutes, staying for one class. Build tolerance gradually without forcing.",
+          "Examine academic fit: Some children avoid school because work is too hard or too easy. Advocate for appropriate academic support or enrichment.",
+          "Address social dynamics: Bullying, exclusion, or social anxiety are common causes. Help develop social skills and work with school to address peer issues.",
+          "Consider underlying conditions: School avoidance can indicate learning disabilities, ADHD, autism, or mental health conditions requiring professional evaluation.",
+          "Maintain empathy while holding expectations: 'I can see school feels really hard for you AND education is important. Let's figure out how to make it work better.'"
         ],
         "red_flags": [
           "Complete school refusal lasting days",
@@ -864,9 +876,15 @@ export class BehaviorGuide {
           "Sadness about child's apparent numbness"
         ],
         "strategies": [
-          "Provide consistent, patient support",
-          "Avoid forcing emotional expression",
-          "Consider professional help if persistent"
+          "Understand as protective adaptation: Emotional shutdown is often the nervous system's way of surviving overwhelming experiences. Honor this protection while gently offering connection (Maté's trauma framework).",
+          "Focus on felt safety first: Before trying to 'fix' the shutdown, help them feel safe in relationship with you. Stay present without demands for emotional expression.",
+          "Use non-verbal connection: Offer physical proximity, gentle touch (if welcomed), or simply being in the same space. Connection can happen without words (attachment theory principles).",
+          "Respect their timing: Pushing for emotional expression often increases shutdown. Trust that with safety and time, natural emotional flow will return.",
+          "Address potential trauma: Emotional numbing can indicate experiences that overwhelmed their capacity to process. Consider trauma-informed therapy if this persists.",
+          "Model emotional expression: Show your own emotions appropriately - 'I feel sad when I see you hurting' - without making them responsible for your feelings.",
+          "Create low-pressure connection opportunities: Side-by-side activities like walking, driving, or doing crafts can facilitate opening up more than face-to-face conversation.",
+          "Support basic regulation: Ensure good sleep, nutrition, exercise, and limit overwhelming stimuli. A dysregulated nervous system can't access emotions safely.",
+          "Consider professional support: If shutdown persists for weeks or includes talk of emptiness/hopelessness, seek help from trauma-informed mental health professionals."
         ],
         "red_flags": [
           "Complete lack of emotional response",
@@ -890,9 +908,15 @@ export class BehaviorGuide {
           "Confusion about how to help"
         ],
         "strategies": [
-          "Focus on health rather than weight",
-          "Create positive mealtime environments",
-          "Address underlying emotional needs"
+          "Understand food as emotional regulation: Children often use food to manage overwhelming feelings when they lack other coping skills. Address the emotions, not just the eating (Maté's addiction understanding).",
+          "Examine family food dynamics: Look at family attitudes toward food, body image, dieting, and emotional eating. Children absorb these patterns unconsciously.",
+          "Focus on nourishment and pleasure: Emphasize how food helps their body grow strong and can be enjoyable rather than focusing on weight or appearance.",
+          "Address underlying trauma or stress: Extreme eating patterns can indicate anxiety, depression, trauma, or other stressors that need professional attention.",
+          "Create food security: Ensure consistent, adequate meals so scarcity fears don't drive bingeing behaviors. Restriction often leads to reactive overeating.",
+          "Teach emotional awareness: Help them identify feelings before they turn to food. 'What are you feeling right now? Let's talk about that before we eat.'",
+          "Model healthy relationship with food: Demonstrate eating for nourishment and pleasure without guilt, shame, or rigidity around food choices.",
+          "Remove moral language about food: Avoid 'good' and 'bad' foods. This creates shame and can worsen extreme eating patterns.",
+          "Seek professional support early: Eating disorders can be serious and benefit from specialized treatment. Don't wait if patterns persist or worsen."
         ],
         "red_flags": [
           "Significant weight changes",
@@ -916,9 +940,15 @@ export class BehaviorGuide {
           "Worry about child's social impact"
         ],
         "strategies": [
-          "Consult healthcare provider for evaluation",
-          "Maintain matter-of-fact response",
-          "Support child's self-esteem"
+          "Rule out medical causes first: Consult healthcare provider to eliminate constipation, urinary tract infections, diabetes, or other physical conditions causing accidents.",
+          "Understand as stress indicator: Regression in toileting often signals emotional overwhelm, trauma, or significant life changes requiring attention to underlying causes.",
+          "Respond without shame: Matter-of-fact cleanup without anger or disappointment protects their developing sense of self. Shame about bodily functions can create lasting issues.",
+          "Address sleep and stress factors: Bedwetting often connects to deep sleep patterns, stress, or anxiety. Improve sleep hygiene and reduce environmental stressors.",
+          "Support their autonomy: Involve them in problem-solving without making it their fault. 'Let's figure out how to help your body with this' rather than blame.",
+          "Examine family dynamics: Sometimes toileting issues reflect power struggles or family stress. Address relationship patterns that might be contributing.",
+          "Consider trauma responses: Sudden onset of toileting problems can indicate trauma, abuse, or overwhelming experiences requiring professional support.",
+          "Protect from social consequences: Work with school and social situations to minimize embarrassment while addressing the underlying causes.",
+          "Trust developmental timing: Some children's nervous systems mature at different rates. Patience combined with appropriate support usually resolves these issues."
         ],
         "red_flags": [
           "Sudden onset of toileting problems",
@@ -942,9 +972,15 @@ export class BehaviorGuide {
           "Stress when routines are disrupted"
         ],
         "strategies": [
-          "Gradually introduce small changes",
-          "Help child understand anxiety connection",
-          "Provide predictability where possible"
+          "Understand as anxiety management: Rituals provide sense of control when the world feels unpredictable or unsafe. Address underlying anxiety rather than just the behaviors (attachment-based understanding).",
+          "Respect the function while offering alternatives: 'I can see this helps you feel safe. Let's think of other ways to feel safe too' rather than just stopping rituals.",
+          "Introduce flexibility very gradually: Make tiny changes to routines while maintaining the core elements that provide security. Build tolerance slowly.",
+          "Address environmental stressors: Examine what's creating the need for control - school stress, family conflict, major changes, or sensory overwhelm.",
+          "Validate their experience: 'It really matters to you that things are done just right. That makes sense.' Validation reduces the intensity of the need for control.",
+          "Teach anxiety management skills: Breathing techniques, progressive muscle relaxation, and mindfulness can provide alternative ways to feel safe and regulated.",
+          "Consider neurodevelopmental factors: Some rigidity reflects autistic traits or other neurodifferences requiring accommodation rather than elimination.",
+          "Support family flexibility: Sometimes parents' own anxiety or rigidity contributes to children's need for control. Address family-wide stress and flexibility.",
+          "Know when to seek help: If rituals interfere with daily functioning or increase in complexity/frequency, consider evaluation for OCD or anxiety disorders."
         ],
         "red_flags": [
           "Rituals interfering with daily functioning",
@@ -968,9 +1004,15 @@ export class BehaviorGuide {
           "Desire to boost child's confidence"
         ],
         "strategies": [
-          "Model self-compassion and mistake-making",
-          "Challenge negative self-talk gently",
-          "Praise effort and learning over perfection"
+          "Address internalized shame: Excessive apologizing often indicates the child has internalized a sense of being 'bad' or burdensome. Healing requires rebuilding their sense of inherent worth (Maté's shame understanding).",
+          "Examine family communication patterns: Children learn to over-apologize from environments where mistakes are met with criticism, anger, or disappointment. Model different responses.",
+          "Separate behavior from identity: 'You made a mistake AND you're a good person' helps them understand that actions don't define their worth (Circle of Security principles).",
+          "Validate their feelings while challenging thoughts: 'You're feeling really bad about this mistake. Let's think about whether this is as big as it feels right now.'",
+          "Teach self-compassion explicitly: Help them develop the voice that says 'Everyone makes mistakes, that's how we learn' instead of harsh self-criticism.",
+          "Model appropriate apologizing: Show when apologies are needed (for harm caused) versus when they're not (for being human, having needs, making normal mistakes).",
+          "Address perfectionism at the root: Frequent apologizing often stems from perfectionist thinking that any mistake is catastrophic. Challenge these cognitive patterns.",
+          "Build secure attachment: Children who feel securely loved apologize less frequently because they trust the relationship can handle their imperfections.",
+          "Consider underlying depression or anxiety: Excessive shame and self-criticism can indicate mental health conditions requiring professional support."
         ],
         "red_flags": [
           "Extreme self-criticism or self-hate",
@@ -994,9 +1036,15 @@ export class BehaviorGuide {
           "Worry about social consequences"
         ],
         "strategies": [
-          "Identify barriers to hygiene (sensory, time, etc.)",
-          "Create manageable routines",
-          "Address underlying emotional issues"
+          "Investigate sensory factors: Many hygiene refusals stem from sensory sensitivities - water temperature, soap textures, or overwhelm from multiple sensations. Accommodate these needs.",
+          "Examine depression indicators: Sudden changes in hygiene habits can signal depression, where self-care feels impossible. Address underlying emotional state first.",
+          "Address executive function challenges: Some children struggle with the planning and sequencing required for hygiene routines. Break tasks into smaller, more manageable steps.",
+          "Consider body autonomy issues: Sometimes hygiene refusal reflects appropriate boundary-setting about their body. Respect their autonomy while addressing health needs.",
+          "Look for trauma indicators: Sudden hygiene changes, especially around bathing, can indicate trauma or abuse. Handle with sensitivity and seek professional guidance if concerned.",
+          "Create positive associations: If hygiene has become a battleground, rebuild positive associations through fun bath toys, favorite soaps, or enjoyable routines.",
+          "Address social skills understanding: Some children don't understand the social importance of hygiene. Teach explicitly without shaming their natural body processes.",
+          "Support sensory regulation: Use predictable routines, preferred temperatures, and calming environments to make hygiene feel safe and manageable.",
+          "Model self-care as self-respect: Show how taking care of our bodies is a way of honoring ourselves rather than just following rules."
         ],
         "red_flags": [
           "Complete refusal despite health risks",
@@ -1020,9 +1068,15 @@ export class BehaviorGuide {
           "Stress about monitoring and limits"
         ],
         "strategies": [
-          "Set clear, consistent screen time limits",
-          "Provide engaging alternative activities",
-          "Model healthy screen use"
+          "Understand screen use as regulation attempt: Many children use screens to manage difficult emotions, anxiety, or overwhelm. Address underlying emotional needs rather than just limiting access.",
+          "Examine what screens provide: Identify whether they're seeking social connection, escape from stress, stimulation, or competence. Find offline ways to meet these legitimate needs.",
+          "Create gradual transitions: Sudden screen removal often creates intense reactions. Use timers, warnings, and transition rituals to help their nervous system adjust.",
+          "Address underlying ADHD or sensory needs: Some children are drawn to screens because they provide optimal stimulation for their neurotype. Consider evaluation if needed.",
+          "Build real-world competence: Children often prefer screens when real-world activities feel too challenging or boring. Ensure offline activities match their skill level and interests.",
+          "Examine family screen culture: Children model what they see. Assess family screen habits and create consistent, reasonable expectations for everyone.",
+          "Provide connection and boredom tolerance: Screens often fill gaps in human connection or inability to tolerate unstimulated time. Address these underlying capacity-building needs.",
+          "Use collaborative problem-solving: Include them in creating screen time agreements rather than imposing rules. This builds buy-in and self-regulation skills.",
+          "Consider social aspects: For some children, online gaming or social media provides important peer connection. Find ways to maintain social needs while managing screen time."
         ],
         "red_flags": [
           "Extreme reactions when screens removed",
@@ -1048,9 +1102,15 @@ export class BehaviorGuide {
           "Uncertainty about when to intervene"
         ],
         "strategies": [
-          "Respect space but check in non-judgementally",
-          "Use low-pressure options like texting or walking side-by-side",
-          "Stay available without forcing connection"
+          "Respect developmental need for autonomy: Adolescent withdrawal often reflects healthy separation-individuation process. Honor their need for space while staying emotionally available (developmental psychology principles).",
+          "Stay curious, not controlling: Approach with 'I've noticed you seem to prefer alone time lately. How are you doing?' rather than demands for connection or accusations.",
+          "Offer low-pressure connection opportunities: Text messages, side-by-side activities, or brief check-ins work better than intense conversations during withdrawal periods.",
+          "Examine family dynamics: Sometimes withdrawal reflects family conflict, criticism, or overwhelm. Address environmental factors that might be pushing them away.",
+          "Differentiate normal from concerning: Temporary withdrawal during stress is normal; complete isolation with mood changes may indicate depression requiring professional support.",
+          "Maintain unconditional love messages: 'I'm here whenever you're ready' and 'I love you even when we're not talking much' preserve the attachment bond during distant periods.",
+          "Address your own anxiety: Parent worry about teen withdrawal can inadvertently push them further away. Manage your own fears about the changing relationship.",
+          "Look for signs of depression: If withdrawal includes hopelessness, loss of all interests, or self-harm thoughts, seek immediate professional help regardless of their resistance.",
+          "Trust the relationship: Securely attached teens typically return to connection after working through developmental tasks. Maintain faith in your bond."
         ],
         "red_flags": [
           "Complete isolation lasting weeks",
@@ -1074,9 +1134,15 @@ export class BehaviorGuide {
           "Grief over changing relationship"
         ],
         "strategies": [
-          "Negotiate shared expectations openly",
-          "Avoid punitive reactions—focus on mutual respect",
-          "Pick battles carefully and explain reasoning"
+          "Understand defiance as development: Adolescent opposition serves important identity formation and autonomy development. It's not personal attack but necessary growth process (developmental understanding).",
+          "Examine power dynamics: Ask yourself whether rules are reasonable, necessary, and respectfully communicated. Authoritarian approaches often increase defiance in teens.",
+          "Move toward collaborative parenting: Include them in family rule-making and problem-solving. 'What do you think would be fair expectations around curfew?' builds buy-in.",
+          "Separate respect from compliance: You can maintain mutual respect even when disagreeing. Focus on 'How can we work this out?' rather than 'You must obey.'",
+          "Address underlying needs: Defiance often masks feelings of powerlessness, misunderstanding, or unmet needs for autonomy, competence, or connection.",
+          "Pick battles wisely: Differentiate between safety issues (non-negotiable) and preference issues (room to negotiate). Fight for what truly matters.",
+          "Validate their perspective: 'I can see why this rule feels unfair to you' doesn't mean changing the rule but acknowledges their experience and maintains connection.",
+          "Model respectful disagreement: Show how to disagree without being disrespectful. Your response to their defiance teaches them how to handle conflict in relationships.",
+          "Examine your own triggers: Teen defiance often activates parents' own childhood experiences of authority. Address your emotional reactions to respond more skillfully."
         ],
         "red_flags": [
           "Defiance putting teen in serious danger",
@@ -1100,9 +1166,15 @@ export class BehaviorGuide {
           "Uncertainty about safety at home"
         ],
         "strategies": [
-          "Help teen recognise escalation signals",
-          "Model anger management techniques yourself",
-          "Set clear consequences for aggressive behaviour"
+          "Understand aggression as pain expression: Aggressive behavior often represents intense emotional pain, trauma, or feeling powerless that gets expressed through the body (Maté's trauma framework).",
+          "Ensure safety first: Set clear, firm boundaries about physical safety while addressing underlying causes. 'I won't let you hurt yourself or others AND I want to understand what's going on.'",
+          "Look beneath the behavior: Ask 'What happened to you?' rather than 'What's wrong with you?' Aggression often has roots in experiences of powerlessness, shame, or trauma.",
+          "Teach emotional regulation skills: Help them identify early warning signs of escalation and develop coping strategies like breathing, physical release, or taking space.",
+          "Address family trauma patterns: Aggressive teens often come from families with histories of trauma, violence, or emotional dysregulation requiring family-wide healing.",
+          "Model calm responses: Your regulated response to their aggression teaches them that intense emotions can be contained and relationships can survive conflict.",
+          "Consider trauma therapy: Aggressive behavior, especially if sudden or severe, may indicate underlying trauma requiring specialized therapeutic intervention.",
+          "Examine environmental triggers: Identify situations, stressors, or relationship dynamics that tend to trigger aggressive responses and work to modify them.",
+          "Maintain connection despite behavior: Separate the person from their actions. 'I love you AND this behavior isn't okay. Let's figure out what's underneath it.'"
         ],
         "red_flags": [
           "Threats of serious violence",
@@ -1126,9 +1198,15 @@ export class BehaviorGuide {
           "Fear of serious consequences"
         ],
         "strategies": [
-          "Discuss risks without lecturing",
-          "Provide safe alternatives for excitement",
-          "Stay connected despite concerning behaviour"
+          "Understand adolescent brain development: Teen brains are wired for sensation-seeking as part of normal development. The prefrontal cortex (judgment center) isn't fully mature until mid-20s (neuroscience understanding).",
+          "Discuss risks without lecturing: Share information about consequences in collaborative conversation rather than fear-based warnings. Ask 'What do you think could happen?' to engage their thinking.",
+          "Provide safe excitement alternatives: Help them find healthy ways to get adrenaline and excitement - sports, adventure activities, creative challenges that meet their developmental needs.",
+          "Stay connected despite concerning behavior: Pulling away in fear often increases risky behavior. Maintain relationship while expressing concerns about safety.",
+          "Examine underlying emotional needs: Risk-taking often attempts to manage depression, anxiety, trauma, or emotional numbness. Address root causes rather than just behaviors.",
+          "Involve them as experts: Ask about their risk assessment and safety planning. 'What would help you stay safer when you're out with friends?' builds internal motivation.",
+          "Address peer influence thoughtfully: Help them develop skills to resist negative peer pressure while maintaining friendships. Role-play difficult social situations.",
+          "Model calculated risk-taking: Show them how to evaluate risks and make thoughtful decisions about activities that involve some uncertainty or challenge.",
+          "Know when to seek help: If risk-taking escalates, involves substance use, or seems driven by self-destructive impulses, professional intervention may be needed."
         ],
         "red_flags": [
           "Life-threatening risk-taking",
@@ -1152,9 +1230,15 @@ export class BehaviorGuide {
           "Sadness about relationship breakdown"
         ],
         "strategies": [
-          "Focus on safety rather than control",
-          "Discuss the importance of trust in relationships",
-          "Create opportunities for honest communication"
+          "Understand lying as autonomy-seeking: Teen lying often reflects normal developmental need for privacy and independence rather than moral failure or disrespect (developmental perspective).",
+          "Examine trust-control balance: Ask whether your expectations for information-sharing are reasonable for their age and development. Some privacy is healthy and necessary.",
+          "Focus on safety over surveillance: Shift conversations to 'I need to know you're safe' rather than 'I need to know everything you're doing.' This maintains connection while respecting autonomy.",
+          "Create opportunities for honesty: Make it easier to tell truth by responding calmly to concerning information and focusing on problem-solving rather than punishment.",
+          "Address your own anxiety: Parent fear about teen activities often drives interrogation that increases lying. Manage your anxiety to preserve honest communication.",
+          "Discuss the relationship impact: Help them understand how lying affects trust and relationship quality. 'When you lie, it makes it harder for me to support you.'",
+          "Look for patterns in lying: Consistent lying about certain topics may indicate areas where they feel unsafe to be honest - examine your responses to those topics.",
+          "Model transparency appropriately: Share your own age-appropriate challenges and how you handle difficult situations to normalize honest communication.",
+          "Differentiate privacy from deception: Help them understand the difference between keeping some things private (healthy) and actively deceiving about important matters (relationship-damaging)."
         ],
         "red_flags": [
           "Lies about dangerous activities",
@@ -1178,9 +1262,15 @@ export class BehaviorGuide {
           "Fear of legal consequences"
         ],
         "strategies": [
-          "Address behaviour seriously with natural consequences",
-          "Explore underlying needs or pressures",
-          "Discuss legal and social implications"
+          "Address underlying needs: Stealing often reflects unmet needs for belonging, excitement, material items, or feeling of control. Understand what they're really seeking through this behavior.",
+          "Examine financial pressures: Teen stealing may relate to wanting things peers have or feeling unable to ask parents for money. Address family financial communication and teen's legitimate needs.",
+          "Hold them accountable meaningfully: Natural consequences should include making amends, returning/replacing items, and understanding impact on others. Avoid shame-based responses.",
+          "Look for peer influence factors: Sometimes stealing occurs in group settings where teens feel pressure to prove themselves or gain acceptance. Address social dynamics.",
+          "Consider underlying mental health: Stealing can indicate depression, ADHD, trauma, or other conditions affecting impulse control and decision-making. Seek evaluation if patterns persist.",
+          "Teach empathy and perspective-taking: Help them understand how stealing affects victims, businesses, and community trust. Role-play different perspectives.",
+          "Address family modeling: Examine whether family behaviors around honesty, rules, or taking things send mixed messages about what's acceptable.",
+          "Discuss legal and social consequences: Age-appropriately explain real-world implications of theft while maintaining hope for their ability to make better choices.",
+          "Support positive identity development: Help them see themselves as trustworthy and capable of making good choices. Focus on their character strengths and values."
         ],
         "red_flags": [
           "Stealing to support substance use",
@@ -1204,9 +1294,15 @@ export class BehaviorGuide {
           "Stress about community relationships"
         ],
         "strategies": [
-          "Address behaviour immediately and clearly",
-          "Explore underlying pain or insecurity",
-          "Require meaningful amends to victims"
+          "Understand bullying as pain passed along: Teens who bully others are often experiencing their own powerlessness, trauma, or emotional pain. Address their hurt while stopping harmful behavior (Maté's understanding).",
+          "Address immediately and clearly: Set firm boundaries about bullying while investigating underlying causes. 'This behavior stops now AND let's understand what's driving it.'",
+          "Examine their own victimization: Many teen bullies have histories of being bullied, abused, or marginalized. Trauma-informed approaches address root causes more effectively than punishment alone.",
+          "Build empathy through connection: Help them understand impact on victims by connecting to their own experiences of feeling powerless, excluded, or hurt.",
+          "Address family and social power dynamics: Sometimes bullying reflects patterns learned at home or in community. Examine whether they're experiencing domination that gets passed down.",
+          "Require meaningful repair: Have them make direct amends to victims and contribute positively to communities they've harmed. This builds responsibility and empathy.",
+          "Address underlying insecurity: Bullying often stems from deep insecurity masked by aggressive behavior. Build their authentic self-esteem through connection and competence-building.",
+          "Teach healthy power and leadership: Channel their influence toward positive leadership rather than dominance. Help them use their power constructively.",
+          "Monitor and support: Stay involved in their social world to prevent future bullying while supporting their growth toward healthy relationships."
         ],
         "red_flags": [
           "Systematic targeting and harassment",
@@ -1230,9 +1326,15 @@ export class BehaviorGuide {
           "Guilt about contributing to pressure"
         ],
         "strategies": [
-          "Model work-life balance and self-care",
-          "Discuss realistic expectations and failure as learning",
-          "Encourage authentic self-expression"
+          "Address achievement pressure directly: Teen perfectionism often reflects overwhelming academic, social, or family pressure. Examine environmental expectations and advocate for balance.",
+          "Differentiate self-worth from performance: Consistently communicate that your love and their value aren't dependent on achievements. This rewires attachment security (Bowlby's principles).",
+          "Model work-life balance: Show them how to prioritize self-care, relationships, and joy alongside achievement. Your example teaches them sustainable life patterns.",
+          "Address anxiety and depression: Perfectionism often masks intense anxiety or depression. If teen shows signs of mental health struggles, seek professional support.",
+          "Teach failure as learning: Share your own failures and what you learned from them. Help them reframe mistakes as growth opportunities rather than character judgments.",
+          "Examine family perfectionism patterns: Sometimes teen perfectionism reflects family-wide patterns of conditional love or criticism. Address these systemic issues.",
+          "Support authentic interests: Help them pursue activities they genuinely enjoy rather than just those that look good on applications or meet others' expectations.",
+          "Build distress tolerance: Help them develop capacity to sit with uncomfortable feelings like disappointment without needing to be perfect to feel okay.",
+          "Create perfectionism-free zones: Establish family activities, conversations, or spaces where achievement doesn't matter and they can just be themselves."
         ],
         "red_flags": [
           "Panic attacks or physical symptoms from stress",
@@ -1256,9 +1358,15 @@ export class BehaviorGuide {
           "Stress about legal requirements for attendance"
         ],
         "strategies": [
-          "Identify barriers to school attendance",
-          "Work with school counsellors and teachers",
-          "Address underlying mental health needs"
+          "Investigate school climate and safety: Teen school avoidance often indicates problems with bullying, social anxiety, academic overwhelm, or unsafe school environment requiring advocacy.",
+          "Address mental health factors: Depression, anxiety, or trauma can make school feel impossible. Screen for mental health conditions and provide appropriate support.",
+          "Examine academic fit and learning needs: Some teens avoid school because of undiagnosed learning differences, inappropriate academic level, or lack of engaging coursework.",
+          "Support without enabling: Balance understanding their struggles with maintaining expectations for education. 'School is hard for you AND education is important. Let's solve this together.'",
+          "Work collaboratively with school: Partner with counselors, teachers, and administrators to identify barriers and create supportive solutions rather than punitive responses.",
+          "Address social anxiety and peer issues: Help them develop social skills, find their peer group, or address bullying situations that make school feel unsafe socially.",
+          "Consider alternative education options: Some teens thrive in different educational environments - online school, alternative programs, or modified schedules may be appropriate.",
+          "Build motivation through connection: Help them connect education to their own goals and interests rather than external pressures or requirements.",
+          "Address trauma or family stressors: Sometimes school avoidance reflects overwhelming home situations or trauma that makes leaving home feel unsafe."
         ],
         "red_flags": [
           "Complete school refusal for weeks",
@@ -1282,9 +1390,15 @@ export class BehaviorGuide {
           "Feeling helpless to reach them"
         ],
         "strategies": [
-          "Provide consistent support without pressure",
-          "Consider professional mental health support",
-          "Validate that numbness is a form of pain"
+          "Understand numbing as protective response: Emotional shutdown is often the nervous system's way of surviving overwhelming pain, trauma, or chronic stress. Honor this adaptation while gently offering reconnection (Maté's trauma understanding).",
+          "Create felt safety first: Before trying to access emotions, help them feel physically and emotionally safe in relationship with you. This may take considerable time and patience.",
+          "Use non-verbal connection: Offer presence without demands - sitting nearby, gentle touch if welcomed, or engaging in parallel activities. Connection can happen without emotional expression.",
+          "Address underlying trauma or depression: Emotional numbing often indicates experiences that overwhelmed their capacity to cope. Professional trauma-informed therapy may be essential.",
+          "Respect their protective mechanisms: Pushing for emotional expression can increase shutdown. Trust that with safety and time, natural emotional capacity will return.",
+          "Model emotional expression appropriately: Share your own feelings in non-demanding ways: 'I feel sad seeing you struggle, and I'm here for whatever you need.'",
+          "Support basic regulation: Ensure adequate sleep, nutrition, movement, and limit overwhelming stimuli. A dysregulated nervous system can't safely access emotions.",
+          "Consider medication evaluation: Persistent emotional numbing may benefit from psychiatric evaluation, especially if accompanied by depression or anxiety symptoms.",
+          "Maintain hope and connection: Even when they seem unreachable, your consistent presence and belief in their healing capacity provides important foundation for recovery."
         ],
         "red_flags": [
           "Complete emotional flatness for weeks",
@@ -1308,9 +1422,15 @@ export class BehaviorGuide {
           "Desperation to help but uncertainty how"
         ],
         "strategies": [
-          "Stay calm and avoid shaming language",
-          "Seek immediate professional help",
-          "Focus on underlying emotional needs"
+          "Stay calm and non-judgmental: Your reaction sets the tone for whether they'll continue to trust you with their pain. Panic or anger often shuts down communication (attachment principles).",
+          "Understand self-harm function: It often serves to regulate overwhelming emotions, feel control, or express pain they can't verbalize. Address the underlying needs, not just the behavior.",
+          "Seek professional help immediately: Self-harm requires specialized intervention. Find therapists trained in self-injury and adolescent mental health for comprehensive support.",
+          "Remove or secure harmful objects: While addressing root causes, take practical steps to reduce easy access to self-harm tools without making them feel untrusted.",
+          "Validate their pain without condoning behavior: 'I can see you're in tremendous pain. Let's find safer ways to help with these feelings together.'",
+          "Address trauma and mental health: Self-harm often indicates underlying trauma, depression, anxiety, or other conditions requiring professional treatment.",
+          "Learn about self-harm safety: While working toward stopping, learn about harm reduction approaches that can minimize physical damage if behavior continues temporarily.",
+          "Support alternative coping strategies: Help them develop other ways to manage intense emotions - ice cubes, intense exercise, creative expression, calling supportive people.",
+          "Maintain strong therapeutic relationships: Consistent professional support is crucial for teens who self-harm. Don't try to handle this alone as a parent."
         ],
         "red_flags": [
           "Escalating severity of self-harm",
@@ -1334,9 +1454,15 @@ export class BehaviorGuide {
           "Uncertainty about how to address"
         ],
         "strategies": [
-          "Address behaviour calmly but clearly",
-          "Provide appropriate sex education",
-          "Consider professional assessment if concerning"
+          "Stay calm and gather information: Approach with curiosity rather than judgment to understand what's happening and whether this indicates concerning experiences or exposure.",
+          "Provide comprehensive sex education: Many inappropriate behaviors stem from lack of proper education about healthy sexuality, boundaries, and consent.",
+          "Assess for trauma or abuse: Sudden or age-inappropriate sexual behavior can indicate sexual abuse or exposure requiring immediate professional assessment and support.",
+          "Set clear, shame-free boundaries: Address concerning behavior directly while maintaining the teen's dignity: 'This behavior isn't appropriate and we need to talk about why.'",
+          "Examine media and peer influences: Investigate whether they've been exposed to pornography, inappropriate online content, or peer pressure that's shaping their understanding.",
+          "Address consent and healthy relationships: Teach explicitly about mutual respect, consent, emotional readiness, and what healthy sexual relationships look like.",
+          "Consider professional evaluation: If behavior persists or seems compulsive, seek assessment from professionals experienced with adolescent sexuality and trauma.",
+          "Support healthy identity development: Help them understand sexuality as part of healthy human development while maintaining appropriate boundaries for their age.",
+          "Address family communication: Examine whether family comfort with discussing sexuality and boundaries needs to improve to support healthy development."
         ],
         "red_flags": [
           "Sexual behaviour toward younger children",
