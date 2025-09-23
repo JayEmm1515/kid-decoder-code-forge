@@ -18,9 +18,14 @@ export class BehaviorGuide {
           "Frustration from repeated outbursts"
         ],
         "strategies": [
-          "Use calm voice and stay close",
-          "Validate feelings with simple words",
-          "Redirect gently with touch or song"
+          "Co-regulation first: Stay calm and present - your nervous system regulates theirs (Siegel). Breathe deeply, lower your voice, and get down to their eye level.",
+          "Provide the 'secure base' (Bowlby): Offer comfort through gentle touch, holding, or simply staying nearby. Your presence communicates safety during overwhelm.",
+          "Name and validate: 'You're having such big feelings. It's hard when things don't work the way you want.' This helps develop emotional vocabulary and felt understanding.",
+          "Address underlying needs: Check for hunger, tiredness, overstimulation, or need for connection. Tantrums often signal unmet physical or emotional needs.",
+          "Use sensory soothing: Soft singing, rhythmic rocking, or gentle massage can activate the parasympathetic nervous system and restore calm (Narvaez).",
+          "Avoid reasoning during the storm: Wait until after the tantrum to discuss what happened. During intense emotion, the thinking brain is offline.",
+          "Create predictable routines: Consistent daily rhythms provide the secure structure that prevents many tantrums before they start.",
+          "Practice 'Circle of Security' principles: Be bigger, stronger, wiser, and kind while helping them organize their emotions through your calm presence."
         ],
         "red_flags": [
           "Tantrums lasting over 30 mins daily",
@@ -44,9 +49,14 @@ export class BehaviorGuide {
           "Worry about creating 'dependency'"
         ],
         "strategies": [
-          "Offer transitional object (e.g. toy, cloth)",
-          "Use short goodbye rituals",
-          "Stay calm during separations"
+          "Honor the attachment need: Separation anxiety reflects healthy attachment bonds (Bowlby). Validate: 'You want to stay close to me. That shows how much you love me.'",
+          "Create bridging rituals: Use photos, special objects, or recordings of your voice to maintain connection during separations (Circle of Security approach).",
+          "Practice graduated separations: Start with very brief separations in familiar environments, gradually building tolerance for longer periods.",
+          "Maintain the secure base: Be fully present during reunions without rushing or dismissing their feelings. This reinforces that coming back together is safe and joyful.",
+          "Support the caregiver's nervous system: Stay calm during goodbyes. Children co-regulate from your emotional state, so your anxiety increases theirs.",
+          "Use attachment language: 'I'll be thinking of you' and 'I always come back' provide explicit reassurance about the continuity of your bond.",
+          "Respect developmental timing: Some children need longer to develop object permanence. Pushing too hard can increase anxiety rather than build independence.",
+          "Create consistent goodbye routines: Predictable sequences help children know what to expect and when you'll return."
         ],
         "red_flags": [
           "Inconsolable distress at every separation",
@@ -70,9 +80,14 @@ export class BehaviorGuide {
           "Uncertainty about when to intervene"
         ],
         "strategies": [
-          "Provide alternative sensory activities",
-          "Ensure child's other needs are met",
-          "Observe triggers and patterns"
+          "Understand as self-regulation: These behaviors often serve important nervous system regulation functions (Narvaez). They're adaptive, not problematic.",
+          "Provide rich sensory environment: Offer various textures, sounds, and movement opportunities that can meet their sensory needs in healthy ways.",
+          "Observe patterns mindfully: Notice when these behaviors increase (tiredness, stress, boredom) to understand their regulatory function.",
+          "Support rather than stop: Unless harmful, allow these behaviors while offering alternatives. 'I see you need to move your body. Here's a soft brush to try.'",
+          "Check environmental factors: Reduce overwhelming stimuli that might be increasing their need for self-soothing through repetitive movement.",
+          "Engage their attachment system: Sometimes repetitive behaviors increase when children need more connection. Offer more physical closeness and interaction.",
+          "Trust developmental wisdom: Many repetitive behaviors are part of normal neurological development and will naturally decrease with maturation.",
+          "Consult if concerned: If behaviors seem compulsive or interfere with development, seek evaluation from professionals familiar with normal variation."
         ],
         "red_flags": [
           "Self-injurious repetitive behaviours",
@@ -96,9 +111,14 @@ export class BehaviorGuide {
           "Self-doubt about parenting abilities"
         ],
         "strategies": [
-          "Check for physical needs (hunger, sleep, comfort)",
-          "Provide consistent, calm responses",
-          "Create soothing environment"
+          "Systematic needs assessment: Rule out physical causes first - hunger, gas, illness, overstimulation. Address these before assuming emotional causes.",
+          "Provide consistent co-regulation: Your calm, patient presence helps regulate their overwhelmed nervous system (Siegel's concept of interpersonal neurobiology).",
+          "Create optimal environment: Dim lights, reduce noise, ensure comfortable temperature. The evolved developmental niche includes environmental sensitivity (Narvaez).",
+          "Use 'skin-to-skin' contact: Physical closeness activates the parasympathetic nervous system and promotes regulation through neurobiological pathways.",
+          "Respond without urgency: Approach with curiosity rather than panic. Your calm investigation helps them feel safe even in distress.",
+          "Track patterns: Note timing, duration, and contexts of crying to identify triggers and develop more targeted responses.",
+          "Support your own regulation: Crying triggers our own stress responses. Take breaks, seek support, and manage your own nervous system to better help theirs.",
+          "Trust the communication: Excessive crying is their way of telling you something important. Stay curious and responsive rather than frustrated."
         ],
         "red_flags": [
           "Crying for hours despite comfort attempts",
@@ -122,9 +142,14 @@ export class BehaviorGuide {
           "Worry about underlying issues"
         ],
         "strategies": [
-          "Provide extra comfort and reassurance",
-          "Maintain consistent routines",
-          "Address any sources of stress"
+          "Normalize developmental non-linearity: Development isn't linear - regression during stress is adaptive and protective (Maté's understanding of stress responses).",
+          "Increase attachment security: Offer extra physical closeness, extended bedtime routines, more patient responses to needs. Regression signals need for security.",
+          "Address environmental stressors: Identify and minimize sources of stress like changes in routine, family tension, or new environments.",
+          "Avoid shaming language: 'You're acting like a baby' increases stress. Instead: 'You need extra comfort right now, and that's okay.'",
+          "Provide choice in comfort: Let them choose whether they want extra snuggles, their favorite blanket, or special comfort foods during this period.",
+          "Trust the process: Regression usually resolves naturally once the child feels secure again. Forcing 'age-appropriate' behavior often prolongs it.",
+          "Support the whole family system: Sometimes regression reflects family stress. Address adult stress and relationship dynamics that may be affecting the child.",
+          "Maintain some expectations gently: While offering extra support, keep some age-appropriate expectations to maintain developmental momentum."
         ],
         "red_flags": [
           "Significant loss of multiple skills",
@@ -148,9 +173,14 @@ export class BehaviorGuide {
           "Frustration with bedtime battles"
         ],
         "strategies": [
-          "Establish consistent bedtime routine",
-          "Create calm, dark sleep environment",
-          "Respond consistently to night waking"
+          "Establish circadian rhythm support: Consistent bedtime routines help regulate their internal clock. Include dim lighting, quiet activities, and predictable sequences.",
+          "Create secure sleep environment: Room-sharing or safe co-sleeping supports attachment needs while developing independent sleep skills (following safe sleep guidelines).",
+          "Address separation anxiety at bedtime: Stay calm and patient during bedtime resistance. Their need for closeness at night reflects healthy attachment (Circle of Security principles).",
+          "Use graduated responses: Respond consistently to night waking with comfort, but gradually reduce intervention as child develops self-soothing capacity.",
+          "Support nervous system regulation: Avoid overstimulation before bed. Create calm, quiet environments that support parasympathetic activation for sleep.",
+          "Consider developmental appropriateness: Many sleep 'problems' are normal developmental phases. Adjust expectations to match child's neurological maturity.",
+          "Maintain caregiver well-being: Sleep deprivation affects your ability to co-regulate. Accept help, take turns with partners, and prioritize your own rest when possible.",
+          "Trust biological wisdom: Children's sleep needs and patterns vary. Work with their natural rhythms rather than forcing rigid schedules."
         ],
         "red_flags": [
           "Extreme sleep resistance for weeks",
@@ -174,9 +204,14 @@ export class BehaviorGuide {
           "Feeling like a failure as a provider"
         ],
         "strategies": [
-          "Offer variety without pressure",
-          "Model positive eating behaviours",
-          "Keep mealtimes relaxed and social"
+          "Trust their internal wisdom: Children have innate ability to self-regulate food intake when not pressured. Provide variety and trust their appetite cues (Narvaez's evolved developmental niche).",
+          "Examine feeding relationship: Focus on your job (offering nutritious foods in pleasant environment) vs. their job (deciding how much to eat). Avoid power struggles.",
+          "Address sensory factors: Some children have heightened sensitivity to textures, temperatures, or flavors. Respect these differences while gradually expanding options.",
+          "Create positive mealtime atmosphere: Relaxed, social mealtimes support healthy eating. Stress and pressure activate fight-or-flight, shutting down digestion.",
+          "Model enjoyment of food: Children learn through observation. Show pleasure in eating variety of foods without pressuring them to copy you.",
+          "Consider timing and environment: Ensure child isn't too tired, distracted, or full of milk/snacks when offering meals.",
+          "Rule out medical causes: Persistent food refusal may indicate reflux, allergies, or other physical issues requiring medical evaluation.",
+          "Support feeding relationship repair: If mealtimes have become battlegrounds, take pressure off and rebuild positive associations with eating together."
         ],
         "red_flags": [
           "Significant weight loss",
@@ -200,9 +235,14 @@ export class BehaviorGuide {
           "Temptation to avoid feared situations"
         ],
         "strategies": [
-          "Provide comfort and reassurance",
-          "Gradually expose to feared situations",
-          "Stay calm during fear responses"
+          "Co-regulate their nervous system: Stay calm and grounded when they're fearful. Your regulated presence helps them feel safe (Siegel's co-regulation principles).",
+          "Validate without amplifying: 'I see you're worried about that sound. You're safe with me.' Acknowledge the fear without making it bigger or smaller than it is.",
+          "Use gradual exposure with support: Slowly introduce feared objects/situations while maintaining connection and safety. Never force, always follow their lead.",
+          "Provide comfort objects: Transitional objects help bridge separations and provide security during scary moments (attachment theory principles).",
+          "Create predictable environments: Reduce overwhelming stimuli when possible. Too much novelty can trigger fear responses in sensitive children.",
+          "Support sensory regulation: Some fears relate to sensory overwhelm. Help identify triggers and provide sensory supports (quiet spaces, soft textures, familiar sounds).",
+          "Build 'felt safety': Focus on helping them FEEL safe in their body, not just convincing them logically that they're safe.",
+          "Trust developmental timing: Many fears are normal developmental phases that resolve with maturation and secure relationships."
         ],
         "red_flags": [
           "Fears interfering with daily activities",
@@ -228,9 +268,14 @@ export class BehaviorGuide {
           "Uncertainty about discipline approach"
         ],
         "strategies": [
-          "Name emotions and offer two choices",
-          "Hold limits with empathy",
-          "Use visual aids for transitions"
+          "Understand developmental context: Preschooler tantrums reflect immature prefrontal cortex meeting big emotions. Their thinking brain literally goes 'offline' during intense feelings (Siegel).",
+          "Use 'time-in' not 'time-out': Stay connected during the storm. 'Time-in' helps co-regulate their nervous system rather than leaving them alone with overwhelming emotions.",
+          "Set limits with empathy: 'You really wanted that cookie AND dinner comes first.' Acknowledge their perspective while holding boundaries (Circle of Security approach).",
+          "Offer limited choices: 'Would you like to walk to the car or hop like a bunny?' Providing options gives sense of control within your limits.",
+          "Create visual supports: Use pictures, timers, or charts to help with transitions. Visual cues support executive function development.",
+          "Address underlying needs: Check for hunger, tiredness, overstimulation, or need for connection before assuming defiance.",
+          "Practice emotional coaching: During calm moments, read books about feelings, practice naming emotions, and create 'feeling tools' they can use.",
+          "Model regulation strategies: Show them how you handle frustration. 'I'm feeling angry, so I'm going to take three deep breaths.'"
         ],
         "red_flags": [
           "Tantrums lasting over 45 minutes regularly",
@@ -254,9 +299,14 @@ export class BehaviorGuide {
           "Exhaustion from power struggles"
         ],
         "strategies": [
-          "Offer choices within limits",
-          "Use playful tone to increase cooperation",
-          "Be consistent with expectations"
+          "Recognize autonomy development: Defiance is often healthy assertion of independence. Respond to the underlying need for autonomy while maintaining necessary limits.",
+          "Use collaborative problem-solving: 'We have a problem. You want to keep playing AND we need to clean up. What ideas do you have?' (Siegel's collaborative approach).",
+          "Provide appropriate power: Give them meaningful choices and control where safety allows. 'Which jacket would you like to wear?' vs. fighting about wearing a jacket.",
+          "Check your attachment lens: Are you in 'shark music' (Circle of Security term for anxiety)? Sometimes our own triggers make normal behavior feel more threatening.",
+          "Use playful engagement: Silly voices, games, or humor can shift the dynamic from power struggle to connection. 'Oh no! The toys are escaping! Help me catch them!'",
+          "Examine expectations: Ensure requests are developmentally appropriate. Can they actually remember multi-step instructions or sit still for that long?",
+          "Stay regulated yourself: Your calm nervous system helps them regulate. When you escalate, they escalate. Take breaks when needed.",
+          "Focus on connection first: Sometimes defiance signals disconnection. Offer special time or physical affection before addressing the behavior."
         ],
         "red_flags": [
           "Defiance leading to dangerous situations",
@@ -280,9 +330,14 @@ export class BehaviorGuide {
           "Worry about child's social development"
         ],
         "strategies": [
-          "Label what's not okay and show what is",
-          "Use books or stories to teach alternatives",
-          "Provide physical outlets for energy"
+          "Teach emotional vocabulary actively: 'Your body is showing me you're frustrated. Let's find words for that feeling.' Help them connect body sensations to emotion words.",
+          "Provide immediate alternatives: 'Hands are not for hitting. Hands are for hugging, building, and high-fives. Let's try again.' Give them something TO do, not just what NOT to do.",
+          "Address the unmet need: Aggression often signals unmet needs for attention, control, or sensory input. 'You wanted that toy. Let's ask for a turn.'",
+          "Use natural consequences: If they hurt someone, they need to help that person feel better. Focus on repair rather than punishment.",
+          "Create sensory outlets: Provide acceptable ways to meet their need for physical intensity - jumping, dancing, squeezing stress balls, or heavy work activities.",
+          "Stay calm during incidents: Your regulated response helps them learn regulation. Reacting with anger teaches them that aggression is how we handle frustration.",
+          "Practice during calm moments: Role-play scenarios, read books about emotions, and practice gentle touches during peaceful times.",
+          "Examine environmental factors: Are they overstimulated, hungry, tired, or overwhelmed? Address these underlying states that make aggression more likely."
         ],
         "red_flags": [
           "Frequent aggression toward peers",
@@ -306,9 +361,14 @@ export class BehaviorGuide {
           "Concern about social relationships"
         ],
         "strategies": [
-          "Give child appropriate choices and control",
-          "Set clear boundaries on bossiness",
-          "Teach asking versus demanding"
+          "Understand the need for control: Bossiness often reflects anxiety about unpredictability. Provide structure and routine to reduce their need to control everything.",
+          "Give appropriate leadership opportunities: 'You're great at organizing! Would you like to be in charge of setting up the art supplies?' Channel their leadership positively.",
+          "Set limits on demanding tone: 'I want to help you AND I need you to ask nicely. Try again with a asking voice.' Teach HOW to ask for what they need.",
+          "Address underlying anxiety: Controlling behavior often masks worry. 'It seems like you're worried about what might happen. Tell me about that.'",
+          "Create predictability: Use visual schedules, consistent routines, and advance warning of changes to reduce their anxiety-driven need for control.",
+          "Model flexible thinking: Show them how you adapt when things don't go as planned. 'Oh well, we'll try a different way. That's okay.'",
+          "Validate their perspective: 'You had a plan for how this should go. It's hard when things change.' Acknowledge their feelings while maintaining flexibility.",
+          "Encourage collaborative solutions: 'We both have ideas. Let's see if we can find a way that works for both of us.'"
         ],
         "red_flags": [
           "Extreme distress when not in control",
@@ -332,9 +392,14 @@ export class BehaviorGuide {
           "Concerns about school readiness"
         ],
         "strategies": [
-          "Provide structured physical outlets",
-          "Use timers and visual cues",
-          "Break tasks into smaller steps"
+          "Provide structured movement outlets: Channel their energy into acceptable activities - dancing, yoga, outdoor play, or 'heavy work' activities that provide sensory input.",
+          "Break tasks into smaller chunks: Their developing executive function needs support. 'First we'll put on shoes, then get backpack, then go to car.'",
+          "Use environmental supports: Create calm spaces with fewer distractions. Reduce visual clutter, noise, and overwhelming stimuli that increase hyperactivity.",
+          "Implement regular movement breaks: Build physical activity into daily routine. Many children need movement to help their brains focus and regulate.",
+          "Practice mindfulness together: Simple breathing exercises, body awareness games, and mindful listening can help develop self-regulation skills.",
+          "Check nutrition and sleep: Ensure adequate sleep, regular meals, and limited sugar/processed foods that can affect attention and impulse control.",
+          "Use positive attention for calm behavior: Catch them being still, focused, or calm and acknowledge it. 'I notice how carefully you're listening.'",
+          "Consider sensory needs: Some hyperactivity reflects sensory seeking. Provide appropriate sensory input through movement, touch, or proprioceptive activities."
         ],
         "red_flags": [
           "Inability to sit for age-appropriate activities",
@@ -358,9 +423,14 @@ export class BehaviorGuide {
           "Worry about preschool adjustment"
         ],
         "strategies": [
-          "Prepare child ahead of time for separations",
-          "Keep routines consistent and warm",
-          "Practice short separations"
+          "Validate attachment needs: 'You want to stay close to me. That shows how much you love me.' Separation anxiety reflects healthy attachment bonds (Bowlby).",
+          "Create connection rituals: Develop special goodbye routines, use photos or recordings of your voice, and create 'connection objects' to bridge separations.",
+          "Practice graduated exposure: Start with very brief separations in safe environments, gradually building tolerance. Follow their lead rather than pushing.",
+          "Prepare in advance: Talk about upcoming separations, visit new environments beforehand, and create visual schedules showing when you'll return.",
+          "Support other caregivers: Help alternative caregivers understand your child's attachment needs and preferred soothing strategies.",
+          "Stay regulated during goodbyes: Your calm energy helps them feel safe. Rushed, anxious departures increase their distress.",
+          "Avoid sneaking away: Always say goodbye. Disappearing without notice breaks trust and increases future anxiety about separations.",
+          "Reunite with enthusiasm: Show joy when you come back together. This reinforces that separations end in happy reunions."
         ],
         "red_flags": [
           "Extreme distress lasting hours",
@@ -384,9 +454,14 @@ export class BehaviorGuide {
           "Worry about underlying issues"
         ],
         "strategies": [
-          "Stay calm and matter-of-fact",
-          "Maintain consistent routines",
-          "Consult healthcare provider if persistent"
+          "Respond matter-of-factly: 'Accidents happen. Let's clean up and try again.' Avoid shame, disappointment, or pressure which increase stress and accidents.",
+          "Address underlying stress: Toileting regression often signals emotional overwhelm. Identify and reduce stressors while providing extra emotional support.",
+          "Maintain consistent routines: Keep regular toilet breaks, especially during transitions or busy times when children might 'forget' their body signals.",
+          "Rule out medical issues: Consult healthcare provider to ensure no physical causes like constipation, UTI, or developmental delays.",
+          "Support nervous system regulation: Stress affects bladder control. Focus on helping them feel calm and safe in their body.",
+          "Avoid punishment: Consequences for accidents increase shame and stress, making the problem worse. Focus on natural learning and support.",
+          "Provide appropriate reminders: Gentle prompts during high-risk times (transitions, excitement, new environments) without nagging or pressure.",
+          "Celebrate successes: Acknowledge their body awareness and successful toilet use without making it overly important or emotionally charged."
         ],
         "red_flags": [
           "Sudden onset after being trained",
@@ -410,9 +485,14 @@ export class BehaviorGuide {
           "Worry about development"
         ],
         "strategies": [
-          "Provide extra comfort without reinforcing regression",
-          "Address underlying stressors",
-          "Acknowledge child's feelings"
+          "Understand regression as communication: Temporary return to earlier behaviors often signals need for extra security during times of stress or change.",
+          "Provide emotional comfort without reinforcing: Offer extra snuggles and attention for their emotional needs rather than for the regressive behaviors themselves.",
+          "Address underlying stressors: Identify what changes or challenges might be overwhelming them - new sibling, daycare, family stress, developmental leaps.",
+          "Maintain gentle expectations: Keep some age-appropriate expectations while being patient with temporary regression. 'I know you can do this when you're ready.'",
+          "Focus on connection over correction: Increase one-on-one time, physical affection, and emotional attunement rather than trying to eliminate regressive behaviors.",
+          "Support the whole family: Often regression reflects family system stress. Address adult anxiety, relationship tensions, or environmental stressors affecting everyone.",
+          "Trust developmental resilience: Most regression resolves naturally once children feel secure again. Forcing maturity often prolongs regressive patterns.",
+          "Seek support when needed: If regression is severe or prolonged, consider consultation with child development specialists."
         ],
         "red_flags": [
           "Significant loss of multiple skills",
@@ -436,9 +516,14 @@ export class BehaviorGuide {
           "Worry about child's emotional health"
         ],
         "strategies": [
-          "Validate emotions while teaching coping",
-          "Look for patterns and triggers",
-          "Provide consistent emotional support"
+          "Validate emotions first: 'You're having such hard feelings. It makes sense you're upset.' Don't rush to fix or dismiss their emotional experience.",
+          "Look for patterns and triggers: Track when crying increases - transitions, hunger, tiredness, overstimulation, or specific emotional triggers.",
+          "Provide co-regulation support: Stay calm and present during their emotional storms. Your regulated nervous system helps theirs find balance (Siegel's co-regulation).",
+          "Teach emotion vocabulary: Help them name feelings in the moment. 'This looks like disappointment' or 'I wonder if you're feeling frustrated.'",
+          "Create emotional safety: Ensure they know ALL feelings are acceptable, even if behaviors need limits. 'It's okay to feel angry AND hitting isn't okay.'",
+          "Address underlying needs: Excessive crying often signals unmet needs for connection, control, or comfort. Meet these needs proactively.",
+          "Use comfort strategies: Offer physical comfort, change of environment, or soothing activities without trying to stop the emotion too quickly.",
+          "Build emotional resilience: During calm moments, read books about feelings, practice coping strategies, and celebrate emotional courage."
         ],
         "red_flags": [
           "Persistent sadness lasting weeks",
@@ -462,9 +547,14 @@ export class BehaviorGuide {
           "Worry about child's rest needs"
         ],
         "strategies": [
-          "Establish calm bedtime routine",
-          "Address fears with comfort and gradual exposure",
-          "Ensure appropriate sleep environment"
+          "Address developmental fears: Preschooler imagination creates both wonderful creativity and scary possibilities. Validate fears while gently challenging them.",
+          "Create bedtime security rituals: Consistent, calming routines help transition from active day to restful night. Include connection time with you.",
+          "Use graduated exposure to fears: If afraid of dark, use nightlight, then dimmer light, gradually building comfort. Never force, always follow their lead.",
+          "Provide comfort objects: Special stuffed animals, blankets, or photos can provide security during nighttime separation from you.",
+          "Check environment: Ensure comfortable room temperature, minimal noise, and appropriate lighting that supports natural sleep rhythms.",
+          "Avoid overstimulation before bed: Limit screens, exciting activities, or stimulating foods that can interfere with nervous system regulation for sleep.",
+          "Stay calm during resistance: Your anxious energy about bedtime increases their resistance. Approach bedtime with patience and confidence.",
+          "Address daytime stress: Sometimes sleep problems reflect daytime overwhelm. Ensure they have adequate downtime and emotional processing during the day."
         ],
         "red_flags": [
           "Night terrors or severe nightmares",
@@ -488,9 +578,14 @@ export class BehaviorGuide {
           "Frustration when child won't speak to others"
         ],
         "strategies": [
-          "Reduce pressure to speak",
-          "Create comfortable social opportunities",
-          "Consult speech-language pathologist if needed"
+          "Reduce performance pressure: Remove pressure to speak in challenging situations. Pressure increases anxiety and makes speaking harder.",
+          "Support their comfort zone: Let them communicate through gestures, nodding, or whispering to you first. Honor their pace of social engagement.",
+          "Build confidence gradually: Create successful speaking experiences in very safe environments before expecting communication in challenging ones.",
+          "Address underlying anxiety: Selective mutism often reflects social anxiety. Focus on helping them feel emotionally safe rather than pushing speech.",
+          "Communicate with caregivers: Ensure teachers and other adults understand not to pressure speech and know alternative ways child can participate.",
+          "Avoid bribes or consequences: Rewards or punishments for speaking increase pressure and often backfire. Focus on reducing anxiety instead.",
+          "Celebrate non-verbal communication: Acknowledge their expressions, gestures, and other forms of communication to build confidence.",
+          "Consider professional support: Speech-language pathologists familiar with selective mutism can provide valuable strategies and assessment."
         ],
         "red_flags": [
           "Complete silence in multiple settings",
@@ -514,9 +609,14 @@ export class BehaviorGuide {
           "Uncertainty about exposure versus protection"
         ],
         "strategies": [
-          "Validate fears while gently challenging them",
-          "Use gradual exposure and positive experiences",
-          "Provide coping strategies and comfort items"
+          "Validate their emotional experience: 'That does look scary to you. Your feelings make sense.' Don't minimize or dismiss their fears, even if they seem irrational.",
+          "Use gradual exposure with support: Slowly introduce feared situations while maintaining safety and connection. 'Let's look at the dog from far away first.'",
+          "Provide coping tools: Teach breathing techniques, create 'brave' mantras, or use comfort objects they can carry when facing fears.",
+          "Address the nervous system: Help them recognize body signals of fear and practice calming strategies that activate their parasympathetic nervous system.",
+          "Build confidence through mastery: Create successful experiences in slightly challenging situations to build their sense of capability and resilience.",
+          "Avoid forcing exposure: Pushing too hard often increases fears. Follow their lead and respect their pace of emotional processing.",
+          "Check for underlying factors: Sometimes increased fearfulness signals stress, changes, or overwhelming experiences that need attention.",
+          "Model brave behavior: Show them how you handle things that make YOU nervous. Normalize having fears while also showing courage."
         ],
         "red_flags": [
           "Fears severely limiting daily activities",
@@ -542,9 +642,16 @@ export class BehaviorGuide {
           "Sadness about lost connection"
         ],
         "strategies": [
-          "Open the door with: 'I've noticed you've been quiet lately.'",
-          "Offer connection through shared interests",
-          "Respect need for space while staying available"
+          "Understand developmental context: School-age children face increasing social pressures and academic demands. Withdrawal may be protective and adaptive (Maté's understanding of protective responses).",
+          "Open gentle dialogue: 'I've noticed you've been spending more time alone lately. I'm wondering what that's like for you.' Approach with curiosity, not judgment.",
+          "Respect their need for privacy: Balance respecting growing independence with maintaining connection. 'I'm here when you're ready to talk.'",
+          "Create low-pressure connection opportunities: Side-by-side activities like cooking, walking, or car rides can feel safer for sharing than face-to-face conversations.",
+          "Check for underlying issues: Gently explore possible bullying, academic struggles, friendship problems, or family stress that might be contributing.",
+          "Maintain family routines: Continue family meals, traditions, and activities even if they participate quietly. Presence matters even without verbal engagement.",
+          "Focus on felt safety: Help them feel emotionally and physically safe at home, even if school or peer environments feel challenging (Circle of Security principles).",
+          "Monitor for depression signs: While some withdrawal is normal, watch for persistent sadness, loss of interests, or concerning changes in sleep/appetite.",
+          "Avoid taking it personally: Their withdrawal likely reflects their internal struggles, not rejection of family relationships.",
+          "Seek professional support: If withdrawal is severe or accompanied by other concerning symptoms, consider counseling support."
         ],
         "red_flags": [
           "Complete refusal to engage with family",
@@ -568,9 +675,16 @@ export class BehaviorGuide {
           "Exhaustion from constant battles"
         ],
         "strategies": [
-          "Discuss reasons behind rules collaboratively",
-          "Validate frustration but hold expectations",
-          "Involve child in creating family rules"
+          "Understand developmental drives: School-age children are developing sense of fairness and autonomy. Some defiance reflects healthy moral development and critical thinking.",
+          "Use collaborative problem-solving: 'Help me understand your perspective on this rule. What concerns do you have?' Include them in finding solutions (Siegel's collaborative approach).",
+          "Examine rule fairness: Ensure family rules are reasonable, clearly explained, and consistently applied. Children this age can spot inconsistency and unfairness.",
+          "Focus on natural consequences: Let them experience logical outcomes of choices when safe. This builds internal motivation better than arbitrary punishments.",
+          "Address underlying feelings: 'It seems like you're feeling powerless. Tell me more about that.' Often defiance masks feelings of helplessness or unfairness.",
+          "Provide appropriate autonomy: Give them meaningful choices and responsibility. Micro-managing increases rebellion in children who need growing independence.",
+          "Stay curious about their world: Understanding their peer relationships, school pressures, and developmental challenges helps you respond with empathy.",
+          "Model respectful disagreement: Show them how to express different opinions respectfully. 'I hear you disagree. Help me understand your thinking.'",
+          "Check your own triggers: Sometimes our reaction to defiance is stronger than the behavior warrants. Manage your own emotions to respond effectively.",
+          "Maintain connection during conflicts: 'We disagree about this AND I still love you completely.' Preserve the relationship even during difficult moments."
         ],
         "red_flags": [
           "Defiance leading to dangerous situations",
