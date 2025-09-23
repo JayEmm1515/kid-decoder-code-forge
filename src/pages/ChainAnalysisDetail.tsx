@@ -112,13 +112,58 @@ export default function ChainAnalysisDetailPage() {
     <Layout>
       <div className="bg-teal-corner p-6 max-w-5xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-foreground mb-2 flex items-center gap-3">
+          <h1 className="text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
             <Brain className="w-8 h-8 text-primary" />
             Chain Analysis
           </h1>
-          <p className="text-muted-foreground">
-            Break down challenging behaviors step by step to understand patterns and develop effective strategies.
-          </p>
+          
+          {/* What is Chain Analysis - Educational Section */}
+          <Card className="mb-6 bg-blue-50 border-blue-200">
+            <CardContent className="p-6">
+              <h2 className="text-xl font-semibold text-blue-800 mb-3 flex items-center gap-2">
+                <Lightbulb className="w-5 h-5" />
+                What is Chain Analysis?
+              </h2>
+              <div className="space-y-3 text-blue-700">
+                <p>
+                  <strong>Chain Analysis is like being a detective</strong> - it helps you trace back through all the events, feelings, and circumstances that led up to your child's challenging moment or outburst.
+                </p>
+                <p>
+                  Instead of only focusing on the difficult behavior itself, you'll work backwards to uncover the "chain of events" that built up to that moment. This might include things like:
+                </p>
+                <ul className="list-disc list-inside ml-4 space-y-1">
+                  <li>Your child being tired, hungry, or overstimulated</li>
+                  <li>A change in routine or unexpected transition</li>
+                  <li>Social stress or disappointment</li>
+                  <li>Your child's thoughts and feelings at each step</li>
+                </ul>
+                <div className="bg-white/50 p-4 rounded-lg mt-4">
+                  <h3 className="font-semibold text-blue-800 mb-2">How This Helps You as a Parent:</h3>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium">🔍 <strong>Spot Patterns:</strong></p>
+                      <p>See common triggers and timing that lead to difficulties</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">⚡ <strong>Prevent Outbursts:</strong></p>
+                      <p>Intervene earlier in the chain before things escalate</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">📊 <strong>Track Progress:</strong></p>
+                      <p>Build a personal record of what works for your child</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">🎯 <strong>Targeted Solutions:</strong></p>
+                      <p>Create specific strategies based on your child's unique triggers</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-sm italic">
+                  <strong>Remember:</strong> The goal isn't to blame anyone, but to understand your child better so you can support them more effectively and help prevent challenging situations before they happen.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-8">
