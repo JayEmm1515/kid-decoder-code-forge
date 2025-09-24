@@ -9,8 +9,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Slider } from "@/components/ui/slider";
 import Layout from "@/components/Layout";
 import { Child, MoodEntry, BehaviorEntry } from "@/entities/all";
-import { Plus, Activity, Heart, Calendar, Clock, Target, AlertCircle } from "lucide-react";
+import { Plus, Activity, Heart, Calendar, Clock, Target, AlertCircle, Brain } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import BehaviorInsights from "@/components/BehaviorInsights";
 
 const moodOptions = {
   very_sad: "😢 Very Sad",
@@ -58,7 +59,23 @@ export default function MoodBehaviorTrackingPage() {
     context: "",
     response: "",
     outcome: "",
-    notes: ""
+    notes: "",
+    // Neurodivergent-specific fields
+    sensory_environment: {
+      noise_level: "",
+      lighting: "",
+      crowding: "",
+      transitions: ""
+    },
+    diet_timing: {
+      meal_status: "",
+      time_since_meal: ""
+    },
+    routine_changes: {
+      unexpected_events: "",
+      schedule_disruption: "",
+      transition_warning: ""
+    }
   });
 
   useEffect(() => {
@@ -134,7 +151,22 @@ export default function MoodBehaviorTrackingPage() {
         context: "",
         response: "",
         outcome: "",
-        notes: ""
+        notes: "",
+        sensory_environment: {
+          noise_level: "",
+          lighting: "",
+          crowding: "",
+          transitions: ""
+        },
+        diet_timing: {
+          meal_status: "",
+          time_since_meal: ""
+        },
+        routine_changes: {
+          unexpected_events: "",
+          schedule_disruption: "",
+          transition_warning: ""
+        }
       });
     } catch (error) {
       console.error('Error saving behavior:', error);
@@ -170,7 +202,7 @@ export default function MoodBehaviorTrackingPage() {
           </Card>
         ) : (
           <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-            <TabsList className="grid w-full grid-cols-2">
+            <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="mood" className="flex items-center gap-2">
                 <Heart className="w-4 h-4" />
                 Mood Tracking
@@ -178,6 +210,10 @@ export default function MoodBehaviorTrackingPage() {
               <TabsTrigger value="behavior" className="flex items-center gap-2">
                 <Target className="w-4 h-4" />
                 Behavior Logging
+              </TabsTrigger>
+              <TabsTrigger value="insights" className="flex items-center gap-2">
+                <Brain className="w-4 h-4" />
+                Insights
               </TabsTrigger>
             </TabsList>
 
@@ -431,6 +467,214 @@ export default function MoodBehaviorTrackingPage() {
                       />
                     </div>
 
+                    {/* Neurodivergent-Specific Tracking Section */}
+                    <div className="border-t pt-6">
+                      <h3 className="text-lg font-semibold mb-4 text-muted-foreground">
+                        Neurodivergent Context (Optional)
+                      </h3>
+                      
+                      {/* Sensory Environment */}
+                      <div className="space-y-4 mb-6">
+                        <h4 className="font-medium text-sm">Sensory Environment</h4>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+                          <div className="space-y-2">
+                            <Label className="text-xs">Noise Level</Label>
+                            <Select 
+                              value={behaviorForm.sensory_environment.noise_level} 
+                              onValueChange={(value) => setBehaviorForm({
+                                ...behaviorForm, 
+                                sensory_environment: {...behaviorForm.sensory_environment, noise_level: value}
+                              })}
+                            >
+                              <SelectTrigger className="h-8 text-sm">
+                                <SelectValue placeholder="Select" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="very_low">Very Quiet</SelectItem>
+                                <SelectItem value="low">Quiet</SelectItem>
+                                <SelectItem value="moderate">Moderate</SelectItem>
+                                <SelectItem value="high">Loud</SelectItem>
+                                <SelectItem value="very_high">Very Loud</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="space-y-2">
+                            <Label className="text-xs">Lighting</Label>
+                            <Select 
+                              value={behaviorForm.sensory_environment.lighting} 
+                              onValueChange={(value) => setBehaviorForm({
+                                ...behaviorForm, 
+                                sensory_environment: {...behaviorForm.sensory_environment, lighting: value}
+                              })}
+                            >
+                              <SelectTrigger className="h-8 text-sm">
+                                <SelectValue placeholder="Select" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="dim">Dim</SelectItem>
+                                <SelectItem value="natural">Natural</SelectItem>
+                                <SelectItem value="bright">Bright</SelectItem>
+                                <SelectItem value="fluorescent">Fluorescent</SelectItem>
+                                <SelectItem value="flashing">Flashing/Flickering</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="space-y-2">
+                            <Label className="text-xs">Crowding</Label>
+                            <Select 
+                              value={behaviorForm.sensory_environment.crowding} 
+                              onValueChange={(value) => setBehaviorForm({
+                                ...behaviorForm, 
+                                sensory_environment: {...behaviorForm.sensory_environment, crowding: value}
+                              })}
+                            >
+                              <SelectTrigger className="h-8 text-sm">
+                                <SelectValue placeholder="Select" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="none">Just us</SelectItem>
+                                <SelectItem value="low">Few people</SelectItem>
+                                <SelectItem value="moderate">Some people</SelectItem>
+                                <SelectItem value="high">Crowded</SelectItem>
+                                <SelectItem value="very_high">Very crowded</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="space-y-2">
+                            <Label className="text-xs">Transitions</Label>
+                            <Select 
+                              value={behaviorForm.sensory_environment.transitions} 
+                              onValueChange={(value) => setBehaviorForm({
+                                ...behaviorForm, 
+                                sensory_environment: {...behaviorForm.sensory_environment, transitions: value}
+                              })}
+                            >
+                              <SelectTrigger className="h-8 text-sm">
+                                <SelectValue placeholder="Select" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="smooth">Smooth</SelectItem>
+                                <SelectItem value="planned">Planned</SelectItem>
+                                <SelectItem value="unexpected">Unexpected</SelectItem>
+                                <SelectItem value="abrupt">Abrupt</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Diet/Meal Timing */}
+                      <div className="space-y-4 mb-6">
+                        <h4 className="font-medium text-sm">Diet & Meal Timing</h4>
+                        <div className="grid md:grid-cols-2 gap-3">
+                          <div className="space-y-2">
+                            <Label className="text-xs">Meal Status</Label>
+                            <Select 
+                              value={behaviorForm.diet_timing.meal_status} 
+                              onValueChange={(value) => setBehaviorForm({
+                                ...behaviorForm, 
+                                diet_timing: {...behaviorForm.diet_timing, meal_status: value}
+                              })}
+                            >
+                              <SelectTrigger className="h-8 text-sm">
+                                <SelectValue placeholder="Select" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="just_ate">Just ate</SelectItem>
+                                <SelectItem value="satisfied">Satisfied</SelectItem>
+                                <SelectItem value="getting_hungry">Getting hungry</SelectItem>
+                                <SelectItem value="hungry">Hungry</SelectItem>
+                                <SelectItem value="very_hungry">Very hungry</SelectItem>
+                                <SelectItem value="skipped_meal">Skipped meal</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="space-y-2">
+                            <Label className="text-xs">Time Since Last Meal</Label>
+                            <Select 
+                              value={behaviorForm.diet_timing.time_since_meal} 
+                              onValueChange={(value) => setBehaviorForm({
+                                ...behaviorForm, 
+                                diet_timing: {...behaviorForm.diet_timing, time_since_meal: value}
+                              })}
+                            >
+                              <SelectTrigger className="h-8 text-sm">
+                                <SelectValue placeholder="Select" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="30 minutes">30 minutes</SelectItem>
+                                <SelectItem value="1 hour">1 hour</SelectItem>
+                                <SelectItem value="2 hours">2 hours</SelectItem>
+                                <SelectItem value="3 hours">3 hours</SelectItem>
+                                <SelectItem value="4 hours">4 hours</SelectItem>
+                                <SelectItem value="5+ hours">5+ hours</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Routine Changes */}
+                      <div className="space-y-4 mb-6">
+                        <h4 className="font-medium text-sm">Routine & Changes</h4>
+                        <div className="grid md:grid-cols-3 gap-3">
+                          <div className="space-y-2">
+                            <Label className="text-xs">Unexpected Events</Label>
+                            <Input 
+                              value={behaviorForm.routine_changes.unexpected_events}
+                              onChange={(e) => setBehaviorForm({
+                                ...behaviorForm, 
+                                routine_changes: {...behaviorForm.routine_changes, unexpected_events: e.target.value}
+                              })}
+                              placeholder="Any surprises?"
+                              className="h-8 text-sm"
+                            />
+                          </div>
+                          <div className="space-y-2">
+                            <Label className="text-xs">Schedule Disruption</Label>
+                            <Select 
+                              value={behaviorForm.routine_changes.schedule_disruption} 
+                              onValueChange={(value) => setBehaviorForm({
+                                ...behaviorForm, 
+                                routine_changes: {...behaviorForm.routine_changes, schedule_disruption: value}
+                              })}
+                            >
+                              <SelectTrigger className="h-8 text-sm">
+                                <SelectValue placeholder="Select" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="none">None</SelectItem>
+                                <SelectItem value="minor">Minor</SelectItem>
+                                <SelectItem value="moderate">Moderate</SelectItem>
+                                <SelectItem value="major">Major</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="space-y-2">
+                            <Label className="text-xs">Transition Warning</Label>
+                            <Select 
+                              value={behaviorForm.routine_changes.transition_warning} 
+                              onValueChange={(value) => setBehaviorForm({
+                                ...behaviorForm, 
+                                routine_changes: {...behaviorForm.routine_changes, transition_warning: value}
+                              })}
+                            >
+                              <SelectTrigger className="h-8 text-sm">
+                                <SelectValue placeholder="Select" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="none">No warning</SelectItem>
+                                <SelectItem value="2 minutes">2 minutes</SelectItem>
+                                <SelectItem value="5 minutes">5 minutes</SelectItem>
+                                <SelectItem value="10 minutes">10 minutes</SelectItem>
+                                <SelectItem value="15+ minutes">15+ minutes</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                     <Button type="submit" className="w-full">
                       <Plus className="w-4 h-4 mr-2" />
                       Log Behavior Event
@@ -438,6 +682,10 @@ export default function MoodBehaviorTrackingPage() {
                   </form>
                 </CardContent>
               </Card>
+            </TabsContent>
+
+            <TabsContent value="insights">
+              <BehaviorInsights />
             </TabsContent>
           </Tabs>
         )}

@@ -74,8 +74,8 @@ const Index = () => {
                 <div className="w-12 h-12 bg-teal-400/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Activity className="w-6 h-6 text-teal-400" />
                 </div>
-                <h3 className="text-white font-semibold text-lg mb-2">Track Behavior & Mood</h3>
-                <p className="text-white/70 text-sm">Log daily behaviors and emotional patterns</p>
+                <h3 className="text-white font-semibold text-lg mb-2">Enhanced Behavior Tracking</h3>
+                <p className="text-white/70 text-sm">Track behaviors with sensory, diet, and routine context for deeper insights</p>
               </CardContent>
             </Card>
           </Link>
