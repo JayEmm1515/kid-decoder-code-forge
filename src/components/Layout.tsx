@@ -50,6 +50,12 @@ const navigationItems = [
     color: "text-rose-400"
   },
   {
+    title: "Neurodivergent Support",
+    url: "/quizzes",
+    icon: Brain,
+    color: "text-purple-400"
+  },
+  {
     title: "Track Behavior",
     url: createPageUrl("Tracking"),
     icon: Zap,

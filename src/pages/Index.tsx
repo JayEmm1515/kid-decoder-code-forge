@@ -44,6 +44,18 @@ const Index = () => {
             </Card>
           </Link>
 
+          <Link to="/quizzes">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all cursor-pointer">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-purple-400/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-6 h-6 text-purple-400" />
+                </div>
+                <h3 className="text-white font-semibold text-lg mb-2">Neurodivergent Support</h3>
+                <p className="text-white/70 text-sm">ADHD and Autism screening quizzes with gentle guidance</p>
+              </CardContent>
+            </Card>
+          </Link>
+
           <Link to="/tracking">
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all cursor-pointer">
               <CardContent className="p-6 text-center">
