@@ -6,6 +6,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { AlertTriangle, Clock, FileText, RotateCcw } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 type AgeGroup = 'preschool' | 'school-age' | 'teens';
 type QuizType = 'adhd' | 'autism';
@@ -260,6 +261,12 @@ export default function Quizzes() {
                 <Button onClick={resetQuiz} variant="outline">
                   <RotateCcw className="w-4 h-4 mr-2" />
                   Take Another Quiz
+                </Button>
+                <Button asChild>
+                  <Link to="/learn">
+                    <FileText className="w-4 h-4 mr-2" />
+                    Watch Recommended Videos
+                  </Link>
                 </Button>
               </div>
             </CardContent>

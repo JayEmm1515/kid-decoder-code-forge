@@ -56,6 +56,12 @@ const navigationItems = [
     color: "text-purple-400"
   },
   {
+    title: "Learn",
+    url: "/learn",
+    icon: BookOpen,
+    color: "text-green-400"
+  },
+  {
     title: "Track Behavior",
     url: createPageUrl("Tracking"),
     icon: Zap,

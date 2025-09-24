@@ -22,6 +22,7 @@ import SchoolAge from "./pages/SchoolAge";
 import Teens from "./pages/Teens";
 import BeingWithExercise from "./pages/BeingWithExercise";
 import Quizzes from "./pages/Quizzes";
+import Learn from "./pages/Learn";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/teens" element={<Teens />} />
           <Route path="/being-with-exercise" element={<BeingWithExercise />} />
           <Route path="/quizzes" element={<Quizzes />} />
+          <Route path="/learn" element={<Learn />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
