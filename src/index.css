@@ -15,6 +15,14 @@
   --color-purple-400:  #C386E0;
   --color-peach-gold:  #F3D2A3;
 
+  /* Low Poly 3D Palette Colors */
+  --poly-cream: 48 56% 84%;
+  --poly-teal: 194 39% 55%;
+  --poly-purple: 266 56% 70%;
+  --poly-mint: 166 61% 73%;
+  --poly-coral: 11 100% 85%;
+  --poly-lime: 101 52% 78%;
+
   /* Roles */
   --surface:           var(--color-snow);
   --surface-muted:     var(--color-sky-50);

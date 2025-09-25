@@ -19,25 +19,25 @@ export default function QuickActions() {
       title: "Log Event",
       icon: Zap,
       url: createPageUrl("Tracking"),
-      color: "text-teal-grey"
+      variant: "poly-coral" as const
     },
     {
       title: "Chain Analysis",
       icon: Brain,
       url: createPageUrl("ChainAnalysis"),
-      color: "text-violet"
+      variant: "poly-purple" as const
     },
     {
       title: "Being With Exercise",
       icon: Calendar,
       url: createPageUrl("BeingWithExercise"),
-      color: "text-rose"
+      variant: "poly-mint" as const
     },
     {
       title: "Ask AI",
       icon: MessageCircle,
       url: createPageUrl("ParentingChat"),
-      color: "text-peach"
+      variant: "poly-teal" as const
     }
   ];
 
@@ -54,13 +54,11 @@ export default function QuickActions() {
           {actions.map((action) => (
             <Link key={action.title} to={action.url}>
               <Button
-                variant="outline"
-                className="w-full h-24 p-2 flex flex-col items-center justify-center text-center gap-2 border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 group"
+                variant={action.variant}
+                className="w-full h-24 p-4 flex flex-col items-center justify-center text-center gap-3 transition-all duration-300 group"
               >
-                <div className={`p-2 rounded-full bg-slate-100 group-hover:bg-white transition-colors`}>
-                    <action.icon className={`w-6 h-6 ${action.color} transition-colors`} />
-                </div>
-                <span className="font-medium text-sm text-ink">{action.title}</span>
+                <action.icon className="w-6 h-6 transition-colors" />
+                <span className="font-medium text-sm">{action.title}</span>
               </Button>
             </Link>
           ))}
