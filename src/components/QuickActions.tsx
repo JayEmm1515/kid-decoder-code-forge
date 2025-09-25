@@ -19,25 +19,25 @@ export default function QuickActions() {
       title: "Log Event",
       icon: Zap,
       url: createPageUrl("Tracking"),
-      variant: "poly-coral" as const
+      variant: "poly-coral-3d" as const
     },
     {
       title: "Chain Analysis",
       icon: Brain,
       url: createPageUrl("ChainAnalysis"),
-      variant: "poly-purple" as const
+      variant: "poly-purple-3d" as const
     },
     {
       title: "Being With Exercise",
       icon: Calendar,
       url: createPageUrl("BeingWithExercise"),
-      variant: "poly-mint" as const
+      variant: "poly-mint-3d" as const
     },
     {
       title: "Ask AI",
       icon: MessageCircle,
       url: createPageUrl("ParentingChat"),
-      variant: "poly-teal" as const
+      variant: "poly-teal-3d" as const
     }
   ];
 
@@ -55,7 +55,7 @@ export default function QuickActions() {
             <Link key={action.title} to={action.url}>
               <Button
                 variant={action.variant}
-                className="w-full h-24 p-4 flex flex-col items-center justify-center text-center gap-3 transition-all duration-300 group"
+                className="w-full h-24 p-4 flex flex-col items-center justify-center text-center gap-3 transition-all duration-300 group [&_svg]:relative [&_svg]:z-10 [&_span]:relative [&_span]:z-10"
               >
                 <action.icon className="w-6 h-6 transition-colors" />
                 <span className="font-medium text-sm">{action.title}</span>
