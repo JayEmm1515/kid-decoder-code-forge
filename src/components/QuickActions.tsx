@@ -50,15 +50,15 @@ export default function QuickActions() {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-4 p-2">
           {actions.map((action) => (
             <Link key={action.title} to={action.url}>
               <Button
                 variant={action.variant}
-                className="w-full h-24 p-4 flex flex-col items-center justify-center text-center gap-3 transition-all duration-300 group [&_svg]:relative [&_svg]:z-10 [&_span]:relative [&_span]:z-10"
+                className="w-full h-28 p-4 flex flex-col items-center justify-center text-center gap-3 group [&_svg]:relative [&_svg]:z-10 [&_span]:relative [&_span]:z-10"
               >
-                <action.icon className="w-6 h-6 transition-colors" />
-                <span className="font-medium text-sm">{action.title}</span>
+                <action.icon className="w-7 h-7 drop-shadow-sm" />
+                <span className="font-semibold text-xs drop-shadow-sm leading-tight">{action.title}</span>
               </Button>
             </Link>
           ))}

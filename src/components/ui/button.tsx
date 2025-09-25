@@ -20,50 +20,50 @@ const buttonVariants = cva(
         link: "text-[hsl(var(--dreamy-purple))] underline-offset-4 hover:underline bg-transparent shadow-none",
         primary: "bg-[hsl(var(--dreamy-teal))] text-white shadow-[12px_12px_24px_hsl(180_55%_50%),_-12px_-12px_24px_hsl(180_55%_80%)] border-none hover:shadow-[15px_15px_30px_hsl(180_55%_45%),_-15px_-15px_30px_hsl(180_55%_85%)] active:shadow-[inset_6px_6px_12px_hsl(180_55%_50%),_inset_-6px_-6px_12px_hsl(180_55%_75%)]",
         
-        // Exact match for your uploaded design - low poly 3D neumorphic buttons
+        // 3D App Icon Buttons - matching your exact design
         "poly-coral": `
-          rounded-[28px] bg-[#F97F84] text-white border-none font-semibold
-          shadow-[0_12px_32px_rgba(249,127,132,0.4),_0_4px_16px_rgba(249,127,132,0.2),_inset_0_2px_0_rgba(255,255,255,0.2),_inset_0_-2px_0_rgba(0,0,0,0.1)]
-          hover:shadow-[0_16px_40px_rgba(249,127,132,0.5),_0_6px_20px_rgba(249,127,132,0.3),_inset_0_2px_0_rgba(255,255,255,0.3)]
-          active:shadow-[inset_0_4px_12px_rgba(0,0,0,0.2),_inset_0_-1px_0_rgba(255,255,255,0.1)]
-          transition-all duration-200 hover:translate-y-[-2px] active:translate-y-[1px] active:scale-95
-          before:content-[''] before:absolute before:inset-[2px] before:rounded-[26px] before:bg-gradient-to-b before:from-white/20 before:to-transparent before:pointer-events-none
+          rounded-[22px] bg-gradient-to-br from-[#F97F84] via-[#F97F84] to-[#E86B70] text-white border-none font-semibold
+          shadow-[0_4px_8px_rgba(0,0,0,0.1),_0_12px_32px_rgba(249,127,132,0.25),_0_2px_4px_rgba(0,0,0,0.05),_inset_0_1px_0_rgba(255,255,255,0.3)]
+          hover:shadow-[0_6px_12px_rgba(0,0,0,0.12),_0_16px_40px_rgba(249,127,132,0.3),_0_2px_6px_rgba(0,0,0,0.08)] hover:translate-y-[-1px]
+          active:shadow-[0_2px_4px_rgba(0,0,0,0.15),_0_6px_16px_rgba(249,127,132,0.2),_inset_0_2px_4px_rgba(0,0,0,0.1)] active:translate-y-[1px]
+          transition-all duration-150 ease-out overflow-hidden
+          before:content-[''] before:absolute before:inset-0 before:rounded-[22px] before:bg-gradient-to-t before:from-transparent before:via-transparent before:to-white/15 before:pointer-events-none
         `,
         
         "poly-teal": `
-          rounded-[28px] bg-[#6EDCD7] text-white border-none font-semibold
-          shadow-[0_12px_32px_rgba(110,220,215,0.4),_0_4px_16px_rgba(110,220,215,0.2),_inset_0_2px_0_rgba(255,255,255,0.2),_inset_0_-2px_0_rgba(0,0,0,0.1)]
-          hover:shadow-[0_16px_40px_rgba(110,220,215,0.5),_0_6px_20px_rgba(110,220,215,0.3),_inset_0_2px_0_rgba(255,255,255,0.3)]
-          active:shadow-[inset_0_4px_12px_rgba(0,0,0,0.2),_inset_0_-1px_0_rgba(255,255,255,0.1)]
-          transition-all duration-200 hover:translate-y-[-2px] active:translate-y-[1px] active:scale-95
-          before:content-[''] before:absolute before:inset-[2px] before:rounded-[26px] before:bg-gradient-to-b before:from-white/20 before:to-transparent before:pointer-events-none
+          rounded-[22px] bg-gradient-to-br from-[#6EDCD7] via-[#6EDCD7] to-[#5BC4BF] text-white border-none font-semibold
+          shadow-[0_4px_8px_rgba(0,0,0,0.1),_0_12px_32px_rgba(110,220,215,0.25),_0_2px_4px_rgba(0,0,0,0.05),_inset_0_1px_0_rgba(255,255,255,0.3)]
+          hover:shadow-[0_6px_12px_rgba(0,0,0,0.12),_0_16px_40px_rgba(110,220,215,0.3),_0_2px_6px_rgba(0,0,0,0.08)] hover:translate-y-[-1px]
+          active:shadow-[0_2px_4px_rgba(0,0,0,0.15),_0_6px_16px_rgba(110,220,215,0.2),_inset_0_2px_4px_rgba(0,0,0,0.1)] active:translate-y-[1px]
+          transition-all duration-150 ease-out overflow-hidden
+          before:content-[''] before:absolute before:inset-0 before:rounded-[22px] before:bg-gradient-to-t before:from-transparent before:via-transparent before:to-white/15 before:pointer-events-none
         `,
         
         "poly-purple": `
-          rounded-[28px] bg-[#A364D8] text-white border-none font-semibold
-          shadow-[0_12px_32px_rgba(163,100,216,0.4),_0_4px_16px_rgba(163,100,216,0.2),_inset_0_2px_0_rgba(255,255,255,0.2),_inset_0_-2px_0_rgba(0,0,0,0.1)]
-          hover:shadow-[0_16px_40px_rgba(163,100,216,0.5),_0_6px_20px_rgba(163,100,216,0.3),_inset_0_2px_0_rgba(255,255,255,0.3)]
-          active:shadow-[inset_0_4px_12px_rgba(0,0,0,0.2),_inset_0_-1px_0_rgba(255,255,255,0.1)]
-          transition-all duration-200 hover:translate-y-[-2px] active:translate-y-[1px] active:scale-95
-          before:content-[''] before:absolute before:inset-[2px] before:rounded-[26px] before:bg-gradient-to-b before:from-white/20 before:to-transparent before:pointer-events-none
+          rounded-[22px] bg-gradient-to-br from-[#A364D8] via-[#A364D8] to-[#8F51C4] text-white border-none font-semibold
+          shadow-[0_4px_8px_rgba(0,0,0,0.1),_0_12px_32px_rgba(163,100,216,0.25),_0_2px_4px_rgba(0,0,0,0.05),_inset_0_1px_0_rgba(255,255,255,0.3)]
+          hover:shadow-[0_6px_12px_rgba(0,0,0,0.12),_0_16px_40px_rgba(163,100,216,0.3),_0_2px_6px_rgba(0,0,0,0.08)] hover:translate-y-[-1px]
+          active:shadow-[0_2px_4px_rgba(0,0,0,0.15),_0_6px_16px_rgba(163,100,216,0.2),_inset_0_2px_4px_rgba(0,0,0,0.1)] active:translate-y-[1px]
+          transition-all duration-150 ease-out overflow-hidden
+          before:content-[''] before:absolute before:inset-0 before:rounded-[22px] before:bg-gradient-to-t before:from-transparent before:via-transparent before:to-white/15 before:pointer-events-none
         `,
         
         "poly-mint": `
-          rounded-[28px] bg-[#4CA096] text-white border-none font-semibold
-          shadow-[0_12px_32px_rgba(76,160,150,0.4),_0_4px_16px_rgba(76,160,150,0.2),_inset_0_2px_0_rgba(255,255,255,0.2),_inset_0_-2px_0_rgba(0,0,0,0.1)]
-          hover:shadow-[0_16px_40px_rgba(76,160,150,0.5),_0_6px_20px_rgba(76,160,150,0.3),_inset_0_2px_0_rgba(255,255,255,0.3)]
-          active:shadow-[inset_0_4px_12px_rgba(0,0,0,0.2),_inset_0_-1px_0_rgba(255,255,255,0.1)]
-          transition-all duration-200 hover:translate-y-[-2px] active:translate-y-[1px] active:scale-95
-          before:content-[''] before:absolute before:inset-[2px] before:rounded-[26px] before:bg-gradient-to-b before:from-white/20 before:to-transparent before:pointer-events-none
+          rounded-[22px] bg-gradient-to-br from-[#4CA096] via-[#4CA096] to-[#3E8A80] text-white border-none font-semibold
+          shadow-[0_4px_8px_rgba(0,0,0,0.1),_0_12px_32px_rgba(76,160,150,0.25),_0_2px_4px_rgba(0,0,0,0.05),_inset_0_1px_0_rgba(255,255,255,0.3)]
+          hover:shadow-[0_6px_12px_rgba(0,0,0,0.12),_0_16px_40px_rgba(76,160,150,0.3),_0_2px_6px_rgba(0,0,0,0.08)] hover:translate-y-[-1px]
+          active:shadow-[0_2px_4px_rgba(0,0,0,0.15),_0_6px_16px_rgba(76,160,150,0.2),_inset_0_2px_4px_rgba(0,0,0,0.1)] active:translate-y-[1px]
+          transition-all duration-150 ease-out overflow-hidden
+          before:content-[''] before:absolute before:inset-0 before:rounded-[22px] before:bg-gradient-to-t before:from-transparent before:via-transparent before:to-white/15 before:pointer-events-none
         `,
 
         "poly-pink": `
-          rounded-[28px] bg-[#EFB2D1] text-white border-none font-semibold
-          shadow-[0_12px_32px_rgba(239,178,209,0.4),_0_4px_16px_rgba(239,178,209,0.2),_inset_0_2px_0_rgba(255,255,255,0.2),_inset_0_-2px_0_rgba(0,0,0,0.1)]
-          hover:shadow-[0_16px_40px_rgba(239,178,209,0.5),_0_6px_20px_rgba(239,178,209,0.3),_inset_0_2px_0_rgba(255,255,255,0.3)]
-          active:shadow-[inset_0_4px_12px_rgba(0,0,0,0.2),_inset_0_-1px_0_rgba(255,255,255,0.1)]
-          transition-all duration-200 hover:translate-y-[-2px] active:translate-y-[1px] active:scale-95
-          before:content-[''] before:absolute before:inset-[2px] before:rounded-[26px] before:bg-gradient-to-b before:from-white/20 before:to-transparent before:pointer-events-none
+          rounded-[22px] bg-gradient-to-br from-[#EFB2D1] via-[#EFB2D1] to-[#E09BBF] text-white border-none font-semibold
+          shadow-[0_4px_8px_rgba(0,0,0,0.1),_0_12px_32px_rgba(239,178,209,0.25),_0_2px_4px_rgba(0,0,0,0.05),_inset_0_1px_0_rgba(255,255,255,0.3)]
+          hover:shadow-[0_6px_12px_rgba(0,0,0,0.12),_0_16px_40px_rgba(239,178,209,0.3),_0_2px_6px_rgba(0,0,0,0.08)] hover:translate-y-[-1px]
+          active:shadow-[0_2px_4px_rgba(0,0,0,0.15),_0_6px_16px_rgba(239,178,209,0.2),_inset_0_2px_4px_rgba(0,0,0,0.1)] active:translate-y-[1px]
+          transition-all duration-150 ease-out overflow-hidden
+          before:content-[''] before:absolute before:inset-0 before:rounded-[22px] before:bg-gradient-to-t before:from-transparent before:via-transparent before:to-white/15 before:pointer-events-none
         `,
       },
       size: {
