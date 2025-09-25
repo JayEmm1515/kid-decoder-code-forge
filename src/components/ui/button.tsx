@@ -20,77 +20,41 @@ const buttonVariants = cva(
         link: "text-[hsl(var(--dreamy-purple))] underline-offset-4 hover:underline bg-transparent shadow-none",
         primary: "bg-[hsl(var(--dreamy-teal))] text-white shadow-[12px_12px_24px_hsl(180_55%_50%),_-12px_-12px_24px_hsl(180_55%_80%)] border-none hover:shadow-[15px_15px_30px_hsl(180_55%_45%),_-15px_-15px_30px_hsl(180_55%_85%)] active:shadow-[inset_6px_6px_12px_hsl(180_55%_50%),_inset_-6px_-6px_12px_hsl(180_55%_75%)]",
         
-        // New Low Poly 3D Neumorphic Buttons
-        "poly-cream-3d": `
-          rounded-[24px] bg-[hsl(var(--poly-cream))] text-[hsl(220_20%_20%)] border-none
-          shadow-[12px_12px_28px_hsl(48_56%_70%),_-12px_-12px_28px_hsl(48_56%_95%),_inset_2px_2px_8px_hsl(48_56%_90%),_inset_-2px_-2px_8px_hsl(48_56%_85%)]
-          before:content-[''] before:absolute before:inset-[8px] before:rounded-[16px] 
-          before:bg-[hsl(48_56%_86%)] before:shadow-[inset_6px_6px_16px_hsl(48_56%_75%),_inset_-6px_-6px_16px_hsl(48_56%_92%)]
-          after:content-[''] after:absolute after:inset-[16px] after:rounded-[12px] 
-          after:bg-[hsl(48_56%_84%)] after:shadow-[4px_4px_12px_hsl(48_56%_78%),_-4px_-4px_12px_hsl(48_56%_90%)]
-          hover:shadow-[16px_16px_32px_hsl(48_56%_65%),_-16px_-16px_32px_hsl(48_56%_98%)]
-          active:shadow-[inset_8px_8px_20px_hsl(48_56%_70%),_inset_-8px_-8px_20px_hsl(48_56%_88%)]
-          transition-all duration-200 hover:translate-y-[-1px] active:translate-y-[1px]
+        // Modern 3D App Icon Style Buttons
+        "app-icon-coral": `
+          rounded-[20px] bg-gradient-to-br from-[hsl(var(--poly-coral))] to-[hsl(11_100%_75%)] text-white border-none
+          shadow-[0_8px_32px_rgba(0,0,0,0.12),_0_2px_8px_rgba(0,0,0,0.08),_inset_0_1px_0_rgba(255,255,255,0.2)]
+          hover:shadow-[0_12px_40px_rgba(0,0,0,0.15),_0_4px_12px_rgba(0,0,0,0.1)]
+          active:shadow-[0_4px_16px_rgba(0,0,0,0.15),_inset_0_2px_4px_rgba(0,0,0,0.1)]
+          transition-all duration-200 hover:translate-y-[-2px] active:translate-y-[1px]
+          before:content-[''] before:absolute before:inset-0 before:rounded-[20px] before:bg-gradient-to-br before:from-white/10 before:to-transparent before:pointer-events-none
         `,
         
-        "poly-teal-3d": `
-          rounded-[24px] bg-[hsl(var(--poly-teal))] text-white border-none
-          shadow-[12px_12px_28px_hsl(194_39%_40%),_-12px_-12px_28px_hsl(194_39%_75%),_inset_2px_2px_8px_hsl(194_39%_62%),_inset_-2px_-2px_8px_hsl(194_39%_48%)]
-          before:content-[''] before:absolute before:inset-[8px] before:rounded-[16px] 
-          before:bg-[hsl(194_39%_58%)] before:shadow-[inset_6px_6px_16px_hsl(194_39%_45%),_inset_-6px_-6px_16px_hsl(194_39%_68%)]
-          after:content-[''] after:absolute after:inset-[16px] after:rounded-[12px] 
-          after:bg-[hsl(194_39%_55%)] after:shadow-[4px_4px_12px_hsl(194_39%_42%),_-4px_-4px_12px_hsl(194_39%_65%)]
-          hover:shadow-[16px_16px_32px_hsl(194_39%_35%),_-16px_-16px_32px_hsl(194_39%_80%)]
-          active:shadow-[inset_8px_8px_20px_hsl(194_39%_40%),_inset_-8px_-8px_20px_hsl(194_39%_62%)]
-          transition-all duration-200 hover:translate-y-[-1px] active:translate-y-[1px]
+        "app-icon-teal": `
+          rounded-[20px] bg-gradient-to-br from-[hsl(180_70%_60%)] to-[hsl(266_56%_70%)] text-white border-none
+          shadow-[0_8px_32px_rgba(0,0,0,0.12),_0_2px_8px_rgba(0,0,0,0.08),_inset_0_1px_0_rgba(255,255,255,0.2)]
+          hover:shadow-[0_12px_40px_rgba(0,0,0,0.15),_0_4px_12px_rgba(0,0,0,0.1)]
+          active:shadow-[0_4px_16px_rgba(0,0,0,0.15),_inset_0_2px_4px_rgba(0,0,0,0.1)]
+          transition-all duration-200 hover:translate-y-[-2px] active:translate-y-[1px]
+          before:content-[''] before:absolute before:inset-0 before:rounded-[20px] before:bg-gradient-to-br before:from-white/10 before:to-transparent before:pointer-events-none
         `,
         
-        "poly-purple-3d": `
-          rounded-[24px] bg-[hsl(var(--poly-purple))] text-white border-none
-          shadow-[12px_12px_28px_hsl(266_56%_55%),_-12px_-12px_28px_hsl(266_56%_85%),_inset_2px_2px_8px_hsl(266_56%_77%),_inset_-2px_-2px_8px_hsl(266_56%_63%)]
-          before:content-[''] before:absolute before:inset-[8px] before:rounded-[16px] 
-          before:bg-[hsl(266_56%_73%)] before:shadow-[inset_6px_6px_16px_hsl(266_56%_60%),_inset_-6px_-6px_16px_hsl(266_56%_83%)]
-          after:content-[''] after:absolute after:inset-[16px] after:rounded-[12px] 
-          after:bg-[hsl(266_56%_70%)] after:shadow-[4px_4px_12px_hsl(266_56%_57%),_-4px_-4px_12px_hsl(266_56%_80%)]
-          hover:shadow-[16px_16px_32px_hsl(266_56%_50%),_-16px_-16px_32px_hsl(266_56%_90%)]
-          active:shadow-[inset_8px_8px_20px_hsl(266_56%_55%),_inset_-8px_-8px_20px_hsl(266_56%_77%)]
-          transition-all duration-200 hover:translate-y-[-1px] active:translate-y-[1px]
+        "app-icon-purple": `
+          rounded-[20px] bg-gradient-to-br from-[hsl(280_60%_65%)] to-[hsl(266_56%_50%)] text-white border-none
+          shadow-[0_8px_32px_rgba(0,0,0,0.12),_0_2px_8px_rgba(0,0,0,0.08),_inset_0_1px_0_rgba(255,255,255,0.2)]
+          hover:shadow-[0_12px_40px_rgba(0,0,0,0.15),_0_4px_12px_rgba(0,0,0,0.1)]
+          active:shadow-[0_4px_16px_rgba(0,0,0,0.15),_inset_0_2px_4px_rgba(0,0,0,0.1)]
+          transition-all duration-200 hover:translate-y-[-2px] active:translate-y-[1px]
+          before:content-[''] before:absolute before:inset-0 before:rounded-[20px] before:bg-gradient-to-br before:from-white/10 before:to-transparent before:pointer-events-none
         `,
         
-        "poly-mint-3d": `
-          rounded-[24px] bg-[hsl(var(--poly-mint))] text-[hsl(220_20%_20%)] border-none
-          shadow-[12px_12px_28px_hsl(166_61%_58%),_-12px_-12px_28px_hsl(166_61%_88%),_inset_2px_2px_8px_hsl(166_61%_80%),_inset_-2px_-2px_8px_hsl(166_61%_66%)]
-          before:content-[''] before:absolute before:inset-[8px] before:rounded-[16px] 
-          before:bg-[hsl(166_61%_76%)] before:shadow-[inset_6px_6px_16px_hsl(166_61%_63%),_inset_-6px_-6px_16px_hsl(166_61%_86%)]
-          after:content-[''] after:absolute after:inset-[16px] after:rounded-[12px] 
-          after:bg-[hsl(166_61%_73%)] after:shadow-[4px_4px_12px_hsl(166_61%_60%),_-4px_-4px_12px_hsl(166_61%_83%)]
-          hover:shadow-[16px_16px_32px_hsl(166_61%_53%),_-16px_-16px_32px_hsl(166_61%_93%)]
-          active:shadow-[inset_8px_8px_20px_hsl(166_61%_58%),_inset_-8px_-8px_20px_hsl(166_61%_80%)]
-          transition-all duration-200 hover:translate-y-[-1px] active:translate-y-[1px]
-        `,
-        
-        "poly-coral-3d": `
-          rounded-[24px] bg-[hsl(var(--poly-coral))] text-[hsl(220_20%_20%)] border-none
-          shadow-[12px_12px_28px_hsl(11_100%_70%),_-12px_-12px_28px_hsl(11_100%_95%),_inset_2px_2px_8px_hsl(11_100%_88%),_inset_-2px_-2px_8px_hsl(11_100%_82%)]
-          before:content-[''] before:absolute before:inset-[8px] before:rounded-[16px] 
-          before:bg-[hsl(11_100%_87%)] before:shadow-[inset_6px_6px_16px_hsl(11_100%_75%),_inset_-6px_-6px_16px_hsl(11_100%_92%)]
-          after:content-[''] after:absolute after:inset-[16px] after:rounded-[12px] 
-          after:bg-[hsl(11_100%_85%)] after:shadow-[4px_4px_12px_hsl(11_100%_78%),_-4px_-4px_12px_hsl(11_100%_90%)]
-          hover:shadow-[16px_16px_32px_hsl(11_100%_65%),_-16px_-16px_32px_hsl(11_100%_98%)]
-          active:shadow-[inset_8px_8px_20px_hsl(11_100%_70%),_inset_-8px_-8px_20px_hsl(11_100%_88%)]
-          transition-all duration-200 hover:translate-y-[-1px] active:translate-y-[1px]
-        `,
-        
-        "poly-lime-3d": `
-          rounded-[24px] bg-[hsl(var(--poly-lime))] text-[hsl(220_20%_20%)] border-none
-          shadow-[12px_12px_28px_hsl(101_52%_63%),_-12px_-12px_28px_hsl(101_52%_88%),_inset_2px_2px_8px_hsl(101_52%_83%),_inset_-2px_-2px_8px_hsl(101_52%_73%)]
-          before:content-[''] before:absolute before:inset-[8px] before:rounded-[16px] 
-          before:bg-[hsl(101_52%_81%)] before:shadow-[inset_6px_6px_16px_hsl(101_52%_68%),_inset_-6px_-6px_16px_hsl(101_52%_86%)]
-          after:content-[''] after:absolute after:inset-[16px] after:rounded-[12px] 
-          after:bg-[hsl(101_52%_78%)] after:shadow-[4px_4px_12px_hsl(101_52%_65%),_-4px_-4px_12px_hsl(101_52%_83%)]
-          hover:shadow-[16px_16px_32px_hsl(101_52%_58%),_-16px_-16px_32px_hsl(101_52%_93%)]
-          active:shadow-[inset_8px_8px_20px_hsl(101_52%_63%),_inset_-8px_-8px_20px_hsl(101_52%_83%)]
-          transition-all duration-200 hover:translate-y-[-1px] active:translate-y-[1px]
+        "app-icon-mint": `
+          rounded-[20px] bg-gradient-to-br from-[hsl(var(--poly-mint))] to-[hsl(180_70%_60%)] text-white border-none
+          shadow-[0_8px_32px_rgba(0,0,0,0.12),_0_2px_8px_rgba(0,0,0,0.08),_inset_0_1px_0_rgba(255,255,255,0.2)]
+          hover:shadow-[0_12px_40px_rgba(0,0,0,0.15),_0_4px_12px_rgba(0,0,0,0.1)]
+          active:shadow-[0_4px_16px_rgba(0,0,0,0.15),_inset_0_2px_4px_rgba(0,0,0,0.1)]
+          transition-all duration-200 hover:translate-y-[-2px] active:translate-y-[1px]
+          before:content-[''] before:absolute before:inset-0 before:rounded-[20px] before:bg-gradient-to-br before:from-white/10 before:to-transparent before:pointer-events-none
         `,
       },
       size: {

@@ -19,25 +19,25 @@ export default function QuickActions() {
       title: "Log Event",
       icon: Zap,
       url: createPageUrl("Tracking"),
-      variant: "poly-coral-3d" as const
+      variant: "app-icon-coral" as const
     },
     {
       title: "Chain Analysis",
       icon: Brain,
       url: createPageUrl("ChainAnalysis"),
-      variant: "poly-purple-3d" as const
+      variant: "app-icon-purple" as const
     },
     {
       title: "Being With Exercise",
       icon: Calendar,
       url: createPageUrl("BeingWithExercise"),
-      variant: "poly-mint-3d" as const
+      variant: "app-icon-mint" as const
     },
     {
       title: "Ask AI",
       icon: MessageCircle,
       url: createPageUrl("ParentingChat"),
-      variant: "poly-teal-3d" as const
+      variant: "app-icon-teal" as const
     }
   ];
 
