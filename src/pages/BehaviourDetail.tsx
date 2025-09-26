@@ -4,7 +4,7 @@ import { BehaviorGuide } from '@/entities/BehaviorGuide';
 import { createPageUrl } from '@/utils';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Lightbulb, UserCheck, Heart, AlertTriangle, Phone, MessageCircle } from 'lucide-react';
+import { ArrowLeft, Lightbulb, UserCheck, Heart, AlertTriangle, Phone, MessageCircle, Sparkles } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 export default function BehaviourDetailPage() {
@@ -45,6 +45,83 @@ export default function BehaviourDetailPage() {
       </Layout>
     );
   }
+
+  // Did You Know facts mapping
+  const didYouKnowFacts = {
+    'tantrums': 'When children "flip their lid" (Siegel), their logical brain shuts down. Connection and soothing must come before teaching or reasoning.',
+    'aggression': 'Aggression is often a sign of overwhelm, not intent to harm. Naming feelings helps a child learn safer ways to express them.',
+    'defiance': 'Defiance is a developmental push for autonomy. Circle of Security reminds us kids need both freedom to explore and reassurance of safety.',
+    'clinginess': 'Clinginess signals a child checking that their "secure base" is steady. Short, predictable goodbye rituals reduce anxiety over time.',
+    'separation-anxiety': 'Clinginess signals a child checking that their "secure base" is steady. Short, predictable goodbye rituals reduce anxiety over time.',
+    'withdrawal': 'Withdrawal is often a coping strategy for overwhelm. Gentle presence—without pressure—invites re-connection.',
+    'isolation': 'Withdrawal is often a coping strategy for overwhelm. Gentle presence—without pressure—invites re-connection.',
+    'anxiety': 'Anxiety in children can look like stomach aches, irritability, or avoidance rather than obvious "worry" words.',
+    'lying': 'Younger kids may "lie" because imagination is stronger than logic. Asking "What made it hard to tell the truth?" teaches honesty with empathy.',
+    'fabrication': 'Younger kids may "lie" because imagination is stronger than logic. Asking "What made it hard to tell the truth?" teaches honesty with empathy.',
+    'stealing': 'Impulse control develops gradually through childhood. Calm teaching about consequences shapes values more than punishment.',
+    'taking-without-permission': 'Impulse control develops gradually through childhood. Calm teaching about consequences shapes values more than punishment.',
+    'risk-taking': 'The teen brain is wired for risk—reward systems are on overdrive while judgment is still developing. Connection lowers risk.',
+    'thrill-seeking': 'The teen brain is wired for risk—reward systems are on overdrive while judgment is still developing. Connection lowers risk.',
+    'bedtime-resistance': 'Sleep difficulties often spike during developmental leaps. A consistent routine acts as a signal of safety for the brain.',
+    'sleep-struggles': 'Sleep difficulties often spike during developmental leaps. A consistent routine acts as a signal of safety for the brain.',
+    'mealtime-battles': 'Refusal is often about control, not just food. Offering choices ("Do you want carrot sticks or cucumber?") restores autonomy.',
+    'picky-eating': 'Refusal is often about control, not just food. Offering choices ("Do you want carrot sticks or cucumber?") restores autonomy.',
+    'toilet-training-resistance': 'Stress, big life changes, or pressure can cause regressions. Calm patience builds confidence faster than rewards or punishments alone.',
+    'sibling-rivalry': 'Children compete for connection, not just toys. Special one-on-one time with each child reduces rivalry more than refereeing fights.',
+    'jealousy': 'Jealousy reflects a fear of losing connection. Naming the feeling ("You wish I was just with you right now") reduces shame.',
+    'bullying-others': 'Children who bully are often struggling with disconnection or stress themselves. Boundaries plus empathy can shift behaviour.',
+    'being-bullied': 'Secure attachment is the strongest protective factor against bullying. Kids with safe adult allies cope and recover better.',
+    'school-refusal': 'School avoidance often masks anxiety. Small exposure steps—paired with strong parental empathy—help more than force.',
+    'excessive-screen-use': 'Screens trigger dopamine like other rewards. Screen addiction. Clear, consistent routines—not punishment—teach balance.',
+    'screen-limits': 'Screens trigger dopamine like other rewards. Screen addiction. Clear, consistent routines—not punishment—teach balance.',
+    'hyperactivity': 'Movement helps regulate attention and emotions. Allowing active breaks improves focus rather than punishing fidgeting.',
+    'restlessness': 'Movement helps regulate attention and emotions. Allowing active breaks improves focus rather than punishing fidgeting.',
+    'inattention': 'Inattention may be a sign of fatigue, stress, or unmet sensory needs—not laziness. Gentle support builds focus over time.',
+    'daydreaming': 'Inattention may be a sign of fatigue, stress, or unmet sensory needs—not laziness. Gentle support builds focus over time.',
+    'excessive-crying': 'Crying is a biological stress release. Being "with" the child in crying moments wires the brain for resilience.',
+    'whining': 'Whining often means "I need connection" but lack the skills to ask directly. Pausing to connect reduces it more than scolding.',
+    'over-sensitivity': 'Some children\'s nervous systems are more finely tuned. Maté notes they absorb stress easily, needing extra co-regulation.',
+    'emotional-sensitivity': 'Some children\'s nervous systems are more finely tuned. Maté notes they absorb stress easily, needing extra co-regulation.',
+    'sensory-sensitivity': 'Some children\'s nervous systems are more finely tuned. Maté notes they absorb stress easily, needing extra co-regulation.',
+    'impulsivity': 'Impulse control develops slowly into the twenties. Scaffolding (visual reminders, step-by-step cues) supports self-control better than punishment.',
+    'bossiness': 'Over-control can be a way to manage inner anxiety. Coaching flexible play builds resilience and friendships.',
+    'controlling-play': 'Over-control can be a way to manage inner anxiety. Coaching flexible play builds resilience and friendships.',
+    'dishonesty-homework': 'Avoidance often reflects overwhelm or fear of failure. Curiosity and collaboration work better than punishment.',
+    'homework-avoidance': 'Avoidance often reflects overwhelm or fear of failure. Curiosity and collaboration work better than punishment.',
+    'chore-avoidance': 'Avoidance often reflects overwhelm or fear of failure. Curiosity and collaboration work better than punishment.',
+    'perfectionism': 'Perfectionism often arises from fear of losing approval. Normalising mistakes teaches resilience and self-worth.',
+    'fear-of-failure': 'Perfectionism often arises from fear of losing approval. Normalising mistakes teaches resilience and self-worth.',
+    'risk-avoidance': 'Over-cautious kids may have heightened sensitivity. Gentle encouragement in small steps helps expand confidence.',
+    'over-cautiousness': 'Over-cautious kids may have heightened sensitivity. Gentle encouragement in small steps helps expand confidence.',
+    'regression': 'Regression often follows stress or transitions. It\'s usually a temporary way of seeking safety, not "bad behaviour."',
+    'acting-younger': 'Regression often follows stress or transitions. It\'s usually a temporary way of seeking safety, not "bad behaviour."',
+    'substance-curiosity': 'Maté stresses that substance use is rarely about the drug itself, but about disconnection and pain. Staying connected is the most protective factor.',
+    'substance-experimentation': 'Maté stresses that substance use is rarely about the drug itself, but about disconnection and pain. Staying connected is the most protective factor.'
+  };
+
+  // Get the fact for this behavior guide
+  const getDidYouKnowFact = (title) => {
+    const normalizedTitle = title.toLowerCase()
+      .replace(/[^\w\s-]/g, '') // Remove special characters except hyphens and spaces
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/--+/g, '-'); // Replace multiple hyphens with single hyphen
+    
+    // Try exact match first
+    if (didYouKnowFacts[normalizedTitle]) {
+      return didYouKnowFacts[normalizedTitle];
+    }
+    
+    // Try partial matches for complex titles
+    for (const [key, fact] of Object.entries(didYouKnowFacts)) {
+      if (normalizedTitle.includes(key) || key.includes(normalizedTitle.split('-')[0])) {
+        return fact;
+      }
+    }
+    
+    return null;
+  };
+
+  const didYouKnowFact = getDidYouKnowFact(guide.title);
 
   const sections = [
     { title: "What It Means", content: guide.what_it_means, icon: Lightbulb, color: "var(--teal-grey)" },
@@ -100,6 +177,29 @@ export default function BehaviourDetailPage() {
               </div>
             )}
           </div>
+
+          {/* Did You Know Section */}
+          {didYouKnowFact && (
+            <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 mb-8">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                      <Sparkles className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-ink mb-2 flex items-center gap-2">
+                      Did You Know?
+                    </h3>
+                    <p className="text-muted leading-relaxed italic">
+                      {didYouKnowFact}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )}
 
           {/* When to Seek Help */}
           <Card className="bg-pink-ice border-dusty-rose mb-6">
