@@ -141,7 +141,7 @@
   }
 
   body {
-    background: url('/src/assets/gradient-background.png') no-repeat center center fixed;
+    background: url('/gradient-background.png') no-repeat center center fixed;
     background-size: cover;
     color: var(--ink);
     min-height: 100vh;
