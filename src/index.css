@@ -135,9 +135,8 @@
   }
 
   /* ---------- 3) App-wide application ---------- */
-  html, body {
-    background: var(--bg);
-    color: var(--fg);
+  html {
+    background: transparent;
   }
 
   body {
