@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Home, Heart, Zap, Users, BookOpen, ArrowRight, Activity, MessageCircle, Brain, TrendingUp } from "lucide-react";
+import { Home, Heart, Zap, Users, BookOpen, ArrowRight, Activity, MessageCircle, Brain, TrendingUp, Shield } from "lucide-react";
 
 const Index = () => {
   return (
@@ -100,6 +100,18 @@ const Index = () => {
                 </div>
                 <h3 className="text-white font-semibold text-lg mb-2">Chain Analysis</h3>
                 <p className="text-white/70 text-sm">Break down challenging behaviors step by step</p>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link to="/boundary-barriers">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all cursor-pointer">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-blue-400/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-6 h-6 text-blue-400" />
+                </div>
+                <h3 className="text-white font-semibold text-lg mb-2">Boundary Barriers</h3>
+                <p className="text-white/70 text-sm">Discover what gets in the way of setting healthy boundaries</p>
               </CardContent>
             </Card>
           </Link>
