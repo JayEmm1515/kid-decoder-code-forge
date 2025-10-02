@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Layout from '@/components/Layout';
 
 // Types
 type Emotion = 'joy' | 'sadness' | 'anger' | 'fear' | 'shame' | 'curiosity';
@@ -421,7 +422,8 @@ export default function BeingWithExercise() {
   };
 
   return (
-    <div style={styles.container}>
+    <Layout currentPageName="Being With Exercise">
+      <div style={styles.container}>
       {/* Header */}
       <header style={styles.header}>
         <h1 style={styles.title}>Being With</h1>
@@ -621,5 +623,6 @@ export default function BeingWithExercise() {
         />
       </section>
     </div>
+    </Layout>
   );
 }
