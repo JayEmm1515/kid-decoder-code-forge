@@ -108,6 +108,7 @@ export default function BoundaryBarrierCards({
   const dy = useRef(0);
   const isDragging = useRef(false);
   const animatingOut = useRef(false);
+  const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null);
 
   const current = items[index];
   const remaining = items.length - index - 1;
@@ -155,6 +156,14 @@ export default function BoundaryBarrierCards({
     if (!isDragging.current || startX.current === null || startY.current === null) return;
     dx.current = e.clientX - startX.current;
     dy.current = e.clientY - startY.current;
+    
+    // Update swipe direction for color feedback
+    if (Math.abs(dx.current) > 30) {
+      setSwipeDirection(dx.current > 0 ? 'right' : 'left');
+    } else {
+      setSwipeDirection(null);
+    }
+    
     updateTransform(dx.current, dy.current);
   };
 
@@ -171,6 +180,7 @@ export default function BoundaryBarrierCards({
       handleChoice(false);
     } else {
       // Snap back
+      setSwipeDirection(null);
       snapBack();
     }
   };
@@ -192,6 +202,10 @@ export default function BoundaryBarrierCards({
     if (!cardRef.current) return;
     cardRef.current.style.transition = "transform 0.2s ease-out";
     cardRef.current.style.transform = "translate(0px, 0px) rotate(0deg)";
+    if (cardRef.current.firstElementChild) {
+      (cardRef.current.firstElementChild as HTMLElement).style.transition = "background-color 0.2s ease-out";
+      (cardRef.current.firstElementChild as HTMLElement).style.backgroundColor = "";
+    }
     dx.current = 0;
     dy.current = 0;
   };
@@ -258,7 +272,14 @@ export default function BoundaryBarrierCards({
         {!done && current && (
           <Card
             ref={cardRef as any}
-            className="absolute inset-0 mx-2 bg-white border-slate-200 shadow-xl will-change-transform"
+            className="absolute inset-0 mx-2 bg-white border-slate-200 shadow-xl will-change-transform transition-colors duration-200"
+            style={{
+              backgroundColor: swipeDirection === 'left' 
+                ? 'rgba(239, 68, 68, 0.15)' 
+                : swipeDirection === 'right' 
+                ? 'rgba(34, 197, 94, 0.15)' 
+                : 'white'
+            }}
             onPointerDown={onPointerDown}
             onPointerMove={onPointerMove}
             onPointerUp={onPointerUp}
