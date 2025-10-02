@@ -290,13 +290,6 @@ export default function BoundaryBarrierCards({
             <CardContent className="pt-0">
               <p className="text-slate-600 leading-relaxed">{current.summary}</p>
 
-              {current.hint && (
-                <div className="mt-4 p-3 rounded-lg border border-slate-200 bg-slate-50 text-sm text-slate-600">
-                  <span className="font-medium text-slate-700">Try this: </span>
-                  {current.hint}
-                </div>
-              )}
-
               {/* Swipe affordances */}
               <div className="absolute left-3 bottom-3 right-3 flex items-center justify-between gap-3">
                 <Button
