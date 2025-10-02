@@ -125,7 +125,7 @@ export default function Layout({ children, currentPageName }: { children: React.
       <div id="kid-theme" className="kid-theme">
         <SidebarProvider>
           <div className="min-h-screen flex w-full bg-white text-ink">
-            <Sidebar className="border-r border-slate-300 bg-slate-50">
+            <Sidebar className="border-r border-slate-300 bg-white">
               <SidebarHeader className="border-b border-slate-200 p-6">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-grad-cta rounded-xl flex items-center justify-center">

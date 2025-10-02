@@ -60,6 +60,16 @@
   --card: var(--surface);
   --card-foreground: var(--text);
   --muted: var(--text-muted);
+
+  /* Sidebar colors - solid white background with dark text */
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 222 47% 11%;
+  --sidebar-primary: 194 39% 55%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 210 40% 96%;
+  --sidebar-accent-foreground: 222 47% 11%;
+  --sidebar-border: 214 32% 91%;
+  --sidebar-ring: 194 39% 55%;
 }
 
 /* Floating glass pane */
