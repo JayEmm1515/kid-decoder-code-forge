@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Home, Heart, Zap, Users, BookOpen, ArrowRight, Activity, MessageCircle, Brain, TrendingUp, Shield } from "lucide-react";
+import Layout from "@/components/Layout";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-coral-bottom p-4">
+    <Layout currentPageName="Home">
+      <div className="min-h-screen bg-coral-bottom p-4">
       <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-12 pt-8">
@@ -173,6 +175,7 @@ const Index = () => {
         </Card>
       </div>
     </div>
+    </Layout>
   );
 };
 
