@@ -140,7 +140,7 @@ export default function Layout({ children, currentPageName }: { children: React.
              
               <SidebarContent className="p-3">
                 <SidebarGroup>
-                  <SidebarGroupLabel className="text-xs font-semibold text-muted uppercase tracking-wider px-3 py-2">
+                  <SidebarGroupLabel className="text-xs font-semibold text-slate-600 uppercase tracking-wider px-3 py-2">
                     Main Tools
                   </SidebarGroupLabel>
                   <SidebarGroupContent>
@@ -149,8 +149,8 @@ export default function Layout({ children, currentPageName }: { children: React.
                         <SidebarMenuItem key={item.title}>
                           <SidebarMenuButton
                             asChild
-                            className={`hover:bg-slate-100 hover:text-teal-grey transition-all duration-200 rounded-xl mb-1 ${
-                              location.pathname === item.url ? 'bg-teal-50 text-teal-grey font-semibold shadow-sm' : 'text-slate-600'
+                            className={`hover:bg-teal-50 transition-all duration-200 rounded-xl mb-1 ${
+                              location.pathname === item.url ? 'bg-teal-100 text-slate-900 font-semibold shadow-sm' : 'text-slate-800'
                             }`}
                           >
                             <Link to={item.url} className="flex items-center gap-3 px-3 py-3">
@@ -165,7 +165,7 @@ export default function Layout({ children, currentPageName }: { children: React.
                 </SidebarGroup>
 
                 <SidebarGroup className="mt-4">
-                  <SidebarGroupLabel className="text-xs font-semibold text-muted uppercase tracking-wider px-3 py-2">
+                  <SidebarGroupLabel className="text-xs font-semibold text-slate-600 uppercase tracking-wider px-3 py-2">
                     Age-Specific Strategies
                   </SidebarGroupLabel>
                   <SidebarGroupContent>
@@ -174,8 +174,8 @@ export default function Layout({ children, currentPageName }: { children: React.
                         <SidebarMenuItem key={item.title}>
                           <SidebarMenuButton
                             asChild
-                            className={`hover:bg-slate-100 hover:text-violet transition-all duration-200 rounded-xl mb-1 ${
-                              location.pathname === item.url ? 'bg-purple-50 text-violet font-semibold shadow-sm' : 'text-slate-500'
+                            className={`hover:bg-purple-50 transition-all duration-200 rounded-xl mb-1 ${
+                              location.pathname === item.url ? 'bg-purple-100 text-slate-900 font-semibold shadow-sm' : 'text-slate-700'
                             }`}
                           >
                             <Link to={item.url} className="flex items-center gap-3 px-3 py-2">
