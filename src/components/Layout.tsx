@@ -13,7 +13,8 @@ import {
   GraduationCap,
   Heart,
   Zap,
-  Search
+  Search,
+  Shield
 } from "lucide-react";
 import {
   Sidebar,
@@ -72,6 +73,12 @@ const navigationItems = [
     url: createPageUrl("ChainAnalysis"),
     icon: Brain,
     color: "text-purple-400"
+  },
+  {
+    title: "Boundary Barriers",
+    url: createPageUrl("BoundaryBarriers"),
+    icon: Shield,
+    color: "text-blue-400"
   },
   {
     title: "AI Parenting Chat",
