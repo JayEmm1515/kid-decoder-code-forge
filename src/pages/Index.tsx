@@ -33,7 +33,7 @@ const Index = () => {
         </div>
 
         {/* Quick Actions Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8" style={{ background: '#153b3e' }}>
           <Link to="/being-with-exercise">
             <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
               <CardContent className="p-6 text-center">
