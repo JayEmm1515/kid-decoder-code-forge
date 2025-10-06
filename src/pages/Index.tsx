@@ -35,87 +35,52 @@ const Index = () => {
         {/* Quick Actions Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8" style={{ background: '#153b3e' }}>
           <Link to="/being-with-exercise">
-            <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-[#002962] font-semibold text-lg mb-2">Being With Exercise</h3>
-                <p className="text-[#002962]/70 text-sm">Explore your emotional patterns and get personalized parenting guidance</p>
-              </CardContent>
-            </Card>
+            <Button variant="poly-coral" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
+              <Heart className="w-10 h-10" />
+              <span className="text-base font-semibold text-center leading-tight">Being With Exercise</span>
+            </Button>
           </Link>
 
           <Link to="/quizzes">
-            <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-[#002962] font-semibold text-lg mb-2">Neurodivergent Support</h3>
-                <p className="text-[#002962]/70 text-sm">ADHD and Autism screening quizzes with gentle guidance</p>
-              </CardContent>
-            </Card>
+            <Button variant="poly-teal" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
+              <Brain className="w-10 h-10" />
+              <span className="text-base font-semibold text-center leading-tight">Neurodivergent Support</span>
+            </Button>
           </Link>
 
           <Link to="/learn">
-            <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-[#002962] font-semibold text-lg mb-2">Learn</h3>
-                <p className="text-[#002962]/70 text-sm">Short, practical videos for parents of neurodivergent children</p>
-              </CardContent>
-            </Card>
+            <Button variant="poly-purple" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
+              <BookOpen className="w-10 h-10" />
+              <span className="text-base font-semibold text-center leading-tight">Learn</span>
+            </Button>
           </Link>
 
           <Link to="/tracking">
-            <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Activity className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-[#002962] font-semibold text-lg mb-2">Enhanced Behavior Tracking</h3>
-                <p className="text-[#002962]/70 text-sm">Track behaviors with sensory, diet, and routine context for deeper insights</p>
-              </CardContent>
-            </Card>
+            <Button variant="poly-mint" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
+              <Activity className="w-10 h-10" />
+              <span className="text-base font-semibold text-center leading-tight">Behavior Tracking</span>
+            </Button>
           </Link>
 
           <Link to="/parenting-chat">
-            <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-[#002962] font-semibold text-lg mb-2">AI Parenting Chat</h3>
-                <p className="text-[#002962]/70 text-sm">Get personalized, evidence-based guidance</p>
-              </CardContent>
-            </Card>
+            <Button variant="poly-pink" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
+              <MessageCircle className="w-10 h-10" />
+              <span className="text-base font-semibold text-center leading-tight">AI Parenting Chat</span>
+            </Button>
           </Link>
 
           <Link to="/chain-analysis">
-            <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-[#002962] font-semibold text-lg mb-2">Chain Analysis</h3>
-                <p className="text-[#002962]/70 text-sm">Break down challenging behaviors step by step</p>
-              </CardContent>
-            </Card>
+            <Button variant="poly-coral" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
+              <Brain className="w-10 h-10" />
+              <span className="text-base font-semibold text-center leading-tight">Chain Analysis</span>
+            </Button>
           </Link>
 
           <Link to="/boundary-barriers">
-            <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-[#002962] font-semibold text-lg mb-2">Boundary Barriers</h3>
-                <p className="text-[#002962]/70 text-sm">Discover what gets in the way of setting healthy boundaries</p>
-              </CardContent>
-            </Card>
+            <Button variant="poly-teal" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
+              <Shield className="w-10 h-10" />
+              <span className="text-base font-semibold text-center leading-tight">Boundary Barriers</span>
+            </Button>
           </Link>
         </div>
 
