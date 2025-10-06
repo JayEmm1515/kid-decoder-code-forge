@@ -148,9 +148,8 @@
   }
 
   body {
-    background: url('/gradient-background.png') no-repeat center center fixed;
-    background-size: cover;
-    color: var(--ink);
+    background: #DCE3EC;
+    color: #002962;
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
