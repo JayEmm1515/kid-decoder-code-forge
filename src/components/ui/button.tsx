@@ -65,6 +65,15 @@ const buttonVariants = cva(
           transition-all duration-150 ease-out overflow-hidden
           before:content-[''] before:absolute before:inset-0 before:rounded-[22px] before:bg-gradient-to-t before:from-transparent before:via-transparent before:to-white/15 before:pointer-events-none
         `,
+        
+        "poly-white": `
+          rounded-[18px] bg-gradient-to-br from-[#FFFFFF] via-[#F8F9FA] to-[#E9ECEF] text-[#002962] border-none font-semibold
+          shadow-[0_4px_8px_rgba(0,0,0,0.08),_0_10px_24px_rgba(0,0,0,0.06),_0_2px_4px_rgba(0,0,0,0.04),_inset_0_1px_0_rgba(255,255,255,0.8)]
+          hover:shadow-[0_6px_12px_rgba(0,0,0,0.1),_0_14px_32px_rgba(0,0,0,0.08),_0_2px_6px_rgba(0,0,0,0.05)] hover:translate-y-[-1px]
+          active:shadow-[0_2px_4px_rgba(0,0,0,0.12),_0_4px_12px_rgba(0,0,0,0.06),_inset_0_2px_4px_rgba(0,0,0,0.08)] active:translate-y-[1px]
+          transition-all duration-150 ease-out overflow-hidden
+          before:content-[''] before:absolute before:inset-0 before:rounded-[18px] before:bg-gradient-to-t before:from-transparent before:via-transparent before:to-white/40 before:pointer-events-none
+        `,
       },
       size: {
         default: "h-10 px-4 py-2",

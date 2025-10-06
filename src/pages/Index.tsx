@@ -33,53 +33,53 @@ const Index = () => {
         </div>
 
         {/* Quick Actions Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8" style={{ background: '#153b3e' }}>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8" style={{ background: '#153b3e' }}>
           <Link to="/being-with-exercise">
-            <Button variant="poly-coral" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
-              <Heart className="w-10 h-10" />
-              <span className="text-base font-semibold text-center leading-tight">Being With Exercise</span>
+            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
+              <Heart className="w-6 h-6" />
+              <span className="text-xs font-semibold text-center leading-tight">Being With</span>
             </Button>
           </Link>
 
           <Link to="/quizzes">
-            <Button variant="poly-teal" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
-              <Brain className="w-10 h-10" />
-              <span className="text-base font-semibold text-center leading-tight">Neurodivergent Support</span>
+            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
+              <Brain className="w-6 h-6" />
+              <span className="text-xs font-semibold text-center leading-tight">Neurodivergent</span>
             </Button>
           </Link>
 
           <Link to="/learn">
-            <Button variant="poly-purple" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
-              <BookOpen className="w-10 h-10" />
-              <span className="text-base font-semibold text-center leading-tight">Learn</span>
+            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
+              <BookOpen className="w-6 h-6" />
+              <span className="text-xs font-semibold text-center leading-tight">Learn</span>
             </Button>
           </Link>
 
           <Link to="/tracking">
-            <Button variant="poly-mint" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
-              <Activity className="w-10 h-10" />
-              <span className="text-base font-semibold text-center leading-tight">Behavior Tracking</span>
+            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
+              <Activity className="w-6 h-6" />
+              <span className="text-xs font-semibold text-center leading-tight">Tracking</span>
             </Button>
           </Link>
 
           <Link to="/parenting-chat">
-            <Button variant="poly-pink" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
-              <MessageCircle className="w-10 h-10" />
-              <span className="text-base font-semibold text-center leading-tight">AI Parenting Chat</span>
+            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
+              <MessageCircle className="w-6 h-6" />
+              <span className="text-xs font-semibold text-center leading-tight">AI Chat</span>
             </Button>
           </Link>
 
           <Link to="/chain-analysis">
-            <Button variant="poly-coral" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
-              <Brain className="w-10 h-10" />
-              <span className="text-base font-semibold text-center leading-tight">Chain Analysis</span>
+            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
+              <Brain className="w-6 h-6" />
+              <span className="text-xs font-semibold text-center leading-tight">Chain Analysis</span>
             </Button>
           </Link>
 
           <Link to="/boundary-barriers">
-            <Button variant="poly-teal" className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 h-auto">
-              <Shield className="w-10 h-10" />
-              <span className="text-base font-semibold text-center leading-tight">Boundary Barriers</span>
+            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
+              <Shield className="w-6 h-6" />
+              <span className="text-xs font-semibold text-center leading-tight">Boundaries</span>
             </Button>
           </Link>
         </div>
