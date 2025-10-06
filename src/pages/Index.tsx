@@ -7,7 +7,7 @@ import Layout from "@/components/Layout";
 const Index = () => {
   return (
     <Layout currentPageName="Home">
-      <div className="bg-[#DCE3EC] p-4">
+      <div className="bg-[#002962] p-4">
         <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-12 pt-8">
