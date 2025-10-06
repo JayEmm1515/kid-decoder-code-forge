@@ -37,8 +37,8 @@ const Index = () => {
           <Link to="/being-with-exercise">
             <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#FFDA6C] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-6 h-6 text-[#002962]" />
+                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-[#002962] font-semibold text-lg mb-2">Being With Exercise</h3>
                 <p className="text-[#002962]/70 text-sm">Explore your emotional patterns and get personalized parenting guidance</p>
@@ -49,7 +49,7 @@ const Index = () => {
           <Link to="/quizzes">
             <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#0062B8] rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-[#002962] font-semibold text-lg mb-2">Neurodivergent Support</h3>
@@ -61,8 +61,8 @@ const Index = () => {
           <Link to="/learn">
             <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#FFDA6C] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="w-6 h-6 text-[#002962]" />
+                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-[#002962] font-semibold text-lg mb-2">Learn</h3>
                 <p className="text-[#002962]/70 text-sm">Short, practical videos for parents of neurodivergent children</p>
@@ -73,7 +73,7 @@ const Index = () => {
           <Link to="/tracking">
             <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#0062B8] rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Activity className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-[#002962] font-semibold text-lg mb-2">Enhanced Behavior Tracking</h3>
@@ -85,8 +85,8 @@ const Index = () => {
           <Link to="/parenting-chat">
             <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#FFDA6C] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle className="w-6 h-6 text-[#002962]" />
+                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <MessageCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-[#002962] font-semibold text-lg mb-2">AI Parenting Chat</h3>
                 <p className="text-[#002962]/70 text-sm">Get personalized, evidence-based guidance</p>
@@ -97,7 +97,7 @@ const Index = () => {
           <Link to="/chain-analysis">
             <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#0062B8] rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-[#002962] font-semibold text-lg mb-2">Chain Analysis</h3>
@@ -109,8 +109,8 @@ const Index = () => {
           <Link to="/boundary-barriers">
             <Card className="bg-white border-white hover:shadow-lg transition-all cursor-pointer">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-[#FFDA6C] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-6 h-6 text-[#002962]" />
+                <div className="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-[#002962] font-semibold text-lg mb-2">Boundary Barriers</h3>
                 <p className="text-[#002962]/70 text-sm">Discover what gets in the way of setting healthy boundaries</p>
