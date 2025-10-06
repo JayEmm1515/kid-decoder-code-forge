@@ -6,36 +6,34 @@
 
 @layer base {
 :root{
-  /* Colours sampled from your bottom image */
-  --color-snow:        #F8FBFC;
-  --color-sky-50:      #E4EDF8;
-  --color-sky-200:     #B9DAF5;
-  --color-teal-300:    #7BCAE4;
-  --color-ocean-500:   #5C8DCF;
-  --color-purple-400:  #C386E0;
-  --color-peach-gold:  #F3D2A3;
+  /* New Color Palette from Reference Image */
+  --color-teal-blue:   #0062B8;
+  --color-peachy:      #FFDA6C;
+  --color-light-blue:  #DCE3EC;
+  --color-navy:        #002962;
+  --color-white:       #FFFFFF;
 
-  /* Low Poly 3D Palette Colors */
-  --poly-cream: 48 56% 84%;
-  --poly-teal: 194 39% 55%;
-  --poly-purple: 266 56% 70%;
+  /* Low Poly 3D Palette Colors (updated) */
+  --poly-teal: 208 100% 36%;
+  --poly-peachy: 45 100% 71%;
+  --poly-light: 214 31% 89%;
+  --poly-navy: 215 100% 19%;
   --poly-mint: 166 61% 73%;
   --poly-coral: 11 100% 85%;
-  --poly-lime: 101 52% 78%;
 
   /* Roles */
-  --surface:           var(--color-snow);
-  --surface-muted:     var(--color-sky-50);
-  --primary:           var(--color-teal-300);
-  --primary-strong:    var(--color-ocean-500);
-  --accent:            var(--color-purple-400);
-  --warning:           var(--color-peach-gold);
-  --text:              #0F172A;
+  --surface:           var(--color-light-blue);
+  --surface-muted:     var(--color-white);
+  --primary:           var(--color-teal-blue);
+  --primary-strong:    var(--color-navy);
+  --accent:            var(--color-peachy);
+  --warning:           var(--color-peachy);
+  --text:              var(--color-navy);
   --text-muted:        #64748B;
 
-  /* Gradients (match the spheres) */
-  --grad-teal-purple:  linear-gradient(90deg,#7BCAE4 0%,#C386E0 100%);
-  --grad-sky-teal:     linear-gradient(90deg,#B9DAF5 0%,#7BCAE4 100%);
+  /* Gradients using new palette */
+  --grad-teal-peachy:  linear-gradient(90deg, #0062B8 0%, #FFDA6C 100%);
+  --grad-navy-teal:    linear-gradient(90deg, #002962 0%, #0062B8 100%);
 
   /* Rounding */
   --radius-sm: 14px;
@@ -63,13 +61,13 @@
 
   /* Sidebar colors - solid white background with dark text */
   --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 222 47% 11%;
-  --sidebar-primary: 194 39% 55%;
+  --sidebar-foreground: 215 100% 19%;
+  --sidebar-primary: 208 100% 36%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 210 40% 96%;
-  --sidebar-accent-foreground: 222 47% 11%;
-  --sidebar-border: 214 32% 91%;
-  --sidebar-ring: 194 39% 55%;
+  --sidebar-accent: 214 31% 89%;
+  --sidebar-accent-foreground: 215 100% 19%;
+  --sidebar-border: 214 31% 89%;
+  --sidebar-ring: 208 100% 36%;
 }
 
 /* Floating glass pane */
@@ -99,9 +97,9 @@
 /* Page background like the image (soft coloured orbs) */
 .bg-orb {
   background:
-    radial-gradient(800px 400px at 20% 10%, rgba(185,218,245,0.35) 0%, transparent 60%),
-    radial-gradient(700px 500px at 80% 30%, rgba(195,134,224,0.25) 0%, transparent 65%),
-    radial-gradient(600px 400px at 50% 90%, rgba(124,202,228,0.25) 0%, transparent 70%),
+    radial-gradient(800px 400px at 20% 10%, rgba(220, 227, 236, 0.35) 0%, transparent 60%),
+    radial-gradient(700px 500px at 80% 30%, rgba(255, 218, 108, 0.25) 0%, transparent 65%),
+    radial-gradient(600px 400px at 50% 90%, rgba(0, 98, 184, 0.25) 0%, transparent 70%),
     var(--surface);
 }
 
@@ -580,10 +578,10 @@
   }
 
   /* Kid Theme Wrapper Styles */
-  /* New coral and teal colors */
+  /* Updated color tokens */
   :root {
-    --color-coral: #F97F84;
-    --color-teal: #6EDCD7;
+    --color-coral: #FFDA6C;
+    --color-teal: #0062B8;
   }
 
   /* Force base colours inside our app, regardless of Lovable's defaults */
@@ -629,10 +627,10 @@
   .kid-theme .btn-primary,
   .kid-theme .primary,
   .kid-theme .cta {
-    background-image: var(--grad-teal-purple) !important;
+    background-image: var(--grad-teal-peachy) !important;
     color: #fff !important;
     border: 0 !important;
-    box-shadow: 0 8px 20px rgba(92,141,207,0.25) !important;
+    box-shadow: 0 8px 20px rgba(0, 98, 184, 0.25) !important;
   }
 
   /* Kill accidental white text on light backgrounds */

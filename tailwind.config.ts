@@ -63,12 +63,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				ecosystem: {
-					navy: 'hsl(var(--ecosystem-navy))',
-					teal: 'hsl(var(--ecosystem-teal))',
-					coral: 'hsl(var(--ecosystem-coral))',
-					aqua: 'hsl(var(--ecosystem-aqua))',
-					purple: 'hsl(var(--ecosystem-purple))',
-					sage: 'hsl(var(--ecosystem-sage))'
+					navy: 'hsl(215 100% 19%)',
+					teal: 'hsl(208 100% 36%)',
+					coral: 'hsl(45 100% 71%)',
+					aqua: 'hsl(208 100% 50%)',
+					purple: 'hsl(266 56% 70%)',
+					sage: 'hsl(214 31% 89%)'
 				}
 			},
 			borderRadius: {
@@ -106,11 +106,11 @@ export default {
 				'gradient-depth': 'var(--gradient-depth)',
 				'texture-organic': 'var(--texture-organic)',
 				'texture-depth': 'var(--texture-depth)',
-				'coral-teal': 'linear-gradient(135deg, #F97F84 0%, #F5A79A 25%, #B8D7D1 75%, #6EDCD7 100%)',
-				'teal-coral': 'linear-gradient(135deg, #6EDCD7 0%, #B8D7D1 25%, #F5A79A 75%, #F97F84 100%)',
-				'coral-bottom': 'linear-gradient(180deg, #6EDCD7 0%, #B8D7D1 30%, #F5A79A 70%, #F97F84 100%)',
-				'teal-bottom': 'linear-gradient(180deg, #F97F84 0%, #F5A79A 30%, #B8D7D1 70%, #6EDCD7 100%)',
-				'soft-coral-teal': 'radial-gradient(1000px 800px at 25% 25%, rgba(249, 127, 132, 0.15) 0%, transparent 70%), radial-gradient(800px 600px at 75% 75%, rgba(110, 220, 215, 0.15) 0%, transparent 70%), linear-gradient(135deg, rgba(245, 167, 154, 0.1) 0%, rgba(184, 215, 209, 0.1) 50%, rgba(110, 220, 215, 0.1) 100%)'
+				'coral-teal': 'linear-gradient(135deg, #FFDA6C 0%, #DCE3EC 50%, #0062B8 100%)',
+				'teal-coral': 'linear-gradient(135deg, #0062B8 0%, #DCE3EC 50%, #FFDA6C 100%)',
+				'coral-bottom': 'linear-gradient(180deg, #0062B8 0%, #DCE3EC 30%, #FFDA6C 70%, #FFDA6C 100%)',
+				'teal-bottom': 'linear-gradient(180deg, #FFDA6C 0%, #DCE3EC 30%, #0062B8 70%, #002962 100%)',
+				'soft-coral-teal': 'radial-gradient(1000px 800px at 25% 25%, rgba(255, 218, 108, 0.15) 0%, transparent 70%), radial-gradient(800px 600px at 75% 75%, rgba(0, 98, 184, 0.15) 0%, transparent 70%), linear-gradient(135deg, rgba(220, 227, 236, 0.1) 0%, rgba(0, 98, 184, 0.1) 50%, rgba(0, 41, 98, 0.1) 100%)'
 			},
 			boxShadow: {
 				'floating': 'var(--shadow-floating)',
