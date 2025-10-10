@@ -7,7 +7,7 @@ import Layout from "@/components/Layout";
 const Index = () => {
   return (
     <Layout currentPageName="Home">
-      <div className="bg-[#153b3e] p-4 min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/dashboard-bg.jpg)' }}>
+      <div className="bg-[#153b3e] p-4 min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/dashboard-bg.png)' }}>
         <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-12 pt-8">
