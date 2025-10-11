@@ -35,52 +35,52 @@ const Index = () => {
         {/* Quick Actions Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8" style={{ background: '#153b3e' }}>
           <Link to="/being-with-exercise">
-            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
-              <Heart className="w-6 h-6" />
-              <span className="text-xs font-semibold text-center leading-tight">Being With</span>
-            </Button>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+              <Heart className="w-8 h-8 text-[#002962]" />
+              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Being With</span>
+            </div>
           </Link>
 
           <Link to="/quizzes">
-            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
-              <Brain className="w-6 h-6" />
-              <span className="text-xs font-semibold text-center leading-tight">Neurodivergent</span>
-            </Button>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+              <Brain className="w-8 h-8 text-[#002962]" />
+              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Neurodivergent</span>
+            </div>
           </Link>
 
           <Link to="/learn">
-            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
-              <BookOpen className="w-6 h-6" />
-              <span className="text-xs font-semibold text-center leading-tight">Learn</span>
-            </Button>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+              <BookOpen className="w-8 h-8 text-[#002962]" />
+              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Learn</span>
+            </div>
           </Link>
 
           <Link to="/tracking">
-            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
-              <Activity className="w-6 h-6" />
-              <span className="text-xs font-semibold text-center leading-tight">Tracking</span>
-            </Button>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+              <Activity className="w-8 h-8 text-[#002962]" />
+              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Tracking</span>
+            </div>
           </Link>
 
           <Link to="/parenting-chat">
-            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
-              <MessageCircle className="w-6 h-6" />
-              <span className="text-xs font-semibold text-center leading-tight">AI Chat</span>
-            </Button>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+              <MessageCircle className="w-8 h-8 text-[#002962]" />
+              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">AI Chat</span>
+            </div>
           </Link>
 
           <Link to="/chain-analysis">
-            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
-              <Brain className="w-6 h-6" />
-              <span className="text-xs font-semibold text-center leading-tight">Chain Analysis</span>
-            </Button>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+              <Brain className="w-8 h-8 text-[#002962]" />
+              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Chain Analysis</span>
+            </div>
           </Link>
 
           <Link to="/boundary-barriers">
-            <Button variant="poly-white" className="w-full aspect-square flex flex-col items-center justify-center gap-2 p-3 h-auto">
-              <Shield className="w-6 h-6" />
-              <span className="text-xs font-semibold text-center leading-tight">Boundaries</span>
-            </Button>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+              <Shield className="w-8 h-8 text-[#002962]" />
+              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Boundaries</span>
+            </div>
           </Link>
         </div>
 
