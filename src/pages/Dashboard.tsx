@@ -47,7 +47,7 @@ export default function Dashboard() {
 
   return (
     <Layout currentPageName="Dashboard">
-      <div className="bg-teal-bottom p-6 space-y-6 min-h-screen">
+      <div className="bg-[#153b3e] p-6 space-y-6 min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/dashboard-bg.png)' }}>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="mb-8">
