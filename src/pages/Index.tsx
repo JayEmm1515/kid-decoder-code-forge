@@ -33,51 +33,51 @@ const Index = () => {
         </div>
 
         {/* Quick Actions Grid */}
-        <div className="grid grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-2 gap-5 mb-8 px-2">
           <Link to="/being-with-exercise">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow bg-cover bg-center" style={{ backgroundImage: 'url(/button-bg.png)' }}>
               <Heart className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
               <span className="text-base font-semibold text-[#002962] text-center leading-tight">Being With</span>
             </div>
           </Link>
 
           <Link to="/quizzes">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow bg-cover bg-center" style={{ backgroundImage: 'url(/button-bg.png)' }}>
               <Brain className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
               <span className="text-base font-semibold text-[#002962] text-center leading-tight">Neurodivergent</span>
             </div>
           </Link>
 
           <Link to="/learn">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow bg-cover bg-center" style={{ backgroundImage: 'url(/button-bg.png)' }}>
               <BookOpen className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
               <span className="text-base font-semibold text-[#002962] text-center leading-tight">Learn</span>
             </div>
           </Link>
 
           <Link to="/tracking">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow bg-cover bg-center" style={{ backgroundImage: 'url(/button-bg.png)' }}>
               <Activity className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
               <span className="text-base font-semibold text-[#002962] text-center leading-tight">Tracking</span>
             </div>
           </Link>
 
           <Link to="/parenting-chat">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow bg-cover bg-center" style={{ backgroundImage: 'url(/button-bg.png)' }}>
               <MessageCircle className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
               <span className="text-base font-semibold text-[#002962] text-center leading-tight">AI Chat</span>
             </div>
           </Link>
 
           <Link to="/chain-analysis">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow bg-cover bg-center" style={{ backgroundImage: 'url(/button-bg.png)' }}>
               <Brain className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
               <span className="text-base font-semibold text-[#002962] text-center leading-tight">Chain Analysis</span>
             </div>
           </Link>
 
           <Link to="/boundary-barriers">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow bg-cover bg-center" style={{ backgroundImage: 'url(/button-bg.png)' }}>
               <Shield className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
               <span className="text-base font-semibold text-[#002962] text-center leading-tight">Boundaries</span>
             </div>
