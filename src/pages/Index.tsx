@@ -33,53 +33,53 @@ const Index = () => {
         </div>
 
         {/* Quick Actions Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8" style={{ background: '#153b3e' }}>
+        <div className="grid grid-cols-2 gap-6 mb-8">
           <Link to="/being-with-exercise">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
-              <Heart className="w-8 h-8 text-[#002962]" />
-              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Being With</span>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+              <Heart className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
+              <span className="text-base font-semibold text-[#002962] text-center leading-tight">Being With</span>
             </div>
           </Link>
 
           <Link to="/quizzes">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
-              <Brain className="w-8 h-8 text-[#002962]" />
-              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Neurodivergent</span>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+              <Brain className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
+              <span className="text-base font-semibold text-[#002962] text-center leading-tight">Neurodivergent</span>
             </div>
           </Link>
 
           <Link to="/learn">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
-              <BookOpen className="w-8 h-8 text-[#002962]" />
-              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Learn</span>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+              <BookOpen className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
+              <span className="text-base font-semibold text-[#002962] text-center leading-tight">Learn</span>
             </div>
           </Link>
 
           <Link to="/tracking">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
-              <Activity className="w-8 h-8 text-[#002962]" />
-              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Tracking</span>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+              <Activity className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
+              <span className="text-base font-semibold text-[#002962] text-center leading-tight">Tracking</span>
             </div>
           </Link>
 
           <Link to="/parenting-chat">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
-              <MessageCircle className="w-8 h-8 text-[#002962]" />
-              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">AI Chat</span>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+              <MessageCircle className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
+              <span className="text-base font-semibold text-[#002962] text-center leading-tight">AI Chat</span>
             </div>
           </Link>
 
           <Link to="/chain-analysis">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
-              <Brain className="w-8 h-8 text-[#002962]" />
-              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Chain Analysis</span>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+              <Brain className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
+              <span className="text-base font-semibold text-[#002962] text-center leading-tight">Chain Analysis</span>
             </div>
           </Link>
 
           <Link to="/boundary-barriers">
-            <div className="w-full aspect-square flex flex-col items-center justify-center gap-3 p-6 bg-[#F5F1E8] rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
-              <Shield className="w-8 h-8 text-[#002962]" />
-              <span className="text-sm font-semibold text-[#002962] text-center leading-tight">Boundaries</span>
+            <div className="w-full aspect-square flex flex-col items-center justify-center gap-4 p-8 bg-[#F5F1E8] rounded-[2.5rem] shadow-lg hover:shadow-xl transition-shadow">
+              <Shield className="w-12 h-12 text-[#002962]" strokeWidth={1.5} />
+              <span className="text-base font-semibold text-[#002962] text-center leading-tight">Boundaries</span>
             </div>
           </Link>
         </div>
