@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
-import NeumoGemButton from "@/components/NeumoGemButton";
-import RecentActivity from "@/components/RecentActivity";
-import WeeklyInsights from "@/components/WeeklyInsights";
 import { Child, BehaviorEntry, MoodEntry } from "@/entities/all";
-import { Users, TrendingUp, Activity, Brain, MessageCircle, Zap, Calendar, Lightbulb } from "lucide-react";
+import { TrendingUp, MessageCircle, Users, Calendar, Edit } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 
@@ -28,7 +25,7 @@ export default function Dashboard() {
       ]);
       
       setChildren(childrenData);
-      setBehaviors(behaviorsData.slice(0, 5)); // Recent 5
+      setBehaviors(behaviorsData.slice(0, 5));
       setMoods(moodsData);
     } catch (error) {
       console.error('Error loading dashboard data:', error);
@@ -37,148 +34,116 @@ export default function Dashboard() {
     }
   };
 
-  const stats = {
-    totalChildren: children.length,
-    totalBehaviors: behaviors.length,
-    weeklyMoods: moods.filter(m => {
-      const weekAgo = new Date();
-      weekAgo.setDate(weekAgo.getDate() - 7);
-      return new Date(m.date) >= weekAgo;
-    }).length
-  };
+  const featureCards = [
+    {
+      title: "Mood & Behaviour",
+      subtitle: "Track recent entries",
+      icon: <TrendingUp className="w-10 h-10" strokeWidth={1.5} />,
+      href: createPageUrl("Tracking"),
+      className: "dashboard-card-teal"
+    },
+    {
+      title: "Parenting Chat",
+      subtitle: "Ask the AI coach",
+      icon: <MessageCircle className="w-10 h-10" strokeWidth={1.5} />,
+      href: createPageUrl("ParentingChat"),
+      className: "dashboard-card-purple"
+    },
+    {
+      title: "Your Children",
+      subtitle: "Manage profiles",
+      icon: <Users className="w-10 h-10" strokeWidth={1.5} />,
+      href: createPageUrl("Children"),
+      className: "dashboard-card-pink"
+    },
+  ];
 
   const quickActions = [
-    {
-      key: "log-event",
-      label: "Log Event",
-      icon: <Zap className="w-9 h-9 text-white" strokeWidth={1.75} />,
-      from: "#FF9A8B",
-      to: "#FF6A88",
-      href: createPageUrl("Tracking"),
-    },
-    {
-      key: "chain-analysis",
-      label: "Chain Analysis",
-      icon: <Brain className="w-9 h-9 text-white" strokeWidth={1.75} />,
-      from: "#A364D8",
-      to: "#D988F3",
-      href: createPageUrl("ChainAnalysis"),
-    },
-    {
-      key: "being-with",
-      label: "Being With",
-      icon: <Calendar className="w-9 h-9 text-white" strokeWidth={1.75} />,
-      from: "#84E1C7",
-      to: "#7C8CF7",
-      href: createPageUrl("BeingWithExercise"),
-    },
-    {
-      key: "ask-ai",
-      label: "Ask AI",
-      icon: <MessageCircle className="w-9 h-9 text-white" strokeWidth={1.75} />,
-      from: "#7ADCE3",
-      to: "#8A6BFF",
-      href: createPageUrl("ParentingChat"),
-    },
+    { label: "Track Mood", icon: <TrendingUp className="w-5 h-5" />, href: createPageUrl("Tracking") },
+    { label: "Add Behaviour", icon: <Calendar className="w-5 h-5" />, href: createPageUrl("Tracking") },
+    { label: "Update Profile", icon: <Edit className="w-5 h-5" />, href: createPageUrl("Children") },
+  ];
+
+  const recentActivities = [
+    { text: "You logged a mood entry for Alice", time: "2 hours ago", color: "bg-cyan-400" },
+    { text: "You updated Jane's profile", time: "Yesterday", color: "bg-blue-400" },
+    { text: "You logged a behaviour note for Jack", time: "2 days ago", color: "bg-purple-400" },
   ];
 
   return (
     <Layout currentPageName="Dashboard">
-      <div className="bg-orb p-6 space-y-6 min-h-screen">
-        <div className="max-w-7xl mx-auto">
+      <div className="dashboard-dark p-6 md:p-8 lg:p-12">
+        <div className="max-w-6xl mx-auto space-y-8">
           {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-[#002962] mb-2">Welcome to The Kid Decoder</h1>
-            <p className="text-[#64748B] text-lg">Your child's emotional wellness dashboard</p>
+          <div className="mb-12">
+            <h1 className="text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-r from-cyan-400 to-teal-300 bg-clip-text text-transparent">
+              Welcome back 👋
+            </h1>
+            <p className="text-gray-400 text-lg md:text-xl">Your parenting insights at a glance</p>
           </div>
 
-          {/* Quick Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <Card className="glass border-0">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-[#6EDCD7] to-[#A364D8]">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-[#64748B] text-sm font-medium">Children</p>
-                    <p className="text-3xl font-bold text-[#002962]">{stats.totalChildren}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="glass border-0">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-[#84E1C7] to-[#7C8CF7]">
-                    <Activity className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-[#64748B] text-sm font-medium">Recent Behaviors</p>
-                    <p className="text-3xl font-bold text-[#002962]">{stats.totalBehaviors}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="glass border-0">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-[#7ADCE3] to-[#8A6BFF]">
-                    <TrendingUp className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-[#64748B] text-sm font-medium">Weekly Moods</p>
-                    <p className="text-3xl font-bold text-[#002962]">{stats.weeklyMoods}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          {/* Feature Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {featureCards.map((card, index) => (
+              <Link key={index} to={card.href}>
+                <Card className={`${card.className} dashboard-glass border-0 hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden`}>
+                  <CardContent className="p-8">
+                    <div className="text-white mb-4">{card.icon}</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{card.title}</h3>
+                    <p className="text-gray-300 text-sm">{card.subtitle}</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
-
-          {/* Quick Actions */}
-          <Card className="glass border-0 mb-8">
-            <CardHeader>
-              <CardTitle className="text-lg font-semibold text-[#002962] flex items-center gap-2">
-                <Lightbulb className="w-5 h-5 text-[#FFDA6C]" />
-                Quick Actions
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-5 p-2">
-                {quickActions.map((action) => (
-                  <Link key={action.key} to={action.href} className="block">
-                    <NeumoGemButton
-                      label={action.label}
-                      icon={action.icon}
-                      from={action.from}
-                      to={action.to}
-                      size="lg"
-                    />
-                  </Link>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
 
           {/* Main Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-1 space-y-6">
-              <RecentActivity 
-                behaviors={behaviors} 
-                children={children} 
-                isLoading={isLoading} 
-              />
-            </div>
-            
-            <div className="lg:col-span-2">
-              <WeeklyInsights 
-                moods={moods} 
-                behaviors={behaviors} 
-                children={children} 
-              />
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Recent Activity */}
+            <Card className="dashboard-glass border-0">
+              <CardContent className="p-6">
+                <h2 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-teal-300 bg-clip-text text-transparent mb-6">
+                  Recent Activity
+                </h2>
+                <div className="space-y-4">
+                  {recentActivities.map((activity, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className={`w-3 h-3 rounded-full ${activity.color} mt-1.5 flex-shrink-0`}></div>
+                      <div className="flex-1">
+                        <p className="text-white text-sm mb-1">{activity.text}</p>
+                        <p className="text-gray-500 text-xs">{activity.time}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Quick Actions */}
+            <Card className="dashboard-glass border-0">
+              <CardContent className="p-6">
+                <h2 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-teal-300 bg-clip-text text-transparent mb-6">
+                  Quick Actions
+                </h2>
+                <div className="space-y-3">
+                  {quickActions.map((action, index) => (
+                    <Link key={index} to={action.href}>
+                      <button className="w-full flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 text-left group">
+                        <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                          {action.icon}
+                        </div>
+                        <span className="text-white font-medium">{action.label}</span>
+                      </button>
+                    </Link>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Footer */}
+          <div className="mt-16 text-center">
+            <p className="text-cyan-500 text-sm font-semibold tracking-widest">THE KID DECODER</p>
           </div>
         </div>
       </div>
