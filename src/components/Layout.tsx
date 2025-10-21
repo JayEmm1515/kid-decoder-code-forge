@@ -16,6 +16,7 @@ import {
   Search,
   Shield
 } from "lucide-react";
+import BottomNav from "@/components/BottomNav";
 import {
   Sidebar,
   SidebarContent,
@@ -208,11 +209,12 @@ export default function Layout({ children, currentPageName }: { children: React.
                 </div>
               </header>
 
-              <div className="flex-1 overflow-auto">
+              <div className="flex-1 overflow-auto pb-24">
                 {children}
               </div>
             </main>
           </div>
+          <BottomNav />
         </SidebarProvider>
       </div>
     </>
