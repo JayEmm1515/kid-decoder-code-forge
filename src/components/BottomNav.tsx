@@ -29,7 +29,7 @@ export default function BottomNav() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 pb-safe">
-      <nav className="bg-gradient-to-t from-slate-900 via-slate-800 to-slate-800/95 backdrop-blur-xl border-t border-slate-700/50 shadow-[0_-10px_40px_-10px_rgba(0,0,0,0.5)]">
+      <nav className="bg-gradient-to-t from-slate-900 via-purple-900/50 to-slate-800/95 backdrop-blur-xl border-t border-cyan-400/20 shadow-[0_-10px_40px_-10px_rgba(0,0,0,0.8)]">
         <div className="max-w-screen-xl mx-auto px-4">
           <div className="flex items-center justify-around py-4">
             {navItems.map((item) => {
@@ -47,25 +47,25 @@ export default function BottomNav() {
                       relative w-14 h-14 rounded-2xl transition-all duration-300
                       ${
                         isActive
-                          ? "bg-gradient-to-br from-purple-500 to-purple-600 shadow-[0_8px_16px_-4px_rgba(168,85,247,0.4),inset_0_-2px_8px_rgba(0,0,0,0.3),inset_0_2px_4px_rgba(255,255,255,0.2)]"
-                          : "bg-gradient-to-br from-slate-700 to-slate-800 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3),inset_0_-2px_6px_rgba(0,0,0,0.2),inset_0_1px_2px_rgba(255,255,255,0.1)] group-hover:from-purple-500/80 group-hover:to-purple-600/80"
+                          ? "bg-gradient-to-br from-cyan-500 to-teal-500 shadow-[0_8px_20px_-4px_rgba(6,182,212,0.6),inset_0_-3px_10px_rgba(0,0,0,0.4),inset_0_2px_6px_rgba(255,255,255,0.3)] border-2 border-cyan-300/40"
+                          : "bg-gradient-to-br from-purple-600/80 to-purple-700/80 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.4),inset_0_-2px_8px_rgba(0,0,0,0.3),inset_0_1px_3px_rgba(255,255,255,0.2)] border border-purple-400/30 group-hover:from-cyan-500/90 group-hover:to-teal-500/90 group-hover:border-cyan-300/40"
                       }
                       flex items-center justify-center
-                      transform group-hover:scale-105 group-active:scale-95
+                      transform group-hover:scale-110 group-active:scale-95
                     `}
                   >
                     <Icon
                       className={`w-7 h-7 transition-colors duration-300 ${
                         isActive
-                          ? "text-cyan-300 drop-shadow-[0_2px_4px_rgba(103,232,249,0.5)]"
-                          : "text-slate-400 group-hover:text-cyan-300"
+                          ? "text-white drop-shadow-[0_2px_6px_rgba(255,255,255,0.8)]"
+                          : "text-cyan-200 group-hover:text-white drop-shadow-[0_2px_4px_rgba(103,232,249,0.4)]"
                       }`}
                       strokeWidth={2.5}
                     />
                   </div>
                   <span
-                    className={`text-xs font-medium transition-colors duration-300 ${
-                      isActive ? "text-purple-400" : "text-slate-500 group-hover:text-purple-400"
+                    className={`text-xs font-bold transition-colors duration-300 ${
+                      isActive ? "text-cyan-400" : "text-cyan-300/70 group-hover:text-cyan-300"
                     }`}
                   >
                     {item.label}
