@@ -269,21 +269,21 @@ export default function Learn() {
   const featuredVideos = VIDEOS.filter(video => video.featured);
 
   const VideoCard = ({ video }: { video: Video }) => (
-    <Card className="cursor-pointer hover:shadow-lg transition-shadow">
+    <Card className="cursor-pointer hover:shadow-2xl transition-all bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-2xl overflow-hidden">
       <CardContent className="p-0">
-        <div className={`${video.thumbnailColor} h-32 rounded-t-lg flex items-center justify-center relative`}>
+        <div className={`${video.thumbnailColor} h-32 flex items-center justify-center relative`}>
           <Play className="w-12 h-12 text-white opacity-80" />
-          <Badge className="absolute top-2 right-2 bg-black/50 text-white">
+          <Badge className="absolute top-2 right-2 bg-black/50 text-white rounded-xl border-0">
             <Clock className="w-3 h-3 mr-1" />
             {video.duration}
           </Badge>
         </div>
         <div className="p-4">
-          <h3 className="font-semibold text-sm mb-2 line-clamp-2">{video.title}</h3>
-          <p className="text-xs text-muted-foreground mb-3 line-clamp-2">{video.description}</p>
+          <h3 className="font-semibold text-sm mb-2 line-clamp-2 text-cyan-400">{video.title}</h3>
+          <p className="text-xs text-gray-400 mb-3 line-clamp-2">{video.description}</p>
           <div className="flex flex-wrap gap-1">
             {video.tags.slice(0, 2).map(tag => (
-              <Badge key={tag} variant="secondary" className="text-xs">
+              <Badge key={tag} variant="secondary" className="text-xs bg-slate-700/50 text-cyan-300 border-cyan-400/20 rounded-xl">
                 {tag}
               </Badge>
             ))}
@@ -295,26 +295,27 @@ export default function Learn() {
 
   return (
     <Layout>
-      <div className="max-w-7xl mx-auto p-6 space-y-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-4">Learn</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A library of short, practical videos to help you understand and support your neurodivergent child
-          </p>
-        </div>
-
-        {/* Search */}
-        <div className="max-w-md mx-auto">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-            <Input
-              placeholder="Search videos..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10"
-            />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6">
+        <div className="max-w-7xl mx-auto space-y-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-cyan-400 mb-4">Learn</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              A library of short, practical videos to help you understand and support your neurodivergent child
+            </p>
           </div>
-        </div>
+
+          {/* Search */}
+          <div className="max-w-md mx-auto">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <Input
+                placeholder="Search videos..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 bg-slate-800/60 border-cyan-400/30 text-white rounded-xl"
+              />
+            </div>
+          </div>
 
         {/* Recommended Videos */}
         {recommendedVideos.length > 0 && (
@@ -354,11 +355,11 @@ export default function Learn() {
           <h2 className="text-2xl font-bold mb-6">Browse by Category</h2>
           
           <Tabs value={selectedCategory} onValueChange={(value) => setSelectedCategory(value as VideoCategory)}>
-            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4">
+            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-2xl p-1">
               {Object.entries(CATEGORY_INFO).map(([category, info]) => {
                 const IconComponent = info.icon;
                 return (
-                  <TabsTrigger key={category} value={category} className="flex items-center gap-2">
+                  <TabsTrigger key={category} value={category} className="flex items-center gap-2 rounded-xl data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-teal-500 data-[state=active]:text-white text-gray-400">
                     <IconComponent className="w-4 h-4" />
                     <span className="hidden sm:inline">{info.title}</span>
                   </TabsTrigger>
@@ -369,11 +370,11 @@ export default function Learn() {
             {Object.entries(CATEGORY_INFO).map(([category, info]) => (
               <TabsContent key={category} value={category} className="mt-6">
                 <div className="mb-6">
-                  <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                    <info.icon className={`w-5 h-5 ${info.color}`} />
+                  <h3 className="text-xl font-semibold mb-2 flex items-center gap-2 text-cyan-400">
+                    <info.icon className="w-5 h-5 text-cyan-400" />
                     {info.title}
                   </h3>
-                  <p className="text-muted-foreground">{info.description}</p>
+                  <p className="text-gray-300">{info.description}</p>
                 </div>
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -384,11 +385,11 @@ export default function Learn() {
                 
                 {filteredVideos.length === 0 && searchTerm && (
                   <div className="text-center py-8">
-                    <p className="text-muted-foreground">No videos found matching "{searchTerm}"</p>
+                    <p className="text-gray-300">No videos found matching "{searchTerm}"</p>
                     <Button 
                       variant="outline" 
                       onClick={() => setSearchTerm('')}
-                      className="mt-2"
+                      className="mt-2 border-cyan-400/30 text-cyan-400 hover:bg-slate-700/50 rounded-xl"
                     >
                       Clear search
                     </Button>
@@ -399,12 +400,13 @@ export default function Learn() {
           </Tabs>
         </div>
 
-        {/* Video Count Summary */}
-        <div className="text-center pt-8 border-t">
-          <p className="text-muted-foreground">
-            {VIDEOS.length} videos across {Object.keys(CATEGORY_INFO).length} categories • 
-            All videos include captions and are 1-3 minutes long
-          </p>
+          {/* Video Count Summary */}
+          <div className="text-center pt-8 border-t border-cyan-400/20">
+            <p className="text-gray-400">
+              {VIDEOS.length} videos across {Object.keys(CATEGORY_INFO).length} categories • 
+              All videos include captions and are 1-3 minutes long
+            </p>
+          </div>
         </div>
       </div>
     </Layout>

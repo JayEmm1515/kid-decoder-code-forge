@@ -43,31 +43,31 @@ export default function UnderstandingBehaviourPage() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-coral-bottom p-4 md:p-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 md:p-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-block p-4 bg-purple-100 rounded-2xl mb-4">
-              <Search className="w-10 h-10 text-violet" />
+            <div className="inline-block p-4 bg-purple-500/20 rounded-3xl mb-4">
+              <Search className="w-10 h-10 text-cyan-400" />
             </div>
-            <h1 className="text-4xl font-extrabold text-ink tracking-tight">First, let's find the right lens.</h1>
-            <p className="text-lg text-muted mt-3 max-w-2xl mx-auto">A child's behaviour is deeply connected to their developmental stage. Select an age group to see tailored guidance.</p>
+            <h1 className="text-4xl font-extrabold text-cyan-400 tracking-tight">First, let's find the right lens.</h1>
+            <p className="text-lg text-gray-300 mt-3 max-w-2xl mx-auto">A child's behaviour is deeply connected to their developmental stage. Select an age group to see tailored guidance.</p>
           </div>
          
           <div className="grid md:grid-cols-2 gap-6">
             {ageGroups.map((group) => (
               <Link key={group.age_group} to={createPageUrl(`BehaviourList?age_group=${group.age_group}`)} className="group">
-                <Card className={`p-6 bg-white border-2 border-transparent transition-all duration-300 hover:border-[color:var(--color)] hover:shadow-2xl ${group.shadowColor} rounded-2xl h-full`}>
+                <Card className="p-6 bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl rounded-3xl h-full">
                   <div className="flex items-start justify-between">
                     <div className="flex items-start gap-4">
-                       <div style={{ backgroundColor: group.color }} className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                       <div style={{ backgroundColor: group.color }} className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0">
                          <group.icon className="w-7 h-7 text-white" />
                       </div>
                       <div>
-                        <h2 className="text-xl font-bold text-ink">{group.title}</h2>
-                        <p className="text-muted mt-1">{group.description}</p>
+                        <h2 className="text-xl font-bold text-cyan-400">{group.title}</h2>
+                        <p className="text-gray-300 mt-1">{group.description}</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-6 h-6 text-slate-300 group-hover:text-[color:var(--color)] transition-all duration-300 transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-6 h-6 text-gray-500 group-hover:text-cyan-400 transition-all duration-300 transform group-hover:translate-x-1" />
                   </div>
                 </Card>
               </Link>

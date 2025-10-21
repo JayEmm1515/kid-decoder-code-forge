@@ -72,9 +72,9 @@ export default function BehaviourListPage() {
       to={createPageUrl(`BehaviourDetail?slug=${behavior.slug}`)}
       className="block group"
     >
-      <Card className="glass h-full hover:shadow-lg transition-all duration-300 group-hover:border-violet/30">
+      <Card className="bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-3xl h-full hover:shadow-2xl hover:border-cyan-400/40 transition-all duration-300">
         <CardHeader>
-          <CardTitle className="text-xl font-semibold text-ink group-hover:text-violet transition-colors">
+          <CardTitle className="text-xl font-semibold text-cyan-400 group-hover:text-cyan-300 transition-colors">
             {behavior.title}
           </CardTitle>
         </CardHeader>
@@ -85,13 +85,13 @@ export default function BehaviourListPage() {
   if (loading) {
     return (
       <Layout>
-        <div className="min-h-screen bg-coral-teal p-4 md:p-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 md:p-8">
           <div className="max-w-6xl mx-auto">
             <div className="animate-pulse space-y-8">
-              <div className="h-8 bg-slate-200 rounded w-1/3"></div>
+              <div className="h-8 bg-slate-700/50 rounded-xl w-1/3"></div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[...Array(6)].map((_, i) => (
-                  <div key={i} className="h-64 bg-slate-200 rounded-xl"></div>
+                  <div key={i} className="h-64 bg-slate-700/50 rounded-3xl"></div>
                 ))}
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function BehaviourListPage() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-coral-teal p-4 md:p-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 md:p-8">
         <div className="max-w-6xl mx-auto space-y-8">
           
           {/* Header */}
@@ -111,15 +111,15 @@ export default function BehaviourListPage() {
             <div className="flex items-center gap-4">
               <Link 
                 to={createPageUrl("UnderstandingBehaviour")} 
-                className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+                className="p-2 hover:bg-slate-700/50 rounded-xl transition-colors"
               >
-                <ArrowLeft className="w-5 h-5 text-muted" />
+                <ArrowLeft className="w-5 h-5 text-cyan-400" />
               </Link>
               <div>
-                <h1 className="text-3xl font-bold text-ink">
+                <h1 className="text-3xl font-bold text-cyan-400">
                   {ageGroup ? `${ageGroupLabels[ageGroup]} Behavior Guides` : 'All Behavior Guides'}
                 </h1>
-                <p className="text-muted mt-2">
+                <p className="text-gray-300 mt-2">
                   {ageGroup 
                     ? `Evidence-based guidance for understanding ${ageGroupLabels[ageGroup].toLowerCase()} behavior`
                     : 'Evidence-based guidance for understanding children\'s behavior across all ages'
@@ -130,24 +130,24 @@ export default function BehaviourListPage() {
 
             {/* Search */}
             <div className="relative max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <Input
                 placeholder="Search behavior guides..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 border-slate-200"
+                className="pl-10 bg-slate-800/60 border-cyan-400/30 text-white rounded-xl"
               />
             </div>
           </div>
 
           {/* Results */}
           {filteredBehaviors.length === 0 ? (
-            <Card className="glass text-center py-12">
+            <Card className="bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-3xl text-center py-12">
               <CardContent className="space-y-4">
-                <BookOpen className="w-12 h-12 text-muted mx-auto" />
+                <BookOpen className="w-12 h-12 text-cyan-400 mx-auto" />
                 <div>
-                  <h3 className="text-xl font-semibold text-ink">No guides found</h3>
-                  <p className="text-muted mt-2">
+                  <h3 className="text-xl font-semibold text-cyan-400">No guides found</h3>
+                  <p className="text-gray-300 mt-2">
                     {searchTerm 
                       ? `No behavior guides match "${searchTerm}"`
                       : 'No behavior guides available for this age group yet'
@@ -158,7 +158,7 @@ export default function BehaviourListPage() {
                   <Button 
                     variant="outline" 
                     onClick={() => setSearchTerm('')}
-                    className="neu mt-4"
+                    className="border-cyan-400/30 text-cyan-400 hover:bg-slate-700/50 rounded-xl mt-4"
                   >
                     Clear search
                   </Button>
@@ -168,7 +168,7 @@ export default function BehaviourListPage() {
           ) : (
             <div className="space-y-6">
               <div className="flex items-center justify-between">
-                <p className="text-muted flex items-center gap-2">
+                <p className="text-gray-400 flex items-center gap-2">
                   <Users className="w-4 h-4" />
                   {filteredBehaviors.length} guide{filteredBehaviors.length !== 1 ? 's' : ''} found
                 </p>

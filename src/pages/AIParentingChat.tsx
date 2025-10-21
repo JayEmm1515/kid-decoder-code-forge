@@ -128,25 +128,25 @@ export default function AIParentingChatPage() {
 
   return (
     <Layout>
-      <div className="bg-soft-coral-teal p-6 max-w-4xl mx-auto h-screen flex flex-col">
+      <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6 max-w-4xl mx-auto min-h-screen flex flex-col">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-foreground mb-2 flex items-center gap-3">
-            <MessageCircle className="w-8 h-8 text-primary" />
+          <h1 className="text-3xl font-bold text-cyan-400 mb-2 flex items-center gap-3">
+            <MessageCircle className="w-8 h-8 text-cyan-400" />
             AI Parenting Chat
           </h1>
-          <p className="text-muted-foreground">Get personalized, evidence-based parenting guidance for your child's unique needs.</p>
+          <p className="text-gray-300">Get personalized, evidence-based parenting guidance for your child's unique needs.</p>
         </div>
 
         {/* Child Selection */}
-        <Card className="mb-4">
+        <Card className="mb-4 bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-2xl">
           <CardContent className="p-4">
             <div className="flex items-center gap-4">
-              <Label className="font-medium">Select Child (optional):</Label>
+              <Label className="font-medium text-cyan-400">Select Child (optional):</Label>
               <Select value={selectedChild} onValueChange={setSelectedChild}>
-                <SelectTrigger className="w-48">
+                <SelectTrigger className="w-48 bg-slate-700/50 border-cyan-400/30 text-white rounded-xl">
                   <SelectValue placeholder="Choose child" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-slate-800 border-cyan-400/30 text-white rounded-xl">
                   <SelectItem value="general">General Advice</SelectItem>
                   {children && children.length > 0 && children.map(child => (
                     <SelectItem key={child.id} value={child.id}>
@@ -156,7 +156,7 @@ export default function AIParentingChatPage() {
                 </SelectContent>
               </Select>
               {selectedChild && (
-                <Badge variant="secondary" className="ml-2">
+                <Badge variant="secondary" className="ml-2 bg-cyan-500/20 text-cyan-400 border-cyan-400/30 rounded-xl">
                   <Heart className="w-3 h-3 mr-1" />
                   {getChildInfo(selectedChild)}
                 </Badge>
@@ -166,10 +166,10 @@ export default function AIParentingChatPage() {
         </Card>
 
         {/* Chat Messages */}
-        <Card className="flex-1 flex flex-col mb-4 min-h-0">
+        <Card className="flex-1 flex flex-col mb-4 min-h-0 bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-2xl">
           <CardHeader className="pb-4">
-            <CardTitle className="flex items-center gap-2">
-              <Bot className="w-5 h-5 text-primary" />
+            <CardTitle className="flex items-center gap-2 text-cyan-400">
+              <Bot className="w-5 h-5 text-cyan-400" />
               Chat Session
             </CardTitle>
           </CardHeader>
@@ -177,10 +177,10 @@ export default function AIParentingChatPage() {
             <div className="flex-1 overflow-y-auto space-y-4 pr-2">
               {messages.map((message) => (
                 <div key={message.id} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`max-w-[80%] p-4 rounded-lg ${
+                  <div className={`max-w-[80%] p-4 rounded-2xl ${
                     message.role === 'user' 
-                      ? 'bg-primary text-primary-foreground' 
-                      : 'bg-muted text-muted-foreground'
+                      ? 'bg-gradient-to-r from-cyan-500 to-teal-500 text-white' 
+                      : 'bg-slate-700/50 text-gray-300'
                   }`}>
                     <div className="flex items-start gap-2 mb-2">
                       {message.role === 'assistant' ? (
@@ -201,7 +201,7 @@ export default function AIParentingChatPage() {
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="bg-muted text-muted-foreground p-4 rounded-lg max-w-[80%]">
+                  <div className="bg-slate-700/50 text-gray-300 p-4 rounded-2xl max-w-[80%]">
                     <div className="flex items-center gap-2">
                       <Bot className="w-4 h-4" />
                       <div className="flex gap-1">
@@ -224,12 +224,13 @@ export default function AIParentingChatPage() {
                 onKeyPress={handleKeyPress}
                 placeholder="Ask a parenting question..."
                 disabled={isLoading}
-                className="flex-1"
+                className="flex-1 bg-slate-700/50 border-cyan-400/30 text-white rounded-xl"
               />
               <Button 
                 onClick={handleSendMessage} 
                 disabled={isLoading || !inputMessage.trim()}
                 size="icon"
+                className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 rounded-xl"
               >
                 <Send className="w-4 h-4" />
               </Button>
@@ -238,13 +239,13 @@ export default function AIParentingChatPage() {
         </Card>
 
         {/* Disclaimer */}
-        <Card className="bg-amber-50 border-amber-200">
+        <Card className="bg-amber-900/20 border-amber-500/30 rounded-2xl">
           <CardContent className="p-4">
             <div className="flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+              <AlertCircle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm">
-                <p className="font-medium text-amber-800 mb-1">AI Guidance Disclaimer</p>
-                <p className="text-amber-700">
+                <p className="font-medium text-amber-400 mb-1">AI Guidance Disclaimer</p>
+                <p className="text-amber-300">
                   This AI provides general parenting information based on evidence-based practices and should not replace professional advice. 
                   For specific concerns about your child's development, behavior, or wellbeing, please consult qualified healthcare professionals. 
                   In emergencies, call 000.

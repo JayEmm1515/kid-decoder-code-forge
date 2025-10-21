@@ -114,19 +114,19 @@ export default function ChildrenPage() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-teal-corner p-4 md:p-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 md:p-8">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <div>
-              <h1 className="text-3xl font-bold text-foreground flex items-center gap-3">
-                <Users className="w-8 h-8 text-primary" />
+              <h1 className="text-3xl font-bold text-cyan-400 flex items-center gap-3">
+                <Users className="w-8 h-8 text-cyan-400" />
                 Understanding Your Child
               </h1>
-              <p className="text-muted-foreground mt-2">Manage your children's profiles and explore age-appropriate behaviour insights</p>
+              <p className="text-gray-300 mt-2">Manage your children's profiles and explore age-appropriate behaviour insights</p>
             </div>
             <Button
               onClick={() => setShowForm(!showForm)}
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600 rounded-2xl shadow-lg"
             >
               <Plus className="w-5 h-5 mr-2" />
               Add Child
@@ -134,9 +134,9 @@ export default function ChildrenPage() {
           </div>
 
           {showForm && (
-            <Card className="mb-8 bg-white border-slate-200">
+            <Card className="mb-8 bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-3xl shadow-xl">
               <CardHeader>
-                <CardTitle className="text-xl font-semibold text-ink">
+                <CardTitle className="text-xl font-semibold text-cyan-400">
                   {editingChild ? 'Edit Child' : 'Add New Child'}
                 </CardTitle>
               </CardHeader>
@@ -144,43 +144,46 @@ export default function ChildrenPage() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name" className="text-muted">Child's Name</Label>
+                      <Label htmlFor="name" className="text-gray-300">Child's Name</Label>
                       <Input
                         id="name"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                         placeholder="Enter child's name"
                         required
+                        className="bg-slate-700/50 border-cyan-400/30 text-white rounded-xl"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="birth_date" className="text-muted">Birth Date</Label>
+                      <Label htmlFor="birth_date" className="text-gray-300">Birth Date</Label>
                       <Input
                         id="birth_date"
                         type="date"
                         value={formData.birth_date}
                         onChange={(e) => setFormData({...formData, birth_date: e.target.value})}
                         required
+                        className="bg-slate-700/50 border-cyan-400/30 text-white rounded-xl"
                       />
                     </div>
                   </div>
                  
                   <div className="space-y-2">
-                    <Label htmlFor="notes" className="text-muted">Notes (Optional)</Label>
+                    <Label htmlFor="notes" className="text-gray-300">Notes (Optional)</Label>
                     <Textarea
                       id="notes"
                       value={formData.notes}
                       onChange={(e) => setFormData({...formData, notes: e.target.value})}
                       placeholder="Any additional notes about your child..."
                       rows={3}
+                      className="bg-slate-700/50 border-cyan-400/30 text-white rounded-xl"
                     />
                   </div>
 
                   <div className="flex justify-end gap-3">
-                    <Button type="button" variant="outline" onClick={resetForm}>
+                    <Button type="button" variant="outline" onClick={resetForm} className="rounded-xl border-cyan-400/30 text-cyan-400 hover:bg-slate-700/50">
                       Cancel
                     </Button>
-                    <Button type="submit" className="bg-gradient-to-r from-rose to-peach text-white">
+                    <Button type="submit" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-xl shadow-lg">
                       {editingChild ? 'Update Child' : 'Add Child'}
                     </Button>
                   </div>
@@ -191,14 +194,14 @@ export default function ChildrenPage() {
 
           <div className="grid gap-6">
             {children.length === 0 ? (
-              <Card className="bg-white border-slate-200">
+              <Card className="bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-3xl shadow-xl">
                 <CardContent className="text-center py-12">
-                  <Baby className="w-16 h-16 text-slate-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-ink mb-2">No children added yet</h3>
-                  <p className="text-muted mb-6">Add your first child to start tracking</p>
+                  <Baby className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-cyan-400 mb-2">No children added yet</h3>
+                  <p className="text-gray-300 mb-6">Add your first child to start tracking</p>
                   <Button
                     onClick={() => setShowForm(true)}
-                    className="bg-gradient-to-r from-rose to-peach text-white"
+                    className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-2xl shadow-lg"
                   >
                     <Plus className="w-5 h-5 mr-2" />
                     Add Your First Child
@@ -208,18 +211,18 @@ export default function ChildrenPage() {
             ) : (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {children.map((child) => (
-                  <Card key={child.id} className="bg-white border-slate-200 hover:shadow-lg transition-all">
+                  <Card key={child.id} className="bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-3xl hover:shadow-2xl transition-all">
                     <CardHeader className="pb-4">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
-                            <span className="text-primary-foreground font-bold text-lg">
+                          <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center">
+                            <span className="text-white font-bold text-lg">
                               {child.name.charAt(0).toUpperCase()}
                             </span>
                           </div>
                           <div>
-                            <CardTitle className="text-lg text-foreground">{child.name}</CardTitle>
-                            <p className="text-sm text-muted-foreground">{formatAge(child.birth_date)}</p>
+                            <CardTitle className="text-lg text-cyan-400">{child.name}</CardTitle>
+                            <p className="text-sm text-gray-400">{formatAge(child.birth_date)}</p>
                           </div>
                         </div>
                         <div className="flex gap-1">
@@ -227,7 +230,7 @@ export default function ChildrenPage() {
                             variant="ghost"
                             size="icon"
                             onClick={() => handleEdit(child)}
-                            className="text-muted-foreground hover:bg-muted hover:text-primary"
+                            className="text-gray-400 hover:bg-slate-700/50 hover:text-cyan-400 rounded-xl"
                           >
                             <Edit className="w-4 h-4" />
                           </Button>
@@ -235,7 +238,7 @@ export default function ChildrenPage() {
                             variant="ghost"
                             size="icon"
                             onClick={() => handleDelete(child.id)}
-                            className="text-muted-foreground hover:bg-muted hover:text-destructive"
+                            className="text-gray-400 hover:bg-slate-700/50 hover:text-red-400 rounded-xl"
                           >
                             <Trash2 className="w-4 h-4" />
                           </Button>
@@ -245,25 +248,25 @@ export default function ChildrenPage() {
                     <CardContent>
                         <div className="space-y-3">
                           <div className="flex items-center gap-2">
-                            <Calendar className="w-4 h-4 text-muted-foreground" />
-                            <span className="text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4 text-gray-400" />
+                            <span className="text-sm text-gray-300">
                               Born {format(new Date(child.birth_date), "MMM d, yyyy")}
                             </span>
                           </div>
-                          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
+                          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-400/20">
                             Age Group: {child.age_group} years
                           </div>
                           {child.notes && (
-                            <div className="mt-3 p-3 bg-muted rounded-lg">
-                              <p className="text-sm text-muted-foreground">{child.notes}</p>
+                            <div className="mt-3 p-3 bg-slate-700/30 rounded-xl border border-cyan-400/10">
+                              <p className="text-sm text-gray-300">{child.notes}</p>
                             </div>
                           )}
                           
-                          <div className="pt-4 border-t">
+                          <div className="pt-4 border-t border-cyan-400/20">
                             <Link to={`/understanding-behaviour?age=${child.age_group}`}>
                               <Button 
                                 variant="outline" 
-                                className="w-full text-sm gap-2 hover:bg-primary hover:text-primary-foreground"
+                                className="w-full text-sm gap-2 hover:bg-cyan-500/20 hover:text-cyan-400 border-cyan-400/30 rounded-xl text-cyan-400"
                               >
                                 <BookOpen className="w-4 h-4" />
                                 Explore {child.age_group} Behaviour Guide
