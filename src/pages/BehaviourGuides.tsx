@@ -1,6 +1,6 @@
+// pages/BehaviourGuides.tsx
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import Layout from '@/components/Layout';
 
 const behaviours = [
   { label: 'Tantrums', slug: 'tantrums', grad: 'from-[#FA9F6B] to-[#E6765E]' },
@@ -17,55 +17,40 @@ const behaviours = [
 
 export default function BehaviourGuides() {
   return (
-    <Layout currentPageName="Behaviour Guides">
-      <div
-        className="min-h-screen p-6 md:p-10"
-        style={{
-          backgroundImage: "url('/public/behaviour-guides-bg.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg mb-6">
-            Behaviour Guides
-          </h1>
+    <div
+      className="min-h-screen p-6 md:p-10"
+      style={{
+        backgroundImage: "url('/images/ui/behaviour-guides.webp')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg mb-6">
+          Behaviour Guides
+        </h1>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {behaviours.map(b => (
-              <Link key={b.slug} to={createPageUrl(`BehaviourDetail?slug=${b.slug}`)}>
-                <div
-                  className={[
-                    'group rounded-2xl px-5 py-4 text-white font-semibold text-lg',
-                    'bg-gradient-to-br', b.grad,
-                    'shadow-lg hover:shadow-2xl',
-                    'transform hover:scale-105 transition-all duration-300',
-                    'backdrop-blur-sm border border-white/10',
-                    'hover:border-white/30',
-                  ].join(' ')}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="drop-shadow-md">{b.label}</span>
-                    <svg
-                      className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {behaviours.map(b => (
+            <Link key={b.slug} to={createPageUrl(`BehaviourDetail?slug=${b.slug}`)}>
+              <div
+                className={[
+                  'group rounded-2xl px-5 py-4 text-white font-semibold text-lg',
+                  'bg-gradient-to-br', b.grad,
+                  // clay-style shadow + hover
+                  'shadow-[0_8px_16px_rgba(0,0,0,0.3)]',
+                  'hover:shadow-[0_12px_24px_rgba(0,0,0,0.4)]',
+                  'hover:-translate-y-1',
+                  'transition-all duration-200',
+                  'relative overflow-hidden',
+                ].join(' ')}
+              >
+                <span className="relative z-10">{b.label}</span>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
