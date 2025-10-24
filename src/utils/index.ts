@@ -17,6 +17,7 @@ export const createPageUrl = (pageName: string) => {
     'BeingWith': '/being-with-exercise',
     'Neurodivergence': '/neurodivergence',
     'BoundaryBarriers': '/boundary-barriers',
+    'BehaviourGuides': '/behaviour-guides',
   };
 
   return pageRoutes[pageName] || `/${pageName.toLowerCase()}`;

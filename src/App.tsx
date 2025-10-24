@@ -24,6 +24,7 @@ import BeingWithExercise from "./pages/BeingWithExercise";
 import Quizzes from "./pages/Quizzes";
 import Learn from "./pages/Learn";
 import BoundaryBarriers from "./pages/BoundaryBarriers";
+import BehaviourGuides from "./pages/BehaviourGuides";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/quizzes" element={<Quizzes />} />
           <Route path="/learn" element={<Learn />} />
           <Route path="/boundary-barriers" element={<BoundaryBarriers />} />
+          <Route path="/behaviour-guides" element={<BehaviourGuides />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
