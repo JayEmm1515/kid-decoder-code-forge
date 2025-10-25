@@ -42,7 +42,7 @@ const Index = () => {
 
   return (
     <Layout currentPageName="Home">
-      <div className="min-h-screen bg-cover bg-center bg-no-repeat p-6" style={{ backgroundImage: 'url(/home-background.jpeg)' }}>
+      <div className="min-h-screen bg-cover bg-center bg-no-repeat p-6" style={{ backgroundImage: 'url(/home-bg.jpeg)' }}>
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-slate-800/40 to-purple-900/40 backdrop-blur-xl rounded-[3rem] border border-purple-500/20 p-8 shadow-2xl">
           {/* Header */}
           <div className="mb-8">
