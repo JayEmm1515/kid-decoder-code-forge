@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-[var(--neuro-button)] text-[hsl(var(--foreground))] shadow-[var(--neuro-button-shadow)] border-none hover:bg-[var(--neuro-button-light)] hover:shadow-[15px_15px_30px_hsl(250_40%_75%),_-15px_-15px_30px_hsl(250_40%_97%)] active:shadow-[var(--neuro-button-pressed)]",
+        default: "bg-gradient-to-br from-primary to-secondary text-primary-foreground shadow-clay-medium border-none hover:shadow-clay-heavy hover:-translate-y-0.5 active:shadow-clay-inset active:translate-y-0 rounded-3xl",
         destructive:
-          "bg-destructive text-destructive-foreground shadow-[var(--neuro-button-shadow)] border-none hover:shadow-[15px_15px_30px_hsl(0_70%_55%),_-15px_-15px_30px_hsl(0_70%_75%)] active:shadow-[var(--neuro-button-pressed)]",
+          "bg-destructive text-destructive-foreground shadow-clay-medium border-none hover:shadow-clay-heavy hover:-translate-y-0.5 active:shadow-clay-inset active:translate-y-0 rounded-3xl",
         outline:
-          "bg-[var(--neuro-button)] text-[hsl(var(--foreground))] border border-[hsl(var(--foreground))]/20 shadow-[var(--neuro-button-shadow)] hover:shadow-[15px_15px_30px_hsl(250_40%_75%),_-15px_-15px_30px_hsl(250_40%_97%)] active:shadow-[var(--neuro-button-pressed)]",
+          "bg-card text-foreground border-2 border-border shadow-clay-light hover:shadow-clay-medium hover:-translate-y-0.5 active:shadow-clay-inset active:translate-y-0 rounded-3xl",
         secondary:
-          "bg-[hsl(var(--dreamy-purple))] text-white shadow-[12px_12px_24px_hsl(260_50%_60%),_-12px_-12px_24px_hsl(260_50%_80%)] border-none hover:shadow-[15px_15px_30px_hsl(260_50%_55%),_-15px_-15px_30px_hsl(260_50%_85%)] active:shadow-[inset_6px_6px_12px_hsl(260_50%_60%),_inset_-6px_-6px_12px_hsl(260_50%_75%)]",
-        ghost: "bg-transparent text-[hsl(var(--foreground))] hover:bg-[var(--neuro-button)] hover:text-[hsl(var(--foreground))] hover:shadow-[var(--neuro-button-shadow)] active:shadow-[var(--neuro-button-pressed)]",
-        link: "text-[hsl(var(--dreamy-purple))] underline-offset-4 hover:underline bg-transparent shadow-none",
-        primary: "bg-[hsl(var(--dreamy-teal))] text-white shadow-[12px_12px_24px_hsl(180_55%_50%),_-12px_-12px_24px_hsl(180_55%_80%)] border-none hover:shadow-[15px_15px_30px_hsl(180_55%_45%),_-15px_-15px_30px_hsl(180_55%_85%)] active:shadow-[inset_6px_6px_12px_hsl(180_55%_50%),_inset_-6px_-6px_12px_hsl(180_55%_75%)]",
+          "bg-secondary text-secondary-foreground shadow-clay-medium border-none hover:shadow-clay-heavy hover:-translate-y-0.5 active:shadow-clay-inset active:translate-y-0 rounded-3xl",
+        ghost: "bg-transparent text-foreground hover:bg-muted hover:shadow-clay-light rounded-3xl",
+        link: "text-primary underline-offset-4 hover:underline bg-transparent shadow-none",
+        primary: "bg-primary text-primary-foreground shadow-clay-medium border-none hover:shadow-clay-heavy hover:-translate-y-0.5 active:shadow-clay-inset active:translate-y-0 rounded-3xl",
         
         // 3D App Icon Buttons - matching your exact design
         "poly-coral": `

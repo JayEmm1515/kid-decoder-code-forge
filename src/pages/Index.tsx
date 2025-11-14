@@ -1,65 +1,97 @@
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { TrendingUp, MessageSquare, Users, User, MessageCircle, Plus } from "lucide-react";
+import { 
+  TrendingUp, 
+  MessageSquare, 
+  Users, 
+  BookOpen, 
+  Heart,
+  Brain,
+  Shield,
+  Sparkles
+} from "lucide-react";
 import Layout from "@/components/Layout";
 
 const Index = () => {
   const featureCards = [
     {
-      title: "Mood & Behaviour",
-      description: "Track recent entries",
+      title: "Track Behavior",
+      description: "Monitor moods & patterns",
       icon: TrendingUp,
       link: "/tracking",
-      bgColor: "from-cyan-500/20 to-teal-500/20",
-      borderColor: "border-cyan-400/30",
-      iconColor: "text-cyan-400",
+      gradient: "from-clay-sky to-clay-mint",
     },
     {
-      title: "Parenting Chat",
-      description: "Ask the AI coach",
+      title: "AI Coach",
+      description: "Get parenting guidance",
       icon: MessageSquare,
       link: "/parenting-chat",
-      bgColor: "from-purple-500/20 to-violet-500/20",
-      borderColor: "border-purple-400/30",
-      iconColor: "text-purple-400",
+      gradient: "from-clay-lavender to-clay-rose",
     },
     {
-      title: "Your Children",
+      title: "My Children",
       description: "Manage profiles",
       icon: Users,
       link: "/children",
-      bgColor: "from-pink-500/20 to-rose-500/20",
-      borderColor: "border-pink-400/30",
-      iconColor: "text-pink-400",
+      gradient: "from-clay-peach to-clay-cream",
     },
-  ];
-
-  const recentActivities = [
-    { text: "You logged a mood entry for", name: "Alice", time: "2 hours ago", color: "bg-cyan-500" },
-    { text: "You updated", name: "Jane's", time: "Yesterday", color: "bg-blue-500" },
-    { text: "You logged a behaviour note for", name: "Jack", time: "2 days ago", color: "bg-purple-500" },
+    {
+      title: "Learn",
+      description: "Expert resources",
+      icon: BookOpen,
+      link: "/learn",
+      gradient: "from-clay-mint to-clay-sage",
+    },
+    {
+      title: "Understand",
+      description: "Decode behaviors",
+      icon: Brain,
+      link: "/understanding-behaviour",
+      gradient: "from-clay-rose to-clay-peach",
+    },
+    {
+      title: "Boundaries",
+      description: "Build healthy limits",
+      icon: Shield,
+      link: "/boundary-barriers",
+      gradient: "from-clay-sage to-clay-sky",
+    },
   ];
 
   return (
     <Layout currentPageName="Home">
-      <div className="min-h-screen bg-cover bg-center bg-no-repeat p-6" style={{ backgroundImage: 'url(/home-bg.jpeg)' }}>
-        <div className="max-w-7xl mx-auto bg-gradient-to-br from-slate-800/40 to-purple-900/40 backdrop-blur-xl rounded-[3rem] border border-purple-500/20 p-8 shadow-2xl">
-          {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-5xl font-bold text-cyan-400 mb-2">Welcome back 👋</h1>
-            <p className="text-gray-300 text-lg">Your parenting insights at a glance</p>
+      <div className="min-h-screen bg-pastel-gradient p-4 md:p-8">
+        <div className="max-w-7xl mx-auto space-y-8">
+          {/* Welcome Header */}
+          <div className="clay-card p-8 text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Heart className="w-10 h-10 text-primary" />
+              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Welcome Back
+              </h1>
+              <Sparkles className="w-10 h-10 text-secondary" />
+            </div>
+            <p className="text-lg text-muted-foreground">
+              Your parenting journey, simplified
+            </p>
           </div>
 
-          {/* Feature Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {/* Feature Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featureCards.map((card, index) => (
-              <Link key={index} to={card.link}>
-                <Card className={`bg-gradient-to-br ${card.bgColor} backdrop-blur-sm border ${card.borderColor} p-6 rounded-3xl hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full`}>
-                  <div className="flex items-start gap-4">
-                    <card.icon className={`w-12 h-12 ${card.iconColor}`} strokeWidth={2} />
+              <Link key={index} to={card.link} className="group">
+                <Card className={`clay-card p-6 bg-gradient-to-br ${card.gradient} border-0 h-full`}>
+                  <div className="flex flex-col items-center text-center gap-4">
+                    <div className="clay-card p-4 bg-white/50">
+                      <card.icon className="w-8 h-8 text-foreground" strokeWidth={2.5} />
+                    </div>
                     <div>
-                      <h3 className={`text-2xl font-bold ${card.iconColor} mb-1`}>{card.title}</h3>
-                      <p className="text-cyan-300/80">{card.description}</p>
+                      <h3 className="text-xl font-bold text-foreground mb-1">
+                        {card.title}
+                      </h3>
+                      <p className="text-sm text-foreground/70">
+                        {card.description}
+                      </p>
                     </div>
                   </div>
                 </Card>
@@ -67,53 +99,45 @@ const Index = () => {
             ))}
           </div>
 
-          {/* Recent Activity & Quick Actions */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Recent Activity */}
-            <Card className="bg-gradient-to-br from-slate-800/60 to-purple-900/40 backdrop-blur-sm border border-cyan-400/20 p-6 rounded-3xl shadow-xl">
-              <h2 className="text-3xl font-bold text-cyan-400 mb-6">Recent Activity</h2>
-              <div className="space-y-4">
-                {recentActivities.map((activity, index) => (
-                  <div key={index} className="flex items-center gap-3 text-gray-200">
-                    <div className={`w-2 h-2 rounded-full ${activity.color}`} />
-                    <p className="flex-1">
-                      {activity.text} <span className="text-cyan-300">{activity.name}</span> {activity.text === "You updated" ? "profile" : ""}
-                    </p>
-                    <span className="text-gray-400 text-sm">{activity.time}</span>
-                  </div>
-                ))}
+          {/* Quick Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="clay-card p-6 bg-gradient-to-br from-clay-lavender to-clay-sky">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-foreground mb-2">12</div>
+                <p className="text-sm text-foreground/70">Entries This Week</p>
               </div>
-            </Card>
-
-            {/* Quick Actions */}
-            <Card className="bg-gradient-to-br from-slate-800/60 to-purple-900/40 backdrop-blur-sm border border-cyan-400/20 p-6 rounded-3xl shadow-xl">
-              <h2 className="text-3xl font-bold text-cyan-400 mb-6">Quick Actions</h2>
-              <div className="space-y-4">
-                <Link to="/tracking">
-                  <button className="w-full flex items-center gap-3 bg-slate-700/50 hover:bg-slate-700/70 border border-cyan-400/30 text-cyan-400 px-6 py-4 rounded-2xl transition-all">
-                    <TrendingUp className="w-5 h-5" />
-                    Track Mood
-                  </button>
-                </Link>
-                <Link to="/tracking">
-                  <button className="w-full flex items-center gap-3 bg-slate-700/50 hover:bg-slate-700/70 border border-cyan-400/30 text-cyan-400 px-6 py-4 rounded-2xl transition-all">
-                    <MessageCircle className="w-5 h-5" />
-                    Add Behaviour
-                  </button>
-                </Link>
-                <Link to="/children">
-                  <button className="w-full flex items-center gap-3 bg-slate-700/50 hover:bg-slate-700/70 border border-cyan-400/30 text-cyan-400 px-6 py-4 rounded-2xl transition-all">
-                    <User className="w-5 h-5" />
-                    Update Profile
-                  </button>
-                </Link>
+            </div>
+            <div className="clay-card p-6 bg-gradient-to-br from-clay-mint to-clay-peach">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-foreground mb-2">3</div>
+                <p className="text-sm text-foreground/70">Children Profiles</p>
               </div>
-            </Card>
+            </div>
+            <div className="clay-card p-6 bg-gradient-to-br from-clay-rose to-clay-cream">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-foreground mb-2">8</div>
+                <p className="text-sm text-foreground/70">Insights Gained</p>
+              </div>
+            </div>
           </div>
 
-          {/* Footer */}
-          <div className="mt-8 text-center">
-            <p className="text-cyan-400/60 text-sm uppercase tracking-wider">THE KID DECODER</p>
+          {/* Quick Actions */}
+          <div className="clay-card p-8">
+            <h2 className="text-2xl font-bold text-foreground mb-6">Quick Actions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link to="/tracking">
+                <button className="clay-button w-full">
+                  <TrendingUp className="w-5 h-5 inline mr-2" />
+                  Log New Entry
+                </button>
+              </Link>
+              <Link to="/parenting-chat">
+                <button className="clay-button w-full">
+                  <MessageSquare className="w-5 h-5 inline mr-2" />
+                  Ask AI Coach
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

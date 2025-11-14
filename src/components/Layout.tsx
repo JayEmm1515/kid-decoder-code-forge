@@ -125,23 +125,23 @@ export default function Layout({ children, currentPageName }: { children: React.
     <>
       <div id="kid-theme" className="kid-theme">
         <SidebarProvider>
-          <div className="min-h-screen flex w-full bg-white text-ink">
-            <Sidebar className="border-r border-slate-300 bg-white">
-              <SidebarHeader className="border-b border-slate-200 p-6">
+          <div className="min-h-screen flex w-full bg-pastel-gradient text-foreground">
+            <Sidebar className="border-r border-sidebar-border bg-sidebar shadow-clay-medium">
+              <SidebarHeader className="border-b border-sidebar-border p-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-grad-cta rounded-xl flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-clay-light">
                     <Heart className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h2 className="font-bold text-ink text-lg">The Kid Decoder</h2>
-                    <p className="text-xs text-muted">by The Big Enough Project</p>
+                    <h2 className="font-bold text-sidebar-foreground text-lg">The Kid Decoder</h2>
+                    <p className="text-xs text-muted-foreground">by The Big Enough Project</p>
                   </div>
                 </div>
               </SidebarHeader>
              
               <SidebarContent className="p-3">
                 <SidebarGroup>
-                  <SidebarGroupLabel className="text-xs font-bold text-slate-700 uppercase tracking-wider px-3 py-2">
+                  <SidebarGroupLabel className="text-xs font-bold text-sidebar-foreground/70 uppercase tracking-wider px-3 py-2">
                     Main Tools
                   </SidebarGroupLabel>
                   <SidebarGroupContent>
@@ -150,8 +150,8 @@ export default function Layout({ children, currentPageName }: { children: React.
                         <SidebarMenuItem key={item.title}>
                           <SidebarMenuButton
                             asChild
-                            className={`hover:bg-slate-200 transition-all duration-200 rounded-xl mb-1 ${
-                              location.pathname === item.url ? 'bg-slate-900 text-white font-semibold shadow-sm' : 'text-slate-900'
+                            className={`hover:shadow-clay-light transition-all duration-200 rounded-2xl mb-1 ${
+                              location.pathname === item.url ? 'shadow-clay-inset bg-white/50 font-semibold' : 'bg-transparent'
                             }`}
                           >
                             <Link to={item.url} className="flex items-center gap-3 px-3 py-3">
@@ -166,7 +166,7 @@ export default function Layout({ children, currentPageName }: { children: React.
                 </SidebarGroup>
 
                 <SidebarGroup className="mt-4">
-                  <SidebarGroupLabel className="text-xs font-bold text-slate-700 uppercase tracking-wider px-3 py-2">
+                  <SidebarGroupLabel className="text-xs font-bold text-sidebar-foreground/70 uppercase tracking-wider px-3 py-2">
                     Age-Specific Strategies
                   </SidebarGroupLabel>
                   <SidebarGroupContent>
@@ -175,8 +175,8 @@ export default function Layout({ children, currentPageName }: { children: React.
                         <SidebarMenuItem key={item.title}>
                           <SidebarMenuButton
                             asChild
-                            className={`hover:bg-slate-200 transition-all duration-200 rounded-xl mb-1 ${
-                              location.pathname === item.url ? 'bg-slate-900 text-white font-semibold shadow-sm' : 'text-slate-900'
+                            className={`hover:shadow-clay-light transition-all duration-200 rounded-2xl mb-1 ${
+                              location.pathname === item.url ? 'shadow-clay-inset bg-white/50 font-semibold' : 'bg-transparent'
                             }`}
                           >
                             <Link to={item.url} className="flex items-center gap-3 px-3 py-2">
@@ -191,29 +191,30 @@ export default function Layout({ children, currentPageName }: { children: React.
                 </SidebarGroup>
               </SidebarContent>
 
-              <SidebarFooter className="border-t border-slate-200 p-4">
+              <SidebarFooter className="border-t border-sidebar-border p-4">
                 <div className="text-center">
-                  <p className="text-xs text-slate-400 mb-2">
+                  <p className="text-xs text-muted-foreground mb-2">
                     <strong>Disclaimer:</strong> This app provides general parenting information and is not a substitute for professional advice.
-                    Always consult qualified health professionals for specific concerns. Call 000 for emergencies.
                   </p>
                 </div>
               </SidebarFooter>
             </Sidebar>
 
-            <main className="flex-1 flex flex-col">
-              <header className="bg-white/80 backdrop-blur-sm border-b border-slate-200 px-6 py-4 md:hidden">
-                <div className="flex items-center gap-4">
-                  <SidebarTrigger className="hover:bg-slate-100 p-2 rounded-lg transition-colors duration-200" />
-                  <h1 className="text-xl font-semibold text-ink">The Kid Decoder</h1>
-                </div>
-              </header>
-
-              <div className="flex-1 overflow-auto pb-24">
-                {children}
-              </div>
+            <main className="flex-1 overflow-auto">
+              {children}
             </main>
           </div>
+
+          {/* Mobile header with sidebar trigger */}
+          <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-sidebar/95 backdrop-blur-md border-b border-sidebar-border shadow-clay-light">
+            <div className="flex items-center justify-between p-4">
+              <div className="flex items-center gap-2">
+                <SidebarTrigger />
+                <h1 className="text-lg font-bold text-sidebar-foreground">The Kid Decoder</h1>
+              </div>
+            </div>
+          </header>
+
           <BottomNav />
         </SidebarProvider>
       </div>
