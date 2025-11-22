@@ -19,42 +19,42 @@ const Index = () => {
       description: "Monitor moods & patterns",
       icon: TrendingUp,
       link: "/tracking",
-      gradient: "from-clay-sky to-clay-mint",
+      gradient: "from-clay-teal to-clay-mint",
     },
     {
       title: "AI Coach",
       description: "Get parenting guidance",
       icon: MessageSquare,
       link: "/parenting-chat",
-      gradient: "from-clay-lavender to-clay-rose",
+      gradient: "from-clay-mint to-clay-light-mint",
     },
     {
       title: "My Children",
       description: "Manage profiles",
       icon: Users,
       link: "/children",
-      gradient: "from-clay-peach to-clay-cream",
+      gradient: "from-clay-light-mint to-clay-pale-mint",
     },
     {
       title: "Learn",
       description: "Expert resources",
       icon: BookOpen,
       link: "/learn",
-      gradient: "from-clay-mint to-clay-sage",
+      gradient: "from-clay-sage to-clay-mint",
     },
     {
       title: "Understand",
       description: "Decode behaviors",
       icon: Brain,
       link: "/understanding-behaviour",
-      gradient: "from-clay-rose to-clay-peach",
+      gradient: "from-clay-teal to-clay-sage",
     },
     {
       title: "Boundaries",
       description: "Build healthy limits",
       icon: Shield,
       link: "/boundary-barriers",
-      gradient: "from-clay-sage to-clay-sky",
+      gradient: "from-clay-dark-teal to-clay-teal",
     },
   ];
 
@@ -101,19 +101,19 @@ const Index = () => {
 
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="clay-card p-6 bg-gradient-to-br from-clay-lavender to-clay-sky">
+            <div className="clay-card p-6 bg-gradient-to-br from-clay-teal to-clay-mint">
               <div className="text-center">
-                <div className="text-4xl font-bold text-foreground mb-2">12</div>
-                <p className="text-sm text-foreground/70">Entries This Week</p>
+                <div className="text-4xl font-bold text-white mb-2">12</div>
+                <p className="text-sm text-white/80">Entries This Week</p>
               </div>
             </div>
-            <div className="clay-card p-6 bg-gradient-to-br from-clay-mint to-clay-peach">
+            <div className="clay-card p-6 bg-gradient-to-br from-clay-mint to-clay-light-mint">
               <div className="text-center">
                 <div className="text-4xl font-bold text-foreground mb-2">3</div>
                 <p className="text-sm text-foreground/70">Children Profiles</p>
               </div>
             </div>
-            <div className="clay-card p-6 bg-gradient-to-br from-clay-rose to-clay-cream">
+            <div className="clay-card p-6 bg-gradient-to-br from-clay-sage to-clay-pale-mint">
               <div className="text-center">
                 <div className="text-4xl font-bold text-foreground mb-2">8</div>
                 <p className="text-sm text-foreground/70">Insights Gained</p>
