@@ -29,7 +29,7 @@ export default function BottomNav() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 pb-safe">
-      <nav className="bg-gradient-to-t from-slate-900 via-purple-900/50 to-slate-800/95 backdrop-blur-xl border-t border-cyan-400/20 shadow-[0_-10px_40px_-10px_rgba(0,0,0,0.8)]">
+      <nav className="bg-gradient-to-t from-background via-secondary/30 to-background/95 backdrop-blur-xl border-t border-border/40 shadow-clay-heavy">
         <div className="max-w-screen-xl mx-auto px-4">
           <div className="flex items-center justify-around py-4">
             {navItems.map((item) => {
@@ -44,28 +44,29 @@ export default function BottomNav() {
                 >
                   <div
                     className={`
-                      relative w-14 h-14 rounded-2xl transition-all duration-300
+                      relative w-16 h-16 rounded-full transition-all duration-300
                       ${
                         isActive
-                          ? "bg-gradient-to-br from-cyan-500 to-teal-500 shadow-[0_8px_20px_-4px_rgba(6,182,212,0.6),inset_0_-3px_10px_rgba(0,0,0,0.4),inset_0_2px_6px_rgba(255,255,255,0.3)] border-2 border-cyan-300/40"
-                          : "bg-gradient-to-br from-purple-600/80 to-purple-700/80 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.4),inset_0_-2px_8px_rgba(0,0,0,0.3),inset_0_1px_3px_rgba(255,255,255,0.2)] border border-purple-400/30 group-hover:from-cyan-500/90 group-hover:to-teal-500/90 group-hover:border-cyan-300/40"
+                          ? "bg-gradient-to-br from-[hsl(250,50%,45%)] via-[hsl(280,60%,50%)] to-[hsl(330,70%,55%)] shadow-[0_12px_24px_-4px_rgba(139,92,246,0.6),0_8px_16px_-2px_rgba(236,72,153,0.4),inset_0_-4px_12px_rgba(0,0,0,0.5),inset_0_2px_8px_rgba(255,255,255,0.3)]"
+                          : "bg-gradient-to-br from-[hsl(250,40%,50%)] to-[hsl(280,50%,55%)] shadow-[0_8px_16px_-2px_rgba(139,92,246,0.4),inset_0_-3px_10px_rgba(0,0,0,0.4),inset_0_1px_4px_rgba(255,255,255,0.2)] group-hover:from-[hsl(250,50%,45%)] group-hover:via-[hsl(280,60%,50%)] group-hover:to-[hsl(330,70%,55%)] group-hover:shadow-[0_12px_24px_-4px_rgba(139,92,246,0.6),0_8px_16px_-2px_rgba(236,72,153,0.4)]"
                       }
                       flex items-center justify-center
                       transform group-hover:scale-110 group-active:scale-95
+                      before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-60
                     `}
                   >
                     <Icon
-                      className={`w-7 h-7 transition-colors duration-300 ${
+                      className={`w-8 h-8 transition-all duration-300 relative z-10 ${
                         isActive
-                          ? "text-white drop-shadow-[0_2px_6px_rgba(255,255,255,0.8)]"
-                          : "text-cyan-200 group-hover:text-white drop-shadow-[0_2px_4px_rgba(103,232,249,0.4)]"
+                          ? "text-[hsl(340,100%,85%)] drop-shadow-[0_0_12px_rgba(236,72,153,0.9)] filter brightness-125"
+                          : "text-[hsl(280,70%,80%)] group-hover:text-[hsl(340,100%,85%)] group-hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.9)] group-hover:brightness-125"
                       }`}
-                      strokeWidth={2.5}
+                      strokeWidth={2.8}
                     />
                   </div>
                   <span
                     className={`text-xs font-bold transition-colors duration-300 ${
-                      isActive ? "text-cyan-400" : "text-cyan-300/70 group-hover:text-cyan-300"
+                      isActive ? "text-primary" : "text-muted-foreground group-hover:text-primary"
                     }`}
                   >
                     {item.label}
