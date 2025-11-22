@@ -47,19 +47,19 @@ export default function BottomNav() {
                       relative w-16 h-16 rounded-full transition-all duration-300
                       ${
                         isActive
-                          ? "bg-gradient-to-br from-[hsl(250,50%,45%)] via-[hsl(280,60%,50%)] to-[hsl(330,70%,55%)] shadow-[0_12px_24px_-4px_rgba(139,92,246,0.6),0_8px_16px_-2px_rgba(236,72,153,0.4),inset_0_-4px_12px_rgba(0,0,0,0.5),inset_0_2px_8px_rgba(255,255,255,0.3)]"
-                          : "bg-gradient-to-br from-[hsl(250,40%,50%)] to-[hsl(280,50%,55%)] shadow-[0_8px_16px_-2px_rgba(139,92,246,0.4),inset_0_-3px_10px_rgba(0,0,0,0.4),inset_0_1px_4px_rgba(255,255,255,0.2)] group-hover:from-[hsl(250,50%,45%)] group-hover:via-[hsl(280,60%,50%)] group-hover:to-[hsl(330,70%,55%)] group-hover:shadow-[0_12px_24px_-4px_rgba(139,92,246,0.6),0_8px_16px_-2px_rgba(236,72,153,0.4)]"
+                          ? "bg-gradient-to-br from-[hsl(178,35%,35%)] via-[hsl(177,35%,50%)] to-[hsl(176,40%,65%)] shadow-[0_12px_24px_-4px_rgba(77,130,128,0.6),0_8px_16px_-2px_rgba(127,181,178,0.5),inset_0_-4px_12px_rgba(0,0,0,0.4),inset_0_2px_8px_rgba(255,255,255,0.4)]"
+                          : "bg-gradient-to-br from-[hsl(178,30%,40%)] to-[hsl(177,35%,55%)] shadow-[0_8px_16px_-2px_rgba(77,130,128,0.4),inset_0_-3px_10px_rgba(0,0,0,0.3),inset_0_1px_4px_rgba(255,255,255,0.25)] group-hover:from-[hsl(178,35%,35%)] group-hover:via-[hsl(177,35%,50%)] group-hover:to-[hsl(176,40%,65%)] group-hover:shadow-[0_12px_24px_-4px_rgba(77,130,128,0.6),0_8px_16px_-2px_rgba(127,181,178,0.5)]"
                       }
                       flex items-center justify-center
                       transform group-hover:scale-110 group-active:scale-95
-                      before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-60
+                      before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/25 before:to-transparent before:opacity-60
                     `}
                   >
                     <Icon
                       className={`w-8 h-8 transition-all duration-300 relative z-10 ${
                         isActive
-                          ? "text-[hsl(340,100%,85%)] drop-shadow-[0_0_12px_rgba(236,72,153,0.9)] filter brightness-125"
-                          : "text-[hsl(280,70%,80%)] group-hover:text-[hsl(340,100%,85%)] group-hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.9)] group-hover:brightness-125"
+                          ? "text-[hsl(175,45%,92%)] drop-shadow-[0_0_12px_rgba(184,216,214,0.9)] filter brightness-125"
+                          : "text-[hsl(176,40%,85%)] group-hover:text-[hsl(175,45%,92%)] group-hover:drop-shadow-[0_0_12px_rgba(184,216,214,0.9)] group-hover:brightness-125"
                       }`}
                       strokeWidth={2.8}
                     />

@@ -63,13 +63,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				clay: {
-					lavender: 'hsl(260 65% 85%)',
-					mint: 'hsl(150 50% 80%)',
-					peach: 'hsl(20 90% 85%)',
-					sky: 'hsl(200 70% 85%)',
-					rose: 'hsl(340 60% 85%)',
-					cream: 'hsl(40 60% 92%)',
-					sage: 'hsl(120 25% 82%)'
+					'dark-teal': 'hsl(178 35% 28%)',
+					teal: 'hsl(178 30% 45%)',
+					mint: 'hsl(177 35% 65%)',
+					'light-mint': 'hsl(176 40% 78%)',
+					'pale-mint': 'hsl(175 45% 88%)',
+					cream: 'hsl(174 35% 92%)',
+					sage: 'hsl(175 28% 70%)'
 				}
 			},
 			borderRadius: {
