@@ -4,7 +4,7 @@
 // Drop this file into your project and import where needed.
 
 import React, { useMemo, useRef, useState } from "react";
-import { X, Heart, RotateCcw } from "lucide-react";
+import { X, Heart, RotateCcw, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -192,30 +192,26 @@ export default function BoundaryBarrierCards({
     if (!cardRef.current) return;
     const rotation = Math.max(
       -MAX_ROTATION,
-      Math.min(MAX_ROTATION, (dxVal / 10))
+      Math.min(MAX_ROTATION, (dxVal / 8))
     );
-    cardRef.current.style.transition = "transform 0s";
+    cardRef.current.style.transition = "none";
     cardRef.current.style.transform = `translate(${dxVal}px, ${dyVal}px) rotate(${rotation}deg)`;
   };
 
   const snapBack = () => {
     if (!cardRef.current) return;
-    cardRef.current.style.transition = "transform 0.2s ease-out";
+    cardRef.current.style.transition = "transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)";
     cardRef.current.style.transform = "translate(0px, 0px) rotate(0deg)";
-    if (cardRef.current.firstElementChild) {
-      (cardRef.current.firstElementChild as HTMLElement).style.transition = "background-color 0.2s ease-out";
-      (cardRef.current.firstElementChild as HTMLElement).style.backgroundColor = "";
-    }
     dx.current = 0;
     dy.current = 0;
   };
 
   const flyOut = (dir: 1 | -1, cb: () => void) => {
     if (!cardRef.current) return cb();
-    cardRef.current.style.transition = "transform 0.25s ease-in";
-    cardRef.current.style.transform = `translate(${dir * OUT_DISTANCE}px, ${dy.current}px) rotate(${dir * MAX_ROTATION}deg)`;
-    // Wait for animation to finish
-    setTimeout(cb, 250);
+    cardRef.current.style.transition = "transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
+    const finalRotation = dir * (MAX_ROTATION + 10);
+    cardRef.current.style.transform = `translate(${dir * OUT_DISTANCE}px, ${dy.current + 50}px) rotate(${finalRotation}deg)`;
+    setTimeout(cb, 400);
   };
 
   const resetTopCard = () => {
@@ -236,108 +232,186 @@ export default function BoundaryBarrierCards({
   return (
     <div className="w-full max-w-xl mx-auto">
       {/* Header */}
-      <div className="mb-4">
-        <div className="flex items-center justify-between mb-1">
-          <h2 className="text-2xl font-bold text-slate-800">{title}</h2>
-          <span className="text-sm text-slate-500">
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-2xl font-bold" style={{ color: 'hsl(var(--clay-dark-teal))' }}>{title}</h2>
+          <span className="text-sm font-medium" style={{ color: 'hsl(var(--clay-sage))' }}>
             {Math.min(index, items.length)}/{items.length}
           </span>
         </div>
-        <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
+        <div className="h-3 w-full rounded-full overflow-hidden" style={{ background: 'hsl(var(--clay-pale-mint))' }}>
           <div
-            className="h-full bg-gradient-to-r from-[var(--color-teal)] to-[var(--color-purple)]"
-            style={{ width: `${progressPct}%` }}
+            className="h-full rounded-full transition-all duration-300"
+            style={{ 
+              width: `${progressPct}%`,
+              background: 'linear-gradient(90deg, hsl(var(--clay-teal)), hsl(var(--clay-mint)))'
+            }}
           />
         </div>
       </div>
+      
+      {/* Swipe Instructions */}
+      {!done && (
+        <div className="mb-4 p-4 rounded-2xl flex items-center justify-between gap-4" style={{ 
+          background: 'linear-gradient(135deg, hsl(var(--clay-pale-mint)), hsl(var(--clay-cream)))',
+          border: '2px solid hsl(var(--clay-mint))'
+        }}>
+          <div className="flex items-center gap-2 flex-1">
+            <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: 'hsl(var(--destructive))' }}>
+              <ChevronLeft className="w-6 h-6 text-white" />
+            </div>
+            <span className="text-sm font-semibold" style={{ color: 'hsl(var(--clay-dark-teal))' }}>
+              Swipe left<br/>if it doesn't resonate
+            </span>
+          </div>
+          <div className="w-px h-12" style={{ background: 'hsl(var(--clay-teal))' }} />
+          <div className="flex items-center gap-2 flex-1 justify-end">
+            <span className="text-sm font-semibold text-right" style={{ color: 'hsl(var(--clay-dark-teal))' }}>
+              Swipe right<br/>if it resonates
+            </span>
+            <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: 'hsl(var(--clay-teal))' }}>
+              <ChevronRight className="w-6 h-6 text-white" />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Card Stack */}
-      <div className="relative h-[380px] select-none">
+      <div className="relative h-[420px] select-none">
         {/* Background cards (for depth) */}
         {items.slice(index + 1, index + 3).map((item, i) => (
-          <Card
+          <div
             key={item.id}
-            className="absolute inset-0 mx-2 bg-white border-slate-200"
+            className="absolute inset-0 rounded-3xl"
             style={{
-              transform: `scale(${1 - (i + 1) * 0.04}) translateY(${(i + 1) * 8}px)`,
-              opacity: 0.85 - i * 0.15,
+              transform: `scale(${1 - (i + 1) * 0.05}) translateY(${(i + 1) * 12}px)`,
+              opacity: 0.7 - i * 0.2,
+              background: 'hsl(var(--clay-cream))',
+              border: '3px solid hsl(var(--clay-pale-mint))',
+              boxShadow: '0 8px 24px -4px rgba(77, 130, 128, 0.2)'
             }}
             aria-hidden
-          >
-            <CardContent className="p-0 h-full" />
-          </Card>
+          />
         ))}
 
         {/* Top card */}
         {!done && current && (
-          <Card
-            ref={cardRef as any}
-            className="absolute inset-0 mx-2 bg-white border-slate-200 shadow-xl will-change-transform transition-colors duration-200"
+          <div
+            ref={cardRef}
+            className="absolute inset-0 cursor-grab active:cursor-grabbing rounded-3xl will-change-transform touch-none"
             style={{
-              backgroundColor: swipeDirection === 'left' 
-                ? 'rgba(239, 68, 68, 0.15)' 
+              background: swipeDirection === 'left' 
+                ? 'linear-gradient(135deg, rgba(239, 68, 68, 0.1), hsl(var(--clay-cream)))' 
                 : swipeDirection === 'right' 
-                ? 'rgba(34, 197, 94, 0.15)' 
-                : 'white'
+                ? 'linear-gradient(135deg, rgba(77, 130, 128, 0.2), hsl(var(--clay-pale-mint)))' 
+                : 'linear-gradient(135deg, hsl(var(--clay-cream)), hsl(var(--clay-pale-mint)))',
+              border: swipeDirection 
+                ? `4px solid ${swipeDirection === 'left' ? 'hsl(var(--destructive))' : 'hsl(var(--clay-teal))'}`
+                : '3px solid hsl(var(--clay-mint))',
+              boxShadow: swipeDirection
+                ? `0 20px 60px -10px ${swipeDirection === 'left' ? 'rgba(239, 68, 68, 0.4)' : 'rgba(77, 130, 128, 0.5)'}`
+                : '0 20px 60px -10px rgba(77, 130, 128, 0.3)',
+              transition: 'background 0.2s, border 0.2s, box-shadow 0.2s'
             }}
             onPointerDown={onPointerDown}
             onPointerMove={onPointerMove}
             onPointerUp={onPointerUp}
           >
-            <CardHeader className="pb-2">
-              <CardTitle className="text-xl text-slate-800">{current.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="pt-0">
-              <p className="text-slate-600 leading-relaxed">{current.summary}</p>
+            {/* Swipe direction indicators */}
+            {swipeDirection && (
+              <>
+                <div 
+                  className="absolute top-8 left-8 transition-opacity duration-200"
+                  style={{ 
+                    opacity: swipeDirection === 'left' ? 1 : 0,
+                    pointerEvents: 'none'
+                  }}
+                >
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center animate-pulse" 
+                    style={{ background: 'hsl(var(--destructive))' }}>
+                    <X className="w-10 h-10 text-white" strokeWidth={3} />
+                  </div>
+                </div>
+                <div 
+                  className="absolute top-8 right-8 transition-opacity duration-200"
+                  style={{ 
+                    opacity: swipeDirection === 'right' ? 1 : 0,
+                    pointerEvents: 'none'
+                  }}
+                >
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center animate-pulse" 
+                    style={{ background: 'hsl(var(--clay-teal))' }}>
+                    <Heart className="w-10 h-10 text-white" strokeWidth={3} fill="white" />
+                  </div>
+                </div>
+              </>
+            )}
+            
+            <div className="p-8 h-full flex flex-col">
+              <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(var(--clay-dark-teal))' }}>
+                {current.title}
+              </h3>
+              <p className="text-lg leading-relaxed flex-1" style={{ color: 'hsl(var(--clay-sage))' }}>
+                {current.summary}
+              </p>
 
-              {/* Swipe affordances */}
-              <div className="absolute left-3 bottom-3 right-3 flex items-center justify-between gap-3">
+              {/* Button affordances */}
+              <div className="flex items-center justify-between gap-3 mt-6">
                 <Button
                   variant="outline"
-                  className="flex-1 border-rose-200 text-rose-600 hover:bg-rose-50"
+                  size="lg"
+                  className="flex-1 h-14 rounded-2xl font-semibold text-base border-2 transition-all hover:scale-105"
+                  style={{
+                    borderColor: 'hsl(var(--destructive))',
+                    color: 'hsl(var(--destructive))',
+                    background: 'white'
+                  }}
                   onClick={(e) => {
                     e.stopPropagation();
                     handleChoice(false);
                   }}
                 >
-                  <X className="w-4 h-4 mr-2" />
-                  Doesn't resonate
+                  <X className="w-5 h-5 mr-2" />
+                  Pass
                 </Button>
                 <Button
-                  className="flex-1 bg-gradient-to-r from-[var(--color-teal)] to-[var(--color-purple)] text-white hover:opacity-90"
+                  size="lg"
+                  className="flex-1 h-14 rounded-2xl font-semibold text-base text-white transition-all hover:scale-105"
+                  style={{
+                    background: 'linear-gradient(135deg, hsl(var(--clay-teal)), hsl(var(--clay-mint)))'
+                  }}
                   onClick={(e) => {
                     e.stopPropagation();
                     handleChoice(true);
                   }}
                 >
-                  <Heart className="w-4 h-4 mr-2" />
+                  <Heart className="w-5 h-5 mr-2" />
                   Resonates
                 </Button>
               </div>
-
-              {/* Subtle hint for gesture */}
-              <div className="absolute left-0 right-0 bottom-[86px] text-center">
-                <p className="text-xs text-slate-400">Swipe ⟵ no · yes ⟶</p>
-              </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         )}
 
         {/* Finished summary */}
         {done && (
-          <Card className="absolute inset-0 mx-2 bg-white border-slate-200 flex flex-col">
-            <CardHeader>
-              <CardTitle className="text-xl text-slate-800">Your Boundary Barriers</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-1 overflow-auto">
+          <div className="absolute inset-0 rounded-3xl p-8 flex flex-col" style={{
+            background: 'linear-gradient(135deg, hsl(var(--clay-pale-mint)), hsl(var(--clay-cream)))',
+            border: '3px solid hsl(var(--clay-mint))',
+            boxShadow: '0 20px 60px -10px rgba(77, 130, 128, 0.3)'
+          }}>
+            <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(var(--clay-dark-teal))' }}>
+              Your Boundary Barriers
+            </h3>
+            <div className="flex-1 overflow-auto">
               {showSummaryOnFinish ? (
                 <>
-                  <p className="text-slate-600 mb-3">
+                  <p className="text-base mb-4" style={{ color: 'hsl(var(--clay-sage))' }}>
                     You marked these as most relevant:
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {results.filter(r => r.resonate).length === 0 ? (
-                      <span className="text-slate-500 text-sm">
+                      <span className="text-sm" style={{ color: 'hsl(var(--clay-sage))' }}>
                         None selected. You can retake it.
                       </span>
                     ) : (
@@ -346,7 +420,12 @@ export default function BoundaryBarrierCards({
                         .map((r) => (
                           <span
                             key={r.id}
-                            className="inline-flex items-center rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-sm text-teal-800"
+                            className="inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold"
+                            style={{
+                              background: 'hsl(var(--clay-mint))',
+                              color: 'hsl(var(--clay-dark-teal))',
+                              border: '2px solid hsl(var(--clay-teal))'
+                            }}
                           >
                             {r.title}
                           </span>
@@ -355,40 +434,57 @@ export default function BoundaryBarrierCards({
                   </div>
 
                   {results.filter(r => r.resonate).length > 0 && (
-                    <div className="p-3 rounded-lg border border-slate-200 bg-slate-50 text-sm text-slate-600">
+                    <div className="p-4 rounded-2xl text-sm" style={{
+                      background: 'white',
+                      border: '2px solid hsl(var(--clay-mint))',
+                      color: 'hsl(var(--clay-sage))'
+                    }}>
                       Tip: Link each selected barrier to a short strategy pathway (e.g., a
                       one-minute read or micro-practice) inside your app.
                     </div>
                   )}
                 </>
               ) : (
-                <p className="text-slate-600">
+                <p style={{ color: 'hsl(var(--clay-sage))' }}>
                   Finished! Use the callback to route the user to tailored content.
                 </p>
               )}
 
-              <div className="mt-4 flex items-center justify-between">
-                <Button variant="outline" onClick={restart}>
-                  <RotateCcw className="w-4 h-4 mr-2" />
+              <div className="mt-6 flex items-center justify-between gap-3">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="flex-1 h-12 rounded-2xl font-semibold border-2"
+                  style={{
+                    borderColor: 'hsl(var(--clay-teal))',
+                    color: 'hsl(var(--clay-dark-teal))',
+                    background: 'white'
+                  }}
+                  onClick={restart}
+                >
+                  <RotateCcw className="w-5 h-5 mr-2" />
                   Retake
                 </Button>
 
-                {/* Example: pass results back up */}
                 <Button
-                  className="bg-gradient-to-r from-[var(--color-teal)] to-[var(--color-purple)] text-white hover:opacity-90"
+                  size="lg"
+                  className="flex-1 h-12 rounded-2xl font-semibold text-white"
+                  style={{
+                    background: 'linear-gradient(135deg, hsl(var(--clay-teal)), hsl(var(--clay-mint)))'
+                  }}
                   onClick={() => onFinish?.(results)}
                 >
                   Continue
                 </Button>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         )}
       </div>
 
       {/* Footer mini-legend */}
       {!done && (
-        <div className="mt-4 text-center text-xs text-slate-500">
+        <div className="mt-6 text-center text-sm font-medium" style={{ color: 'hsl(var(--clay-sage))' }}>
           {remaining > -1 && <>Cards remaining: {remaining + 1}</>}
         </div>
       )}
