@@ -2,212 +2,298 @@
 @tailwind components;
 @tailwind utilities;
 
-/* THE KID DECODER – Global colour system */
+/* THE KID DECODER – Sophisticated Dark Card + Light Background System */
 
 @layer base {
 :root{
-  /* Teal/Mint Claymorphic Color Palette */
-  --clay-dark-teal: 178 35% 28%;
-  --clay-teal: 178 30% 45%;
-  --clay-mint: 177 35% 65%;
-  --clay-light-mint: 176 40% 78%;
-  --clay-pale-mint: 175 45% 88%;
-  --clay-cream: 174 35% 92%;
-  --clay-sage: 175 28% 70%;
+  /* Core Palette - Deep Blues/Grays with Teal/Aqua Accents */
+  --slate-dark: 220 25% 14%;
+  --slate-medium: 220 20% 22%;
+  --slate-light: 220 15% 32%;
+  --navy-deep: 222 35% 12%;
+  --navy: 222 30% 18%;
   
-  /* Surface colors */
-  --background: 175 45% 92%;
-  --foreground: 178 40% 18%;
-  --card: 174 50% 96%;
-  --card-foreground: 178 40% 18%;
+  /* Teal/Aqua Accents */
+  --aqua-vibrant: 180 65% 50%;
+  --aqua-soft: 178 50% 60%;
+  --teal-deep: 180 55% 35%;
+  --teal-light: 178 45% 70%;
   
-  /* Primary teal */
-  --primary: 178 35% 45%;
-  --primary-foreground: 0 0% 100%;
+  /* Warm Accent Pops (for status/callouts only) */
+  --amber-warm: 38 92% 60%;
+  --orange-soft: 25 85% 65%;
   
-  /* Secondary mint */
-  --secondary: 176 40% 70%;
-  --secondary-foreground: 178 40% 18%;
+  /* Light Background System */
+  --background: 210 30% 96%;
+  --foreground: 220 25% 14%;
+  --card: 220 25% 16%;
+  --card-foreground: 210 20% 95%;
   
-  /* Accent light mint */
-  --accent: 175 45% 82%;
-  --accent-foreground: 178 40% 18%;
+  /* Primary - Vibrant Aqua */
+  --primary: 180 65% 50%;
+  --primary-foreground: 220 25% 10%;
   
-  /* Muted soft teal-gray */
-  --muted: 176 25% 82%;
-  --muted-foreground: 178 20% 40%;
+  /* Secondary - Soft Teal */
+  --secondary: 178 50% 60%;
+  --secondary-foreground: 220 25% 14%;
+  
+  /* Accent - Light Aqua */
+  --accent: 178 45% 70%;
+  --accent-foreground: 220 25% 14%;
+  
+  /* Muted - Soft Gray-Blue */
+  --muted: 215 20% 88%;
+  --muted-foreground: 220 15% 45%;
   
   /* Borders and inputs */
-  --border: 176 30% 80%;
-  --input: 175 35% 88%;
-  --ring: 177 35% 65%;
+  --border: 215 25% 85%;
+  --input: 210 25% 92%;
+  --ring: 180 65% 50%;
   
-  /* Destructive soft coral */
-  --destructive: 10 65% 75%;
-  --destructive-foreground: 178 40% 18%;
+  /* Destructive - Soft Coral */
+  --destructive: 0 70% 60%;
+  --destructive-foreground: 0 0% 100%;
 
-  /* Popover colors */
-  --popover: 174 50% 96%;
-  --popover-foreground: 178 40% 18%;
+  /* Popover - Dark Card Style */
+  --popover: 220 25% 16%;
+  --popover-foreground: 210 20% 95%;
   
-  /* Sidebar colors - teal/mint theme */
-  --sidebar-background: 175 42% 90%;
-  --sidebar-foreground: 178 40% 18%;
-  --sidebar-primary: 178 35% 45%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 176 40% 82%;
-  --sidebar-accent-foreground: 178 40% 18%;
-  --sidebar-border: 176 30% 75%;
-  --sidebar-ring: 177 35% 65%;
+  /* Sidebar - Light Theme */
+  --sidebar-background: 210 25% 94%;
+  --sidebar-foreground: 220 25% 14%;
+  --sidebar-primary: 180 65% 50%;
+  --sidebar-primary-foreground: 220 25% 10%;
+  --sidebar-accent: 178 45% 85%;
+  --sidebar-accent-foreground: 220 25% 14%;
+  --sidebar-border: 215 25% 85%;
+  --sidebar-ring: 180 65% 50%;
 
-  /* Claymorphic 3D Effects - Teal tones */
-  --clay-shadow-light: 
-    8px 8px 16px rgba(77, 130, 128, 0.15),
-    -8px -8px 16px rgba(220, 242, 240, 0.9);
-  
-  --clay-shadow-medium: 
-    12px 12px 24px rgba(77, 130, 128, 0.2),
-    -12px -12px 24px rgba(220, 242, 240, 0.95);
-  
-  --clay-shadow-heavy: 
-    16px 16px 32px rgba(77, 130, 128, 0.25),
-    -16px -16px 32px rgba(220, 242, 240, 1);
-  
-  --clay-shadow-inset: 
-    inset 6px 6px 12px rgba(77, 130, 128, 0.2),
-    inset -6px -6px 12px rgba(220, 242, 240, 0.9);
+  /* Sophisticated Shadows - Subtle Depth */
+  --shadow-soft: 0 4px 20px rgba(34, 45, 58, 0.08);
+  --shadow-card: 0 8px 32px rgba(34, 45, 58, 0.12), 0 2px 8px rgba(34, 45, 58, 0.08);
+  --shadow-elevated: 0 12px 48px rgba(34, 45, 58, 0.15), 0 4px 12px rgba(34, 45, 58, 0.08);
+  --shadow-glow-aqua: 0 0 24px rgba(45, 212, 191, 0.25);
 
-  /* Rounding - more rounded for clay look */
-  --radius: 24px;
-  --radius-sm: 16px;
-  --radius-md: 24px;
-  --radius-lg: 32px;
-  --radius-xl: 40px;
+  /* Generous Rounding */
+  --radius: 20px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
 }
 
-/* Claymorphic Elements */
-.clay-card {
-  background: hsl(var(--card));
+/* Light Airy Background with Subtle Gradient */
+.bg-airy {
+  background: 
+    radial-gradient(ellipse 120% 80% at 20% 0%, rgba(45, 212, 191, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 60% at 80% 100%, rgba(34, 211, 238, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, hsl(210 30% 98%) 0%, hsl(210 30% 96%) 50%, hsl(215 25% 94%) 100%);
+}
+
+/* Dark Card System */
+.dark-card {
+  background: linear-gradient(145deg, hsl(220 25% 18%) 0%, hsl(222 30% 14%) 100%);
   border-radius: var(--radius-lg);
-  box-shadow: var(--clay-shadow-medium);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clay-card:hover {
-  box-shadow: var(--clay-shadow-heavy);
+.dark-card:hover {
+  box-shadow: var(--shadow-elevated);
   transform: translateY(-2px);
 }
 
-.clay-card-pressed {
-  background: hsl(var(--card));
+/* Feature Card with Teal Accent Glow */
+.dark-card-glow {
+  background: linear-gradient(145deg, hsl(220 25% 18%) 0%, hsl(222 30% 14%) 100%);
   border-radius: var(--radius-lg);
-  box-shadow: var(--clay-shadow-inset);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(45, 212, 191, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.dark-card-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(45, 212, 191, 0.2) 0%, transparent 50%, rgba(34, 211, 238, 0.15) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.dark-card-glow:hover::before {
+  opacity: 1;
+}
+
+.dark-card-glow:hover {
+  box-shadow: var(--shadow-elevated), var(--shadow-glow-aqua);
+  transform: translateY(-3px);
+  border-color: rgba(45, 212, 191, 0.3);
+}
+
+/* Stat Card - Slightly Lighter Dark */
+.stat-card {
+  background: linear-gradient(145deg, hsl(220 22% 22%) 0%, hsl(222 25% 18%) 100%);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  background: linear-gradient(145deg, hsl(220 22% 24%) 0%, hsl(222 25% 20%) 100%);
+  box-shadow: var(--shadow-card);
+}
+
+/* Light Card for Secondary Content */
+.light-card {
+  background: hsl(0 0% 100%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid hsl(215 25% 90%);
+  transition: all 0.3s ease;
+}
+
+.light-card:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-1px);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, hsl(180 65% 50%) 0%, hsl(178 55% 45%) 100%);
+  border-radius: var(--radius-md);
+  border: none;
+  color: hsl(220 25% 10%);
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  box-shadow: 0 4px 16px rgba(45, 212, 191, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 24px rgba(45, 212, 191, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: linear-gradient(145deg, hsl(220 25% 20%) 0%, hsl(222 28% 16%) 100%);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  color: hsl(178 50% 65%);
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(45, 212, 191, 0.4);
+  color: hsl(178 60% 75%);
+  box-shadow: var(--shadow-glow-aqua);
+}
+
+/* Icon Container - Clean Outlined Style */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(145deg, rgba(45, 212, 191, 0.15) 0%, rgba(34, 211, 238, 0.1) 100%);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+}
+
+.icon-container-warm {
+  background: linear-gradient(145deg, rgba(251, 191, 36, 0.15) 0%, rgba(251, 146, 60, 0.1) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.25);
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-badge-active {
+  background: rgba(251, 191, 36, 0.15);
+  color: hsl(38 92% 60%);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.status-badge-teal {
+  background: rgba(45, 212, 191, 0.15);
+  color: hsl(180 65% 55%);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+}
+
+/* Legacy clay styles remapped */
+.clay-card {
+  background: linear-gradient(145deg, hsl(220 25% 18%) 0%, hsl(222 30% 14%) 100%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clay-card:hover {
+  box-shadow: var(--shadow-elevated);
+  transform: translateY(-2px);
 }
 
 .clay-button {
-  background: linear-gradient(145deg, hsl(var(--primary)), hsl(var(--secondary)));
+  background: linear-gradient(135deg, hsl(180 65% 50%) 0%, hsl(178 55% 45%) 100%);
   border-radius: var(--radius-md);
-  box-shadow: var(--clay-shadow-light);
   border: none;
-  color: hsl(var(--primary-foreground));
+  color: hsl(220 25% 10%);
   font-weight: 600;
-  padding: 0.75rem 1.5rem;
+  padding: 0.875rem 1.5rem;
+  box-shadow: 0 4px 16px rgba(45, 212, 191, 0.3);
   transition: all 0.3s ease;
 }
 
 .clay-button:hover {
-  box-shadow: var(--clay-shadow-medium);
+  box-shadow: 0 6px 24px rgba(45, 212, 191, 0.4);
   transform: translateY(-2px);
 }
 
-.clay-button:active {
-  box-shadow: var(--clay-shadow-inset);
-  transform: translateY(0);
-}
-
-/* Teal/Mint Gradient Background */
+/* Legacy bg-pastel-gradient remapped */
 .bg-pastel-gradient {
   background: 
-    radial-gradient(circle at 20% 20%, hsla(177, 40%, 85%, 0.5) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, hsla(175, 45%, 88%, 0.6) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, hsla(176, 35%, 80%, 0.4) 0%, transparent 60%),
-    hsl(var(--background));
+    radial-gradient(ellipse 120% 80% at 20% 0%, rgba(45, 212, 191, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 60% at 80% 100%, rgba(34, 211, 238, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, hsl(210 30% 98%) 0%, hsl(210 30% 96%) 50%, hsl(215 25% 94%) 100%);
 }
 
 .dark {
-  --background: 230 25% 8%;
-  --foreground: 250 15% 90%;
-  --card: 230 25% 10%;
-  --card-foreground: 250 15% 90%;
-  --popover: 230 25% 8%;
-  --popover-foreground: 250 15% 90%;
-  --primary: 240 60% 70%;
-  --primary-foreground: 230 25% 8%;
-  --secondary: 320 40% 60%;
-  --secondary-foreground: 250 15% 90%;
-  --muted: 230 20% 15%;
-  --muted-foreground: 250 10% 65%;
-  --accent: 280 50% 65%;
-  --accent-foreground: 250 15% 90%;
-  --destructive: 0 70% 65%;
-  --destructive-foreground: 250 15% 90%;
-  --border: 230 20% 20%;
-  --input: 230 25% 12%;
-  --ring: 240 60% 70%;
-  --neuro-shadow-light: 20px 20px 40px hsl(230 25% 5%), -20px -20px 40px hsl(230 25% 15%);
-  --neuro-shadow-sm: 8px 8px 16px hsl(230 25% 6%), -8px -8px 16px hsl(230 25% 12%);
-  --neuro-shadow-inset: inset 12px 12px 24px hsl(230 25% 5%), inset -12px -12px 24px hsl(230 25% 15%);
-  --neuro-shadow-active: inset 20px 20px 40px hsl(230 25% 3%), inset -20px -20px 40px hsl(230 25% 18%);
-  --neuro-shadow-deep: 25px 25px 50px hsl(230 25% 3%), -25px -25px 50px hsl(230 25% 20%);
-  --gradient-main-bg: linear-gradient(135deg, 
-    hsl(230 25% 8%) 0%, 
-    hsl(240 20% 10%) 25%, 
-    hsl(250 15% 8%) 50%, 
-    hsl(260 20% 10%) 75%, 
-    hsl(270 25% 12%) 100%);
-}
-
-/* Dashboard Dark Theme */
-.dashboard-dark {
-  background: linear-gradient(135deg, 
-    hsl(230 35% 12%) 0%, 
-    hsl(250 40% 15%) 25%, 
-    hsl(260 35% 12%) 50%, 
-    hsl(270 40% 15%) 75%, 
-    hsl(280 35% 12%) 100%);
-  min-height: 100vh;
-}
-
-/* Dashboard Glass Cards */
-.dashboard-glass {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-/* Dashboard Feature Cards */
-.dashboard-card-teal {
-  background: linear-gradient(135deg, 
-    rgba(20, 184, 166, 0.2) 0%, 
-    rgba(14, 116, 144, 0.15) 100%);
-  border: 1px solid rgba(20, 184, 166, 0.3);
-}
-
-.dashboard-card-purple {
-  background: linear-gradient(135deg, 
-    rgba(139, 92, 246, 0.2) 0%, 
-    rgba(109, 40, 217, 0.15) 100%);
-  border: 1px solid rgba(139, 92, 246, 0.3);
-}
-
-.dashboard-card-pink {
-  background: linear-gradient(135deg, 
-    rgba(236, 72, 153, 0.2) 0%, 
-    rgba(219, 39, 119, 0.15) 100%);
-  border: 1px solid rgba(236, 72, 153, 0.3);
+  --background: 222 35% 10%;
+  --foreground: 210 20% 95%;
+  --card: 220 25% 14%;
+  --card-foreground: 210 20% 95%;
+  --popover: 220 25% 14%;
+  --popover-foreground: 210 20% 95%;
+  --primary: 180 65% 50%;
+  --primary-foreground: 220 25% 10%;
+  --secondary: 178 50% 60%;
+  --secondary-foreground: 210 20% 95%;
+  --muted: 220 20% 20%;
+  --muted-foreground: 215 15% 60%;
+  --accent: 178 45% 70%;
+  --accent-foreground: 210 20% 95%;
+  --destructive: 0 70% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 20% 25%;
+  --input: 220 25% 18%;
+  --ring: 180 65% 50%;
 }
 }
 
@@ -216,58 +302,26 @@
     @apply border-border;
   }
 
-  /* ---------- 3) App-wide application ---------- */
   html {
     background: transparent;
   }
 
   body {
-    background: #DCE3EC;
-    color: #002962;
+    background: hsl(210 30% 96%);
+    color: hsl(220 25% 14%);
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 
-  /* Page backgrounds */
-  .app-bg-aurora { background: var(--grad-aurora); }
-  .app-bg-sunset { background: var(--grad-sunset); }
-  .app-bg-therapy { background: var(--grad-therapy); }
-  .app-bg-ocean { background: var(--grad-ocean); }
-  .app-bg-hero { background: var(--grad-hero); }
-
-  /* Solid backgrounds */
-  .bg-white { background: var(--white); }
-  .bg-mint { background: var(--mint); }
-  .bg-lavender { background: var(--lavender); }
-  .bg-soft-red { background: var(--soft-red); }
-  .bg-peach { background: var(--peach); }
-  .bg-violet { background: var(--violet); }
-  .bg-ink { background: var(--ink); }
-  .bg-teal-grey { background: var(--teal-grey); }
-  .bg-beige { background: var(--beige); }
-  .bg-pink-ice { background: var(--pink-ice); }
-  .bg-plum { background: var(--plum); }
-  .bg-pastel-y { background: var(--pastel-y); }
-  .bg-deep-teal { background: var(--deep-teal); }
-  .bg-dusty-rose { background: var(--dusty-rose); }
-  .bg-rose { background: var(--rose); }
-  .bg-raspberry { background: var(--raspberry); }
-  .bg-mint-ice { background: var(--mint-ice); }
-
-  /* Text colours */
-  .text-ink { color: var(--ink); }
-  .text-muted { color: var(--muted); }
-  .text-violet { color: var(--violet); }
-  .text-rose { color: var(--rose); }
-
-  /* Cards / panels (works nicely with neumorphism if you add shadows) */
+  /* Cards */
   .card {
-    background: var(--white);
+    background: linear-gradient(145deg, hsl(220 25% 18%) 0%, hsl(222 30% 14%) 100%);
     border-radius: 20px;
     padding: 16px;
-    box-shadow: 8px 8px 24px rgba(13,18,22,0.15), -8px -8px 24px rgba(255,255,255,0.8);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   /* Buttons */
@@ -278,443 +332,61 @@
     padding: 12px 18px;
     border-radius: 16px;
     font-weight: 600;
-    color: var(--white);
-    background: var(--grad-cta);
-    box-shadow: 0 10px 24px rgba(13,18,22,0.25);
+    color: hsl(220 25% 10%);
+    background: linear-gradient(135deg, hsl(180 65% 50%) 0%, hsl(178 55% 45%) 100%);
+    box-shadow: 0 4px 16px rgba(45, 212, 191, 0.3);
     border: 0;
     cursor: pointer;
-  }
-  .button.alt { background: var(--grad-ocean); }
-  .button.ghost {
-    background: transparent;
-    color: var(--deep-teal);
-    border: 2px solid var(--deep-teal);
   }
 
   /* Inputs */
   .input {
-    background: var(--white);
-    color: var(--fg);
+    background: hsl(0 0% 100%);
+    color: hsl(220 25% 14%);
     border-radius: 14px;
     padding: 12px 14px;
-    border: 1px solid rgba(13,18,22,0.08);
-    box-shadow: inset 3px 3px 8px rgba(13,18,22,0.08), inset -3px -3px 8px rgba(255,255,255,0.8);
+    border: 1px solid hsl(215 25% 85%);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
   }
 
-  /* Utility gradient text (e.g., headings) */
+  /* Gradient text */
   .grad-text {
-    background: var(--grad-therapy);
+    background: linear-gradient(135deg, hsl(180 65% 50%) 0%, hsl(178 50% 60%) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
+}
 
-  /* App container matching the uploaded image */
-  .dreamy-app {
-    position: relative;
-    min-height: 100vh;
-    padding: 2rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .dreamy-container {
-    position: relative;
-    width: min(380px, 90vw);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  /* Deep neumorphic cards matching the uploaded image exactly */
-  .dreamy-card {
-    position: relative;
-    background: var(--neuro-card);
-    border: none;
-    border-radius: 24px;
-    box-shadow: var(--neuro-shadow-deep);
-    padding: 24px;
-    transition: all 0.3s ease;
-  }
+@layer utilities {
+  /* Text Colors */
+  .text-aqua { color: hsl(180 65% 50%); }
+  .text-teal { color: hsl(178 50% 60%); }
+  .text-amber { color: hsl(38 92% 60%); }
+  .text-slate-light { color: hsl(210 20% 95%); }
+  .text-slate-muted { color: hsl(215 15% 60%); }
   
-  .dreamy-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 30px 30px 60px hsl(250 40% 68%), -30px -30px 60px hsl(250 40% 98%);
-  }
+  /* Background Colors */
+  .bg-slate-dark { background: hsl(220 25% 14%); }
+  .bg-navy { background: hsl(222 30% 18%); }
+  .bg-aqua { background: hsl(180 65% 50%); }
+}
 
-  .dreamy-card-hero {
-    padding: 32px 24px;
-    position: relative;
-    overflow: hidden;
-    min-height: 200px;
-  }
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
 
-  .dreamy-card-small {
-    padding: 20px;
-    border-radius: 20px;
-  }
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
 
-  .dreamy-card-tiny {
-    padding: 16px;
-    border-radius: 16px;
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
 
-  /* Deep neumorphic buttons matching the uploaded image */
-  .dreamy-button {
-    background: var(--neuro-button);
-    border: none;
-    border-radius: 16px;
-    padding: 12px 24px;
-    color: hsl(var(--foreground));
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    box-shadow: var(--neuro-button-shadow);
-  }
-
-  .dreamy-button:hover {
-    background: var(--neuro-button-light);
-    transform: translateY(-2px);
-    box-shadow: 18px 18px 36px hsl(250 40% 72%), -18px -18px 36px hsl(250 40% 97%);
-  }
-  
-  .dreamy-button:active {
-    transform: translateY(1px);
-    box-shadow: var(--neuro-button-pressed);
-  }
-
-  /* Decorative elements matching the uploaded image */
-  .dreamy-sun {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: var(--sunset-gradient);
-    box-shadow: 8px 8px 16px hsl(25 70% 60%), -8px -8px 16px hsl(25 70% 85%), 0 0 40px rgba(255, 180, 80, 0.6);
-  }
-
-  .dreamy-mountains {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 80px;
-    background: var(--mountain-gradient);
-    clip-path: polygon(0 100%, 20% 40%, 40% 60%, 60% 30%, 80% 50%, 100% 20%, 100% 100%);
-  }
-
-  .dreamy-toggle {
-    width: 44px;
-    height: 24px;
-    border-radius: 12px;
-    background: var(--toggle-gradient);
-    position: relative;
-    cursor: pointer;
-  }
-
-  .dreamy-toggle::after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Legacy ecosystem cards for backwards compatibility */
-  .ecosystem-card {
-    background: var(--texture-organic), hsl(var(--card));
-    border: 1px solid hsl(var(--border));
-    border-radius: 24px;
-    box-shadow: var(--shadow-floating);
-    transform: var(--transform-organic);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: blur(8px);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .ecosystem-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--gradient-organic);
-    opacity: 0.5;
-  }
-
-  .ecosystem-card:hover {
-    transform: var(--transform-grow);
-    box-shadow: var(--shadow-deep);
-  }
-
-  /* Glassmorphism buttons and UI elements */
-  .kd-btn {
-    border: 0;
-    padding: 14px 24px;
-    border-radius: 20px;
-    background: linear-gradient(145deg, 
-      hsl(0 0% 100% / 0.15) 0%, 
-      hsl(0 0% 100% / 0.08) 100%);
-    border: 1px solid hsl(0 0% 100% / 0.2);
-    box-shadow: var(--shadow-glass-sm);
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    color: hsl(var(--foreground));
-    backdrop-filter: blur(12px);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .kd-btn:hover {
-    transform: translateY(-2px) scale(1.02);
-    background: linear-gradient(145deg, 
-      hsl(0 0% 100% / 0.2) 0%, 
-      hsl(0 0% 100% / 0.12) 100%);
-    border-color: hsl(0 0% 100% / 0.3);
-    box-shadow: var(--shadow-glass-md), var(--shadow-glow-teal);
-  }
-
-  .kd-btn--primary {
-    background: linear-gradient(145deg, 
-      hsl(var(--ecosystem-purple) / 0.8) 0%, 
-      hsl(var(--ecosystem-purple) / 0.6) 100%);
-    border-color: hsl(var(--ecosystem-purple) / 0.4);
-    color: white;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: var(--shadow-glow-purple);
-  }
-
-  .kd-btn--primary:hover {
-    background: linear-gradient(145deg, 
-      hsl(var(--ecosystem-purple) / 0.9) 0%, 
-      hsl(var(--ecosystem-purple) / 0.7) 100%);
-    box-shadow: var(--shadow-glow-purple), var(--shadow-glass-md);
-  }
-
-  /* Glass pills and chips */
-  .kd-pill {
-    border: 0;
-    padding: 10px 18px;
-    border-radius: 25px;
-    background: linear-gradient(145deg, 
-      hsl(0 0% 100% / 0.12) 0%, 
-      hsl(0 0% 100% / 0.06) 100%);
-    border: 1px solid hsl(0 0% 100% / 0.15);
-    box-shadow: var(--shadow-glass-sm);
-    color: hsl(var(--foreground));
-    font-weight: 600;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: blur(8px);
-  }
-
-  .kd-pill:hover {
-    background: linear-gradient(145deg, 
-      hsl(0 0% 100% / 0.18) 0%, 
-      hsl(0 0% 100% / 0.1) 100%);
-    transform: translateY(-1px);
-  }
-
-  .kd-pill--alt {
-    background: linear-gradient(145deg, 
-      hsl(var(--ecosystem-purple) / 0.15) 0%, 
-      hsl(var(--ecosystem-purple) / 0.08) 100%);
-    border-color: hsl(var(--ecosystem-purple) / 0.25);
-    color: hsl(var(--ecosystem-purple));
-  }
-
-  .kd-chip {
-    border: 0;
-    padding: 12px 18px;
-    border-radius: 18px;
-    background: linear-gradient(145deg, 
-      hsl(0 0% 100% / 0.1) 0%, 
-      hsl(0 0% 100% / 0.05) 100%);
-    border: 1px solid hsl(0 0% 100% / 0.12);
-    box-shadow: var(--shadow-glass-sm);
-    font-weight: 600;
-    font-size: 0.85rem;
-    cursor: pointer;
-    color: hsl(var(--foreground));
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: blur(8px);
-  }
-
-  .kd-chip:hover {
-    background: linear-gradient(145deg, 
-      hsl(0 0% 100% / 0.15) 0%, 
-      hsl(0 0% 100% / 0.08) 100%);
-    transform: translateY(-1px) scale(1.02);
-  }
-
-  /* Legacy ecosystem buttons */
-  .ecosystem-button {
-    background: var(--gradient-organic);
-    border: none;
-    border-radius: 20px;
-    box-shadow: var(--shadow-organic);
-    transform: var(--transform-float);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .ecosystem-button::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: var(--gradient-coral);
-    border-radius: 22px;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .ecosystem-button:hover {
-    transform: var(--transform-grow);
-    box-shadow: var(--shadow-glow);
-  }
-
-  .ecosystem-button:hover::before {
-    opacity: 1;
-  }
-
-  .floating-element {
-    animation: float 6s ease-in-out infinite;
-    transform-origin: center center;
-  }
-
-  @keyframes float {
-    0%, 100% { 
-      transform: translateY(0px) rotate(0deg); 
-    }
-    33% { 
-      transform: translateY(-10px) rotate(1deg); 
-    }
-    66% { 
-      transform: translateY(-5px) rotate(-1deg); 
-    }
-  }
-
-  .organic-shape {
-    position: absolute;
-    border-radius: 50% 40% 60% 30%;
-    background: var(--gradient-organic);
-    opacity: 0.1;
-    animation: organic-morph 8s ease-in-out infinite;
-  }
-
-  @keyframes organic-morph {
-    0%, 100% { 
-      border-radius: 50% 40% 60% 30%;
-      transform: rotate(0deg) scale(1);
-    }
-    25% { 
-      border-radius: 40% 60% 30% 50%;
-      transform: rotate(90deg) scale(1.1);
-    }
-    50% { 
-      border-radius: 60% 30% 50% 40%;
-      transform: rotate(180deg) scale(0.9);
-    }
-    75% { 
-      border-radius: 30% 50% 40% 60%;
-      transform: rotate(270deg) scale(1.05);
-    }
-  }
-
-  .gradient-text {
-    background: var(--gradient-organic);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Kid Theme Wrapper Styles */
-  /* Updated color tokens */
-  :root {
-    --color-coral: #FFDA6C;
-    --color-teal: #0062B8;
-  }
-
-  /* Force base colours inside our app, regardless of Lovable's defaults */
-  .kid-theme, .kid-theme * { 
-    color: var(--text); 
-  }
-  .kid-theme .muted, .kid-theme .subtle, .kid-theme .caption { 
-    color: var(--text-muted) !important; 
-  }
-
-
-  /* Gradient background variations - removed to use Tailwind utilities instead */
-
-  /* Glass panes – less milk, more contrast; stronger shadow */
-  .kid-theme .glass {
-    background: rgba(255,255,255,0.35) !important;
-    border: 1px solid rgba(255,255,255,0.30) !important;
-    backdrop-filter: blur(var(--glass-blur)); 
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    border-radius: 18px !important;
-    box-shadow: 0 12px 30px rgba(92,141,207,0.22) !important;
-  }
-
-  /* Neumorphic tiles */
-  .kid-theme .neu {
-    background: var(--surface) !important;
-    border-radius: 18px !important;
-    box-shadow:
-      10px 10px 24px rgba(15,23,42,0.08),
-      -10px -10px 24px rgba(255,255,255,0.85) !important;
-  }
-
-  /* Pressed state */
-  .kid-theme .neu-pressed {
-    background: var(--surface) !important;
-    border-radius: 18px !important;
-    box-shadow:
-      inset 6px 6px 14px rgba(15,23,42,0.08),
-      inset -6px -6px 14px rgba(255,255,255,0.85) !important;
-  }
-
-  /* Primary action button – always visible */
-  .kid-theme .btn-primary,
-  .kid-theme .primary,
-  .kid-theme .cta {
-    background-image: var(--grad-teal-peachy) !important;
-    color: #fff !important;
-    border: 0 !important;
-    box-shadow: 0 8px 20px rgba(0, 98, 184, 0.25) !important;
-  }
-
-  /* Kill accidental white text on light backgrounds */
-  .kid-theme .text-white:not(.on-dark) { 
-    color: var(--text) !important; 
-  }
-
-  /* iOS readability tweaks */
-  @supports (-webkit-touch-callout: none) {
-    .kid-theme .glass { 
-      background: rgba(255,255,255,0.32) !important; 
-    }
-  }
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
 }
