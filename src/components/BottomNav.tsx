@@ -29,12 +29,21 @@ export default function BottomNav() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 pb-safe">
-      <nav className="bg-gradient-to-t from-background via-secondary/30 to-background/95 backdrop-blur-xl border-t border-border/40 shadow-clay-heavy">
+      <nav className="bg-slate-800/95 backdrop-blur-xl border-t border-white/10 shadow-elevated">
         <div className="max-w-screen-xl mx-auto px-4">
-          <div className="flex items-center justify-around py-4">
-            {navItems.map((item) => {
+          <div className="flex items-center justify-around py-3">
+            {navItems.map((item, index) => {
               const isActive = location.pathname === item.path;
               const Icon = item.icon;
+              
+              // Cycle through brand colors
+              const colors = [
+                { active: "from-teal to-mint", glow: "shadow-glow-teal", text: "text-teal" },
+                { active: "from-purple to-purple-light", glow: "shadow-glow-purple", text: "text-purple" },
+                { active: "from-teal to-teal-light", glow: "shadow-glow-teal", text: "text-teal" },
+                { active: "from-pink to-pink-light", glow: "shadow-glow-pink", text: "text-pink" },
+              ];
+              const colorScheme = colors[index % colors.length];
 
               return (
                 <Link
@@ -44,29 +53,28 @@ export default function BottomNav() {
                 >
                   <div
                     className={`
-                      relative w-16 h-16 rounded-full transition-all duration-300
+                      relative w-14 h-14 rounded-2xl transition-all duration-300
                       ${
                         isActive
-                          ? "bg-gradient-to-br from-[hsl(178,35%,35%)] via-[hsl(177,35%,50%)] to-[hsl(176,40%,65%)] shadow-[0_12px_24px_-4px_rgba(77,130,128,0.6),0_8px_16px_-2px_rgba(127,181,178,0.5),inset_0_-4px_12px_rgba(0,0,0,0.4),inset_0_2px_8px_rgba(255,255,255,0.4)]"
-                          : "bg-gradient-to-br from-[hsl(178,30%,40%)] to-[hsl(177,35%,55%)] shadow-[0_8px_16px_-2px_rgba(77,130,128,0.4),inset_0_-3px_10px_rgba(0,0,0,0.3),inset_0_1px_4px_rgba(255,255,255,0.25)] group-hover:from-[hsl(178,35%,35%)] group-hover:via-[hsl(177,35%,50%)] group-hover:to-[hsl(176,40%,65%)] group-hover:shadow-[0_12px_24px_-4px_rgba(77,130,128,0.6),0_8px_16px_-2px_rgba(127,181,178,0.5)]"
+                          ? `bg-gradient-to-br ${colorScheme.active} ${colorScheme.glow}`
+                          : "bg-white/5 border border-white/10 group-hover:bg-white/10 group-hover:border-white/20"
                       }
                       flex items-center justify-center
-                      transform group-hover:scale-110 group-active:scale-95
-                      before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/25 before:to-transparent before:opacity-60
+                      transform group-hover:scale-105 group-active:scale-95
                     `}
                   >
                     <Icon
-                      className={`w-8 h-8 transition-all duration-300 relative z-10 ${
+                      className={`w-6 h-6 transition-all duration-300 ${
                         isActive
-                          ? "text-[hsl(175,45%,92%)] drop-shadow-[0_0_12px_rgba(184,216,214,0.9)] filter brightness-125"
-                          : "text-[hsl(176,40%,85%)] group-hover:text-[hsl(175,45%,92%)] group-hover:drop-shadow-[0_0_12px_rgba(184,216,214,0.9)] group-hover:brightness-125"
+                          ? "text-white"
+                          : `text-white/60 group-hover:${colorScheme.text}`
                       }`}
-                      strokeWidth={2.8}
+                      strokeWidth={1.5}
                     />
                   </div>
                   <span
-                    className={`text-xs font-bold transition-colors duration-300 ${
-                      isActive ? "text-primary" : "text-muted-foreground group-hover:text-primary"
+                    className={`text-xs font-medium transition-colors duration-300 ${
+                      isActive ? colorScheme.text : "text-white/50 group-hover:text-white/80"
                     }`}
                   >
                     {item.label}

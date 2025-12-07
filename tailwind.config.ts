@@ -62,29 +62,45 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Sophisticated color palette
-				slate: {
-					dark: 'hsl(220 25% 14%)',
-					medium: 'hsl(220 20% 22%)',
-					light: 'hsl(220 15% 32%)'
-				},
-				navy: {
-					deep: 'hsl(222 35% 12%)',
-					DEFAULT: 'hsl(222 30% 18%)'
-				},
-				aqua: {
-					vibrant: 'hsl(180 65% 50%)',
-					soft: 'hsl(178 50% 60%)'
-				},
+				// Brand Colors
 				teal: {
-					deep: 'hsl(180 55% 35%)',
-					light: 'hsl(178 45% 70%)'
+					deep: 'hsl(175 60% 35%)',
+					DEFAULT: 'hsl(175 55% 45%)',
+					light: 'hsl(175 50% 55%)'
+				},
+				mint: {
+					DEFAULT: 'hsl(165 50% 65%)',
+					light: 'hsl(165 45% 75%)'
+				},
+				purple: {
+					deep: 'hsl(270 45% 45%)',
+					DEFAULT: 'hsl(270 50% 55%)',
+					light: 'hsl(270 45% 70%)'
+				},
+				pink: {
+					DEFAULT: 'hsl(330 55% 60%)',
+					light: 'hsl(330 50% 75%)',
+					soft: 'hsl(330 45% 85%)'
+				},
+				// Neutrals
+				slate: {
+					900: 'hsl(220 25% 12%)',
+					800: 'hsl(220 22% 18%)',
+					700: 'hsl(220 18% 28%)',
+					600: 'hsl(220 15% 40%)',
+					500: 'hsl(220 12% 55%)',
+					400: 'hsl(220 10% 70%)',
+					300: 'hsl(220 15% 85%)',
+					200: 'hsl(220 20% 92%)',
+					100: 'hsl(220 25% 96%)'
+				},
+				// Legacy aliases
+				aqua: {
+					vibrant: 'hsl(175 55% 45%)',
+					soft: 'hsl(175 50% 60%)'
 				},
 				amber: {
-					warm: 'hsl(38 92% 60%)'
-				},
-				orange: {
-					soft: 'hsl(25 85% 65%)'
+					warm: 'hsl(330 55% 60%)'
 				}
 			},
 			borderRadius: {
@@ -93,7 +109,8 @@ export default {
 				sm: 'calc(var(--radius) - 8px)',
 				xl: 'var(--radius-xl)',
 				'2xl': '32px',
-				'3xl': '40px'
+				'3xl': '40px',
+				'pill': '9999px'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -106,25 +123,32 @@ export default {
 				},
 				'float': {
 					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-6px)' }
+					'50%': { transform: 'translateY(-8px)' }
 				},
 				'pulse-soft': {
 					'0%, 100%': { opacity: '1' },
-					'50%': { opacity: '0.7' }
+					'50%': { opacity: '0.6' }
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-200% 0' },
+					'100%': { backgroundPosition: '200% 0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 4s ease-in-out infinite',
-				'pulse-soft': 'pulse-soft 2s ease-in-out infinite'
+				'pulse-soft': 'pulse-soft 2s ease-in-out infinite',
+				'shimmer': 'shimmer 2s infinite'
 			},
 			boxShadow: {
-				'soft': '0 4px 20px rgba(34, 45, 58, 0.08)',
-				'card': '0 8px 32px rgba(34, 45, 58, 0.12), 0 2px 8px rgba(34, 45, 58, 0.08)',
-				'elevated': '0 12px 48px rgba(34, 45, 58, 0.15), 0 4px 12px rgba(34, 45, 58, 0.08)',
-				'glow-aqua': '0 0 24px rgba(45, 212, 191, 0.25)',
-				'glow-amber': '0 0 16px rgba(251, 191, 36, 0.3)'
+				'glass': '0 8px 32px rgba(31, 38, 50, 0.12)',
+				'glass-lg': '0 12px 40px rgba(31, 38, 50, 0.18)',
+				'elevated': '0 16px 48px rgba(31, 38, 50, 0.20)',
+				'glow-teal': '0 4px 24px rgba(45, 180, 170, 0.30)',
+				'glow-purple': '0 4px 24px rgba(138, 92, 194, 0.30)',
+				'glow-pink': '0 4px 24px rgba(219, 112, 147, 0.30)',
+				'glow-mint': '0 4px 24px rgba(112, 193, 165, 0.30)'
 			}
 		}
 	},
