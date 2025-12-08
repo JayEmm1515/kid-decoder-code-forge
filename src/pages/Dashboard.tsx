@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
+import PageHeader from "@/components/PageHeader";
 import { Child, BehaviorEntry, MoodEntry } from "@/entities/all";
-import { TrendingUp, MessageCircle, Users, Calendar, Edit } from "lucide-react";
+import { TrendingUp, MessageCircle, Users, Calendar, Edit, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 
@@ -38,114 +38,114 @@ export default function Dashboard() {
     {
       title: "Mood & Behaviour",
       subtitle: "Track recent entries",
-      icon: <TrendingUp className="w-10 h-10" strokeWidth={1.5} />,
+      icon: TrendingUp,
       href: createPageUrl("Tracking"),
-      className: "dashboard-card-teal"
+      cardStyle: "glass-card-teal",
+      iconStyle: "icon-box-teal"
     },
     {
       title: "Parenting Chat",
       subtitle: "Ask the AI coach",
-      icon: <MessageCircle className="w-10 h-10" strokeWidth={1.5} />,
+      icon: MessageCircle,
       href: createPageUrl("ParentingChat"),
-      className: "dashboard-card-purple"
+      cardStyle: "glass-card-purple",
+      iconStyle: "icon-box-purple"
     },
     {
       title: "Your Children",
       subtitle: "Manage profiles",
-      icon: <Users className="w-10 h-10" strokeWidth={1.5} />,
+      icon: Users,
       href: createPageUrl("Children"),
-      className: "dashboard-card-pink"
+      cardStyle: "glass-card-pink",
+      iconStyle: "icon-box-pink"
     },
   ];
 
   const quickActions = [
-    { label: "Track Mood", icon: <TrendingUp className="w-5 h-5" />, href: createPageUrl("Tracking") },
-    { label: "Add Behaviour", icon: <Calendar className="w-5 h-5" />, href: createPageUrl("Tracking") },
-    { label: "Update Profile", icon: <Edit className="w-5 h-5" />, href: createPageUrl("Children") },
+    { label: "Track Mood", icon: TrendingUp, href: createPageUrl("Tracking") },
+    { label: "Add Behaviour", icon: Calendar, href: createPageUrl("Tracking") },
+    { label: "Update Profile", icon: Edit, href: createPageUrl("Children") },
   ];
 
   const recentActivities = [
-    { text: "You logged a mood entry for Alice", time: "2 hours ago", color: "bg-cyan-400" },
-    { text: "You updated Jane's profile", time: "Yesterday", color: "bg-blue-400" },
-    { text: "You logged a behaviour note for Jack", time: "2 days ago", color: "bg-purple-400" },
+    { text: "You logged a mood entry for Alice", time: "2 hours ago", color: "bg-teal" },
+    { text: "You updated Jane's profile", time: "Yesterday", color: "bg-purple" },
+    { text: "You logged a behaviour note for Jack", time: "2 days ago", color: "bg-pink" },
   ];
 
   return (
     <Layout currentPageName="Dashboard">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6 md:p-8 lg:p-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-br from-slate-800/40 via-purple-900/30 to-slate-800/40 backdrop-blur-xl border border-cyan-500/20 rounded-[3rem] p-8 md:p-12 lg:p-16 shadow-2xl">
-            {/* Header */}
-            <div className="mb-12">
-              <h1 className="text-5xl md:text-6xl font-bold mb-3 text-cyan-400">
-                Welcome back 👋
-              </h1>
-              <p className="text-gray-300 text-lg md:text-xl">Your parenting insights at a glance</p>
-            </div>
+      <div className="min-h-screen bg-airy p-4 md:p-8 pb-24">
+        <div className="max-w-7xl mx-auto space-y-6">
+          
+          <PageHeader 
+            title="Welcome back 👋" 
+            subtitle="Your parenting insights at a glance"
+            showBack={false}
+          />
 
-            {/* Feature Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              {featureCards.map((card, index) => (
-                <Link key={index} to={card.href}>
-                  <Card className={`${card.className} border-0 hover:scale-105 transition-all duration-300 cursor-pointer overflow-hidden shadow-2xl`}>
-                    <CardContent className="p-8">
-                      <div className="text-white mb-4">{card.icon}</div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{card.title}</h3>
-                      <p className="text-gray-300 text-sm">{card.subtitle}</p>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-
-            {/* Main Content Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Recent Activity */}
-              <Card className="bg-slate-800/40 backdrop-blur-xl border border-cyan-500/20 shadow-xl">
-                <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold text-cyan-400 mb-6">
-                    Recent Activity
-                  </h2>
-                  <div className="space-y-4">
-                    {recentActivities.map((activity, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className={`w-3 h-3 rounded-full ${activity.color} mt-1.5 flex-shrink-0`}></div>
-                        <div className="flex-1 flex justify-between items-start">
-                          <p className="text-white text-sm">{activity.text}</p>
-                          <p className="text-gray-400 text-xs whitespace-nowrap ml-4">{activity.time}</p>
-                        </div>
+          {/* Feature Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {featureCards.map((card, index) => (
+              <Link key={index} to={card.href} className="group">
+                <div className={`${card.cardStyle} p-6`}>
+                  <div className="flex items-start gap-4">
+                    <div className={`icon-box ${card.iconStyle}`}>
+                      <card.icon className="w-6 h-6 text-teal" strokeWidth={1.5} />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-lg font-semibold text-white">{card.title}</h3>
+                        <ChevronRight className="w-5 h-5 text-white/30 group-hover:text-teal transition-all" strokeWidth={1.5} />
                       </div>
-                    ))}
+                      <p className="text-sm text-white/50 mt-1">{card.subtitle}</p>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </Link>
+            ))}
+          </div>
 
-              {/* Quick Actions */}
-              <Card className="bg-slate-800/40 backdrop-blur-xl border border-cyan-500/20 shadow-xl">
-                <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold text-cyan-400 mb-6">
-                    Quick Actions
-                  </h2>
-                  <div className="space-y-3">
-                    {quickActions.map((action, index) => (
-                      <Link key={index} to={action.href}>
-                        <button className="w-full flex items-center gap-3 px-6 py-4 rounded-2xl bg-slate-700/30 border border-cyan-500/20 hover:bg-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 text-left group">
-                          <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                            {action.icon}
-                          </div>
-                          <span className="text-cyan-400 font-medium">{action.label}</span>
-                        </button>
-                      </Link>
-                    ))}
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            {/* Recent Activity */}
+            <div className="glass-card p-6">
+              <h2 className="text-lg font-bold text-white mb-4">Recent Activity</h2>
+              <div className="space-y-3">
+                {recentActivities.map((activity, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className={`w-2.5 h-2.5 rounded-full ${activity.color} mt-1.5 flex-shrink-0`}></div>
+                    <div className="flex-1 flex justify-between items-start">
+                      <p className="text-white/80 text-sm">{activity.text}</p>
+                      <p className="text-white/40 text-xs whitespace-nowrap ml-3">{activity.time}</p>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                ))}
+              </div>
             </div>
 
-            {/* Footer */}
-            <div className="mt-16">
-              <p className="text-cyan-500 text-sm font-semibold tracking-widest">THE KID DECODER</p>
+            {/* Quick Actions */}
+            <div className="glass-card p-6">
+              <h2 className="text-lg font-bold text-white mb-4">Quick Actions</h2>
+              <div className="space-y-2">
+                {quickActions.map((action, index) => (
+                  <Link key={index} to={action.href}>
+                    <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl stat-card hover:bg-white/10 transition-all text-left group">
+                      <div className="icon-box icon-box-teal w-10 h-10">
+                        <action.icon className="w-5 h-5 text-teal" strokeWidth={1.5} />
+                      </div>
+                      <span className="text-white/80 font-medium text-sm">{action.label}</span>
+                      <ChevronRight className="w-4 h-4 text-white/30 ml-auto group-hover:text-teal transition-all" strokeWidth={1.5} />
+                    </button>
+                  </Link>
+                ))}
+              </div>
             </div>
+          </div>
+
+          {/* Footer Branding */}
+          <div className="text-center pt-4">
+            <p className="text-teal text-xs font-semibold tracking-widest uppercase">The Kid Decoder</p>
           </div>
         </div>
       </div>

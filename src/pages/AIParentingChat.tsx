@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
 import Layout from "@/components/Layout";
+import PageHeader from "@/components/PageHeader";
 import { Child } from "@/entities/all";
-import { MessageCircle, Send, Bot, User, AlertCircle, Info, Heart } from "lucide-react";
+import { Send, Bot, User, AlertCircle, Heart } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 type Message = {
@@ -36,11 +34,10 @@ export default function AIParentingChatPage() {
 
   useEffect(() => {
     loadChildren();
-    // Add welcome message
     setMessages([{
       id: '1',
       role: 'assistant',
-      content: "Hello! I'm here to provide evidence-based parenting guidance tailored to your child's developmental needs. Please select your child from the dropdown to get personalized advice, or ask me any parenting question. Remember, I provide general guidance - for specific concerns, always consult qualified professionals.",
+      content: "Hello! I'm here to provide evidence-based parenting guidance tailored to your child's developmental needs. Please select your child from the dropdown to get personalized advice, or ask me any parenting question.",
       timestamp: new Date()
     }]);
   }, []);
@@ -98,7 +95,6 @@ export default function AIParentingChatPage() {
     setInputMessage("");
     setIsLoading(true);
 
-    // Simulate AI response delay
     setTimeout(() => {
       const childContext = children.find(c => c.id === selectedChild);
       const aiResponse: Message = {
@@ -128,137 +124,125 @@ export default function AIParentingChatPage() {
 
   return (
     <Layout>
-      <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6 max-w-4xl mx-auto min-h-screen flex flex-col">
-        <div className="mb-6">
-          <h1 className="text-3xl font-bold text-cyan-400 mb-2 flex items-center gap-3">
-            <MessageCircle className="w-8 h-8 text-cyan-400" />
-            AI Parenting Chat
-          </h1>
-          <p className="text-gray-300">Get personalized, evidence-based parenting guidance for your child's unique needs.</p>
-        </div>
+      <div className="min-h-screen bg-airy p-4 md:p-6 pb-24 flex flex-col max-w-4xl mx-auto">
+        
+        <PageHeader 
+          title="AI Coach" 
+          subtitle="Evidence-based parenting guidance"
+          showOptions={true}
+        />
 
         {/* Child Selection */}
-        <Card className="mb-4 bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-2xl">
-          <CardContent className="p-4">
-            <div className="flex items-center gap-4">
-              <Label className="font-medium text-cyan-400">Select Child (optional):</Label>
-              <Select value={selectedChild} onValueChange={setSelectedChild}>
-                <SelectTrigger className="w-48 bg-slate-700/50 border-cyan-400/30 text-white rounded-xl">
-                  <SelectValue placeholder="Choose child" />
-                </SelectTrigger>
-                <SelectContent className="bg-slate-800 border-cyan-400/30 text-white rounded-xl">
-                  <SelectItem value="general">General Advice</SelectItem>
-                  {children && children.length > 0 && children.map(child => (
-                    <SelectItem key={child.id} value={child.id}>
-                      {child.name} ({child.age_group})
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              {selectedChild && (
-                <Badge variant="secondary" className="ml-2 bg-cyan-500/20 text-cyan-400 border-cyan-400/30 rounded-xl">
-                  <Heart className="w-3 h-3 mr-1" />
-                  {getChildInfo(selectedChild)}
-                </Badge>
-              )}
-            </div>
-          </CardContent>
-        </Card>
+        <div className="glass-card p-4 mb-4">
+          <div className="flex items-center gap-4 flex-wrap">
+            <span className="text-white/70 text-sm font-medium">Select Child:</span>
+            <Select value={selectedChild} onValueChange={setSelectedChild}>
+              <SelectTrigger className="w-48 bg-white/5 border-white/10 text-white rounded-xl">
+                <SelectValue placeholder="Choose child" />
+              </SelectTrigger>
+              <SelectContent className="glass-card border-white/10 text-white rounded-xl">
+                <SelectItem value="general" className="text-white/80 focus:bg-white/10 focus:text-white rounded-lg">General Advice</SelectItem>
+                {children && children.length > 0 && children.map(child => (
+                  <SelectItem key={child.id} value={child.id} className="text-white/80 focus:bg-white/10 focus:text-white rounded-lg">
+                    {child.name} ({child.age_group})
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            {selectedChild && getChildInfo(selectedChild) && (
+              <span className="status-badge status-badge-pink">
+                <Heart className="w-3 h-3" />
+                {getChildInfo(selectedChild)}
+              </span>
+            )}
+          </div>
+        </div>
 
         {/* Chat Messages */}
-        <Card className="flex-1 flex flex-col mb-4 min-h-0 bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-2xl">
-          <CardHeader className="pb-4">
-            <CardTitle className="flex items-center gap-2 text-cyan-400">
-              <Bot className="w-5 h-5 text-cyan-400" />
-              Chat Session
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="flex-1 flex flex-col min-h-0">
-            <div className="flex-1 overflow-y-auto space-y-4 pr-2">
-              {messages.map((message) => (
-                <div key={message.id} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`max-w-[80%] p-4 rounded-2xl ${
-                    message.role === 'user' 
-                      ? 'bg-gradient-to-r from-cyan-500 to-teal-500 text-white' 
-                      : 'bg-slate-700/50 text-gray-300'
-                  }`}>
-                    <div className="flex items-start gap-2 mb-2">
-                      {message.role === 'assistant' ? (
-                        <Bot className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                      ) : (
-                        <User className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                      )}
-                      <div className="text-xs opacity-70">
-                        {message.timestamp.toLocaleTimeString()}
-                        {message.childContext && getChildInfo(message.childContext) && (
-                          <span className="ml-2">• {getChildInfo(message.childContext)}</span>
-                        )}
-                      </div>
-                    </div>
-                    <p className="whitespace-pre-wrap text-sm leading-relaxed">{message.content}</p>
-                  </div>
-                </div>
-              ))}
-              {isLoading && (
-                <div className="flex justify-start">
-                  <div className="bg-slate-700/50 text-gray-300 p-4 rounded-2xl max-w-[80%]">
-                    <div className="flex items-center gap-2">
-                      <Bot className="w-4 h-4" />
-                      <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-current rounded-full animate-bounce" />
-                        <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-                        <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              <div ref={messagesEndRef} />
+        <div className="glass-card flex-1 flex flex-col min-h-0 mb-4">
+          <div className="p-4 border-b border-white/10">
+            <div className="flex items-center gap-2">
+              <div className="icon-box icon-box-teal w-8 h-8">
+                <Bot className="w-4 h-4 text-teal" />
+              </div>
+              <span className="font-medium text-white">Chat Session</span>
             </div>
+          </div>
+          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            {messages.map((message) => (
+              <div key={message.id} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                <div className={`max-w-[85%] p-4 rounded-2xl ${
+                  message.role === 'user' 
+                    ? 'bg-gradient-to-br from-teal to-mint text-white' 
+                    : 'stat-card text-white/80'
+                }`}>
+                  <div className="flex items-start gap-2 mb-2">
+                    {message.role === 'assistant' ? (
+                      <Bot className="w-4 h-4 mt-0.5 flex-shrink-0 text-teal" />
+                    ) : (
+                      <User className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                    )}
+                    <div className="text-xs opacity-60">
+                      {message.timestamp.toLocaleTimeString()}
+                    </div>
+                  </div>
+                  <p className="whitespace-pre-wrap text-sm leading-relaxed">{message.content}</p>
+                </div>
+              </div>
+            ))}
+            {isLoading && (
+              <div className="flex justify-start">
+                <div className="stat-card text-white/60 p-4 rounded-2xl">
+                  <div className="flex items-center gap-2">
+                    <Bot className="w-4 h-4 text-teal" />
+                    <div className="flex gap-1">
+                      <div className="w-2 h-2 bg-teal rounded-full animate-bounce" />
+                      <div className="w-2 h-2 bg-teal rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
+                      <div className="w-2 h-2 bg-teal rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            <div ref={messagesEndRef} />
+          </div>
 
-            {/* Input Area */}
-            <div className="mt-4 flex gap-2">
+          {/* Input Area */}
+          <div className="p-4 border-t border-white/10">
+            <div className="flex gap-2">
               <Input
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Ask a parenting question..."
                 disabled={isLoading}
-                className="flex-1 bg-slate-700/50 border-cyan-400/30 text-white rounded-xl"
+                className="flex-1 bg-white/5 border-white/10 text-white rounded-xl placeholder:text-white/40"
               />
-              <Button 
+              <button 
                 onClick={handleSendMessage} 
                 disabled={isLoading || !inputMessage.trim()}
-                size="icon"
-                className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 rounded-xl"
+                className="btn-pill-teal w-12 h-12 rounded-xl flex items-center justify-center p-0"
               >
-                <Send className="w-4 h-4" />
-              </Button>
+                <Send className="w-5 h-5" />
+              </button>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
 
         {/* Disclaimer */}
-        <Card className="bg-amber-900/20 border-amber-500/30 rounded-2xl">
-          <CardContent className="p-4">
-            <div className="flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
-              <div className="text-sm">
-                <p className="font-medium text-amber-400 mb-1">AI Guidance Disclaimer</p>
-                <p className="text-amber-300">
-                  This AI provides general parenting information based on evidence-based practices and should not replace professional advice. 
-                  For specific concerns about your child's development, behavior, or wellbeing, please consult qualified healthcare professionals. 
-                  In emergencies, call 000.
-                </p>
-              </div>
+        <div className="glass-card-pink p-4">
+          <div className="flex items-start gap-3">
+            <AlertCircle className="w-5 h-5 text-pink flex-shrink-0 mt-0.5" />
+            <div className="text-sm">
+              <p className="font-medium text-pink mb-1">AI Guidance Disclaimer</p>
+              <p className="text-white/60 text-xs">
+                This AI provides general parenting information and should not replace professional advice. 
+                For specific concerns, please consult qualified healthcare professionals.
+              </p>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
     </Layout>
   );
-}
-
-function Label({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  return <label className={`text-sm font-medium ${className}`}>{children}</label>;
 }
