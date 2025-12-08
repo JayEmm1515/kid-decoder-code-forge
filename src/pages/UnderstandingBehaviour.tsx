@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Card, CardContent } from '@/components/ui/card';
 import { Baby, ToyBrick, BookOpen, GraduationCap, ArrowRight, Search } from 'lucide-react';
 import Layout from '@/components/Layout';
+import PageHeader from '@/components/PageHeader';
 
 export default function UnderstandingBehaviourPage() {
   const ageGroups = [
@@ -12,66 +12,88 @@ export default function UnderstandingBehaviourPage() {
       description: "Attachment, co-regulation, and first words.",
       icon: Baby,
       age_group: '0-2',
-      color: 'var(--teal-grey)',
-      shadowColor: 'shadow-teal-500/10'
+      cardStyle: 'glass-card-teal'
     },
     {
       title: 'Preschool (3-5)',
       description: "Big emotions, play, and growing independence.",
       icon: ToyBrick,
       age_group: '3-5',
-      color: 'var(--violet)',
-      shadowColor: 'shadow-purple-500/10'
+      cardStyle: 'glass-card-purple'
     },
     {
       title: 'School Age (6-12)',
       description: "Friendships, rules, and a wider world.",
       icon: BookOpen,
       age_group: '6-12',
-      color: 'var(--peach)',
-      shadowColor: 'shadow-yellow-500/20'
+      cardStyle: 'glass-card-pink'
     },
     {
       title: 'Teens (13-18)',
       description: "Identity, connection, and the path to adulthood.",
       icon: GraduationCap,
       age_group: '13-18',
-      color: 'var(--rose)',
-      shadowColor: 'shadow-pink-500/10'
+      cardStyle: 'glass-card-teal'
     }
   ];
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 md:p-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-block p-4 bg-purple-500/20 rounded-3xl mb-4">
-              <Search className="w-10 h-10 text-cyan-400" />
+      <div className="min-h-screen bg-airy p-4 md:p-8 pb-24">
+        <div className="max-w-5xl mx-auto space-y-6">
+          
+          <PageHeader title="Understand Behaviour" />
+          
+          {/* Hero Section */}
+          <div className="glass-card p-8 text-center">
+            <div className="icon-box icon-box-purple w-16 h-16 mx-auto mb-4">
+              <Search className="w-8 h-8 text-purple" />
             </div>
-            <h1 className="text-4xl font-extrabold text-cyan-400 tracking-tight">First, let's find the right lens.</h1>
-            <p className="text-lg text-gray-300 mt-3 max-w-2xl mx-auto">A child's behaviour is deeply connected to their developmental stage. Select an age group to see tailored guidance.</p>
+            <h2 className="text-2xl font-bold text-white mb-2">First, let's find the right lens.</h2>
+            <p className="text-white/60 max-w-xl mx-auto">
+              A child's behaviour is deeply connected to their developmental stage. Select an age group to see tailored guidance.
+            </p>
           </div>
          
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* Age Group Cards */}
+          <div className="grid md:grid-cols-2 gap-4">
             {ageGroups.map((group) => (
               <Link key={group.age_group} to={createPageUrl(`BehaviourList?age_group=${group.age_group}`)} className="group">
-                <Card className="p-6 bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl rounded-3xl h-full">
+                <div className={`${group.cardStyle} p-6 h-full`}>
                   <div className="flex items-start justify-between">
                     <div className="flex items-start gap-4">
-                       <div style={{ backgroundColor: group.color }} className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0">
-                         <group.icon className="w-7 h-7 text-white" />
+                      <div className="icon-box icon-box-teal w-12 h-12 flex-shrink-0">
+                        <group.icon className="w-6 h-6 text-teal" />
                       </div>
                       <div>
-                        <h2 className="text-xl font-bold text-cyan-400">{group.title}</h2>
-                        <p className="text-gray-300 mt-1">{group.description}</p>
+                        <h3 className="text-lg font-bold text-white">{group.title}</h3>
+                        <p className="text-white/50 mt-1 text-sm">{group.description}</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-6 h-6 text-gray-500 group-hover:text-cyan-400 transition-all duration-300 transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-5 h-5 text-white/30 group-hover:text-teal group-hover:translate-x-1 transition-all" />
                   </div>
-                </Card>
+                </div>
               </Link>
             ))}
+          </div>
+
+          {/* List Items Preview */}
+          <div className="glass-card p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-bold text-white">Common Topics</h3>
+              <span className="status-badge status-badge-teal">List Items</span>
+            </div>
+            <ul className="space-y-3">
+              {['Tantrums & Meltdowns', 'Sleep Difficulties', 'Aggression', 'Anxiety'].map((item, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-teal"></div>
+                  <span className="text-white/70 text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <button className="btn-pill w-full mt-4">
+              View All Topics
+            </button>
           </div>
         </div>
       </div>

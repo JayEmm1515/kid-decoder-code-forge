@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Child } from "@/entities/Child";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,6 +8,7 @@ import { Plus, Users, Baby, Calendar, Edit, Trash2, BookOpen, ArrowRight } from 
 import { format, differenceInYears, differenceInMonths } from "date-fns";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import PageHeader from "@/components/PageHeader";
 
 export default function ChildrenPage() {
   const [children, setChildren] = useState([]);
@@ -114,169 +114,150 @@ export default function ChildrenPage() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 md:p-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-            <div>
-              <h1 className="text-3xl font-bold text-cyan-400 flex items-center gap-3">
-                <Users className="w-8 h-8 text-cyan-400" />
-                Understanding Your Child
-              </h1>
-              <p className="text-gray-300 mt-2">Manage your children's profiles and explore age-appropriate behaviour insights</p>
-            </div>
-            <Button
+      <div className="min-h-screen bg-airy p-4 md:p-8 pb-24">
+        <div className="max-w-5xl mx-auto space-y-6">
+          
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <PageHeader 
+              title="My Children" 
+              subtitle="Manage profiles & explore behaviour insights"
+            />
+            <button
               onClick={() => setShowForm(!showForm)}
-              className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600 rounded-2xl shadow-lg"
+              className="btn-pill-teal flex items-center gap-2"
             >
-              <Plus className="w-5 h-5 mr-2" />
+              <Plus className="w-5 h-5" />
               Add Child
-            </Button>
+            </button>
           </div>
 
           {showForm && (
-            <Card className="mb-8 bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-3xl shadow-xl">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-cyan-400">
-                  {editingChild ? 'Edit Child' : 'Add New Child'}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name" className="text-gray-300">Child's Name</Label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        placeholder="Enter child's name"
-                        required
-                        className="bg-slate-700/50 border-cyan-400/30 text-white rounded-xl"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="birth_date" className="text-gray-300">Birth Date</Label>
-                      <Input
-                        id="birth_date"
-                        type="date"
-                        value={formData.birth_date}
-                        onChange={(e) => setFormData({...formData, birth_date: e.target.value})}
-                        required
-                        className="bg-slate-700/50 border-cyan-400/30 text-white rounded-xl"
-                      />
-                    </div>
-                  </div>
-                 
+            <div className="glass-card p-6">
+              <h3 className="text-lg font-semibold text-white mb-4">
+                {editingChild ? 'Edit Child' : 'Add New Child'}
+              </h3>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="notes" className="text-gray-300">Notes (Optional)</Label>
-                    <Textarea
-                      id="notes"
-                      value={formData.notes}
-                      onChange={(e) => setFormData({...formData, notes: e.target.value})}
-                      placeholder="Any additional notes about your child..."
-                      rows={3}
-                      className="bg-slate-700/50 border-cyan-400/30 text-white rounded-xl"
+                    <Label className="text-white/70 text-sm">Child's Name</Label>
+                    <Input
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      placeholder="Enter child's name"
+                      required
+                      className="bg-white/5 border-white/10 text-white rounded-2xl"
                     />
                   </div>
-
-                  <div className="flex justify-end gap-3">
-                    <Button type="button" variant="outline" onClick={resetForm} className="rounded-xl border-cyan-400/30 text-cyan-400 hover:bg-slate-700/50">
-                      Cancel
-                    </Button>
-                    <Button type="submit" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-xl shadow-lg">
-                      {editingChild ? 'Update Child' : 'Add Child'}
-                    </Button>
+                  <div className="space-y-2">
+                    <Label className="text-white/70 text-sm">Birth Date</Label>
+                    <Input
+                      type="date"
+                      value={formData.birth_date}
+                      onChange={(e) => setFormData({...formData, birth_date: e.target.value})}
+                      required
+                      className="bg-white/5 border-white/10 text-white rounded-2xl"
+                    />
                   </div>
-                </form>
-              </CardContent>
-            </Card>
+                </div>
+               
+                <div className="space-y-2">
+                  <Label className="text-white/70 text-sm">Notes (Optional)</Label>
+                  <Textarea
+                    value={formData.notes}
+                    onChange={(e) => setFormData({...formData, notes: e.target.value})}
+                    placeholder="Any additional notes about your child..."
+                    rows={3}
+                    className="bg-white/5 border-white/10 text-white rounded-2xl"
+                  />
+                </div>
+
+                <div className="flex justify-end gap-3">
+                  <button type="button" onClick={resetForm} className="btn-pill">
+                    Cancel
+                  </button>
+                  <button type="submit" className="btn-pill-teal">
+                    {editingChild ? 'Update Child' : 'Add Child'}
+                  </button>
+                </div>
+              </form>
+            </div>
           )}
 
-          <div className="grid gap-6">
+          <div className="grid gap-4">
             {children.length === 0 ? (
-              <Card className="bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-3xl shadow-xl">
-                <CardContent className="text-center py-12">
-                  <Baby className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-cyan-400 mb-2">No children added yet</h3>
-                  <p className="text-gray-300 mb-6">Add your first child to start tracking</p>
-                  <Button
-                    onClick={() => setShowForm(true)}
-                    className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-2xl shadow-lg"
-                  >
-                    <Plus className="w-5 h-5 mr-2" />
-                    Add Your First Child
-                  </Button>
-                </CardContent>
-              </Card>
+              <div className="glass-card p-8 text-center">
+                <div className="icon-box icon-box-teal w-16 h-16 mx-auto mb-4">
+                  <Baby className="w-8 h-8 text-teal" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">No children added yet</h3>
+                <p className="text-white/50 mb-6">Add your first child to start tracking</p>
+                <button
+                  onClick={() => setShowForm(true)}
+                  className="btn-pill-teal"
+                >
+                  <Plus className="w-5 h-5 mr-2" />
+                  Add Your First Child
+                </button>
+              </div>
             ) : (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {children.map((child) => (
-                  <Card key={child.id} className="bg-slate-800/60 backdrop-blur-xl border border-cyan-400/20 rounded-3xl hover:shadow-2xl transition-all">
-                    <CardHeader className="pb-4">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold text-lg">
-                              {child.name.charAt(0).toUpperCase()}
-                            </span>
-                          </div>
-                          <div>
-                            <CardTitle className="text-lg text-cyan-400">{child.name}</CardTitle>
-                            <p className="text-sm text-gray-400">{formatAge(child.birth_date)}</p>
-                          </div>
+                  <div key={child.id} className="glass-card-teal p-5">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-gradient-to-br from-teal to-mint rounded-2xl flex items-center justify-center">
+                          <span className="text-white font-bold text-lg">
+                            {child.name.charAt(0).toUpperCase()}
+                          </span>
                         </div>
-                        <div className="flex gap-1">
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={() => handleEdit(child)}
-                            className="text-gray-400 hover:bg-slate-700/50 hover:text-cyan-400 rounded-xl"
-                          >
-                            <Edit className="w-4 h-4" />
-                          </Button>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={() => handleDelete(child.id)}
-                            className="text-gray-400 hover:bg-slate-700/50 hover:text-red-400 rounded-xl"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </Button>
+                        <div>
+                          <h3 className="text-lg font-semibold text-white">{child.name}</h3>
+                          <p className="text-sm text-white/50">{formatAge(child.birth_date)}</p>
                         </div>
                       </div>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="space-y-3">
-                          <div className="flex items-center gap-2">
-                            <Calendar className="w-4 h-4 text-gray-400" />
-                            <span className="text-sm text-gray-300">
-                              Born {format(new Date(child.birth_date), "MMM d, yyyy")}
-                            </span>
-                          </div>
-                          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-400/20">
-                            Age Group: {child.age_group} years
-                          </div>
-                          {child.notes && (
-                            <div className="mt-3 p-3 bg-slate-700/30 rounded-xl border border-cyan-400/10">
-                              <p className="text-sm text-gray-300">{child.notes}</p>
-                            </div>
-                          )}
-                          
-                          <div className="pt-4 border-t border-cyan-400/20">
-                            <Link to={`/understanding-behaviour?age=${child.age_group}`}>
-                              <Button 
-                                variant="outline" 
-                                className="w-full text-sm gap-2 hover:bg-cyan-500/20 hover:text-cyan-400 border-cyan-400/30 rounded-xl text-cyan-400"
-                              >
-                                <BookOpen className="w-4 h-4" />
-                                Explore {child.age_group} Behaviour Guide
-                                <ArrowRight className="w-4 h-4 ml-auto" />
-                              </Button>
-                            </Link>
-                          </div>
+                      <div className="flex gap-1">
+                        <button
+                          onClick={() => handleEdit(child)}
+                          className="w-9 h-9 rounded-xl stat-card flex items-center justify-center hover:bg-white/10 transition-all"
+                        >
+                          <Edit className="w-4 h-4 text-white/60" />
+                        </button>
+                        <button
+                          onClick={() => handleDelete(child.id)}
+                          className="w-9 h-9 rounded-xl stat-card flex items-center justify-center hover:bg-white/10 transition-all"
+                        >
+                          <Trash2 className="w-4 h-4 text-white/60" />
+                        </button>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 text-white/60">
+                        <Calendar className="w-4 h-4" />
+                        <span className="text-sm">
+                          Born {format(new Date(child.birth_date), "MMM d, yyyy")}
+                        </span>
+                      </div>
+                      <span className="status-badge status-badge-teal">
+                        Age Group: {child.age_group} years
+                      </span>
+                      {child.notes && (
+                        <div className="mt-3 p-3 stat-card rounded-xl">
+                          <p className="text-sm text-white/60">{child.notes}</p>
                         </div>
-                    </CardContent>
-                  </Card>
+                      )}
+                      
+                      <div className="pt-4 border-t border-white/10">
+                        <Link to={`/understanding-behaviour?age=${child.age_group}`}>
+                          <button className="w-full btn-pill text-sm flex items-center justify-center gap-2">
+                            <BookOpen className="w-4 h-4" />
+                            Explore {child.age_group} Behaviour Guide
+                            <ArrowRight className="w-4 h-4 ml-auto" />
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
             )}

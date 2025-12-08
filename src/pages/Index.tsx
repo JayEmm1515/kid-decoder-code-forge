@@ -8,7 +8,6 @@ import {
   Brain,
   Shield,
   Sparkles,
-  Activity,
   ChevronRight
 } from "lucide-react";
 import Layout from "@/components/Layout";
@@ -71,56 +70,55 @@ const Index = () => {
     },
   ];
 
-  const quickStats = [
-    { label: "Entries This Week", value: "12", icon: Activity, badgeStyle: "status-badge-teal" },
-    { label: "Children Profiles", value: "3", icon: Users, badgeStyle: "status-badge-purple" },
-    { label: "Insights Gained", value: "8", icon: Sparkles, badgeStyle: "status-badge-pink" },
-  ];
-
   return (
     <Layout currentPageName="Home">
-      <div className="min-h-screen bg-airy p-4 md:p-8">
-        <div className="max-w-7xl mx-auto space-y-8">
-          {/* Welcome Header */}
-          <div className="glass-card p-8 text-center">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="icon-box icon-box-pink w-12 h-12">
-                <Heart className="w-6 h-6 text-pink" strokeWidth={1.5} />
+      <div className="min-h-screen bg-airy p-4 md:p-8 pb-24">
+        <div className="max-w-7xl mx-auto space-y-6">
+          
+          {/* Hero Card - The Kid Decoder */}
+          <div className="glass-card p-8 md:p-10">
+            <div className="flex flex-col items-start gap-4">
+              <div className="flex items-center gap-3">
+                <div className="icon-box icon-box-pink w-14 h-14">
+                  <Heart className="w-7 h-7 text-pink" strokeWidth={1.5} />
+                </div>
+                <div className="icon-box icon-box-teal w-14 h-14">
+                  <Sparkles className="w-7 h-7 text-teal" strokeWidth={1.5} />
+                </div>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-white">
-                The Kid Decoder
-              </h1>
-              <div className="icon-box icon-box-teal w-12 h-12">
-                <Sparkles className="w-6 h-6 text-teal" strokeWidth={1.5} />
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                  THE<br/>KID<br/>DECODER
+                </h1>
+                <p className="text-base text-white/50 mt-3 uppercase tracking-wide">
+                  Help for parents waiting
+                </p>
               </div>
+              <Link to="/tracking" className="mt-4">
+                <button className="btn-pill">
+                  Get Started
+                </button>
+              </Link>
             </div>
-            <p className="text-base text-white/60 mb-6">
-              Help for parents waiting
-            </p>
-            <Link to="/tracking">
-              <button className="btn-pill">
-                Get Started
-              </button>
-            </Link>
           </div>
 
           {/* Feature Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {featureCards.map((card, index) => (
               <Link key={index} to={card.link} className="group">
-                <div className={`${card.cardStyle} p-6 h-full`}>
-                  <div className="flex items-start gap-4">
-                    <div className={`icon-box ${card.iconStyle} flex-shrink-0`}>
+                <div className={`${card.cardStyle} p-5 h-full`}>
+                  <div className="flex flex-col gap-3">
+                    <div className={`icon-box ${card.iconStyle} w-12 h-12`}>
                       <card.icon className={`w-6 h-6 ${card.iconColor}`} strokeWidth={1.5} />
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between mb-1">
-                        <h3 className="text-lg font-semibold text-white">
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-base font-semibold text-white">
                           {card.title}
                         </h3>
-                        <ChevronRight className="w-5 h-5 text-white/40 group-hover:text-teal group-hover:translate-x-1 transition-all" strokeWidth={1.5} />
+                        <ChevronRight className="w-4 h-4 text-white/30 group-hover:text-teal group-hover:translate-x-1 transition-all" strokeWidth={1.5} />
                       </div>
-                      <p className="text-sm text-white/50">
+                      <p className="text-xs text-white/40 mt-1">
                         {card.description}
                       </p>
                     </div>
@@ -130,58 +128,31 @@ const Index = () => {
             ))}
           </div>
 
-          {/* Quick Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {quickStats.map((stat, index) => (
-              <div key={index} className="stat-card p-5">
-                <div className="flex items-center gap-4">
-                  <div className="icon-box icon-box-teal">
-                    <stat.icon 
-                      className="w-5 h-5 text-teal" 
-                      strokeWidth={1.5} 
-                    />
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-white">{stat.value}</div>
-                    <p className="text-xs text-white/50">{stat.label}</p>
-                  </div>
-                  <div className="ml-auto">
-                    <span className={`status-badge ${stat.badgeStyle}`}>
-                      Active
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Quick Actions */}
+          {/* My Account Card */}
           <div className="glass-card p-6">
-            <h2 className="text-xl font-semibold text-white mb-5">Quick Actions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Link to="/tracking">
-                <button className="btn-pill-teal w-full flex items-center justify-center gap-2">
-                  <TrendingUp className="w-5 h-5" strokeWidth={1.5} />
-                  Log New Entry
-                </button>
-              </Link>
-              <Link to="/parenting-chat">
-                <button className="btn-pill-purple w-full flex items-center justify-center gap-2">
-                  <MessageSquare className="w-5 h-5" strokeWidth={1.5} />
-                  Ask AI Coach
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs text-white/40 uppercase tracking-wider mb-1">Manage</p>
+                <h2 className="text-xl font-bold text-white">My Account</h2>
+              </div>
+              <Link to="/children">
+                <button className="btn-pill">
+                  View Profile
                 </button>
               </Link>
             </div>
           </div>
 
-          {/* My Account Link */}
-          <div className="text-center">
-            <Link to="/children">
-              <button className="btn-pill inline-flex items-center gap-2">
-                <Users className="w-4 h-4" strokeWidth={1.5} />
-                My Account
-              </button>
-            </Link>
+          {/* Dot Indicators */}
+          <div className="flex justify-center gap-2 py-4">
+            {[0, 1, 2, 3, 4].map((_, i) => (
+              <div 
+                key={i} 
+                className={`w-2 h-2 rounded-full transition-all ${
+                  i === 0 ? "bg-white/80 w-4" : "bg-white/20"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
