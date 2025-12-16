@@ -29,10 +29,10 @@ export default function UnderstandingBehaviourPage() {
       cardStyle: 'glass-card-pink'
     },
     {
-      title: 'Teens (13-18)',
+      title: 'Teens (12-18)',
       description: "Identity, connection, and the path to adulthood.",
       icon: GraduationCap,
-      age_group: '13-18',
+      age_group: '12-18',
       cardStyle: 'glass-card-teal'
     }
   ];
