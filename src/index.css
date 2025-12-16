@@ -90,6 +90,11 @@
   --radius-lg: 28px;
   --radius-xl: 36px;
   --radius-pill: 9999px;
+  
+  /* Color tokens for components */
+  --color-teal: hsl(175 55% 45%);
+  --color-purple: hsl(270 50% 55%);
+  --color-coral-pink: hsl(0 70% 60%);
 }
 
 /* Gradient Background - Soft & Airy with Brand Colors */
