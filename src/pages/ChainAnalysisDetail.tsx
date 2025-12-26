@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import Layout from "@/components/Layout";
+import PageHeader from "@/components/PageHeader";
 import { Child, ChainAnalysis } from "@/entities/all";
 import { TriggerPattern } from "@/entities/TriggerPattern";
 import TriggerPatterns from "@/components/TriggerPatterns";
@@ -119,14 +120,10 @@ export default function ChainAnalysisDetailPage() {
   return (
     <Layout>
       <div className="bg-teal-corner p-6 max-w-5xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
-            <Brain className="w-8 h-8 text-primary" />
-            Chain Analysis
-          </h1>
-          
-          {/* What is Chain Analysis - Educational Section */}
-          <Card className="mb-6 bg-blue-50 border-blue-200">
+        <PageHeader title="Chain Analysis" subtitle="Trace back through events that led to challenging moments" />
+        
+        {/* What is Chain Analysis - Educational Section */}
+        <Card className="mb-6 bg-blue-50 border-blue-200">
             <CardContent className="p-6">
               <h2 className="text-xl font-semibold text-blue-800 mb-3 flex items-center gap-2">
                 <Lightbulb className="w-5 h-5" />
@@ -172,7 +169,6 @@ export default function ChainAnalysisDetailPage() {
               </div>
             </CardContent>
           </Card>
-        </div>
 
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Basic Information */}

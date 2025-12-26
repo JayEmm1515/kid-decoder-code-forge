@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronLeft } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 // Types
@@ -424,6 +426,29 @@ export default function BeingWithExercise() {
   return (
     <Layout currentPageName="Being With Exercise">
       <div style={styles.container}>
+      {/* Back Button */}
+      <div style={{ marginBottom: '20px' }}>
+        <Link 
+          to="/"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '10px 16px',
+            backgroundColor: '#f1f5f9',
+            borderRadius: '12px',
+            color: '#334155',
+            textDecoration: 'none',
+            fontSize: '14px',
+            fontWeight: 500,
+            border: '1px solid #e2e8f0',
+          }}
+        >
+          <ChevronLeft style={{ width: 16, height: 16 }} />
+          Back to Home
+        </Link>
+      </div>
+      
       {/* Header */}
       <header style={styles.header}>
         <h1 style={styles.title}>Being With</h1>

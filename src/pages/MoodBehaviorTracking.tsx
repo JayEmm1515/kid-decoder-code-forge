@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Slider } from "@/components/ui/slider";
 import Layout from "@/components/Layout";
+import PageHeader from "@/components/PageHeader";
 import { Child, MoodEntry, BehaviorEntry } from "@/entities/all";
 import { Plus, Activity, Heart, Calendar, Clock, Target, AlertCircle, Brain } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -181,15 +182,7 @@ export default function MoodBehaviorTrackingPage() {
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6 max-w-5xl mx-auto">
-        <div className="mb-8 bg-gradient-to-br from-slate-800/60 to-purple-900/40 backdrop-blur-xl rounded-3xl border border-cyan-400/20 p-8 shadow-2xl">
-          <h1 className="text-4xl font-bold text-cyan-400 mb-3 flex items-center gap-3">
-            <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-teal-500 rounded-2xl flex items-center justify-center shadow-lg">
-              <Activity className="w-8 h-8 text-white" strokeWidth={2.5} />
-            </div>
-            Behavior & Mood Tracking
-          </h1>
-          <p className="text-cyan-100/80 text-lg">Log your child's daily behaviors and emotional patterns to identify trends and insights.</p>
-        </div>
+        <PageHeader title="Behavior & Mood Tracking" subtitle="Log your child's daily behaviors and emotional patterns to identify trends and insights." />
 
         {children.length === 0 ? (
           <Card className="text-center p-8 bg-gradient-to-br from-slate-800/60 to-purple-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-3xl shadow-xl">
