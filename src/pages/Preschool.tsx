@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ToyBrick, Heart, Shield, Phone, AlertTriangle } from 'lucide-react';
 import Layout from '@/components/Layout';
+import PageHeader from '@/components/PageHeader';
 
 export default function PreschoolPage() {
   const strategies = [
@@ -39,13 +40,7 @@ export default function PreschoolPage() {
     <Layout>
       <div className="min-h-screen bg-coral-corner p-4 md:p-8 text-white">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-white flex items-center gap-3">
-              <ToyBrick className="w-10 h-10 text-pink-ice" />
-              Preschool (3-5)
-            </h1>
-            <p className="text-white/80 mt-2">Guiding big emotions and building cooperation through play and connection.</p>
-          </div>
+          <PageHeader title="Preschool (3-5)" subtitle="Guiding big emotions and building cooperation through play and connection." />
 
           <div className="grid md:grid-cols-1 gap-6">
             {strategies.map(strategy => (

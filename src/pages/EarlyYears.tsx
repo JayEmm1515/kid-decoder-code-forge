@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Baby, Heart, Shield, Phone, AlertTriangle } from 'lucide-react';
 import Layout from '@/components/Layout';
+import PageHeader from '@/components/PageHeader';
 
 export default function EarlyYearsPage() {
   const strategies = [
@@ -39,13 +40,7 @@ export default function EarlyYearsPage() {
     <Layout>
       <div className="min-h-screen bg-soft-coral-teal p-4 md:p-8 text-white">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-white flex items-center gap-3">
-              <Baby className="w-10 h-10 text-mint" />
-              Early Years (0-2)
-            </h1>
-            <p className="text-white/80 mt-2">Nurturing the foundations of emotional wellbeing through connection.</p>
-          </div>
+          <PageHeader title="Early Years (0-2)" subtitle="Nurturing the foundations of emotional wellbeing through connection." />
 
           <div className="grid md:grid-cols-1 gap-6">
             {strategies.map(strategy => (

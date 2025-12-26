@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@/components/Layout';
+import PageHeader from '@/components/PageHeader';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
@@ -354,13 +355,7 @@ export default function Quizzes() {
   return (
     <Layout>
       <div className="max-w-6xl mx-auto p-6 space-y-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-4">Neurodevelopmental Quizzes</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            These brief questionnaires can help you reflect on your child's development. 
-            They are educational tools only and not diagnostic instruments.
-          </p>
-        </div>
+        <PageHeader title="Neurodevelopmental Quizzes" subtitle="These brief questionnaires can help you reflect on your child's development. They are educational tools only and not diagnostic instruments." />
 
         {/* Age Group Selection */}
         <Card>

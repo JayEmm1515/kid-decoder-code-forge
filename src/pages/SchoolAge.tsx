@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BookOpen, Brain, Users, Phone, AlertTriangle, Heart } from 'lucide-react';
 import Layout from '@/components/Layout';
+import PageHeader from '@/components/PageHeader';
 
 export default function SchoolAgePage() {
   const strategies = [
@@ -39,13 +40,7 @@ export default function SchoolAgePage() {
     <Layout>
       <div className="min-h-screen bg-teal-bottom p-4 md:p-8 text-white">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-white flex items-center gap-3">
-              <BookOpen className="w-10 h-10 text-pastel-y" />
-              School Age (6-12)
-            </h1>
-            <p className="text-white/80 mt-2">Navigating friendships, rules, and growing independence while staying connected.</p>
-          </div>
+          <PageHeader title="School Age (6-12)" subtitle="Navigating friendships, rules, and growing independence while staying connected." />
 
           <div className="grid md:grid-cols-1 gap-6">
             {strategies.map(strategy => (

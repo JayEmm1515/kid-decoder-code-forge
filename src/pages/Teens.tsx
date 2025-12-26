@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { GraduationCap, Anchor, Users, Phone, AlertTriangle, Heart } from 'lucide-react';
 import Layout from '@/components/Layout';
+import PageHeader from '@/components/PageHeader';
 
 export default function TeensPage() {
   const strategies = [
@@ -39,13 +40,7 @@ export default function TeensPage() {
     <Layout>
       <div className="min-h-screen bg-coral-teal p-4 md:p-8 text-white">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-white flex items-center gap-3">
-              <GraduationCap className="w-10 h-10 text-rose" />
-              Teens (13-18)
-            </h1>
-            <p className="text-white/80 mt-2">Parenting through the brain's biggest remodel with connection and trust.</p>
-          </div>
+          <PageHeader title="Teens (13-18)" subtitle="Parenting through the brain's biggest remodel with connection and trust." />
 
           <div className="grid md:grid-cols-1 gap-6">
             {strategies.map(strategy => (
