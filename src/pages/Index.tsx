@@ -68,7 +68,7 @@ const Index = () => {
           {/* BEHAVIOR GUIDES - Central Feature */}
           <div className="space-y-3">
             <div className="flex items-center justify-between px-1">
-              <h2 className="text-lg font-semibold text-white">Behavior Guides</h2>
+              <h2 className="text-lg font-semibold text-pink">Behavior Guides</h2>
               <Link to="/behaviour-guides" className="text-sm text-teal hover:underline flex items-center gap-1">
                 See all <ChevronRight className="w-4 h-4" />
               </Link>
@@ -122,7 +122,7 @@ const Index = () => {
 
           {/* Footer */}
           <div className="text-center pt-6">
-            <p className="text-white/30 text-xs">by The Big Enough Project</p>
+            <p className="text-muted-foreground text-xs">by The Big Enough Project</p>
           </div>
         </div>
       </div>
