@@ -208,8 +208,8 @@ export default function Layout({ children, currentPageName }: { children: React.
           {/* Mobile header with sidebar trigger */}
           <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-sidebar/95 backdrop-blur-md border-b border-sidebar-border shadow-clay-light">
             <div className="flex items-center justify-between p-4">
-              <div className="flex items-center gap-2">
-                <SidebarTrigger />
+              <div className="flex items-center gap-3">
+                <SidebarTrigger className="h-11 w-11 bg-gradient-to-br from-teal to-mint text-white rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center justify-center [&_svg]:h-6 [&_svg]:w-6" />
                 <h1 className="text-lg font-bold text-sidebar-foreground">The Kid Decoder</h1>
               </div>
             </div>
