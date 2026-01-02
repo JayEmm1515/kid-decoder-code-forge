@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, Heart, Frown, Angry, AlertTriangle, CircleOff, Lightbulb } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 // Types
@@ -17,6 +17,15 @@ const EMOTION_LABELS: Record<Emotion, string> = {
   fear: 'Fear',
   shame: 'Shame',
   curiosity: 'Curiosity'
+};
+
+const EMOTION_ICONS: Record<Emotion, React.ElementType> = {
+  joy: Heart,
+  sadness: Frown,
+  anger: Angry,
+  fear: AlertTriangle,
+  shame: CircleOff,
+  curiosity: Lightbulb
 };
 
 const EMOTION_CONTENT: Record<Emotion, {
@@ -81,215 +90,6 @@ const COMBINATION_INSIGHTS: Record<string, string> = {
   "shame,curiosity": "With shame and curiosity both out, self-expression feels risky — whether in error or in exploration. Children may grow cautious about standing out. Focus: respond to mistakes with warmth and to questions with encouragement."
 };
 
-// Styles
-const styles = {
-  container: {
-    maxWidth: '980px',
-    margin: '0 auto',
-    padding: '20px',
-    fontFamily: 'system-ui, -apple-system, sans-serif',
-    lineHeight: '1.6'
-  },
-  header: {
-    textAlign: 'center' as const,
-    marginBottom: '40px'
-  },
-  title: {
-    fontSize: '2rem',
-    fontWeight: 'bold',
-    margin: '0 0 10px 0',
-    color: '#333'
-  },
-  subtitle: {
-    fontSize: '1rem',
-    color: '#666',
-    margin: '0'
-  },
-  section: {
-    marginBottom: '30px'
-  },
-  label: {
-    display: 'block',
-    fontWeight: '600',
-    marginBottom: '8px',
-    color: '#333'
-  },
-  input: {
-    width: '100%',
-    padding: '12px',
-    border: '2px solid #ddd',
-    borderRadius: '8px',
-    fontSize: '1rem',
-    outline: 'none',
-    transition: 'border-color 0.2s',
-    boxSizing: 'border-box' as const
-  },
-  inputFocus: {
-    borderColor: '#1faa00'
-  },
-  chipContainer: {
-    display: 'flex',
-    flexWrap: 'wrap' as const,
-    gap: '12px',
-    marginBottom: '30px'
-  },
-  chip: {
-    padding: '12px 24px',
-    border: '2px solid',
-    borderRadius: '30px',
-    fontSize: '1rem',
-    fontWeight: '600',
-    cursor: 'grab',
-    userSelect: 'none' as const,
-    transition: 'all 0.2s',
-    outline: 'none',
-    minWidth: '100px',
-    textAlign: 'center' as const
-  },
-  chipIn: {
-    backgroundColor: '#e8f5e9',
-    borderColor: '#c8e6c9',
-    color: '#2e7d32'
-  },
-  chipOut: {
-    backgroundColor: '#ffebee',
-    borderColor: '#ffcdd2', 
-    color: '#c62828'
-  },
-  chipFocus: {
-    outline: '3px solid #4285f4',
-    outlineOffset: '2px'
-  },
-  dropZoneContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: '40px',
-    marginBottom: '30px',
-    flexWrap: 'wrap' as const
-  },
-  dropZone: {
-    width: '180px',
-    height: '180px',
-    borderRadius: '50%',
-    border: '3px solid #333',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
-    color: 'white',
-    cursor: 'pointer',
-    outline: 'none',
-    transition: 'all 0.2s'
-  },
-  dropZoneIn: {
-    backgroundColor: '#1faa00',
-    boxShadow: '0 0 20px rgba(31,170,0,0.18)'
-  },
-  dropZoneOut: {
-    backgroundColor: '#d50000', 
-    boxShadow: '0 0 20px rgba(213,0,0,0.18)'
-  },
-  dropZoneHover: {
-    filter: 'brightness(1.1)',
-    transform: 'scale(1.05)'
-  },
-  dropZoneFocus: {
-    outline: '3px solid #4285f4',
-    outlineOffset: '4px'
-  },
-  listsContainer: {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gap: '20px',
-    marginBottom: '30px'
-  },
-  listPanel: {
-    padding: '16px',
-    borderRadius: '8px',
-    border: '2px solid'
-  },
-  listPanelIn: {
-    backgroundColor: '#e8f5e9',
-    borderColor: '#c8e6c9'
-  },
-  listPanelOut: {
-    backgroundColor: '#ffebee',
-    borderColor: '#ffcdd2'
-  },
-  listTitle: {
-    fontWeight: 'bold',
-    marginBottom: '8px',
-    fontSize: '1.1rem'
-  },
-  listTitleIn: {
-    color: '#2e7d32'
-  },
-  listTitleOut: {
-    color: '#c62828'
-  },
-  summarySection: {
-    backgroundColor: '#f8f9fa',
-    padding: '24px',
-    borderRadius: '8px',
-    border: '1px solid #e9ecef'
-  },
-  summaryTitle: {
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
-    marginBottom: '16px',
-    color: '#333'
-  },
-  summaryItem: {
-    marginBottom: '16px'
-  },
-  summaryItemTitle: {
-    fontWeight: '600',
-    marginBottom: '8px',
-    color: '#333'
-  },
-  summaryItemContent: {
-    color: '#555',
-    fontSize: '0.95rem'
-  },
-  summaryList: {
-    margin: '8px 0',
-    paddingLeft: '0',
-    listStyle: 'none'
-  },
-  summaryListItem: {
-    marginBottom: '4px',
-    fontSize: '0.9rem',
-    color: '#555'
-  },
-  exportSection: {
-    marginTop: '30px'
-  },
-  exportTextarea: {
-    width: '100%',
-    height: '120px',
-    padding: '12px',
-    border: '2px solid #ddd',
-    borderRadius: '8px',
-    fontFamily: 'monospace',
-    fontSize: '0.9rem',
-    resize: 'vertical' as const,
-    backgroundColor: '#f8f9fa',
-    boxSizing: 'border-box' as const
-  },
-  // Responsive styles
-  '@media (max-width: 768px)': {
-    dropZoneContainer: {
-      flexDirection: 'column' as const,
-      gap: '20px'
-    },
-    listsContainer: {
-      gridTemplateColumns: '1fr'
-    }
-  }
-};
-
 export default function BeingWithExercise() {
   const [attachmentFigure, setAttachmentFigure] = useState<string>('');
   const [emotions, setEmotions] = useState<Record<Emotion, InOut>>(() => {
@@ -301,8 +101,6 @@ export default function BeingWithExercise() {
   });
   const [draggedEmotion, setDraggedEmotion] = useState<Emotion | null>(null);
   const [dragOver, setDragOver] = useState<'in' | 'out' | null>(null);
-  const [focusedChip, setFocusedChip] = useState<Emotion | null>(null);
-  const [focusedZone, setFocusedZone] = useState<'in' | 'out' | null>(null);
 
   // Load from localStorage on mount
   useEffect(() => {
@@ -361,22 +159,6 @@ export default function BeingWithExercise() {
     }));
   };
 
-  const handleChipKeyDown = (e: React.KeyboardEvent, emotion: Emotion) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      toggleEmotion(emotion);
-    }
-  };
-
-  const handleZoneKeyDown = (e: React.KeyboardEvent, zone: 'in' | 'out') => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      if (focusedChip) {
-        setEmotions(prev => ({...prev, [focusedChip]: zone}));
-      }
-    }
-  };
-
   // Generate summary
   const inEmotions = EMOTIONS.filter(e => emotions[e] === 'in');
   const outEmotions = EMOTIONS.filter(e => emotions[e] === 'out');
@@ -395,7 +177,6 @@ export default function BeingWithExercise() {
   const getCombinationInsight = () => {
     if (outEmotions.length === 0) return null;
     
-    // Check for two-emotion combinations first
     if (outEmotions.length === 2) {
       const key = outEmotions.sort().join(',');
       if (COMBINATION_INSIGHTS[key]) {
@@ -403,7 +184,6 @@ export default function BeingWithExercise() {
       }
     }
     
-    // Check for single emotion insights
     if (outEmotions.length === 1) {
       const emotion = outEmotions[0];
       if (COMBINATION_INSIGHTS[emotion]) {
@@ -416,238 +196,204 @@ export default function BeingWithExercise() {
 
   const combinationInsight = getCombinationInsight();
 
-  // Export JSON
-  const exportData = {
-    attachmentFigure: attachmentFigure || null,
-    emotions: emotions,
-    timestamp: new Date().toISOString()
-  };
-
   return (
     <Layout currentPageName="Being With Exercise">
-      <div style={styles.container}>
-      {/* Back Button */}
-      <div style={{ marginBottom: '20px' }}>
-        <Link 
-          to="/"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            padding: '10px 16px',
-            backgroundColor: '#f1f5f9',
-            borderRadius: '12px',
-            color: '#334155',
-            textDecoration: 'none',
-            fontSize: '14px',
-            fontWeight: 500,
-            border: '1px solid #e2e8f0',
-          }}
-        >
-          <ChevronLeft style={{ width: 16, height: 16 }} />
-          Back to Home
-        </Link>
-      </div>
-      
-      {/* Header */}
-      <header style={styles.header}>
-        <h1 style={styles.title}>Being With</h1>
-        <p style={styles.subtitle}>
-          Drag each feeling into IN or OUT based on how it was met by your primary caregiver.
-        </p>
-      </header>
+      <div className="min-h-screen bg-airy p-4 md:p-8 pb-24">
+        <div className="max-w-2xl mx-auto space-y-6">
+          
+          {/* Back Button */}
+          <Link 
+            to="/emotional-toolbox"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass-card text-foreground hover:bg-white/10 transition-colors"
+          >
+            <ChevronLeft className="w-4 h-4" />
+            Back to Toolbox
+          </Link>
 
-      {/* Attachment Figure Input */}
-      <section style={styles.section}>
-        <label style={styles.label} htmlFor="attachment-figure">
-          Attachment figure (e.g., Mum)
-        </label>
-        <input
-          id="attachment-figure"
-          type="text"
-          value={attachmentFigure}
-          onChange={(e) => setAttachmentFigure(e.target.value)}
-          style={{
-            ...styles.input,
-            ...(document.activeElement?.id === 'attachment-figure' ? styles.inputFocus : {})
-          }}
-          onFocus={(e) => e.target.style.borderColor = '#1faa00'}
-          onBlur={(e) => e.target.style.borderColor = '#ddd'}
-        />
-      </section>
+          {/* Header */}
+          <div className="glass-card p-8 text-center">
+            <div className="icon-box icon-box-purple w-14 h-14 mx-auto mb-4">
+              <Heart className="w-7 h-7 text-purple" strokeWidth={1.5} />
+            </div>
+            <h1 className="text-2xl md:text-3xl font-bold text-white">
+              Being With
+            </h1>
+            <p className="text-white/50 mt-2 text-sm md:text-base">
+              Drag each feeling into IN or OUT based on how it was met by your primary caregiver.
+            </p>
+          </div>
 
-      {/* Emotion Chips */}
-      <section style={styles.section}>
-        <div style={styles.chipContainer}>
-          {EMOTIONS.map(emotion => (
-            <button
-              key={emotion}
-              draggable
-              onDragStart={(e) => handleDragStart(e, emotion)}
-              onDragEnd={handleDragEnd}
-              onClick={() => toggleEmotion(emotion)}
-              onKeyDown={(e) => handleChipKeyDown(e, emotion)}
-              onFocus={() => setFocusedChip(emotion)}
-              onBlur={() => setFocusedChip(null)}
-              style={{
-                ...styles.chip,
-                ...(emotions[emotion] === 'in' ? styles.chipIn : styles.chipOut),
-                ...(focusedChip === emotion ? styles.chipFocus : {})
-              }}
-              aria-label={`${EMOTION_LABELS[emotion]} - currently ${emotions[emotion].toUpperCase()} - click to toggle or drag to drop zone`}
+          {/* Attachment Figure Input */}
+          <div className="glass-card p-5">
+            <label className="block text-sm font-medium text-white/70 mb-2" htmlFor="attachment-figure">
+              Attachment figure (e.g., Mum)
+            </label>
+            <input
+              id="attachment-figure"
+              type="text"
+              value={attachmentFigure}
+              onChange={(e) => setAttachmentFigure(e.target.value)}
+              placeholder="Enter name..."
+              className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-teal/50 transition-all"
+            />
+          </div>
+
+          {/* Emotion Chips */}
+          <div className="glass-card p-5">
+            <p className="text-sm text-white/50 mb-4">Tap to toggle or drag to zones below</p>
+            <div className="flex flex-wrap gap-3">
+              {EMOTIONS.map(emotion => {
+                const Icon = EMOTION_ICONS[emotion];
+                const isIn = emotions[emotion] === 'in';
+                return (
+                  <button
+                    key={emotion}
+                    draggable
+                    onDragStart={(e) => handleDragStart(e, emotion)}
+                    onDragEnd={handleDragEnd}
+                    onClick={() => toggleEmotion(emotion)}
+                    className={`
+                      flex items-center gap-2 px-4 py-2.5 rounded-full font-medium text-sm
+                      cursor-grab active:cursor-grabbing transition-all duration-200
+                      ${isIn 
+                        ? 'bg-teal/20 border-2 border-teal/40 text-teal' 
+                        : 'bg-pink/20 border-2 border-pink/40 text-pink'
+                      }
+                      hover:scale-105
+                    `}
+                  >
+                    <Icon className="w-4 h-4" />
+                    {EMOTION_LABELS[emotion]}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Drop Zones */}
+          <div className="grid grid-cols-2 gap-4">
+            <div
+              onDragOver={(e) => handleDragOver(e, 'in')}
+              onDragLeave={handleDragLeave}
+              onDrop={(e) => handleDrop(e, 'in')}
+              className={`
+                aspect-square rounded-full flex items-center justify-center
+                border-4 transition-all duration-200
+                ${dragOver === 'in' 
+                  ? 'bg-teal/30 border-teal scale-105' 
+                  : 'bg-teal/20 border-teal/50'
+                }
+              `}
             >
-              {EMOTION_LABELS[emotion]}
-            </button>
-          ))}
+              <span className="text-2xl md:text-3xl font-bold text-teal">IN</span>
+            </div>
+            <div
+              onDragOver={(e) => handleDragOver(e, 'out')}
+              onDragLeave={handleDragLeave}
+              onDrop={(e) => handleDrop(e, 'out')}
+              className={`
+                aspect-square rounded-full flex items-center justify-center
+                border-4 transition-all duration-200
+                ${dragOver === 'out' 
+                  ? 'bg-pink/30 border-pink scale-105' 
+                  : 'bg-pink/20 border-pink/50'
+                }
+              `}
+            >
+              <span className="text-2xl md:text-3xl font-bold text-pink">OUT</span>
+            </div>
+          </div>
+
+          {/* Current Classification */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="glass-card-teal p-4">
+              <h3 className="text-teal font-semibold mb-2 text-sm">Met Well (IN)</h3>
+              {inEmotions.length > 0 ? (
+                <div className="flex flex-wrap gap-2">
+                  {inEmotions.map(e => (
+                    <span key={e} className="text-xs text-white/70 bg-teal/20 px-2 py-1 rounded-full">
+                      {EMOTION_LABELS[e]}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-white/40 text-xs italic">None selected</p>
+              )}
+            </div>
+            <div className="glass-card-pink p-4">
+              <h3 className="text-pink font-semibold mb-2 text-sm">Challenging (OUT)</h3>
+              {outEmotions.length > 0 ? (
+                <div className="flex flex-wrap gap-2">
+                  {outEmotions.map(e => (
+                    <span key={e} className="text-xs text-white/70 bg-pink/20 px-2 py-1 rounded-full">
+                      {EMOTION_LABELS[e]}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-white/40 text-xs italic">None selected</p>
+              )}
+            </div>
+          </div>
+
+          {/* Summary Section */}
+          <div className="glass-card p-6 space-y-5">
+            <h2 className="text-xl font-bold text-white">Your Profile</h2>
+            
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-sm font-semibold text-purple mb-1">Overview</h3>
+                <p className="text-white/70 text-sm">{getOverview()}</p>
+              </div>
+
+              {combinationInsight && (
+                <div className="p-4 rounded-xl bg-purple/10 border border-purple/30">
+                  <h3 className="text-sm font-semibold text-purple mb-2">Pattern Insight</h3>
+                  <p className="text-white/70 text-sm">{combinationInsight}</p>
+                </div>
+              )}
+
+              {/* Strengths */}
+              {inEmotions.length > 0 && (
+                <div>
+                  <h3 className="text-sm font-semibold text-teal mb-2">Your Strengths</h3>
+                  <div className="space-y-2">
+                    {inEmotions.map(e => (
+                      <div key={e} className="text-xs text-white/60">
+                        <span className="text-teal font-medium">{EMOTION_LABELS[e]}:</span>{' '}
+                        {EMOTION_CONTENT[e].strength}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Growth Areas */}
+              {outEmotions.length > 0 && (
+                <div>
+                  <h3 className="text-sm font-semibold text-pink mb-2">Growth Areas</h3>
+                  <div className="space-y-3">
+                    {outEmotions.map(e => (
+                      <div key={e} className="p-3 rounded-lg bg-pink/10 border border-pink/20">
+                        <p className="text-pink font-medium text-sm mb-1">{EMOTION_LABELS[e]}</p>
+                        <p className="text-white/60 text-xs mb-1">{EMOTION_CONTENT[e].edge}</p>
+                        <p className="text-white/80 text-xs">
+                          <span className="text-purple">Focus:</span> {EMOTION_CONTENT[e].parentingFocus}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="text-center pt-2">
+            <p className="text-muted-foreground text-xs">Auto-saved locally</p>
+          </div>
         </div>
-      </section>
-
-      {/* Drop Zones */}
-      <section style={styles.section}>
-        <div style={styles.dropZoneContainer}>
-          <div
-            onDragOver={(e) => handleDragOver(e, 'in')}
-            onDragLeave={handleDragLeave}
-            onDrop={(e) => handleDrop(e, 'in')}
-            onKeyDown={(e) => handleZoneKeyDown(e, 'in')}
-            onFocus={() => setFocusedZone('in')}
-            onBlur={() => setFocusedZone(null)}
-            tabIndex={0}
-            style={{
-              ...styles.dropZone,
-              ...styles.dropZoneIn,
-              ...(dragOver === 'in' ? styles.dropZoneHover : {}),
-              ...(focusedZone === 'in' ? styles.dropZoneFocus : {})
-            }}
-            aria-label="IN drop zone - emotions that were welcomed"
-          >
-            IN
-          </div>
-          <div
-            onDragOver={(e) => handleDragOver(e, 'out')}
-            onDragLeave={handleDragLeave}
-            onDrop={(e) => handleDrop(e, 'out')}
-            onKeyDown={(e) => handleZoneKeyDown(e, 'out')}
-            onFocus={() => setFocusedZone('out')}
-            onBlur={() => setFocusedZone(null)}
-            tabIndex={0}
-            style={{
-              ...styles.dropZone,
-              ...styles.dropZoneOut,
-              ...(dragOver === 'out' ? styles.dropZoneHover : {}),
-              ...(focusedZone === 'out' ? styles.dropZoneFocus : {})
-            }}
-            aria-label="OUT drop zone - emotions that were discouraged"
-          >
-            OUT
-          </div>
-        </div>
-      </section>
-
-      {/* Current Classification */}
-      <section style={styles.section}>
-        <div style={styles.listsContainer}>
-          <div style={{...styles.listPanel, ...styles.listPanelIn}}>
-            <h3 style={{...styles.listTitle, ...styles.listTitleIn}}>IN (green)</h3>
-            <p>{inEmotions.map(e => EMOTION_LABELS[e]).join(', ') || 'None'}</p>
-          </div>
-          <div style={{...styles.listPanel, ...styles.listPanelOut}}>
-            <h3 style={{...styles.listTitle, ...styles.listTitleOut}}>OUT (red)</h3>
-            <p>{outEmotions.map(e => EMOTION_LABELS[e]).join(', ') || 'None'}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Summary */}
-      <section style={styles.summarySection}>
-        <h2 style={styles.summaryTitle}>Summary</h2>
-        
-        {attachmentFigure && (
-          <div style={styles.summaryItem}>
-            <div style={styles.summaryItemTitle}>Attachment figure:</div>
-            <div style={styles.summaryItemContent}>{attachmentFigure}</div>
-          </div>
-        )}
-
-        <div style={styles.summaryItem}>
-          <div style={styles.summaryItemTitle}>In (green):</div>
-          <div style={styles.summaryItemContent}>
-            {inEmotions.map(e => EMOTION_LABELS[e]).join(', ') || 'None'}
-          </div>
-        </div>
-
-        <div style={styles.summaryItem}>
-          <div style={styles.summaryItemTitle}>Out (red):</div>
-          <div style={styles.summaryItemContent}>
-            {outEmotions.map(e => EMOTION_LABELS[e]).join(', ') || 'None'}
-          </div>
-        </div>
-
-        <div style={styles.summaryItem}>
-          <div style={styles.summaryItemTitle}>Overview:</div>
-          <div style={styles.summaryItemContent}>{getOverview()}</div>
-        </div>
-
-        {combinationInsight && (
-          <div style={styles.summaryItem}>
-            <div style={styles.summaryItemTitle}>Pattern insight:</div>
-            <div style={styles.summaryItemContent}>{combinationInsight}</div>
-          </div>
-        )}
-
-        {inEmotions.length > 0 && (
-          <div style={styles.summaryItem}>
-            <div style={styles.summaryItemTitle}>Strengths:</div>
-            <ul style={styles.summaryList}>
-              {inEmotions.map(emotion => (
-                <li key={emotion} style={styles.summaryListItem}>
-                  {EMOTION_LABELS[emotion]}: {EMOTION_CONTENT[emotion].strength}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {outEmotions.length > 0 && (
-          <div style={styles.summaryItem}>
-            <div style={styles.summaryItemTitle}>Growth edges:</div>
-            <ul style={styles.summaryList}>
-              {outEmotions.map(emotion => (
-                <li key={emotion} style={styles.summaryListItem}>
-                  {EMOTION_LABELS[emotion]}: {EMOTION_CONTENT[emotion].edge}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {outEmotions.length > 0 && (
-          <div style={styles.summaryItem}>
-            <div style={styles.summaryItemTitle}>Parenting focus:</div>
-            <ul style={styles.summaryList}>
-              {outEmotions.map(emotion => (
-                <li key={emotion} style={styles.summaryListItem}>
-                  {EMOTION_LABELS[emotion]}: {EMOTION_CONTENT[emotion].parentingFocus}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </section>
-
-      {/* Export */}
-      <section style={styles.exportSection}>
-        <label style={styles.label} htmlFor="export-data">
-          Export Data (JSON):
-        </label>
-        <textarea
-          id="export-data"
-          readOnly
-          value={JSON.stringify(exportData, null, 2)}
-          style={styles.exportTextarea}
-        />
-      </section>
-    </div>
+      </div>
     </Layout>
   );
 }
