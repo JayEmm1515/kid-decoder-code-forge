@@ -14,7 +14,8 @@ import {
   Heart,
   Zap,
   Search,
-  Shield
+  Shield,
+  Sparkles
 } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
 import {
@@ -50,6 +51,12 @@ const navigationItems = [
     url: "/being-with-exercise",
     icon: Heart,
     color: "text-rose-400"
+  },
+  {
+    title: "Emotional Blueprint",
+    url: "/emotional-blueprint",
+    icon: Sparkles,
+    color: "text-teal-400"
   },
   {
     title: "Neurodivergent Support",

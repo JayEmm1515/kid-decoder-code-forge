@@ -408,7 +408,7 @@
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 
   /* Cards */
@@ -496,4 +496,279 @@
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
+}
+
+/* ========================================
+   EMOTIONAL BLUEPRINT - Claymorphism Styles
+   ======================================== */
+
+/* Deep gradient background for blueprint page */
+.bg-blueprint-gradient {
+  background: linear-gradient(135deg, 
+    hsl(220 35% 12%) 0%,
+    hsl(240 30% 15%) 25%,
+    hsl(260 25% 18%) 50%,
+    hsl(200 30% 15%) 75%,
+    hsl(180 25% 12%) 100%
+  );
+}
+
+/* Glassmorphism container */
+.glass-container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Clay icon box - 3D soft pillowy effect */
+.clay-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, 
+    hsl(0 0% 98%) 0%, 
+    hsl(0 0% 92%) 100%
+  );
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.15),
+    -4px -4px 12px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.8),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.clay-icon-teal {
+  background: linear-gradient(145deg, 
+    hsl(175 40% 92%) 0%, 
+    hsl(175 35% 85%) 100%
+  );
+}
+
+.clay-icon-purple {
+  background: linear-gradient(145deg, 
+    hsl(270 35% 92%) 0%, 
+    hsl(270 30% 85%) 100%
+  );
+}
+
+.clay-icon-pink {
+  background: linear-gradient(145deg, 
+    hsl(330 40% 92%) 0%, 
+    hsl(330 35% 85%) 100%
+  );
+}
+
+/* Clay button - main CTA style */
+.clay-button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clay-button-teal {
+  background: linear-gradient(145deg, 
+    hsl(175 55% 50%) 0%, 
+    hsl(175 50% 42%) 100%
+  );
+  color: white;
+  box-shadow: 
+    6px 6px 14px rgba(0, 0, 0, 0.25),
+    -3px -3px 10px rgba(45, 180, 170, 0.3),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.2),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.clay-button-teal:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    8px 8px 18px rgba(0, 0, 0, 0.3),
+    -4px -4px 12px rgba(45, 180, 170, 0.4),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.25),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.clay-button-teal:active {
+  transform: translateY(1px);
+  box-shadow: 
+    3px 3px 8px rgba(0, 0, 0, 0.2),
+    -2px -2px 6px rgba(45, 180, 170, 0.2),
+    inset 3px 3px 6px rgba(0, 0, 0, 0.15),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.clay-button-secondary {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  color: white;
+  box-shadow: 
+    4px 4px 10px rgba(0, 0, 0, 0.2),
+    -2px -2px 8px rgba(255, 255, 255, 0.05),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+.clay-button-secondary:hover {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.2) 0%, 
+    rgba(255, 255, 255, 0.12) 100%
+  );
+  transform: translateY(-2px);
+}
+
+.clay-button-secondary:active {
+  transform: translateY(1px);
+  box-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.15),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Clay option buttons - for assessment */
+.clay-option {
+  width: 100%;
+  padding: 1.25rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: linear-gradient(145deg, 
+    hsl(0 0% 98%) 0%, 
+    hsl(0 0% 93%) 100%
+  );
+  box-shadow: 
+    6px 6px 14px rgba(0, 0, 0, 0.12),
+    -4px -4px 10px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.8),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.clay-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    8px 8px 18px rgba(0, 0, 0, 0.15),
+    -5px -5px 12px rgba(255, 255, 255, 0.95),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.9),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.clay-option-pressed {
+  transform: translateY(2px) !important;
+  box-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.1),
+    -2px -2px 4px rgba(255, 255, 255, 0.7),
+    inset 4px 4px 8px rgba(0, 0, 0, 0.08),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.5) !important;
+}
+
+.clay-option-pink {
+  background: linear-gradient(145deg, 
+    hsl(330 30% 96%) 0%, 
+    hsl(330 25% 91%) 100%
+  );
+}
+
+.clay-option-pink:hover {
+  background: linear-gradient(145deg, 
+    hsl(330 35% 97%) 0%, 
+    hsl(330 30% 92%) 100%
+  );
+}
+
+.clay-option-purple {
+  background: linear-gradient(145deg, 
+    hsl(270 25% 96%) 0%, 
+    hsl(270 20% 91%) 100%
+  );
+}
+
+.clay-option-purple:hover {
+  background: linear-gradient(145deg, 
+    hsl(270 30% 97%) 0%, 
+    hsl(270 25% 92%) 100%
+  );
+}
+
+.clay-option-teal {
+  background: linear-gradient(145deg, 
+    hsl(175 30% 95%) 0%, 
+    hsl(175 25% 90%) 100%
+  );
+}
+
+.clay-option-teal:hover {
+  background: linear-gradient(145deg, 
+    hsl(175 35% 96%) 0%, 
+    hsl(175 30% 91%) 100%
+  );
+}
+
+.clay-option-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+/* Results zones */
+.results-zone {
+  padding: 1.25rem;
+  border-radius: 20px;
+}
+
+.results-zone-safe {
+  background: linear-gradient(145deg, 
+    hsl(160 40% 94%) 0%, 
+    hsl(160 35% 88%) 100%
+  );
+  box-shadow: 
+    inset 2px 2px 6px rgba(255, 255, 255, 0.8),
+    inset -2px -2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.results-zone-growth {
+  background: linear-gradient(145deg, 
+    hsl(20 50% 94%) 0%, 
+    hsl(330 40% 90%) 100%
+  );
+  box-shadow: 
+    inset 2px 2px 6px rgba(255, 255, 255, 0.8),
+    inset -2px -2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Emotion chips */
+.emotion-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.emotion-chip-safe {
+  background: hsl(160 45% 40%);
+  color: white;
+}
+
+.emotion-chip-growth {
+  background: hsl(330 50% 55%);
+  color: white;
 }
