@@ -15,6 +15,7 @@ export const createPageUrl = (pageName: string) => {
     'Teens': '/teens',
     'BeingWithExercise': '/being-with-exercise',
     'BeingWith': '/being-with-exercise',
+    'EmotionalBlueprint': '/emotional-blueprint',
     'Neurodivergence': '/neurodivergence',
     'BoundaryBarriers': '/boundary-barriers',
     'BehaviourGuides': '/behaviour-guides',

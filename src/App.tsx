@@ -21,6 +21,7 @@ import Preschool from "./pages/Preschool";
 import SchoolAge from "./pages/SchoolAge";
 import Teens from "./pages/Teens";
 import BeingWithExercise from "./pages/BeingWithExercise";
+import EmotionalBlueprint from "./pages/EmotionalBlueprint";
 import Quizzes from "./pages/Quizzes";
 import Learn from "./pages/Learn";
 import BoundaryBarriers from "./pages/BoundaryBarriers";
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/school-age" element={<SchoolAge />} />
           <Route path="/teens" element={<Teens />} />
           <Route path="/being-with-exercise" element={<BeingWithExercise />} />
+          <Route path="/emotional-blueprint" element={<EmotionalBlueprint />} />
           <Route path="/quizzes" element={<Quizzes />} />
           <Route path="/learn" element={<Learn />} />
           <Route path="/boundary-barriers" element={<BoundaryBarriers />} />
