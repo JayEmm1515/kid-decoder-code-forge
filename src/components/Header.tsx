@@ -14,12 +14,24 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border/60">
+    <header
+      className="sticky top-0 z-50 backdrop-blur-md"
+      style={{
+        background: 'hsl(0 0% 100% / 0.92)',
+        borderBottom: '1px solid rgba(31,41,55,0.08)',
+      }}
+    >
       <div className="container-wide mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-105 transition-all">
+            <div
+              className="w-11 h-11 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-all"
+              style={{
+                background: 'linear-gradient(145deg, hsl(213 20% 36%), hsl(213 20% 28%))',
+                boxShadow: 'var(--shadow-clay-sm)',
+              }}
+            >
               <Heart className="w-5 h-5 text-white" />
             </div>
             <div className="hidden sm:block">
@@ -65,7 +77,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border/60">
+          <div className="md:hidden py-4" style={{ borderTop: '1px solid rgba(31,41,55,0.08)' }}>
             <nav className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
@@ -73,16 +85,16 @@ export default function Header() {
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-3 rounded-xl font-semibold transition-colors ${
-                    location.pathname === link.path 
-                      ? 'bg-accent text-accent-foreground' 
+                    location.pathname === link.path
+                      ? 'bg-accent text-accent-foreground'
                       : 'hover:bg-muted text-foreground/70'
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Link 
-                to="/emotional-blueprint" 
+              <Link
+                to="/emotional-blueprint"
                 onClick={() => setMobileMenuOpen(false)}
                 className="btn-primary text-sm text-center mt-3"
               >
