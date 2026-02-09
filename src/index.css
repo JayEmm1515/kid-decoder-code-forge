@@ -2,112 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-/* THE KID DECODER – Soft & Playful Design System */
+/* THE KID DECODER – Claymorphic Design System */
 
 @layer base {
 :root {
-  /* Primary Brand Colors */
-  --teal: 175 55% 45%;
-  --teal-dark: 175 60% 35%;
-  --teal-light: 175 50% 55%;
-  --purple: 270 50% 55%;
-  --purple-dark: 270 55% 45%;
-  --purple-light: 270 45% 65%;
-  
-  /* Warm accent */
-  --peach: 20 90% 92%;
-  --peach-foreground: 20 60% 40%;
-  --lavender: 270 40% 95%;
-  --mint: 175 40% 93%;
-  
-  /* Neutral System */
-  --white: 0 0% 100%;
-  --gray-50: 240 20% 98%;
-  --gray-100: 240 18% 96%;
-  --gray-200: 240 14% 92%;
-  --gray-300: 240 10% 85%;
-  --gray-400: 240 8% 65%;
-  --gray-500: 240 8% 50%;
-  --gray-600: 240 10% 40%;
-  --gray-700: 240 14% 28%;
-  --gray-800: 240 18% 18%;
-  --gray-900: 240 22% 10%;
-  
-  /* Semantic Colors */
-  --background: 240 20% 98%;
-  --foreground: 240 22% 15%;
+  /* ── Palette (strict) ── */
+  --slate: 213 20% 33%;          /* #425466 */
+  --peach: 8 56% 76%;            /* #E7A79C */
+  --peach-light: 8 56% 90%;
+  --bg: 210 18% 96%;             /* #F4F6F8 */
+  --white: 0 0% 100%;            /* #FFFFFF */
+  --text: 220 24% 17%;           /* #1F2937 */
+  --muted-color: 220 7% 46%;    /* #6B7280 */
+  --border-raw: rgba(31,41,55,0.08);
+
+  /* ── Semantic tokens ── */
+  --background: 210 18% 96%;
+  --foreground: 220 24% 17%;
   --card: 0 0% 100%;
-  --card-foreground: 240 22% 15%;
-  
-  /* Primary - Teal */
-  --primary: 175 55% 45%;
+  --card-foreground: 220 24% 17%;
+
+  --primary: 213 20% 33%;
   --primary-foreground: 0 0% 100%;
-  
-  /* Secondary - Purple */
-  --secondary: 270 50% 55%;
-  --secondary-foreground: 0 0% 100%;
-  
-  /* Accent - Soft Lavender */
-  --accent: 270 40% 95%;
-  --accent-foreground: 270 50% 45%;
-  
-  /* Muted */
-  --muted: 240 14% 95%;
-  --muted-foreground: 240 8% 50%;
-  
-  /* Borders and inputs */
-  --border: 240 14% 90%;
-  --input: 240 14% 95%;
-  --ring: 175 55% 45%;
-  
-  /* Destructive */
+
+  --secondary: 8 56% 76%;
+  --secondary-foreground: 220 24% 17%;
+
+  --accent: 210 18% 93%;
+  --accent-foreground: 213 20% 33%;
+
+  --muted: 210 14% 93%;
+  --muted-foreground: 220 7% 46%;
+
+  --border: 220 10% 92%;
+  --input: 210 14% 93%;
+  --ring: 213 20% 33%;
+
   --destructive: 0 70% 55%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Popover */
   --popover: 0 0% 100%;
-  --popover-foreground: 240 22% 15%;
-  
-  /* Sidebar (for mobile) */
-  --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 240 22% 15%;
-  --sidebar-primary: 175 55% 45%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 175 40% 93%;
-  --sidebar-accent-foreground: 175 55% 35%;
-  --sidebar-border: 240 14% 90%;
-  --sidebar-ring: 175 55% 45%;
+  --popover-foreground: 220 24% 17%;
 
-  /* Border Radius - Extra rounded for playful feel */
-  --radius: 16px;
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 20px;
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 220 24% 17%;
+  --sidebar-primary: 213 20% 33%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 210 18% 93%;
+  --sidebar-accent-foreground: 213 20% 33%;
+  --sidebar-border: 220 10% 92%;
+  --sidebar-ring: 213 20% 33%;
+
+  /* ── Radii – claymorphic ── */
+  --radius: 20px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 24px;
   --radius-xl: 28px;
   --radius-2xl: 36px;
   --radius-pill: 9999px;
+
+  /* ── Shadows – layered clay ── */
+  --shadow-clay: 
+    0 2px 4px rgba(31,41,55,0.04),
+    0 8px 24px rgba(31,41,55,0.06),
+    0 16px 48px rgba(31,41,55,0.04);
+  --shadow-clay-lg:
+    0 4px 8px rgba(31,41,55,0.05),
+    0 12px 32px rgba(31,41,55,0.08),
+    0 24px 64px rgba(31,41,55,0.05);
+  --shadow-clay-sm:
+    0 1px 3px rgba(31,41,55,0.04),
+    0 4px 12px rgba(31,41,55,0.05);
+  --shadow-inner-highlight: inset 0 1px 1px rgba(255,255,255,0.7);
 }
 
 .dark {
-  --background: 240 22% 10%;
-  --foreground: 0 0% 96%;
-  --card: 240 20% 14%;
-  --card-foreground: 0 0% 96%;
-  --popover: 240 20% 14%;
-  --popover-foreground: 0 0% 96%;
-  --primary: 175 55% 50%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 270 50% 60%;
+  --background: 220 24% 10%;
+  --foreground: 210 18% 96%;
+  --card: 220 20% 14%;
+  --card-foreground: 210 18% 96%;
+  --popover: 220 20% 14%;
+  --popover-foreground: 210 18% 96%;
+  --primary: 8 56% 76%;
+  --primary-foreground: 220 24% 17%;
+  --secondary: 213 20% 50%;
   --secondary-foreground: 0 0% 100%;
-  --muted: 240 14% 20%;
-  --muted-foreground: 240 8% 65%;
-  --accent: 270 30% 22%;
-  --accent-foreground: 270 40% 75%;
+  --muted: 220 14% 20%;
+  --muted-foreground: 220 7% 65%;
+  --accent: 220 14% 18%;
+  --accent-foreground: 8 56% 76%;
   --destructive: 0 70% 55%;
   --destructive-foreground: 0 0% 100%;
-  --border: 240 14% 22%;
-  --input: 240 14% 20%;
-  --ring: 175 55% 50%;
+  --border: 220 14% 22%;
+  --input: 220 14% 20%;
+  --ring: 8 56% 76%;
 }
 }
 
@@ -128,122 +117,105 @@
 }
 
 @layer components {
-  /* ── Playful Card Styles ── */
-  .card-playful {
-    @apply bg-card rounded-3xl border border-border p-6;
-    box-shadow: 0 4px 20px -4px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+  /* ── Claymorphic Cards ── */
+  .card-clay {
+    @apply bg-card rounded-[24px] p-6;
+    border: 1px solid var(--border-raw);
+    box-shadow: var(--shadow-clay), var(--shadow-inner-highlight);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
-  
-  .card-playful:hover {
-    box-shadow: 0 8px 30px -6px rgba(0,0,0,0.1), 0 2px 6px rgba(0,0,0,0.04);
+  .card-clay:hover {
+    box-shadow: var(--shadow-clay-lg), var(--shadow-inner-highlight);
     transform: translateY(-4px);
   }
 
-  /* Soft colored cards */
-  .card-soft-teal {
-    @apply rounded-3xl p-6;
-    background: hsl(var(--mint));
-    border: 1px solid hsl(175 40% 88%);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .card-clay-peach {
+    @apply rounded-[24px] p-6;
+    background: linear-gradient(145deg, hsl(8 56% 92%) 0%, hsl(8 56% 88%) 100%);
+    border: 1px solid hsl(8 56% 85% / 0.5);
+    box-shadow: var(--shadow-clay), var(--shadow-inner-highlight);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
-  .card-soft-teal:hover {
+  .card-clay-peach:hover {
+    box-shadow: var(--shadow-clay-lg), var(--shadow-inner-highlight);
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px hsl(175 55% 45% / 0.12);
   }
 
-  .card-soft-purple {
-    @apply rounded-3xl p-6;
-    background: hsl(var(--lavender));
-    border: 1px solid hsl(270 30% 90%);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .card-clay-slate {
+    @apply rounded-[24px] p-6;
+    background: linear-gradient(145deg, hsl(213 20% 36%) 0%, hsl(213 20% 30%) 100%);
+    border: 1px solid hsl(213 20% 40% / 0.3);
+    box-shadow: var(--shadow-clay), inset 0 1px 1px rgba(255,255,255,0.08);
+    color: white;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
-  .card-soft-purple:hover {
+  .card-clay-slate:hover {
+    box-shadow: var(--shadow-clay-lg), inset 0 1px 1px rgba(255,255,255,0.08);
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px hsl(270 50% 55% / 0.12);
-  }
-
-  .card-soft-peach {
-    @apply rounded-3xl p-6;
-    background: hsl(var(--peach));
-    border: 1px solid hsl(20 60% 88%);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card-soft-peach:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px hsl(20 60% 50% / 0.1);
   }
 
   /* Legacy card compat */
-  .card-clean {
-    @apply card-playful;
-  }
-  .card-feature {
-    @apply card-playful;
-  }
-  .card-feature-teal {
-    @apply card-soft-teal;
-  }
-  .card-feature-purple {
-    @apply card-soft-purple;
-  }
+  .card-playful { @apply card-clay; }
+  .card-clean { @apply card-clay; }
+  .card-feature { @apply card-clay; }
+  .card-soft-teal { @apply card-clay; }
+  .card-soft-purple { @apply card-clay; }
+  .card-soft-peach { @apply card-clay-peach; }
+  .card-feature-teal { @apply card-clay; }
+  .card-feature-purple { @apply card-clay; }
 
-  /* Hero Section – warm gradient with blob shapes */
+  /* ── Hero ── */
   .hero-gradient {
-    background: linear-gradient(160deg,
-      hsl(175 40% 93%) 0%,
-      hsl(270 40% 95%) 40%,
-      hsl(20 90% 96%) 100%
-    );
+    background: hsl(var(--bg));
     position: relative;
     overflow: hidden;
   }
 
-  /* ── Playful Buttons ── */
+  /* ── Buttons ── */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-bold text-white transition-all duration-200;
-    background: linear-gradient(135deg, hsl(175 55% 48%) 0%, hsl(175 60% 40%) 100%);
-    box-shadow: 0 6px 20px hsl(175 55% 45% / 0.3), 0 2px 4px hsl(175 55% 45% / 0.15);
+    background: linear-gradient(145deg, hsl(213 20% 36%) 0%, hsl(213 20% 28%) 100%);
+    box-shadow: var(--shadow-clay-sm), var(--shadow-inner-highlight);
   }
   .btn-primary:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 28px hsl(175 55% 45% / 0.4), 0 3px 6px hsl(175 55% 45% / 0.2);
+    box-shadow: var(--shadow-clay), var(--shadow-inner-highlight);
   }
   .btn-primary:active {
     transform: translateY(1px) scale(0.98);
   }
-  
+
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-bold transition-all duration-200;
-    background: linear-gradient(135deg, hsl(270 50% 58%) 0%, hsl(270 55% 50%) 100%);
-    color: white;
-    box-shadow: 0 6px 20px hsl(270 50% 55% / 0.3), 0 2px 4px hsl(270 50% 55% / 0.15);
+    background: linear-gradient(145deg, hsl(8 56% 78%) 0%, hsl(8 56% 72%) 100%);
+    color: hsl(var(--text));
+    box-shadow: var(--shadow-clay-sm), var(--shadow-inner-highlight);
   }
   .btn-secondary:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 28px hsl(270 50% 55% / 0.4);
+    box-shadow: var(--shadow-clay), var(--shadow-inner-highlight);
   }
   .btn-secondary:active {
     transform: translateY(1px) scale(0.98);
   }
-  
+
   .btn-outline {
     @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-bold border-2 transition-all duration-200;
-    border-color: hsl(var(--teal));
-    color: hsl(var(--teal-dark));
+    border-color: hsl(var(--slate));
+    color: hsl(var(--slate));
     background: hsl(var(--white));
   }
   .btn-outline:hover {
-    background: hsl(var(--teal));
+    background: hsl(var(--slate));
     color: white;
     transform: translateY(-2px);
   }
-  
+
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-foreground/70 hover:text-foreground hover:bg-muted transition-all duration-200;
   }
 
-  /* Section Styles */
+  /* ── Section Layout ── */
   .section-padding {
     @apply px-4 py-14 md:px-6 md:py-20 lg:py-24;
   }
@@ -254,7 +226,7 @@
     @apply max-w-6xl mx-auto;
   }
 
-  /* Navigation Link */
+  /* ── Navigation ── */
   .nav-link {
     @apply text-foreground/65 hover:text-primary font-semibold transition-colors duration-200 text-sm;
   }
@@ -262,90 +234,83 @@
     @apply text-primary font-bold;
   }
 
-  /* ── Playful Icon Containers ── */
+  /* ── Icon containers ── */
   .icon-bubble {
     @apply w-14 h-14 rounded-2xl flex items-center justify-center;
-    background: hsl(var(--mint));
-    box-shadow: inset 0 -2px 4px hsl(175 40% 80% / 0.5);
+    background: hsl(var(--bg));
+    box-shadow: var(--shadow-clay-sm), var(--shadow-inner-highlight);
   }
   .icon-bubble-purple {
-    background: hsl(var(--lavender));
-    box-shadow: inset 0 -2px 4px hsl(270 30% 85% / 0.5);
+    @apply icon-bubble;
   }
   .icon-bubble-peach {
-    background: hsl(var(--peach));
-    box-shadow: inset 0 -2px 4px hsl(20 50% 85% / 0.5);
+    background: hsl(var(--peach-light));
+    box-shadow: var(--shadow-clay-sm), var(--shadow-inner-highlight);
   }
 
   /* Legacy compat */
   .icon-circle { @apply icon-bubble; }
-  .icon-circle-purple { @apply icon-bubble-purple; }
+  .icon-circle-purple { @apply icon-bubble; }
 
-  /* Badge Styles */
+  /* ── Badges ── */
   .badge-teal {
     @apply inline-flex items-center px-4 py-1.5 rounded-full text-sm font-bold;
-    background: hsl(var(--mint));
-    color: hsl(var(--teal-dark));
+    background: hsl(var(--bg));
+    color: hsl(var(--slate));
+    box-shadow: var(--shadow-clay-sm);
   }
   .badge-purple {
     @apply inline-flex items-center px-4 py-1.5 rounded-full text-sm font-bold;
-    background: hsl(var(--lavender));
-    color: hsl(var(--purple-dark));
+    background: hsl(var(--peach-light));
+    color: hsl(var(--text));
+    box-shadow: var(--shadow-clay-sm);
   }
 
-  /* Gradient Text */
+  /* ── Text gradient ── */
   .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--teal)) 0%, hsl(var(--purple)) 100%);
+    background: linear-gradient(135deg, hsl(var(--slate)) 0%, hsl(var(--peach)) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .text-gradient-teal {
-    background: linear-gradient(135deg, hsl(var(--teal-dark)) 0%, hsl(var(--teal-light)) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    @apply text-gradient;
   }
 
-  /* Legacy glass-card compat */
-  .glass-card { @apply card-playful; }
-  .glass-card-teal { @apply card-soft-teal; }
-  .glass-card-purple { @apply card-soft-purple; }
+  /* ── Clay decorative shapes ── */
+  .clay-sphere {
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+  }
+  .clay-pill {
+    border-radius: 9999px;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  /* Legacy compat */
+  .glass-card { @apply card-clay; }
+  .glass-card-teal { @apply card-clay; }
+  .glass-card-purple { @apply card-clay; }
   .bg-airy { @apply bg-background; }
   .btn-pill { @apply btn-outline text-sm px-5 py-2; }
   .btn-pill-teal { @apply btn-primary text-sm px-5 py-2; }
   .btn-pill-purple { @apply btn-secondary text-sm px-5 py-2; }
   .icon-box { @apply icon-bubble; }
   .icon-box-teal { @apply icon-bubble; }
-  .icon-box-purple { @apply icon-bubble icon-bubble-purple; }
-  .icon-box-pink { @apply icon-bubble icon-bubble-purple; }
-  .stat-card { @apply card-playful p-4; }
+  .icon-box-purple { @apply icon-bubble; }
+  .icon-box-pink { @apply icon-bubble; }
+  .stat-card { @apply card-clay p-4; }
 }
 
 @layer utilities {
-  /* Brand Color Utilities */
-  .text-teal { color: hsl(var(--teal)); }
-  .text-teal-dark { color: hsl(var(--teal-dark)); }
-  .text-teal-light { color: hsl(var(--teal-light)); }
-  .text-purple { color: hsl(var(--purple)); }
-  .text-purple-dark { color: hsl(var(--purple-dark)); }
-  .text-purple-light { color: hsl(var(--purple-light)); }
-  
-  .bg-teal { background-color: hsl(var(--teal)); }
-  .bg-teal-light { background-color: hsl(var(--teal) / 0.1); }
-  .bg-purple { background-color: hsl(var(--purple)); }
-  .bg-purple-light { background-color: hsl(var(--purple) / 0.1); }
-  
-  .hover\:bg-teal-light:hover { background-color: hsl(var(--teal) / 0.1); }
-  .hover\:bg-purple-light:hover { background-color: hsl(var(--purple) / 0.1); }
-  
-  /* Legacy aliases */
-  .text-pink { color: hsl(var(--purple)); }
-  .text-mint { color: hsl(var(--teal-light)); }
-  .bg-pink { background-color: hsl(var(--purple)); }
-  .bg-mint { background-color: hsl(var(--teal-light)); }
-  
-  /* Animation utilities */
+  .text-slate-brand { color: hsl(var(--slate)); }
+  .text-peach { color: hsl(var(--peach)); }
+  .bg-slate-brand { background-color: hsl(var(--slate)); }
+  .bg-peach { background-color: hsl(var(--peach)); }
+  .bg-peach-light { background-color: hsl(var(--peach-light)); }
+
   .animate-fade-in {
     animation: fadeIn 0.5s ease-out forwards;
   }

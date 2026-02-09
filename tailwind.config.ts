@@ -65,30 +65,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Brand Colors
-				teal: {
-					dark: 'hsl(175 60% 35%)',
-					DEFAULT: 'hsl(175 55% 45%)',
-					light: 'hsl(175 50% 55%)'
+				slate: {
+					brand: 'hsl(213 20% 33%)',
 				},
-				purple: {
-					dark: 'hsl(270 55% 45%)',
-					DEFAULT: 'hsl(270 50% 55%)',
-					light: 'hsl(270 45% 65%)'
+				peach: {
+					DEFAULT: 'hsl(8 56% 76%)',
+					light: 'hsl(8 56% 90%)',
 				},
-				// Gray scale
-				gray: {
-					50: 'hsl(220 20% 98%)',
-					100: 'hsl(220 18% 96%)',
-					200: 'hsl(220 15% 91%)',
-					300: 'hsl(220 12% 84%)',
-					400: 'hsl(220 10% 65%)',
-					500: 'hsl(220 10% 50%)',
-					600: 'hsl(220 12% 40%)',
-					700: 'hsl(220 15% 28%)',
-					800: 'hsl(220 18% 18%)',
-					900: 'hsl(220 22% 10%)'
-				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -129,13 +112,10 @@ export default {
 				'shimmer': 'shimmer 2s infinite'
 			},
 			boxShadow: {
-				'glass': '0 8px 32px rgba(31, 38, 50, 0.12)',
-				'glass-lg': '0 12px 40px rgba(31, 38, 50, 0.18)',
-				'elevated': '0 16px 48px rgba(31, 38, 50, 0.20)',
-				'glow-teal': '0 4px 24px rgba(45, 180, 170, 0.30)',
-				'glow-purple': '0 4px 24px rgba(138, 92, 194, 0.30)',
-				'glow-pink': '0 4px 24px rgba(219, 112, 147, 0.30)',
-				'glow-mint': '0 4px 24px rgba(112, 193, 165, 0.30)'
+				'clay': '0 2px 4px rgba(31,41,55,0.04), 0 8px 24px rgba(31,41,55,0.06), 0 16px 48px rgba(31,41,55,0.04)',
+				'clay-lg': '0 4px 8px rgba(31,41,55,0.05), 0 12px 32px rgba(31,41,55,0.08), 0 24px 64px rgba(31,41,55,0.05)',
+				'clay-sm': '0 1px 3px rgba(31,41,55,0.04), 0 4px 12px rgba(31,41,55,0.05)',
+				'inner-highlight': 'inset 0 1px 1px rgba(255,255,255,0.7)',
 			}
 		}
 	},

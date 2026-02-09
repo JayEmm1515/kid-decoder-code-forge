@@ -26,13 +26,19 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer style={{ background: 'hsl(0 0% 100%)', borderTop: '1px solid rgba(31,41,55,0.08)' }}>
       <div className="container-wide mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md">
+              <div
+                className="w-11 h-11 rounded-2xl flex items-center justify-center"
+                style={{
+                  background: 'linear-gradient(145deg, hsl(213 20% 36%), hsl(213 20% 28%))',
+                  boxShadow: 'var(--shadow-clay-sm)',
+                }}
+              >
                 <Heart className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -41,10 +47,10 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm text-muted-foreground mb-4 max-w-xs leading-relaxed">
-              Helping parents understand their child's behavior and build stronger emotional connections. 💛
+              Helping parents understand their child's behavior and build stronger emotional connections.
             </p>
-            <a 
-              href="mailto:hello@thebigenoughproject.com" 
+            <a
+              href="mailto:hello@thebigenoughproject.com"
               className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 font-semibold transition-colors"
             >
               <Mail className="w-4 h-4" />
@@ -54,9 +60,7 @@ export default function Footer() {
 
           {/* Features Column */}
           <div>
-            <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4">
-              Features
-            </h3>
+            <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4">Features</h3>
             <ul className="space-y-3">
               {footerLinks.features.map((link) => (
                 <li key={link.path}>
@@ -70,9 +74,7 @@ export default function Footer() {
 
           {/* Age Groups Column */}
           <div>
-            <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4">
-              Age Groups
-            </h3>
+            <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4">Age Groups</h3>
             <ul className="space-y-3">
               {footerLinks.ageGroups.map((link) => (
                 <li key={link.path}>
@@ -86,9 +88,7 @@ export default function Footer() {
 
           {/* Resources Column */}
           <div>
-            <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4">
-              Resources
-            </h3>
+            <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4">Resources</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.path}>
@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-border mt-12 pt-8">
+        <div className="mt-12 pt-8" style={{ borderTop: '1px solid rgba(31,41,55,0.08)' }}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
               © {new Date().getFullYear()} The Big Enough Project. All rights reserved.
