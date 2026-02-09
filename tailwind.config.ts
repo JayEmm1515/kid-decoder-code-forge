@@ -67,43 +67,27 @@ export default {
 				},
 				// Brand Colors
 				teal: {
-					deep: 'hsl(175 60% 35%)',
+					dark: 'hsl(175 60% 35%)',
 					DEFAULT: 'hsl(175 55% 45%)',
 					light: 'hsl(175 50% 55%)'
 				},
-				mint: {
-					DEFAULT: 'hsl(165 50% 65%)',
-					light: 'hsl(165 45% 75%)'
-				},
 				purple: {
-					deep: 'hsl(270 45% 45%)',
+					dark: 'hsl(270 55% 45%)',
 					DEFAULT: 'hsl(270 50% 55%)',
-					light: 'hsl(270 45% 70%)'
+					light: 'hsl(270 45% 65%)'
 				},
-				pink: {
-					DEFAULT: 'hsl(330 55% 60%)',
-					light: 'hsl(330 50% 75%)',
-					soft: 'hsl(330 45% 85%)'
-				},
-				// Neutrals
-				slate: {
-					900: 'hsl(220 25% 12%)',
-					800: 'hsl(220 22% 18%)',
-					700: 'hsl(220 18% 28%)',
-					600: 'hsl(220 15% 40%)',
-					500: 'hsl(220 12% 55%)',
-					400: 'hsl(220 10% 70%)',
-					300: 'hsl(220 15% 85%)',
-					200: 'hsl(220 20% 92%)',
-					100: 'hsl(220 25% 96%)'
-				},
-				// Legacy aliases
-				aqua: {
-					vibrant: 'hsl(175 55% 45%)',
-					soft: 'hsl(175 50% 60%)'
-				},
-				amber: {
-					warm: 'hsl(330 55% 60%)'
+				// Gray scale
+				gray: {
+					50: 'hsl(220 20% 98%)',
+					100: 'hsl(220 18% 96%)',
+					200: 'hsl(220 15% 91%)',
+					300: 'hsl(220 12% 84%)',
+					400: 'hsl(220 10% 65%)',
+					500: 'hsl(220 10% 50%)',
+					600: 'hsl(220 12% 40%)',
+					700: 'hsl(220 15% 28%)',
+					800: 'hsl(220 18% 18%)',
+					900: 'hsl(220 22% 10%)'
 				}
 			},
 			borderRadius: {
