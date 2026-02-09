@@ -13,7 +13,7 @@ export default function BottomNav() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 pb-safe md:hidden">
-      <nav className="bg-white/95 backdrop-blur-sm mx-3 mb-3 rounded-2xl border border-border shadow-lg">
+      <nav className="bg-card/95 backdrop-blur-md mx-3 mb-3 rounded-[1.25rem] border border-border/60 shadow-lg">
         <div className="flex items-center justify-around py-2">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
@@ -27,9 +27,9 @@ export default function BottomNav() {
               >
                 <div
                   className={`
-                    w-11 h-11 rounded-xl transition-all duration-200
+                    w-11 h-11 rounded-2xl transition-all duration-200
                     ${isActive
-                      ? "bg-gradient-to-br from-primary to-secondary shadow-md"
+                      ? "bg-gradient-to-br from-primary to-secondary shadow-md scale-105"
                       : "bg-muted group-hover:bg-accent"
                     }
                     flex items-center justify-center
@@ -39,12 +39,12 @@ export default function BottomNav() {
                     className={`w-5 h-5 transition-colors ${
                       isActive ? "text-white" : "text-muted-foreground group-hover:text-primary"
                     }`}
-                    strokeWidth={1.5}
+                    strokeWidth={isActive ? 2.5 : 1.5}
                   />
                 </div>
                 <span
-                  className={`text-[10px] font-medium transition-colors ${
-                    isActive ? "text-primary" : "text-muted-foreground"
+                  className={`text-[10px] transition-colors ${
+                    isActive ? "text-primary font-bold" : "text-muted-foreground font-medium"
                   }`}
                 >
                   {item.label}

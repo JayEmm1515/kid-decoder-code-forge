@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Heart, Menu, X } from "lucide-react";
+import { Heart, Menu, X, Star } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -14,17 +14,17 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border/60">
       <div className="container-wide mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-105 transition-all">
               <Heart className="w-5 h-5 text-white" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-foreground">The Kid Decoder</h1>
-              <p className="text-xs text-muted-foreground -mt-0.5">by The Big Enough Project</p>
+              <h1 className="text-lg font-extrabold text-foreground">The Kid Decoder</h1>
+              <p className="text-[11px] text-muted-foreground -mt-0.5 font-medium">by The Big Enough Project</p>
             </div>
           </Link>
 
@@ -43,7 +43,8 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/emotional-blueprint" className="btn-primary text-sm">
+            <Link to="/emotional-blueprint" className="btn-primary text-sm py-2.5 px-5">
+              <Star className="w-4 h-4" />
               Start Assessment
             </Link>
           </div>
@@ -51,7 +52,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            className="md:hidden p-2.5 rounded-xl hover:bg-muted transition-colors"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
@@ -64,17 +65,17 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <nav className="flex flex-col gap-2">
+          <div className="md:hidden py-4 border-t border-border/60">
+            <nav className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-lg transition-colors ${
+                  className={`px-4 py-3 rounded-xl font-semibold transition-colors ${
                     location.pathname === link.path 
-                      ? 'bg-accent text-accent-foreground font-semibold' 
-                      : 'hover:bg-muted'
+                      ? 'bg-accent text-accent-foreground' 
+                      : 'hover:bg-muted text-foreground/70'
                   }`}
                 >
                   {link.label}
@@ -83,8 +84,9 @@ export default function Header() {
               <Link 
                 to="/emotional-blueprint" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="btn-primary text-sm text-center mt-2"
+                className="btn-primary text-sm text-center mt-3"
               >
+                <Star className="w-4 h-4" />
                 Start Assessment
               </Link>
             </nav>
