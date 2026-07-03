@@ -6,74 +6,78 @@
 
 @layer base {
 :root {
-  /* ── Palette (strict) ── */
-  --slate: 213 20% 33%;          /* #425466 */
-  --peach: 8 56% 76%;            /* #E7A79C */
-  --peach-light: 8 56% 90%;
-  --bg: 210 18% 96%;             /* #F4F6F8 */
-  --white: 0 0% 100%;            /* #FFFFFF */
-  --text: 220 24% 17%;           /* #1F2937 */
-  --muted-color: 220 7% 46%;    /* #6B7280 */
-  --border-raw: rgba(31,41,55,0.08);
+  /* ── Palette – Kid Decoder mobile mockup ── */
+  --deep-teal: 195 71% 17%;      /* #0D3B4C */
+  --pink: 348 82% 74%;           /* #F6B6C3 */
+  --pink-strong: 348 76% 75%;    /* #F5A7B8 */
+  --pink-accent: 344 78% 75%;    /* #F08EA4 */
+  --pink-soft: 348 71% 92%;      /* #F9DDE4 */
+  --mint: 187 40% 80%;           /* #B9DDE1 */
+  --mint-soft: 187 30% 92%;      /* #DDECEE */
+  --bg: 180 17% 97%;             /* #F8FAFA */
+  --neutral-row: 180 14% 96%;    /* #F4F7F7 */
+  --white: 0 0% 100%;
+  --text: 195 71% 17%;
+  --border-raw: rgba(13,59,76,0.08);
 
   /* ── Semantic tokens ── */
-  --background: 210 18% 96%;
-  --foreground: 220 24% 17%;
+  --background: 180 17% 97%;
+  --foreground: 195 71% 17%;
   --card: 0 0% 100%;
-  --card-foreground: 220 24% 17%;
+  --card-foreground: 195 71% 17%;
 
-  --primary: 213 20% 33%;
+  --primary: 195 71% 17%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 8 56% 76%;
-  --secondary-foreground: 220 24% 17%;
+  --secondary: 348 82% 74%;
+  --secondary-foreground: 195 71% 17%;
 
-  --accent: 210 18% 93%;
-  --accent-foreground: 213 20% 33%;
+  --accent: 187 40% 80%;
+  --accent-foreground: 195 71% 17%;
 
-  --muted: 210 14% 93%;
-  --muted-foreground: 220 7% 46%;
+  --muted: 180 14% 96%;
+  --muted-foreground: 195 20% 40%;
 
-  --border: 220 10% 92%;
-  --input: 210 14% 93%;
-  --ring: 213 20% 33%;
+  --border: 195 20% 90%;
+  --input: 180 14% 96%;
+  --ring: 195 71% 17%;
 
   --destructive: 0 70% 55%;
   --destructive-foreground: 0 0% 100%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 220 24% 17%;
+  --popover-foreground: 195 71% 17%;
 
   --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 220 24% 17%;
-  --sidebar-primary: 213 20% 33%;
+  --sidebar-foreground: 195 71% 17%;
+  --sidebar-primary: 195 71% 17%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 210 18% 93%;
-  --sidebar-accent-foreground: 213 20% 33%;
-  --sidebar-border: 220 10% 92%;
-  --sidebar-ring: 213 20% 33%;
+  --sidebar-accent: 180 14% 96%;
+  --sidebar-accent-foreground: 195 71% 17%;
+  --sidebar-border: 195 20% 90%;
+  --sidebar-ring: 195 71% 17%;
 
-  /* ── Radii – claymorphic ── */
-  --radius: 20px;
-  --radius-sm: 12px;
-  --radius-md: 20px;
-  --radius-lg: 24px;
-  --radius-xl: 28px;
-  --radius-2xl: 36px;
+  /* ── Radii ── */
+  --radius: 24px;
+  --radius-sm: 16px;
+  --radius-md: 24px;
+  --radius-lg: 28px;
+  --radius-xl: 32px;
+  --radius-2xl: 34px;
   --radius-pill: 9999px;
 
-  /* ── Shadows – layered clay ── */
+  /* ── Shadows ── */
   --shadow-clay: 
-    0 2px 4px rgba(31,41,55,0.04),
-    0 8px 24px rgba(31,41,55,0.06),
-    0 16px 48px rgba(31,41,55,0.04);
+    0 2px 4px rgba(13,59,76,0.04),
+    0 8px 24px rgba(13,59,76,0.06),
+    0 16px 48px rgba(13,59,76,0.04);
   --shadow-clay-lg:
-    0 4px 8px rgba(31,41,55,0.05),
-    0 12px 32px rgba(31,41,55,0.08),
-    0 24px 64px rgba(31,41,55,0.05);
+    0 4px 8px rgba(13,59,76,0.05),
+    0 12px 32px rgba(13,59,76,0.08),
+    0 24px 64px rgba(13,59,76,0.05);
   --shadow-clay-sm:
-    0 1px 3px rgba(31,41,55,0.04),
-    0 4px 12px rgba(31,41,55,0.05);
+    0 1px 3px rgba(13,59,76,0.04),
+    0 4px 12px rgba(13,59,76,0.05);
   --shadow-inner-highlight: inset 0 1px 1px rgba(255,255,255,0.7);
 }
 
