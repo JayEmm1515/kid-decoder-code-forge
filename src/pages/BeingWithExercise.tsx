@@ -301,7 +301,7 @@ export default function BeingWithExercise() {
                   className={`
                     flex-[2] flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all
                     ${complete
-                      ? 'bg-gradient-to-r from-teal to-purple text-foreground hover:opacity-90 shadow-lg'
+                      ? 'bg-gradient-to-r from-teal to-purple text-white hover:opacity-90 shadow-lg'
                       : 'bg-foreground/5 border border-foreground/10 text-muted-foreground/50 cursor-not-allowed'}
                   `}
                 >
@@ -390,7 +390,7 @@ export default function BeingWithExercise() {
                   Edit Answers
                 </button>
                 <button onClick={resetExercise}
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-teal to-purple text-foreground font-semibold hover:opacity-90">
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-teal to-purple text-white font-semibold hover:opacity-90">
                   <RotateCcw className="w-4 h-4" /> Start Over
                 </button>
               </div>
