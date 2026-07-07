@@ -162,7 +162,7 @@ export default function BeingWithExercise() {
         <div className="max-w-2xl mx-auto space-y-5">
           {/* Back */}
           <Link to="/emotional-toolbox"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass-card text-foreground hover:bg-white/10 transition-colors">
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass-card text-foreground hover:bg-foreground/10 transition-colors">
             <ChevronLeft className="w-4 h-4" /> Back to Toolbox
           </Link>
 
@@ -171,8 +171,8 @@ export default function BeingWithExercise() {
             <div className="icon-box icon-box-purple w-14 h-14 mx-auto mb-4">
               <Heart className="w-7 h-7 text-purple" strokeWidth={1.5} />
             </div>
-            <h1 className="text-2xl md:text-3xl font-bold text-white">Being With</h1>
-            <p className="text-white/60 mt-2 text-sm md:text-base">
+            <h1 className="text-2xl md:text-3xl font-bold text-foreground">Being With</h1>
+            <p className="text-muted-foreground mt-2 text-sm md:text-base">
               For each feeling, decide whether your caregiver could <span className="text-teal font-medium">stay present with it (IN)</span> or
               <span className="text-pink font-medium"> struggled with it (OUT)</span>.
             </p>
@@ -182,7 +182,7 @@ export default function BeingWithExercise() {
             <>
               {/* Caregiver name */}
               <div className="glass-card p-5">
-                <label className="block text-sm font-medium text-white/70 mb-2" htmlFor="attachment-figure">
+                <label className="block text-sm font-medium text-foreground/80 mb-2" htmlFor="attachment-figure">
                   Who are you thinking of? (e.g. Mum, Dad, Grandma)
                 </label>
                 <input
@@ -191,17 +191,17 @@ export default function BeingWithExercise() {
                   value={attachmentFigure}
                   onChange={(e) => setAttachmentFigure(e.target.value)}
                   placeholder="Enter name..."
-                  className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-teal/50"
+                  className="w-full px-4 py-3 rounded-xl bg-foreground/10 border border-foreground/20 text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-teal/50"
                 />
               </div>
 
               {/* Progress */}
               <div className="glass-card p-4">
-                <div className="flex items-center justify-between mb-2 text-xs text-white/60">
+                <div className="flex items-center justify-between mb-2 text-xs text-muted-foreground">
                   <span>{EMOTIONS.length - unassigned.length} of {EMOTIONS.length} assigned</span>
                   <span>{progress}%</span>
                 </div>
-                <div className="h-2 rounded-full bg-white/10 overflow-hidden">
+                <div className="h-2 rounded-full bg-foreground/10 overflow-hidden">
                   <div className="h-full bg-gradient-to-r from-teal to-purple transition-all duration-300"
                        style={{ width: `${progress}%` }} />
                 </div>
@@ -209,14 +209,14 @@ export default function BeingWithExercise() {
 
               {/* Unassigned pool */}
               <div className="glass-card p-5">
-                <p className="text-sm text-white/60 mb-3">
+                <p className="text-sm text-muted-foreground mb-3">
                   {unassigned.length > 0
                     ? 'Tap IN or OUT for each feeling (or drag it into a zone).'
                     : 'All feelings assigned. Review below or generate your report.'}
                 </p>
                 <div className="space-y-2">
                   {unassigned.length === 0 && (
-                    <p className="text-center text-white/40 text-sm py-2">Nothing left to sort ✓</p>
+                    <p className="text-center text-muted-foreground/60 text-sm py-2">Nothing left to sort ✓</p>
                   )}
                   {unassigned.map(emotion => {
                     const Icon = EMOTION_ICONS[emotion];
@@ -227,12 +227,12 @@ export default function BeingWithExercise() {
                         onDragEnd={onDragEnd}
                         className={`
                           flex items-center justify-between gap-2 p-2 pl-4 rounded-2xl
-                          bg-white/5 border border-white/10 transition-all
+                          bg-foreground/5 border border-foreground/10 transition-all
                           ${draggedEmotion === emotion ? 'opacity-50' : ''}
                         `}
                       >
-                        <div className="flex items-center gap-3 text-white">
-                          <Icon className="w-5 h-5 text-white/70" />
+                        <div className="flex items-center gap-3 text-foreground">
+                          <Icon className="w-5 h-5 text-foreground/80" />
                           <span className="font-medium">{EMOTION_LABELS[emotion]}</span>
                         </div>
                         <div className="flex gap-2">
@@ -260,7 +260,7 @@ export default function BeingWithExercise() {
                 >
                   <h3 className="text-teal font-semibold text-sm mb-2">IN · Met well</h3>
                   {inEmotions.length === 0
-                    ? <p className="text-white/40 text-xs italic">Drop or tap IN</p>
+                    ? <p className="text-muted-foreground/60 text-xs italic">Drop or tap IN</p>
                     : <div className="flex flex-wrap gap-1.5">
                         {inEmotions.map(e => (
                           <button key={e} onClick={() => assign(e, 'unassigned')}
@@ -277,7 +277,7 @@ export default function BeingWithExercise() {
                 >
                   <h3 className="text-pink font-semibold text-sm mb-2">OUT · Struggled</h3>
                   {outEmotions.length === 0
-                    ? <p className="text-white/40 text-xs italic">Drop or tap OUT</p>
+                    ? <p className="text-muted-foreground/60 text-xs italic">Drop or tap OUT</p>
                     : <div className="flex flex-wrap gap-1.5">
                         {outEmotions.map(e => (
                           <button key={e} onClick={() => assign(e, 'unassigned')}
@@ -292,7 +292,7 @@ export default function BeingWithExercise() {
               {/* Actions */}
               <div className="flex gap-3">
                 <button onClick={resetExercise}
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white/70 hover:bg-white/10 transition-colors">
+                  className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-foreground/5 border border-foreground/15 text-foreground/80 hover:bg-foreground/10 transition-colors">
                   <RotateCcw className="w-4 h-4" /> Reset
                 </button>
                 <button
@@ -302,7 +302,7 @@ export default function BeingWithExercise() {
                     flex-[2] flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all
                     ${complete
                       ? 'bg-gradient-to-r from-teal to-purple text-white hover:opacity-90 shadow-lg'
-                      : 'bg-white/5 border border-white/10 text-white/30 cursor-not-allowed'}
+                      : 'bg-foreground/5 border border-foreground/10 text-muted-foreground/50 cursor-not-allowed'}
                   `}
                 >
                   {complete ? <>Generate My Report <ArrowRight className="w-4 h-4" /></> : <>Assign all feelings to continue</>}
@@ -319,8 +319,8 @@ export default function BeingWithExercise() {
                   <Sparkles className="w-5 h-5" />
                   <span className="text-xs uppercase tracking-wider font-semibold">Your Personalised Report</span>
                 </div>
-                <h2 className="text-2xl font-bold text-white">Being With {figure}</h2>
-                <p className="text-white/60 text-sm">
+                <h2 className="text-2xl font-bold text-foreground">Being With {figure}</h2>
+                <p className="text-muted-foreground text-sm">
                   Based on {inEmotions.length} feeling{inEmotions.length !== 1 ? 's' : ''} met well and
                   {' '}{outEmotions.length} that were harder.
                 </p>
@@ -328,13 +328,13 @@ export default function BeingWithExercise() {
 
               <div className="glass-card p-6">
                 <h3 className="text-sm font-semibold text-purple mb-2">Overview</h3>
-                <p className="text-white/80 text-sm leading-relaxed">{overview}</p>
+                <p className="text-foreground text-sm leading-relaxed">{overview}</p>
               </div>
 
               {pairInsight && (
                 <div className="glass-card p-6 border-l-4 border-purple">
                   <h3 className="text-sm font-semibold text-purple mb-2">Pattern Insight</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">{pairInsight}</p>
+                  <p className="text-foreground text-sm leading-relaxed">{pairInsight}</p>
                 </div>
               )}
 
@@ -351,7 +351,7 @@ export default function BeingWithExercise() {
                           <Icon className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
                           <div>
                             <p className="text-teal font-medium text-sm">{EMOTION_LABELS[e]}</p>
-                            <p className="text-white/70 text-xs mt-0.5">{EMOTION_CONTENT[e].strength}</p>
+                            <p className="text-foreground/80 text-xs mt-0.5">{EMOTION_CONTENT[e].strength}</p>
                           </div>
                         </div>
                       );
@@ -372,8 +372,8 @@ export default function BeingWithExercise() {
                             <Icon className="w-4 h-4 text-pink" />
                             <p className="text-pink font-medium text-sm">{EMOTION_LABELS[e]}</p>
                           </div>
-                          <p className="text-white/60 text-xs mb-2">{EMOTION_CONTENT[e].edge}</p>
-                          <p className="text-white/80 text-xs">
+                          <p className="text-muted-foreground text-xs mb-2">{EMOTION_CONTENT[e].edge}</p>
+                          <p className="text-foreground text-xs">
                             <span className="text-purple font-medium">Try this: </span>
                             {EMOTION_CONTENT[e].parentingFocus}
                           </p>
@@ -386,7 +386,7 @@ export default function BeingWithExercise() {
 
               <div className="flex gap-3">
                 <button onClick={() => setShowReport(false)}
-                  className="flex-1 px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white/70 hover:bg-white/10 transition-colors">
+                  className="flex-1 px-4 py-3 rounded-xl bg-foreground/5 border border-foreground/15 text-foreground/80 hover:bg-foreground/10 transition-colors">
                   Edit Answers
                 </button>
                 <button onClick={resetExercise}
@@ -398,7 +398,7 @@ export default function BeingWithExercise() {
           )}
 
           <div className="text-center pt-2">
-            <p className="text-white/40 text-xs">Auto-saved locally</p>
+            <p className="text-muted-foreground/60 text-xs">Auto-saved locally</p>
           </div>
         </div>
       </div>
