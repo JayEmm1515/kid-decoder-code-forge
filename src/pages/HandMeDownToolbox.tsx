@@ -11,7 +11,7 @@ import {
   Compass,
   EyeOff,
   Flame,
-  Tape,
+  XCircle,
   Megaphone,
   ShieldCheck,
   RotateCcw,
@@ -38,7 +38,7 @@ const TOOLS: {
   name: string;
   tag: string;
   description: string;
-  icon: typeof Tape;
+  icon: typeof XCircle;
   tint: "pink" | "mint" | "teal";
 }[] = [
   {
@@ -47,7 +47,7 @@ const TOOLS: {
     tag: "Dismissed",
     description:
       "They dismissed, minimized, or ignored the feeling (e.g., \"Stop crying\", \"You're fine\").",
-    icon: Tape,
+    icon: XCircle,
     tint: "pink",
   },
   {
