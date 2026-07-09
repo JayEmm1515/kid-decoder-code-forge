@@ -26,6 +26,7 @@ import Quizzes from "./pages/Quizzes";
 import Learn from "./pages/Learn";
 import BoundaryBarriers from "./pages/BoundaryBarriers";
 import BehaviourGuides from "./pages/BehaviourGuides";
+import HandMeDownToolbox from "./pages/HandMeDownToolbox";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +58,7 @@ const App = () => (
           <Route path="/learn" element={<Learn />} />
           <Route path="/boundary-barriers" element={<BoundaryBarriers />} />
           <Route path="/behaviour-guides" element={<BehaviourGuides />} />
+          <Route path="/hand-me-down-toolbox" element={<HandMeDownToolbox />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
