@@ -1,196 +1,310 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Plus } from "lucide-react";
-import Layout from "@/components/Layout";
+import { ArrowRight, Menu, Bell, Heart } from "lucide-react";
 
-const AGE_GROUPS = [
-  { label: "Toddlers", path: "/early-years" },
-  { label: "Preschoolers", path: "/preschool" },
-  { label: "Primary School", path: "/school-age" },
-  { label: "Tweens", path: "/school-age" },
-  { label: "Teens", path: "/teens" },
+const TEAL = "hsl(195 71% 17%)";
+const TEAL_DARK = "hsl(195 71% 12%)";
+const CREAM = "#F3ECE4";
+const PEACH = "#F3D8D2";
+const SAGE = "#CFDDD6";
+const SAGE_BLUE = "#B9CBC8";
+const PEACH_BTN = "#EBB6A8";
+const INK = "#0D3B4C";
+
+const CARDS = [
+  {
+    to: "/being-with-exercise",
+    title: "BEING\nWITH",
+    text: "Connection exercises for everyday moments",
+    bg: CREAM,
+    plateBg: "#FBF7F2",
+    dot: TEAL,
+    icon: <PlantIcon />,
+  },
+  {
+    to: "/learn",
+    title: "LEARN",
+    text: "Guides, insights and expert advice",
+    bg: PEACH,
+    plateBg: "#F9E4DE",
+    dot: "#FFFFFF",
+    icon: <BookIcon />,
+  },
+  {
+    to: "/understanding-behaviour",
+    title: "DECODE",
+    text: "Understand behaviour and what it's telling you",
+    bg: SAGE,
+    plateBg: "#E2ECE7",
+    dot: PEACH_BTN,
+    icon: <MagnifierIcon />,
+  },
+  {
+    to: "/tracking",
+    title: "TRACK",
+    text: "Observe, reflect and see patterns",
+    bg: SAGE_BLUE,
+    plateBg: "#CFDDDA",
+    dot: "#FFFFFF",
+    icon: <BarsIcon />,
+  },
 ];
 
-const Index = () => {
+export default function Index() {
   return (
-    <Layout currentPageName="Home">
-      <div className="max-w-[520px] mx-auto px-5 pt-6 pb-16 md:max-w-3xl md:px-8">
-        {/* Hero */}
+    <div className="min-h-screen" style={{ backgroundColor: INK }}>
+      <div className="max-w-[520px] mx-auto pb-10">
+        {/* HERO */}
         <section
-          className="relative rounded-[34px] overflow-hidden mb-6 h-[520px] p-7 flex flex-col justify-end"
+          className="relative overflow-hidden px-7 pt-8 pb-10"
           style={{
-            background:
-              "linear-gradient(135deg, hsl(195 71% 22%) 0%, hsl(195 71% 14%) 100%)",
-            boxShadow: "var(--shadow-clay-lg)",
+            background: `linear-gradient(180deg, ${TEAL} 0%, ${TEAL_DARK} 100%)`,
           }}
         >
-          {/* Decorative clay spheres */}
+          {/* soft peach glow bottom-right of hero */}
           <div
-            className="absolute rounded-full pointer-events-none"
+            className="absolute pointer-events-none"
             style={{
-              width: 220, height: 220, top: -60, right: -50,
-              background: "radial-gradient(circle at 35% 35%, hsl(348 82% 82%), hsl(348 76% 70%))",
-              opacity: 0.5, filter: "blur(2px)",
-            }}
-          />
-          <div
-            className="absolute rounded-full pointer-events-none"
-            style={{
-              width: 160, height: 160, bottom: 100, left: -40,
-              background: "radial-gradient(circle at 30% 30%, hsl(187 40% 85%), hsl(187 40% 70%))",
-              opacity: 0.35, filter: "blur(4px)",
+              width: 380, height: 380, right: -120, top: 40,
+              background: "radial-gradient(circle, rgba(235,182,168,0.35), rgba(235,182,168,0) 70%)",
+              filter: "blur(6px)",
             }}
           />
 
-          <span
-            className="absolute top-8 left-7 text-[13px] font-extrabold tracking-[0.15em]"
-            style={{ color: "hsl(var(--pink))" }}
+          {/* Top bar */}
+          <div className="relative flex items-center justify-between mb-10">
+            <button
+              aria-label="Menu"
+              className="w-11 h-11 flex items-center justify-center rounded-full"
+              style={{ color: "#F1E9DF" }}
+            >
+              <Menu className="w-7 h-7" strokeWidth={2.2} />
+            </button>
+            <div
+              className="relative w-12 h-12 rounded-full flex items-center justify-center"
+              style={{
+                background: "#F5DED6",
+                boxShadow: "0 6px 18px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.6)",
+              }}
+            >
+              <Bell className="w-5 h-5" style={{ color: INK }} strokeWidth={2.2} />
+              <span className="absolute top-0 right-0 w-3 h-3 rounded-full" style={{ backgroundColor: "#8BB4B2", border: "2px solid #F5DED6" }} />
+            </div>
+          </div>
+
+          {/* Big title */}
+          <h1
+            className="relative font-black text-white tracking-tight"
+            style={{
+              fontFamily: '"Bebas Neue", "Anton", "Oswald", Impact, sans-serif',
+              fontSize: 78,
+              lineHeight: 0.92,
+              letterSpacing: "0.01em",
+            }}
           >
-            TODAY'S FOCUS
-          </span>
-
-          <h1 className="relative text-[38px] leading-[42px] font-black text-white tracking-wide mb-4">
-            UNDERSTAND<br />THE WHY<br />BEHIND THEIR<br />BEHAVIOUR
+            THE KID<br />DECODER
           </h1>
-          <p className="relative text-[15px] leading-[22px] text-white/90 w-3/4 mb-2">
-            Decode big feelings with calm, connection and confidence.
-          </p>
 
-          <Link
-            to="/behaviour-guides"
-            className="absolute right-6 bottom-7 w-[62px] h-[62px] rounded-full flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
+          {/* Tagline */}
+          <div className="relative mt-6">
+            <p
+              className="text-[13px] font-semibold tracking-[0.22em]"
+              style={{ color: "#E9DFD5" }}
+            >
+              UNDERSTAND TODAY.
+            </p>
+            <p
+              className="text-[13px] font-semibold tracking-[0.22em] mt-1"
+              style={{ color: "#E9DFD5" }}
+            >
+              SUPPORT TOMORROW.
+            </p>
+            <div className="mt-3 h-[3px] w-16 rounded-full" style={{ backgroundColor: PEACH_BTN }} />
+          </div>
+
+          {/* Welcome back */}
+          <div className="relative mt-10">
+            <p
+              className="text-[12px] font-bold tracking-[0.28em]"
+              style={{ color: PEACH_BTN }}
+            >
+              WELCOME BACK,
+            </p>
+            <h2
+              className="text-white font-black"
+              style={{
+                fontFamily: '"Bebas Neue", "Anton", Impact, sans-serif',
+                fontSize: 56, lineHeight: 1, letterSpacing: "0.02em",
+                marginTop: 6,
+              }}
+            >
+              JESS
+            </h2>
+          </div>
+
+          {/* Child selector pill */}
+          <button
+            className="relative mt-8 flex items-center gap-4 pl-2 pr-6 py-2 rounded-full w-full max-w-[320px]"
             style={{
-              backgroundColor: "hsl(var(--pink-strong))",
-              boxShadow: "0 6px 18px rgba(245,167,184,0.5)",
+              backgroundColor: "#FBF3EC",
+              boxShadow: "0 10px 24px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.9)",
             }}
-            aria-label="Explore focus"
           >
-            <ArrowRight className="w-7 h-7 text-white" strokeWidth={2.5} />
-          </Link>
+            <div
+              className="w-11 h-11 rounded-full flex items-center justify-center"
+              style={{
+                background: "linear-gradient(145deg, #E4EEEC, #C9DAD7)",
+                boxShadow: "inset 0 2px 4px rgba(13,59,76,0.15)",
+              }}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={INK} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+              </svg>
+            </div>
+            <div className="flex-1 text-left">
+              <p className="text-[10px] font-bold tracking-[0.24em]" style={{ color: "#7A8B90" }}>YOUR CHILD</p>
+              <p className="text-[18px] font-black tracking-[0.06em]" style={{ color: INK, fontFamily: '"Bebas Neue", Impact, sans-serif' }}>OLIVIA</p>
+            </div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={PEACH_BTN} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
         </section>
 
-        {/* Two feature cards */}
-        <div className="grid grid-cols-2 gap-[14px] mb-[18px]">
-          <FeatureCard
-            to="/being-with-exercise"
-            title="BEING WITH"
-            text="A guided Yes / No exercise to uncover core feelings beneath behaviour."
-            colour="hsl(var(--pink))"
-          />
-          <FeatureCard
-            to="/tracking"
-            title="TRACKER"
-            text="Log parent mood, child mood, behaviours, triggers and what helped."
-            colour="hsl(var(--mint))"
-          />
-        </div>
-
-        {/* Behaviour Library (large white card) */}
-        <section
-          className="bg-white rounded-[32px] p-6 mb-[18px]"
-          style={{ boxShadow: "var(--shadow-clay)" }}
-        >
-          <p className="text-[12px] font-black tracking-[0.14em] mb-2" style={{ color: "hsl(var(--pink-accent))" }}>
-            BEHAVIOUR LIBRARY
-          </p>
-          <h2 className="text-[34px] leading-9 font-black tracking-wide mb-[18px]" style={{ color: "hsl(var(--deep-teal))" }}>
-            BY AGE GROUP
-          </h2>
-          <div className="flex flex-col gap-2.5">
-            {AGE_GROUPS.map((item) => (
-              <Link
-                key={item.label}
-                to={item.path}
-                className="h-[58px] rounded-[20px] px-[18px] flex items-center justify-between transition-colors hover:brightness-95"
-                style={{ backgroundColor: "hsl(var(--neutral-row))" }}
-              >
-                <span className="text-[15px] font-bold" style={{ color: "hsl(var(--deep-teal))" }}>
-                  {item.label}
-                </span>
-                <ArrowRight className="w-5 h-5" style={{ color: "hsl(var(--pink-accent))" }} strokeWidth={2.5} />
-              </Link>
+        {/* CARD GRID */}
+        <section className="px-5 pt-6" style={{ backgroundColor: INK }}>
+          <div className="grid grid-cols-2 gap-4">
+            {CARDS.map((c) => (
+              <FeatureTile key={c.title} {...c} />
             ))}
           </div>
         </section>
 
-        {/* Dark Chain Analysis card */}
-        <Link
-          to="/chain-analysis"
-          className="block rounded-[32px] p-[26px] mb-[18px] transition-transform hover:-translate-y-1"
-          style={{
-            backgroundColor: "hsl(var(--deep-teal))",
-            boxShadow: "var(--shadow-clay)",
-          }}
+        {/* Footer */}
+        <section
+          className="mt-8 mx-3 rounded-t-[28px] px-6 pt-6 pb-8 flex flex-col items-center"
+          style={{ backgroundColor: "#F3ECE4" }}
         >
-          <p className="text-[12px] font-black tracking-[0.14em] mb-2.5" style={{ color: "hsl(var(--pink))" }}>
-            CHAIN ANALYSIS
+          <p className="text-[11px] font-bold tracking-[0.3em]" style={{ color: "#7A8B90" }}>
+            YOU'RE NOT ALONE IN THIS
           </p>
-          <h2 className="text-[28px] leading-8 font-black text-white tracking-wide mb-3.5">
-            TRIGGER → FEELING → BEHAVIOUR
-          </h2>
-          <p className="text-[14px] leading-[21px]" style={{ color: "hsl(var(--mint-soft))" }}>
-            Map what happened before, during and after the behaviour so patterns become easier to understand.
-          </p>
-        </Link>
-
-        {/* Toolkit card */}
-        <Link
-          to="/learn"
-          className="block rounded-[32px] p-[26px] transition-transform hover:-translate-y-1"
-          style={{
-            backgroundColor: "hsl(var(--pink-soft))",
-            boxShadow: "var(--shadow-clay)",
-          }}
-        >
-          <p className="text-[12px] font-black tracking-[0.14em] mb-2" style={{ color: "hsl(var(--pink-accent))" }}>
-            POSITIVE DISCIPLINE TOOLKIT
-          </p>
-          <h2 className="text-[34px] leading-9 font-black tracking-wide mb-3" style={{ color: "hsl(var(--deep-teal))" }}>
-            CALM LIMITS
-          </h2>
-          <p className="text-[15px] leading-[22px]" style={{ color: "hsl(var(--deep-teal))" }}>
-            Practical tools for boundaries, repair, routines, emotional coaching and connection before correction.
-          </p>
-        </Link>
+          <button
+            className="mt-4 w-12 h-12 rounded-full flex items-center justify-center"
+            style={{
+              backgroundColor: "#F5DED6",
+              boxShadow: "0 6px 14px rgba(13,59,76,0.15), inset 0 1px 1px rgba(255,255,255,0.7)",
+            }}
+            aria-label="Support"
+          >
+            <Heart className="w-5 h-5" style={{ color: INK }} strokeWidth={2.2} fill={PEACH_BTN} />
+          </button>
+        </section>
       </div>
-
-      <div className="h-24 md:hidden" />
-    </Layout>
+    </div>
   );
-};
+}
 
-function FeatureCard({
-  to,
-  title,
-  text,
-  colour,
+function FeatureTile({
+  to, title, text, bg, plateBg, dot, icon,
 }: {
-  to: string;
-  title: string;
-  text: string;
-  colour: string;
+  to: string; title: string; text: string; bg: string; plateBg: string; dot: string; icon: React.ReactNode;
 }) {
   return (
     <Link
       to={to}
-      className="rounded-[28px] p-5 min-h-[180px] flex flex-col justify-between transition-transform hover:-translate-y-1"
-      style={{ backgroundColor: colour, boxShadow: "var(--shadow-clay-sm)" }}
+      className="relative rounded-[24px] p-4 pb-5 block overflow-hidden transition-transform active:scale-[0.98] hover:-translate-y-0.5"
+      style={{
+        backgroundColor: bg,
+        boxShadow: "0 12px 28px rgba(0,0,0,0.18), inset 0 1px 1px rgba(255,255,255,0.55)",
+        minHeight: 240,
+      }}
     >
-      <div>
-        <h3 className="text-[22px] leading-6 font-black tracking-wide mb-2" style={{ color: "hsl(var(--deep-teal))" }}>
-          {title}
-        </h3>
-        <p className="text-[13px] leading-[18px]" style={{ color: "hsl(var(--deep-teal))" }}>
-          {text}
-        </p>
+      {/* corner dot */}
+      <div className="absolute top-3 right-3 flex items-center gap-1">
+        <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: dot, opacity: 0.9 }} />
+        <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "#FFFFFF", opacity: 0.7 }} />
       </div>
+
+      {/* plate */}
       <div
-        className="w-[38px] h-[38px] rounded-full flex items-center justify-center self-end"
-        style={{ backgroundColor: "rgba(255,255,255,0.55)" }}
+        className="w-[86px] h-[86px] rounded-full flex items-center justify-center mb-3"
+        style={{
+          background: `radial-gradient(circle at 35% 30%, #FFFFFF, ${plateBg} 75%)`,
+          boxShadow: "inset 0 -4px 10px rgba(13,59,76,0.08), inset 0 3px 6px rgba(255,255,255,0.9), 0 4px 10px rgba(13,59,76,0.08)",
+        }}
       >
-        <Plus className="w-5 h-5" style={{ color: "hsl(var(--deep-teal))" }} strokeWidth={2.5} />
+        {icon}
+      </div>
+
+      <h3
+        className="font-black leading-[0.95] mb-1.5 whitespace-pre-line"
+        style={{
+          fontFamily: '"Bebas Neue", Impact, sans-serif',
+          fontSize: 24, color: INK, letterSpacing: "0.04em",
+        }}
+      >
+        {title}
+      </h3>
+      <div className="h-[2px] w-8 rounded-full mb-2" style={{ backgroundColor: PEACH_BTN }} />
+      <p className="text-[12px] leading-[16px] pr-6" style={{ color: "#3E5A63" }}>
+        {text}
+      </p>
+
+      {/* arrow button */}
+      <div
+        className="absolute bottom-3 right-3 w-10 h-10 rounded-full flex items-center justify-center"
+        style={{
+          background: `linear-gradient(145deg, #F0C5B8, ${PEACH_BTN})`,
+          boxShadow: "0 4px 10px rgba(13,59,76,0.2), inset 0 1px 1px rgba(255,255,255,0.6)",
+        }}
+      >
+        <ArrowRight className="w-4 h-4" style={{ color: INK }} strokeWidth={2.5} />
       </div>
     </Link>
   );
 }
 
-export default Index;
+/* ── Abstract clay icons (pure CSS/SVG) ── */
+
+function PlantIcon() {
+  return (
+    <svg width="46" height="46" viewBox="0 0 60 60" fill="none">
+      <path d="M30 34 C 30 24, 22 20, 18 22 C 18 30, 24 34, 30 34 Z" fill="#8FB8A6" />
+      <path d="M30 34 C 30 22, 38 18, 44 22 C 44 30, 36 34, 30 34 Z" fill="#A9C9BA" />
+      <path d="M22 34 h16 l-2 12 a2 2 0 0 1 -2 2 h-8 a2 2 0 0 1 -2 -2 Z" fill="#EBB6A8" />
+      <path d="M22 34 h16 v3 h-16 z" fill="#D89E90" />
+    </svg>
+  );
+}
+
+function BookIcon() {
+  return (
+    <svg width="46" height="46" viewBox="0 0 60 60" fill="none">
+      <rect x="16" y="14" width="28" height="34" rx="3" fill="#D89E90" />
+      <rect x="18" y="16" width="24" height="30" rx="2" fill="#E9B4A6" />
+      <rect x="30" y="16" width="2" height="30" fill="#C88A7C" opacity="0.5" />
+      <rect x="40" y="20" width="2" height="22" rx="1" fill="#F0D2C9" />
+    </svg>
+  );
+}
+
+function MagnifierIcon() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 60 60" fill="none">
+      <circle cx="26" cy="26" r="12" fill="#EAF1EE" stroke="#4A6B69" strokeWidth="3.5" />
+      <circle cx="24" cy="24" r="6" fill="#B9CFC8" opacity="0.7" />
+      <rect x="34" y="34" width="14" height="5" rx="2.5" transform="rotate(45 34 34)" fill="#4A6B69" />
+    </svg>
+  );
+}
+
+function BarsIcon() {
+  return (
+    <svg width="52" height="46" viewBox="0 0 60 50" fill="none">
+      <rect x="10" y="20" width="9" height="26" rx="2" fill="#4A6B69" />
+      <rect x="22" y="10" width="9" height="36" rx="2" fill="#7A9895" />
+      <rect x="34" y="24" width="9" height="22" rx="2" fill="#A6BEB9" />
+      <rect x="46" y="30" width="9" height="16" rx="2" fill="#F0C5B8" />
+    </svg>
+  );
+}
