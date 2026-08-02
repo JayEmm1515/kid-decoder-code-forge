@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Menu, Bell, Heart } from "lucide-react";
+import heroImage from "@/assets/hero-child-sea.jpg";
+
 
 const TEAL = "hsl(195 71% 17%)";
 const TEAL_DARK = "hsl(195 71% 12%)";
@@ -56,19 +58,35 @@ export default function Index() {
         {/* HERO */}
         <section
           className="relative overflow-hidden px-7 pt-8 pb-10"
-          style={{
-            background: `linear-gradient(180deg, ${TEAL} 0%, ${TEAL_DARK} 100%)`,
-          }}
+          style={{ backgroundColor: TEAL_DARK }}
         >
+          {/* photographic backdrop */}
+          <img
+            src={heroImage}
+            alt="Child in a pink knitted jumper sitting on a rock looking out at a calm sea at sunset"
+            width={1024}
+            height={1536}
+            className="absolute inset-0 w-full h-full object-cover object-[70%_center]"
+          />
+          {/* teal gradient overlay for legibility */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: `linear-gradient(180deg, ${TEAL}F2 0%, ${TEAL}B8 45%, ${TEAL_DARK}F5 100%),
+                linear-gradient(100deg, ${TEAL_DARK}F0 0%, ${TEAL}80 55%, rgba(13,59,76,0.15) 100%)`,
+            }}
+          />
+
           {/* soft peach glow bottom-right of hero */}
           <div
             className="absolute pointer-events-none"
             style={{
               width: 380, height: 380, right: -120, top: 40,
-              background: "radial-gradient(circle, rgba(235,182,168,0.35), rgba(235,182,168,0) 70%)",
+              background: "radial-gradient(circle, rgba(235,182,168,0.30), rgba(235,182,168,0) 70%)",
               filter: "blur(6px)",
             }}
           />
+
 
           {/* Top bar */}
           <div className="relative flex items-center justify-between mb-10">
