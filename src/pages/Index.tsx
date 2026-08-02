@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Menu, Bell, Heart } from "lucide-react";
+import heroImage from "@/assets/hero-child-sea.jpg";
+
 
 const TEAL = "hsl(195 71% 17%)";
 const TEAL_DARK = "hsl(195 71% 12%)";
